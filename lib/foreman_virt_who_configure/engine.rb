@@ -18,7 +18,7 @@ module ForemanVirtWhoConfigure
 
     initializer 'foreman_virt_who_configure.register_plugin', :before => :finisher_hook do |_app|
       Foreman::Plugin.register :foreman_virt_who_configure do
-        requires_foreman '>= 1.4'
+        requires_foreman '>= 1.11'
 
         # Add permissions
         security_block :foreman_virt_who_configure do
@@ -77,5 +77,13 @@ module ForemanVirtWhoConfigure
       locale_domain = 'foreman_virt_who_configure'
       Foreman::Gettext::Support.add_text_domain locale_domain, locale_dir
     end
+  end
+
+  def self.table_name_prefix
+    "foreman_virt_who_configure_"
+  end
+
+  def self.use_relative_model_naming?
+    true
   end
 end
