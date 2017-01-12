@@ -17,6 +17,11 @@ module ForemanVirtWhoConfigure
     scoped_search :on => :interval, :complete_value => true
     # TODO add more related objects and attributes
 
+    # compatibility layer for 1.11 - pre strong params patch
+    if self.respond_to?(:attr_accessible)
+      attr_accessible :compute_resource_id, :organization_id, :interval
+    end
+
     def title
       compute_resource.name
     end

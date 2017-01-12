@@ -6,7 +6,7 @@ module ForemanVirtWhoConfigure
       if respond_to?(:new_link)
         new_link(_("New Config"), options, html_options)
       else
-        display_link_if_authorized(_("New Config"), hash_for_new_foreman_virt_who_configure_config_path)
+        display_link_if_authorized(_("New Config"), hash_for_new_foreman_virt_who_configure_config_path, html_options)
       end
     end
 
