@@ -5,7 +5,7 @@ module ForemanVirtWhoConfigure
     encrypts :encrypted_password
 
     belongs_to :user
-    belongs_to :config
+    has_many :configs
 
     # Foreman 1.11 specifics, can be removed later
     def name

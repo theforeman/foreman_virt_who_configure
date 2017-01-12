@@ -22,21 +22,21 @@ module ForemanVirtWhoConfigure
 
         # Add permissions
         security_block :foreman_virt_who_configure do
-          permission :view_foreman_virt_who_configure, :'foreman_virt_who_configure/hosts' => [:new_action]
+          permission :view_virt_who_config, :'foreman_virt_who_configure/hosts' => [:index], :resource => 'ForemanVirtWhoConfigure::Config'
         end
 
-        # Add a new role called 'Discovery' if it doesn't exist
-        role 'ForemanVirtWhoConfigure', [:view_foreman_virt_who_configure]
+        # role 'ForemanVirtWhoConfigure', [:view_foreman_virt_who_configure]
+        # TODO
 
         # add menu entry
-        menu :top_menu, :template,
-             url_hash: { controller: :'foreman_virt_who_configure/hosts', action: :new_action },
-             caption: 'ForemanVirtWhoConfigure',
-             parent: :hosts_menu,
-             after: :hosts
+        menu :top_menu, :virt_who_configs,
+             url_hash: { controller: 'foreman_virt_who_configure/configs', action: :index },
+             caption: N_('Virt-who configurations'),
+             parent: :infrastructure_menu,
+             after: :compute_resources
 
         # add dashboard widget
-        widget 'foreman_virt_who_configure_widget', name: N_('Foreman plugin template widget'), sizex: 4, sizey: 1
+        # widget 'foreman_virt_who_configure_widget', name: N_('Foreman plugin template widget'), sizex: 4, sizey: 1
       end
     end
 

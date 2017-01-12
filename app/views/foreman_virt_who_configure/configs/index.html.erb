@@ -1,0 +1,24 @@
+<% title _("Configs") %>
+
+<% title_actions new_config_link, help_button_or_path %>
+
+<table class="<%= table_css_classes 'table-two-pane table-fixed' %>">
+  <thead>
+    <tr>
+      <th class="col-md-8"><%= sort :name, :as => s_("Config|Title") %></th>
+      <th><%= _("Config|Interval") %></th>
+      <th><%= _('Actions') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @configs.each do |config| %>
+    <tr>
+      <td class="display-two-pane ellipsis"><%= link_to_if_authorized (config.title), hash_for_edit_foreman_virt_who_configure_config_path(:id => config).merge(:auth_object => config, :authorizer => authorizer) %></td>
+      <td><%= config.humanized_interval %></td>
+      <td class="col-md-1"><%= action_buttons(display_delete_if_authorized hash_for_foreman_virt_who_configure_config_path(:id => config).merge(:auth_object => config, :authorizer => authorizer), :data => { :confirm => _("Delete virt-who configuration %s?") % config.title }) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate_with_info @configs %>

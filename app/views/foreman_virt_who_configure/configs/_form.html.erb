@@ -1,0 +1,33 @@
+<%= form_for @config, :url => (@config.new_record? ? configs_path : config_path(:id => @config)) do |f| %>
+  <%= base_errors_for @config %>
+  <ul class="nav nav-tabs" data-tabs="tabs">
+    <li class="active"><a href="#primary" data-toggle="tab"><%= _("Domain") %></a></li>
+    <% if authorizer.can?(:view_params) %>
+      <li><a href="#params" data-toggle="tab"><%= _("Parameters") %></a></li>
+    <% end %>
+    <% if show_location_tab? %>
+      <li><a href="#locations" data-toggle="tab"><%= _("Locations") %></a></li>
+    <% end %>
+    <% if show_organization_tab? %>
+      <li><a href="#organizations" data-toggle="tab"><%= _("Organizations") %></a></li>
+    <% end %>
+  </ul>
+
+  <div class="tab-content">
+
+    <div class="tab-pane active" id="primary">
+      <%= text_f   f, :name, :help_inline => _("The full DNS config name") %>
+      <%= text_f   f, :fullname, :help_inline => _("Full name describing the config") %>
+      <%= smart_proxy_fields f %>
+    </div>
+    <% if authorizer.can?("view_params") %>
+      <div class="tab-pane" id="params">
+        <%= render "common_parameters/parameters", { :f => f, :type => :config_parameters } %>
+      </div>
+    <% end %>
+    <%= render 'taxonomies/loc_org_tabs', :f => f, :obj => @config %>
+
+  </div>
+
+  <%= submit_or_cancel f %>
+<% end %>
