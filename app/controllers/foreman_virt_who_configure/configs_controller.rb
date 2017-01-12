@@ -4,6 +4,14 @@ module ForemanVirtWhoConfigure
     include ForemanVirtWhoConfigure::Concerns::ConfigParameters if defined?(Foreman::ParameterFilter)
     before_action :find_resource, :only => [:edit, :update, :destroy]
 
+    # in 1.11 we can't use welcome from application controller since it does not work with namespaces
+    def welcome
+      if model_of_controller.first.nil?
+        @welcome = true
+        render :action => :welcome
+      end
+    end
+
     def index
       if respond_to?(:resource_base_search_and_page)
         @configs = resource_base_search_and_page
@@ -50,9 +58,16 @@ module ForemanVirtWhoConfigure
     end
 
     def controller_name
-      # require 'pry-remote'
-      # binding.remote_pry
       'foreman_virt_who_configure_configs'
+    end
+
+    # compatibility layer for 1.11 - pre strong params patch
+    def config_params
+      if defined?(super)
+        super
+      else
+        params[:config]
+      end
     end
   end
 end
