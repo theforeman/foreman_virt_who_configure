@@ -27,10 +27,15 @@ module ForemanVirtWhoConfigure
 
     def create
       @config = Config.new(config_params)
-      if @config.save
-        process_success :object => @config
+      if @config.wizard_completed? && @config.save
+        process_success :success_redirect => foreman_virt_who_configure_configs_path
       else
-        process_error :object => @config
+        if @config.valid?
+          render 'new'
+        else
+          @config.rewind_step
+          process_error :object => @config
+        end
       end
     end
 
@@ -66,7 +71,7 @@ module ForemanVirtWhoConfigure
       if defined?(super)
         super
       else
-        params[:config]
+        params[:foreman_virt_who_configure_config]
       end
     end
   end
