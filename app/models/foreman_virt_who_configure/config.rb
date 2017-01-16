@@ -26,7 +26,7 @@ module ForemanVirtWhoConfigure
 
     # compatibility layer for 1.11 - pre strong params patch
     if self.respond_to?(:attr_accessible)
-      attr_accessible :compute_resource_id, :organization_id, :interval, :current_step
+      attr_accessible :compute_resource_id, :organization_id, :interval, :current_step, :service_user_id
     end
 
     attr_writer :current_step
@@ -78,6 +78,10 @@ module ForemanVirtWhoConfigure
 
     def wizard_completed?
       new_record? && current_step.blank?
+    end
+
+    def virt_who_config_file
+      OutputGenerator.new(self).output
     end
   end
 end
