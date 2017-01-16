@@ -1,4 +1,4 @@
-<%= form_for @config, :url => (@config.new_record? ? foreman_virt_who_configure_configs_path : foreman_virt_who_configure_config_path(:id => @config)) do |f| %>
+<%= form_for @config, :as => 'foreman_virt_who_configure_config', :url => (@config.new_record? ? foreman_virt_who_configure_configs_path : foreman_virt_who_configure_config_path(:id => @config)) do |f| %>
   <%= base_errors_for @config %>
   <div class="tab-content">
 
