@@ -1,5 +1,8 @@
 module ForemanVirtWhoConfigure
   class Config < ActiveRecord::Base
+    PERMITTED_PARAMS = [
+      :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :listing_mode, :hypervisor_id, :current_step, :service_user_id
+    ]
     include Authorizable
     audited
     validates_lengths_from_database
@@ -26,7 +29,7 @@ module ForemanVirtWhoConfigure
 
     # compatibility layer for 1.11 - pre strong params patch
     if self.respond_to?(:attr_accessible)
-      attr_accessible :compute_resource_id, :organization_id, :interval, :current_step, :service_user_id
+      attr_accessible *PERMITTED_PARAMS
     end
 
     attr_writer :current_step
