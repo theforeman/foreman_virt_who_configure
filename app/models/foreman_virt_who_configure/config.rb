@@ -1,7 +1,9 @@
 module ForemanVirtWhoConfigure
   class Config < ActiveRecord::Base
     PERMITTED_PARAMS = [
-      :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :listing_mode, :hypervisor_id, :current_step, :service_user_id
+      :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :listing_mode, :hypervisor_id,
+      :current_step, :hypervisor_type, :hypervisor_server, :hypervisor_username, :hypervisor_password, :debug,
+      :satellite_url
     ]
     include Authorizable
     audited
@@ -18,6 +20,20 @@ module ForemanVirtWhoConfigure
       'configure' => _('Configure')
     }
 
+    HYPERVISOR_IDS = [ 'uuid', 'hwuuid', 'hostname' ]
+
+    HYPERVISOR_TYPES = {
+      'esx' => 'VMware vSphere / vCenter (esx)',
+      'rhevm' => 'Red Hat Virtualization Hypervisor (rhevm)',
+      # 'libvirt' => 'Red Hat Enterprise Linux Hypervisor (vdsm)',
+      'hyperv' => 'Microsoft Hyper-V (hyperv)',
+      'xen' => 'XenServer (xen)',
+      'libvirt' => 'libvirt'
+    }
+
+    include Encryptable
+    encrypts :hypervisor_password
+
     belongs_to :compute_resource
     belongs_to :organization
 
@@ -33,6 +49,12 @@ module ForemanVirtWhoConfigure
     end
 
     attr_writer :current_step
+
+    # Foreman 1.11 specifics, can be removed later, otherwise when string does not start with "encrypts" prefix
+    # we get 500 when we try to create log message that relies on name method
+    def name
+      title
+    end
 
     def title
       compute_resource.name if compute_resource

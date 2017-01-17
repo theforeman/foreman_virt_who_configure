@@ -8,7 +8,8 @@ module ForemanVirtWhoConfigure
     belongs_to :user
     has_many :configs
 
-    # Foreman 1.11 specifics, can be removed later
+    # Foreman 1.11 specifics, can be removed later, otherwise when string does not start with "encrypts" prefix
+    # we get 500 when we try to create log message that relies on name method
     def name
       self.username || self.to_s
     end

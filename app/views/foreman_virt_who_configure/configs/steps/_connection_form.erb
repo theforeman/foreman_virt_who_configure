@@ -1,3 +1,5 @@
 <div class="tab-pane <%= show_config_partial_wizard(step) %>" id="config_connection">
-  <%= select_f f, :service_user_id, ForemanVirtWhoConfigure::ServiceUser.authorized(:view_service_users), :id, :username %>
+  <%= text_f f, :satellite_url %>
+  <%= select_f f, :hypervisor_id, ForemanVirtWhoConfigure::Config::HYPERVISOR_IDS, :to_s, :to_s, {}, :label => _('Hypervisor ID') %>
+  <%= checkbox_f f, :debug  %>
 </div>

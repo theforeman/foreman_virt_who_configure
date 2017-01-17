@@ -22,6 +22,8 @@ module ForemanVirtWhoConfigure
 
     def virt_who_output
 <<EOS
+a=virt-who-password
+cat > /etc/virt-who.d/config. <<
 [#{identifier}]
 type=#{type}
 hypervisor_id=#{hypervisor_id}
@@ -30,6 +32,7 @@ env=Library
 server=#{cr_server}
 username=#{cr_username}
 password=#{cr_password}
+encrypted_password=$a
 rhsm_hostname=#{satellite_url}
 rhsm_username=#{service_user_username}
 rhsm_password=#{service_user_password}

@@ -1,6 +1,12 @@
 <div class="tab-pane <%= show_config_partial_wizard(step) %>" id="config_general_information">
-  <%= select_f f, :compute_resource_id, ComputeResource.authorized(:view_compute_resources), :id, :to_s %>
-  <%= select_f f, :organization_id, Organization.authorized(:view_organizations), :id, :to_s %>
-  <%= select_f f, :service_user_id, ForemanVirtWhoConfigure::ServiceUser.authorized(:view_service_users), :id, :username %>
-  <%= text_f f, :hypervisor_id, :label => _('Hypervisor ID') %>
+  <% if @config.organization_id.present? %>
+    <%= select_f f, :organization_id, Organization.authorized(:view_organizations), :id, :to_s, {}, :label => _('Owner'), :disabled => true %>
+    <%= f.hidden_field :organization_id %>
+  <% else %>
+  <%= select_f f, :organization_id, Organization.authorized(:view_organizations), :id, :to_s, {}, :label => _('Owner') %>
+  <% end %>
+  <%= select_f f, :hypervisor_type, ForemanVirtWhoConfigure::Config::HYPERVISOR_TYPES, :first, :last %>
+  <%= text_f f, :hypervisor_server %>
+  <%= text_f f, :hypervisor_username %>
+  <%= password_f f, :hypervisor_password %>
 </div>
