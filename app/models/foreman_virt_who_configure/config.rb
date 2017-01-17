@@ -84,7 +84,12 @@ module ForemanVirtWhoConfigure
     end
 
     def virt_who_config_file
-      OutputGenerator.new(self).output
+      generator = OutputGenerator.new(self)
+      if generator.ready_for_virt_who_output?
+        generator.virt_who_output
+      else
+        generator.missing_virt_who_input_messages.join("\n")
+      end
     end
   end
 end

@@ -6,8 +6,22 @@ module ForemanVirtWhoConfigure
       @config = config
     end
 
-    def output
-      <<EOS
+    def ready_for_virt_who_output?
+      missing_virt_who_input_messages.empty?
+    end
+
+    def missing_virt_who_input_messages
+      messages = []
+      # messages.push _('Cofiguration not stored') unless config.persisted?
+      messages.push _('Hypervisor id was not provided') unless config.hypervisor_id.present?
+      messages.push _('Organization was not provided') unless config.organization_id.present?
+      messages.push _('Compute resource was not provided') unless config.compute_resource_id.present?
+      messages.push _('Service user was not provided') unless config.service_user_id.present?
+      messages
+    end
+
+    def virt_who_output
+<<EOS
 [#{identifier}]
 type=#{type}
 hypervisor_id=#{hypervisor_id}

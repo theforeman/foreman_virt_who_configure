@@ -4,7 +4,6 @@
 
     <%= select_f f, :compute_resource_id, ComputeResource.authorized(:view_compute_resources), :id, :to_s %>
     <%= select_f f, :organization_id, Organization.authorized(:view_organizations), :id, :to_s %>
-    <%= select_f f, :service_user_id, ForemanVirtWhoConfigure::ServiceUser.authorized(:view_service_users), :id, :username %>
     <%= text_f f, :hypervisor_id %>
     <%= text_f f, :interval, :help_inline => _("Virt-who run interval in minutes") %>
 

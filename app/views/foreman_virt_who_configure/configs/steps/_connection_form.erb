@@ -1,4 +1,3 @@
 <div class="tab-pane <%= show_config_partial_wizard(step) %>" id="config_connection">
-  <!-- TODO: remove placeholder text -->
-  Connection
+  <%= select_f f, :service_user_id, ForemanVirtWhoConfigure::ServiceUser.authorized(:view_service_users), :id, :username %>
 </div>
