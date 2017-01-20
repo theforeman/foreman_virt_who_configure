@@ -25,11 +25,13 @@ module ForemanVirtWhoConfigure
     HYPERVISOR_TYPES = {
       'esx' => 'VMware vSphere / vCenter (esx)',
       'rhevm' => 'Red Hat Virtualization Hypervisor (rhevm)',
-      # 'libvirt' => 'Red Hat Enterprise Linux Hypervisor (vdsm)',
+      # 'vdsm' => 'Red Hat Enterprise Linux Hypervisor (vdsm)',
       'hyperv' => 'Microsoft Hyper-V (hyperv)',
       'xen' => 'XenServer (xen)',
       'libvirt' => 'libvirt'
     }
+
+    HYPERVISOR_DEFAULT_TYPE = 'esx'
 
     include Encryptable
     encrypts :hypervisor_password

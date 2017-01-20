@@ -26,6 +26,7 @@ module ForemanVirtWhoConfigure
       if params.key?(:organization_id)
         @config.organization = Organization.authorized(:view_organizations).where(:id => params[:organization_id]).first
       end
+      @config.hypervisor_type ||= Config::HYPERVISOR_DEFAULT_TYPE
       @config.organization ||= Organization.current
       @config.satellite_url ||= Setting.foreman_url
     end
