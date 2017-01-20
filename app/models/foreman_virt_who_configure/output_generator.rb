@@ -13,6 +13,7 @@ module ForemanVirtWhoConfigure
     def missing_virt_who_input_messages
       messages = []
       messages.push _('Owner was not provided') unless config.organization_id?
+      messages.push _('Interval was not provided') unless config.interval.present?
       # messages.push _('Cofiguration not stored') unless config.persisted?
       # messages.push _('Service user was not provided') unless config.service_user_id.present?
       messages
@@ -38,7 +39,41 @@ rhsm_username=#{service_user_username}
 rhsm_encrypted_password=$user_password
 rhsm_prefix=/rhsm
 EOF
+
+cat > /etc/cron.d/virt-who-config-#{identifier} << EOF
+#{cron_line}
+EOF
 EOS
+    end
+
+    def cron_line
+      "#{interval_minute} #{interval_hour} * * * virt-who #{virt_who_arguments}"
+    end
+
+    def virt_who_arguments
+      args = "--one-shot"
+      args << "--debug " if config.debug?
+      args
+    end
+
+    def interval_hour
+      if config.interval <= 60
+        "*"
+      elsif config.interval % 60 == 0
+        "*/#{config.interval / 60}"
+      else
+        raise 'unsupporter hour granularity'
+      end
+    end
+
+    def interval_minute
+      if config.interval < 60
+        "*/#{config.interval}"
+      elsif config.interval % 60
+        "0" # potentially generate and save random number to avoid collisions with other reporters
+      else
+        raise 'unsupported minute granularity'
+      end
     end
 
     def identifier
