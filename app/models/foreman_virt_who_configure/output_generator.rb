@@ -20,7 +20,10 @@ module ForemanVirtWhoConfigure
 
     def virt_who_output
 <<EOS
+yum install virt-who
 cr_password=`virt-who-password --password "#{cr_password}" 2> /dev/null`
+user_password=`virt-who-password --password "#{service_user_password}" 2> /dev/null`
+
 cat > /etc/virt-who.d/#{identifier}.conf << EOF
 [#{identifier}]
 type=#{type}
@@ -32,7 +35,7 @@ username=#{cr_username}
 encrypted_password=$cr_password
 rhsm_hostname=#{satellite_url}
 rhsm_username=#{service_user_username}
-rhsm_password=#{service_user_password}
+rhsm_encrypted_password=$user_password
 rhsm_prefix=/rhsm
 EOF
 EOS
