@@ -50,6 +50,18 @@ module ForemanVirtWhoConfigure
 
     attr_writer :current_step
 
+    # mapping of supported CR types
+    # case config.compute_resource
+    #   when Foreman::Model::Libvirt
+    #     'libvirt'
+    #   when Foreman::Model::Vmware
+    #     'esx'
+    #   when Foreman::Model::Ovirt
+    #     'rhevm'
+    #   else
+    #     raise 'unsupported compute resource type'
+    # end
+
     # Foreman 1.11 specifics, can be removed later, otherwise when string does not start with "encrypts" prefix
     # we get 500 when we try to create log message that relies on name method
     def name
