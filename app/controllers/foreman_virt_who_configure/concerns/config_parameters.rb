@@ -6,7 +6,7 @@ module ForemanVirtWhoConfigure
       class_methods do
         def config_params_filter
           Foreman::ParameterFilter.new(::ForemanVirtWhoConfigure::Config).tap do |filter|
-            filter.permit(:interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :listing_mode, :hypervisor_id, :current_step)
+            filter.permit(*ForemanVirtWhoConfigure::Config::PERMITTED_PARAMS)
           end
         end
       end

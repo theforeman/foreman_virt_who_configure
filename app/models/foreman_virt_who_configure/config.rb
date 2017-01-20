@@ -1,5 +1,10 @@
 module ForemanVirtWhoConfigure
   class Config < ActiveRecord::Base
+    PERMITTED_PARAMS = [
+      :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :listing_mode, :hypervisor_id,
+      :current_step, :hypervisor_type, :hypervisor_server, :hypervisor_username, :hypervisor_password, :debug,
+      :satellite_url
+    ]
     include Authorizable
     audited
     validates_lengths_from_database
@@ -15,6 +20,20 @@ module ForemanVirtWhoConfigure
       'configure' => _('Configure')
     }
 
+    HYPERVISOR_IDS = [ 'uuid', 'hwuuid', 'hostname' ]
+
+    HYPERVISOR_TYPES = {
+      'esx' => 'VMware vSphere / vCenter (esx)',
+      'rhevm' => 'Red Hat Virtualization Hypervisor (rhevm)',
+      # 'libvirt' => 'Red Hat Enterprise Linux Hypervisor (vdsm)',
+      'hyperv' => 'Microsoft Hyper-V (hyperv)',
+      'xen' => 'XenServer (xen)',
+      'libvirt' => 'libvirt'
+    }
+
+    include Encryptable
+    encrypts :hypervisor_password
+
     belongs_to :compute_resource
     belongs_to :organization
 
@@ -26,10 +45,28 @@ module ForemanVirtWhoConfigure
 
     # compatibility layer for 1.11 - pre strong params patch
     if self.respond_to?(:attr_accessible)
-      attr_accessible :compute_resource_id, :organization_id, :interval, :current_step
+      attr_accessible *PERMITTED_PARAMS
     end
 
     attr_writer :current_step
+
+    # mapping of supported CR types
+    # case config.compute_resource
+    #   when Foreman::Model::Libvirt
+    #     'libvirt'
+    #   when Foreman::Model::Vmware
+    #     'esx'
+    #   when Foreman::Model::Ovirt
+    #     'rhevm'
+    #   else
+    #     raise 'unsupported compute resource type'
+    # end
+
+    # Foreman 1.11 specifics, can be removed later, otherwise when string does not start with "encrypts" prefix
+    # we get 500 when we try to create log message that relies on name method
+    def name
+      title
+    end
 
     def title
       compute_resource.name if compute_resource
@@ -78,6 +115,15 @@ module ForemanVirtWhoConfigure
 
     def wizard_completed?
       new_record? && current_step.blank?
+    end
+
+    def virt_who_config_file
+      generator = OutputGenerator.new(self)
+      if generator.ready_for_virt_who_output?
+        generator.virt_who_output
+      else
+        generator.missing_virt_who_input_messages.join("\n")
+      end
     end
   end
 end

@@ -1,4 +1,3 @@
-<div class="tab-pane <%= show_partial_wizard(step) %>" id="config_schedule">
-  <!-- TODO: remove placeholder text -->
-  Schedule
+<div class="tab-pane <%= show_config_partial_wizard(step) %>" id="config_schedule">
+  <%= text_f f, :interval, :help_inline => _("How often to check connected hypervisors for changes (minutes)? Also affects how often a mapping is reported.") %>
 </div>

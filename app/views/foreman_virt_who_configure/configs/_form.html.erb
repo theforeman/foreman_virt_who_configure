@@ -3,8 +3,8 @@
   <div class="tab-content">
 
     <%= select_f f, :compute_resource_id, ComputeResource.authorized(:view_compute_resources), :id, :to_s %>
-    <%= select_f f, :organization_id, Organization.authorized(:view_organizations), :id, :to_s %>
-    <%= select_f f, :service_user_id, ServiceUser.authorized(:view_service_users), :id, :username %>
+    <%= select_f f, :organization_id, Organization.authorized(:view_organizations), :id, :to_s, {}, :label => _('Owner') %>
+    <%= select_f f, :hypervisor_id, ForemanVirtWhoConfigure::Config::HYPERVISOR_IDS, :to_s, :to_s %>
     <%= text_f f, :interval, :help_inline => _("Virt-who run interval in minutes") %>
 
   </div>

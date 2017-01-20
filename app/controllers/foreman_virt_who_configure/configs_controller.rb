@@ -23,6 +23,11 @@ module ForemanVirtWhoConfigure
 
     def new
       @config = Config.new
+      if params.key?(:organization_id)
+        @config.organization = Organization.authorized(:view_organizations).where(:id => params[:organization_id]).first
+      end
+      @config.organization ||= Organization.current
+      @config.satellite_url ||= Setting.foreman_url
     end
 
     def create
