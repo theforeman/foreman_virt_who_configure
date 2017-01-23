@@ -1,3 +1,17 @@
 <div class="tab-pane <%= show_config_partial_wizard(step) %>" id="config_configure">
-  <pre><%= @config.virt_who_config_file %></pre>
+  <div class="clearfix">
+  <div class="form-group">
+    <div class="row wizard">
+      <div class="col-md-12">
+        <label><%= _("Please download and copy this configuration script to safe directory on host which will run virt-who reporting, preferably Satellite host and then run it.") %></label>
+      </div>
+    </div>
+
+    <div class="row wizard">
+      <div class="col-md-8">
+        <pre class="terminal"><%= @config.virt_who_config_file %></pre>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>
