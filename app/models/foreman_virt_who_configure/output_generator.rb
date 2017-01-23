@@ -110,12 +110,10 @@ EOS
     end
 
     def service_user_username
-      return 'admin' # waiting for service user automation
       config.service_user.username
     end
 
     def service_user_password
-      return 'encrypted password' # waiting for service user automation
       config.service_user.encrypted_password
     end
 

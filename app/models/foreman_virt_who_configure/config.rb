@@ -19,7 +19,7 @@ module ForemanVirtWhoConfigure
       'connection' => _('Connection')
     }
 
-    HYPERVISOR_IDS = [ 'uuid', 'hwuuid', 'hostname' ]
+    HYPERVISOR_IDS = [ 'hostname', 'uuid', 'hwuuid' ]
 
     HYPERVISOR_TYPES = {
       'esx' => 'VMware vSphere / vCenter (esx)',
@@ -51,6 +51,23 @@ module ForemanVirtWhoConfigure
 
     attr_writer :current_step
 
+    after_create :create_service_user
+
+    def create_service_user
+      password = User.random_password
+      service_user = self.build_service_user
+      user = service_user.build_user
+      user.auth_source = AuthSourceHidden.first
+      user.password = password
+      user.login = "virt_who_reporter_#{self.id}"
+      user.save!(:validate => false)
+
+      service_user.encrypted_password = password
+      service_user.save!
+
+      self.update_attribute :service_user_id, service_user.id
+    end
+
     # mapping of supported CR types
     # case config.compute_resource
     #   when Foreman::Model::Libvirt
@@ -70,7 +87,7 @@ module ForemanVirtWhoConfigure
     end
 
     def title
-      compute_resource.name if compute_resource
+      compute_resource ? compute_resource.name : hypervisor_server
     end
 
     # TODO convert to hours if needed
