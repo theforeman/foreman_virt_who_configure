@@ -17,7 +17,7 @@ module ForemanVirtWhoConfigure
     end
 
     def show_config_partial_wizard(step)
-      @config.current_step == step ? '' : 'hidden'
+      @config.current_step == step || @config.persisted? ? '' : 'hidden'
     end
 
     def previous_config_link(form)
@@ -47,6 +47,16 @@ module ForemanVirtWhoConfigure
         'xen' => _('Account name by which virt-who is to connect to the hypervisor.'),
         'libvirt' => _('Account name by which virt-who is to connect to the hypervisor.')
       }
+    end
+
+    def virt_who_config_form_tabs
+      content_tag :ul, nil, :class => 'nav nav-tabs', :data => { :tabs => 'tabs' } do
+        Config::WIZARD_STEPS.map do |name, label|
+          content_tag :li, nil, :class => Config.new.step_to_i(name) == 1 ? 'active' : '' do
+            link_to label, "#config_#{name}", :data => { :toggle => 'tab' }
+          end
+        end.join.html_safe
+      end
     end
   end
 end

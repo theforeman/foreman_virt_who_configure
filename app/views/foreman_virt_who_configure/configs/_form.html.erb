@@ -1,11 +1,13 @@
 <%= form_for @config, :as => 'foreman_virt_who_configure_config', :url => (@config.new_record? ? foreman_virt_who_configure_configs_path : foreman_virt_who_configure_config_path(:id => @config)) do |f| %>
   <%= base_errors_for @config %>
+
+  <%= virt_who_config_form_tabs %>
+
   <div class="tab-content">
 
-    <%= select_f f, :compute_resource_id, ComputeResource.authorized(:view_compute_resources), :id, :to_s %>
-    <%= select_f f, :organization_id, Organization.authorized(:view_organizations), :id, :to_s, {}, :label => _('Owner') %>
-    <%= select_f f, :hypervisor_id, ForemanVirtWhoConfigure::Config::HYPERVISOR_IDS, :to_s, :to_s %>
-    <%= text_f f, :interval, :help_inline => _("Virt-who run interval in minutes") %>
+    <% @config.steps.each do |step| %>
+      <%= render :partial => "foreman_virt_who_configure/configs/steps/#{step.downcase.tr(' ', '_')}_form", :locals => {:f => f, :step => step} %>
+    <% end %>
 
   </div>
 

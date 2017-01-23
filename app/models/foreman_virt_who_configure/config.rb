@@ -16,8 +16,7 @@ module ForemanVirtWhoConfigure
     WIZARD_STEPS = {
       'general_information' => _('General information'),
       'schedule' => _('Schedule'),
-      'connection' => _('Connection'),
-      'configure' => _('Configure')
+      'connection' => _('Connection')
     }
 
     HYPERVISOR_IDS = [ 'uuid', 'hwuuid', 'hostname' ]
