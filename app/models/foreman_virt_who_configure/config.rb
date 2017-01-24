@@ -52,20 +52,31 @@ module ForemanVirtWhoConfigure
     attr_writer :current_step
 
     after_create :create_service_user
+    after_destroy :destroy_service_user
 
     def create_service_user
       password = User.random_password
       service_user = self.build_service_user
       user = service_user.build_user
-      user.auth_source = AuthSourceHidden.first
+      user.auth_source = AuthSourceHiddenWithAuthentication.first
       user.password = password
       user.login = "virt_who_reporter_#{self.id}"
+      user.organizations = [ self.organization ]
+      user.roles = [ Role.where(:name => 'Virt-who Reporter') ]
+      user.valid? # to trigger password hashing
       user.save!(:validate => false)
 
       service_user.encrypted_password = password
       service_user.save!
 
       self.update_attribute :service_user_id, service_user.id
+    end
+
+    def destroy_service_user
+      # skip validation that prevents hidden user deletion
+      user = service_user.user
+      service_user.destroy
+      user.delete
     end
 
     # mapping of supported CR types

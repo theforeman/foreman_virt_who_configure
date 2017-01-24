@@ -25,8 +25,8 @@ module ForemanVirtWhoConfigure
           permission :view_virt_who_config, :'foreman_virt_who_configure/hosts' => [:index], :resource => 'ForemanVirtWhoConfigure::Config'
         end
 
-        # role 'ForemanVirtWhoConfigure', [:view_foreman_virt_who_configure]
-        # TODO
+        role 'Virt-who Reporter', [ :create_content_hosts, :edit_content_hosts, :view_lifecycle_environments, :my_organizations ]
+        # TODO more
 
         # add menu entry
         menu :top_menu, :virt_who_configs,
