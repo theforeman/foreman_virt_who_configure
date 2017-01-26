@@ -62,7 +62,7 @@ module ForemanVirtWhoConfigure
       user.password = password
       user.login = "virt_who_reporter_#{self.id}"
       user.organizations = [ self.organization ]
-      user.roles = [ Role.where(:name => 'Virt-who Reporter') ]
+      user.roles = [ Role.where(:name => 'Virt-who Reporter').first ]
       user.valid? # to trigger password hashing
       user.save!(:validate => false)
 

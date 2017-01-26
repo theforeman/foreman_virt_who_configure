@@ -3,10 +3,13 @@ module ForemanVirtWhoConfigure
     module ConfigParameters
       extend ActiveSupport::Concern
 
-      class_methods do
-        def config_params_filter
-          Foreman::ParameterFilter.new(::ForemanVirtWhoConfigure::Config).tap do |filter|
-            filter.permit(*ForemanVirtWhoConfigure::Config::PERMITTED_PARAMS)
+      # 6.2 compatibility layer
+      if respond_to?(:class_methods)
+        class_methods do
+          def config_params_filter
+            Foreman::ParameterFilter.new(::ForemanVirtWhoConfigure::Config).tap do |filter|
+              filter.permit(*ForemanVirtWhoConfigure::Config::PERMITTED_PARAMS)
+            end
           end
         end
       end
