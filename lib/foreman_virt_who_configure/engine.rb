@@ -28,8 +28,20 @@ module ForemanVirtWhoConfigure
           permission :destroy_virt_who_config, :'foreman_virt_who_configure/configs' => [:destroy], :resource => 'ForemanVirtWhoConfigure::Config'
         end
 
-        role 'Virt-who Reporter', [ :create_content_hosts, :edit_content_hosts, :view_lifecycle_environments, :my_organizations ]
-        # TODO more
+        reporter_permissions = [ :create_hosts, :edit_hosts, :view_lifecycle_environments, :my_organizations ]
+        begin
+          if Permission.where(:name => ['create_content_hosts', 'edit_content_hosts']).count > 0
+            # old Katello permissions detected (6.2 era)
+            reporter_permissions += [:create_content_hosts, :edit_content_hosts]
+          end
+        rescue => e
+          # permissions could not be loaded yet, probably a migration run
+          logger.debug "Skipping permissions detection because of #{e.message}"
+        end
+        role 'Virt-who Reporter', reporter_permissions
+
+        role 'Virt-who Manager', [ :view_virt_who_config, :create_virt_who_config, :edit_virt_who_config, :destroy_virt_who_config ]
+        role 'Virt-who Viewer', [ :view_virt_who_config ]
 
         # add menu entry
         menu :top_menu, :virt_who_configs,
@@ -62,8 +74,6 @@ module ForemanVirtWhoConfigure
     # Include concerns in this config.to_prepare block
     config.to_prepare do
       begin
-        Host::Managed.send(:include, ForemanVirtWhoConfigure::HostExtensions)
-        HostsHelper.send(:include, ForemanVirtWhoConfigure::HostsHelperExtensions)
       rescue => e
         Rails.logger.warn "ForemanVirtWhoConfigure: skipping engine hook (#{e})"
       end
