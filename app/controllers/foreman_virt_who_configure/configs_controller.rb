@@ -2,7 +2,7 @@ module ForemanVirtWhoConfigure
   class ConfigsController < ::ForemanVirtWhoConfigure::ApplicationController
     include Foreman::Controller::AutoCompleteSearch
     include ForemanVirtWhoConfigure::Concerns::ConfigParameters if defined?(Foreman::ParameterFilter)
-    before_action :find_resource, :only => [:edit, :update, :destroy]
+    before_action :find_resource, :only => [:edit, :update, :destroy, :show]
 
     # in 1.11 we can't use welcome from application controller since it does not work with namespaces
     def welcome
@@ -26,6 +26,7 @@ module ForemanVirtWhoConfigure
       if params.key?(:organization_id)
         @config.organization = Organization.authorized(:view_organizations).where(:id => params[:organization_id]).first
       end
+      @config.hypervisor_type ||= Config::HYPERVISOR_DEFAULT_TYPE
       @config.organization ||= Organization.current
       @config.satellite_url ||= Setting.foreman_url
     end
@@ -33,7 +34,7 @@ module ForemanVirtWhoConfigure
     def create
       @config = Config.new(config_params)
       if @config.wizard_completed? && @config.save
-        process_success :success_redirect => foreman_virt_who_configure_configs_path
+        process_success :success_redirect => foreman_virt_who_configure_config_path(@config)
       else
         if @config.valid?
           render 'new'
@@ -42,6 +43,10 @@ module ForemanVirtWhoConfigure
           process_error :object => @config
         end
       end
+    end
+
+    def show
+
     end
 
     def edit

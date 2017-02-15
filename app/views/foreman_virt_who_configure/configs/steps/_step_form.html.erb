@@ -1,4 +1,4 @@
-<%= javascript 'foreman_virt_who_configure/config_edit' %>
+<% javascript 'foreman_virt_who_configure/config_edit' %>
 
 <%= form_for @config, :as => 'foreman_virt_who_configure_config', :url => (@config.new_record? ? foreman_virt_who_configure_configs_path : foreman_virt_who_configure_config_path(:id => @config)) do |f| %>
 
