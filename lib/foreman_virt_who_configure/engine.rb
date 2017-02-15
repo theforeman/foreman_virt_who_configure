@@ -46,7 +46,7 @@ module ForemanVirtWhoConfigure
     assets_to_precompile =
       Dir.chdir(root) do
         Dir['app/assets/javascripts/foreman_virt_who_configure/**/*', 'app/assets/stylesheets/foreman_virt_who_configure/**/*'].map do |f|
-          f.split(File::SEPARATOR, 4).last
+          f.split(File::SEPARATOR, 4).last.gsub(/\.scss\Z/, '')
         end
       end
     initializer 'foreman_virt_who_configure.assets.precompile' do |app|
