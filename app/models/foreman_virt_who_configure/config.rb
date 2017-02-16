@@ -110,6 +110,10 @@ module ForemanVirtWhoConfigure
       steps.index(step_name) + 1
     end
 
+    def step_name(step_key)
+      WIZARD_STEPS[step_key]
+    end
+
     def steps
       WIZARD_STEPS.keys
     end

@@ -3,12 +3,15 @@
 <%= form_for @config, :as => 'foreman_virt_who_configure_config', :url => (@config.new_record? ? foreman_virt_who_configure_configs_path : foreman_virt_who_configure_config_path(:id => @config)) do |f| %>
   <%= base_errors_for @config %>
 
-  <%= virt_who_config_form_tabs %>
-
   <div class="tab-content">
 
     <% @config.steps.each do |step| %>
-      <%= render :partial => "foreman_virt_who_configure/configs/steps/#{step.downcase.tr(' ', '_')}_form", :locals => {:f => f, :step => step} %>
+      <fieldset>
+        <h3><%= @config.step_name(step) %></h3>
+        <hr>
+        <%= render :partial => "foreman_virt_who_configure/configs/steps/#{step.downcase.tr(' ', '_')}_form", :locals => { :f => f } %>
+      </fieldset>
+
     <% end %>
 
   </div>

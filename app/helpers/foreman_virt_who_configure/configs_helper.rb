@@ -16,17 +16,6 @@ module ForemanVirtWhoConfigure
       end
     end
 
-    def show_config_partial_wizard(step)
-      @config.current_step == step || @config.persisted? ? '' : 'hidden'
-    end
-
-    def previous_config_link(form)
-      previous = content_tag(:span, :class => 'glyphicon glyphicon-chevron-left') {}
-      content_tag(:div, :class => 'pull-left') do
-        link_to((previous).html_safe, '#', :class => 'btn btn-default', :onclick => "previous_step('#{@config.previous_step}')")
-      end
-    end
-
     def hypervisor_server_help_data
       {
         'esx' => _('VMware vCenter server’s fully qualified host name or IP address.'),

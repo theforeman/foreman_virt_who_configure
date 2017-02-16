@@ -1,6 +1,5 @@
-<div class="tab-pane active <%= show_config_partial_wizard(step) %>" id="config_general_information">
+<div id="config_general_information">
   <% if f.object.organization_id.present? %>
-    <%#= select_f f, :organization_id, Organization.authorized(:view_organizations), :id, :to_s, {}, :label => _('Owner'), :disabled => true %>
     <%= f.hidden_field :organization_id %>
   <% else %>
     <%= select_f f, :organization_id, Organization.authorized(:view_organizations), :id, :to_s, {}, :label => _('Owner') %>

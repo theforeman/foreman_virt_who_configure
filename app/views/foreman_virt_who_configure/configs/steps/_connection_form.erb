@@ -1,4 +1,4 @@
-<div class="tab-pane <%= show_config_partial_wizard(step) %>" id="config_connection">
+<div id="config_connection">
   <%= text_f f, :satellite_url, :help_block => _('Satellite Server’s fully-qualified host name, for example: satellite.example.com') %>
   <%= select_f f, :hypervisor_id, ForemanVirtWhoConfigure::Config::HYPERVISOR_IDS, :to_s, :to_s, {}, :label => _('Hypervisor ID'),
                :help_block => _("Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.
