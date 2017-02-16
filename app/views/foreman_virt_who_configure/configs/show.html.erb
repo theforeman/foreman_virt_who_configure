@@ -4,7 +4,12 @@
   <div class="form-group">
     <div class="row">
       <div class="col-md-12">
-        <label><%= _("Please download and copy this configuration script to safe directory on host which will run virt-who reporting, preferably Satellite host and then run it.") %></label>
+        <label><%= _("Run this script on the target host which will run virt-who reporting, preferably Satellite host:") %></label>
+        <p>
+          <%= _("1. Copy this configuration script to a safe directory on the host.") %></br>
+          <%= _("2. Make the script executable and run it on the host.") %></br>
+          <%= _("3. Delete the script on the host.") %></br>
+        </p>
       </div>
     </div>
 
