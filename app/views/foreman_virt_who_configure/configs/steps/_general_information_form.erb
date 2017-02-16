@@ -6,7 +6,7 @@
   <% end %>
 
   <%= select_f f, :hypervisor_type, ForemanVirtWhoConfigure::Config::HYPERVISOR_TYPES, :first, :last %>
-  <%= text_f f, :hypervisor_server, :help_block => hypervisor_server_help_data[f.object.hypervisor_type].html_safe, :data => { :help => hypervisor_server_help_data } %>
-  <%= text_f f, :hypervisor_username, :help_block => hypervisor_username_help_data[f.object.hypervisor_type].html_safe, :data => { :help => hypervisor_username_help_data }  %>
-  <%= password_f f, :hypervisor_password, :value => f.object.hypervisor_password, :help_block => _('Account password by which virt-who is to connect to the hypervisor instance.') %>
+  <%= text_f f, :hypervisor_server, :help_inline => popover('', hypervisor_server_help_data[f.object.hypervisor_type].html_safe), :data => { :help => hypervisor_server_help_data } %>
+  <%= text_f f, :hypervisor_username, :help_inline => popover('', hypervisor_username_help_data[f.object.hypervisor_type].html_safe), :data => { :help => hypervisor_username_help_data }  %>
+  <%= password_f f, :hypervisor_password, :value => f.object.hypervisor_password, :help_inline => popover('', _('Account password by which virt-who is to connect to the hypervisor instance.')) %>
 </div>

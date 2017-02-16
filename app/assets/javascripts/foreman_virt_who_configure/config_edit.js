@@ -4,7 +4,7 @@ $(document).ready(function () {
     $.each(['hypervisor_server', 'hypervisor_username'], function(index, value) {
       var element = $('#foreman_virt_who_configure_config_' + value)
       var help = element.data("help")[selected_type];
-      element.siblings(' span.help-block').html(help)
+      element.parent().siblings('span.help-block.help-inline').children('a[rel=popover]').attr('data-content', help);
     });
   });
 });

@@ -1,10 +1,10 @@
 <div id="config_connection">
-  <%= text_f f, :satellite_url, :help_block => _('Satellite Server’s fully-qualified host name, for example: satellite.example.com') %>
+  <%= text_f f, :satellite_url, :help_inline => popover('', _('Satellite Server’s fully-qualified host name, for example: satellite.example.com')) %>
   <%= select_f f, :hypervisor_id, ForemanVirtWhoConfigure::Config::HYPERVISOR_IDS, :to_s, :to_s, {}, :label => _('Hypervisor ID'),
-               :help_block => _("Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.
+               :help_inline => popover('', _("Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.
                                   Note that some virtualization backends don't have all of them implemented.
                                   Default is <b>uuid</b>, which we also recommend to use. <b>hostname</b> provides more meaningful hypervisor
                                   names but can cause duplicated hypervisor registrations if the host is renamed. <b>hwuuid</b> is applicable to esx and rhevm only.
-                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager.").html_safe %>
-  <%= checkbox_f f, :debug, :help_inline => _('Do you want to enable debugging output?'), :label => '&nbsp;'.html_safe %>
+                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager.").html_safe) %>
+  <%= checkbox_f f, :debug, :label => _('Do you want to enable debugging output?') %>
 </div>
