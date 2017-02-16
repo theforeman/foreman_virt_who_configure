@@ -32,6 +32,16 @@ module ForemanVirtWhoConfigure
 
     HYPERVISOR_DEFAULT_TYPE = 'esx'
 
+    AVAILABLE_INTERVALS = {
+      '60' => _('Every hour'),
+      '120' => _('Every 2 hours'),
+      '240' => _('Every 4 hours'),
+      '480' => _('Every 8 hours'),
+      '720' => _('Every 12 hours'),
+    }
+
+    DEFAULT_INTERVAL = 120
+
     include Encryptable
     encrypts :hypervisor_password
 
