@@ -21,7 +21,7 @@ module ForemanVirtWhoConfigure
 
     def virt_who_output
 <<EOS
-yum install virt-who
+yum install -y virt-who
 cr_password=`virt-who-password --password "#{cr_password}" 2> /dev/null`
 user_password=`virt-who-password --password "#{service_user_password}" 2> /dev/null`
 
