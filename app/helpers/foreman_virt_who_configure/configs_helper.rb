@@ -1,21 +1,5 @@
 module ForemanVirtWhoConfigure
   module ConfigsHelper
-    def submit_or_cancel_config(form, overwrite = nil, args = { })
-      args[:cancel_path] ||= send("#{controller_name}_path")
-      content_tag(:div, :class => "clearfix") do
-        content_tag(:div, :class => "form-actions") do
-          text    = overwrite ? overwrite : _("Submit")
-          options = {:class => "btn btn-primary"}
-          options.merge! :'data-id' => form_to_submit_id(form) unless options.key?(:'data-id')
-          previous = form.object.first_step? ? ' ' : previous_config_link(form)
-          cancel_and_submit = content_tag(:div, :class => "pull-right") do
-            link_to(_("Cancel"), args[:cancel_path], :class => "btn btn-default") + ' ' + form.submit(text, options)
-          end
-          (previous + cancel_and_submit).html_safe
-        end
-      end
-    end
-
     def hypervisor_server_help_data
       {
         'esx' => _('VMware vCenter server’s fully qualified host name or IP address.'),
@@ -36,16 +20,6 @@ module ForemanVirtWhoConfigure
         'xen' => _('Account name by which virt-who is to connect to the hypervisor.'),
         'libvirt' => _('Account name by which virt-who is to connect to the hypervisor.')
       }
-    end
-
-    def virt_who_config_form_tabs
-      content_tag :ul, nil, :class => 'nav nav-tabs', :data => { :tabs => 'tabs' } do
-        Config::WIZARD_STEPS.map do |name, label|
-          content_tag :li, nil, :class => Config.new.step_to_i(name) == 1 ? 'active' : '' do
-            link_to label, "#config_#{name}", :data => { :toggle => 'tab' }
-          end
-        end.join.html_safe
-      end
     end
   end
 end

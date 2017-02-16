@@ -2,7 +2,7 @@ module ForemanVirtWhoConfigure
   class Config < ActiveRecord::Base
     PERMITTED_PARAMS = [
       :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :listing_mode, :hypervisor_id,
-      :current_step, :hypervisor_type, :hypervisor_server, :hypervisor_username, :hypervisor_password, :debug,
+      :hypervisor_type, :hypervisor_server, :hypervisor_username, :hypervisor_password, :debug,
       :satellite_url
     ]
     include Authorizable
@@ -48,8 +48,6 @@ module ForemanVirtWhoConfigure
     if self.respond_to?(:attr_accessible)
       attr_accessible *PERMITTED_PARAMS
     end
-
-    attr_writer :current_step
 
     after_create :create_service_user
     after_destroy :destroy_service_user
@@ -106,48 +104,12 @@ module ForemanVirtWhoConfigure
       _("every %s minutes") % self.interval
     end
 
-    def step_to_i(step_name)
-      steps.index(step_name) + 1
-    end
-
     def step_name(step_key)
       WIZARD_STEPS[step_key]
     end
 
     def steps
       WIZARD_STEPS.keys
-    end
-
-    def current_step
-      @current_step || steps.first
-    end
-
-    def previous_step
-      steps[steps.index(current_step) - 1]
-    end
-
-    def next_step
-      steps[steps.index(current_step) + 1]
-    end
-
-    def rewind_step
-      @current_step = previous_step
-    end
-
-    def first_step?
-      current_step == steps.first
-    end
-
-    def last_step?
-      current_step == steps.last
-    end
-
-    def step_index
-      wizard_completed? ? steps.index(steps.last) : steps.index(current_step) + 1
-    end
-
-    def wizard_completed?
-      new_record? && current_step.blank?
     end
 
     def virt_who_config_file
