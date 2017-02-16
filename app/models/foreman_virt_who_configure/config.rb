@@ -56,7 +56,7 @@ module ForemanVirtWhoConfigure
 
     # compatibility layer for 1.11 - pre strong params patch
     if self.respond_to?(:attr_accessible)
-      attr_accessible *PERMITTED_PARAMS
+      attr_accessible(*PERMITTED_PARAMS)
     end
 
     after_create :create_service_user
