@@ -21,10 +21,13 @@ module ForemanVirtWhoConfigure
 
     def virt_who_output
 <<EOS
+echo "Installing virt-who.."
 yum install -y virt-who
+echo "Encrypting password.."
 cr_password=`virt-who-password --password "#{cr_password}" 2> /dev/null`
 user_password=`virt-who-password --password "#{service_user_password}" 2> /dev/null`
 
+echo "Creating virt-who configuration.."
 cat > /etc/virt-who.d/#{identifier}.conf << EOF
 [#{identifier}]
 type=#{type}
@@ -40,9 +43,12 @@ rhsm_encrypted_password=$user_password
 rhsm_prefix=/rhsm
 EOF
 
+echo "Creating cronjob entry.."
 cat > /etc/cron.d/virt-who-config-#{identifier} << EOF
 #{cron_line}
 EOF
+
+echo "Done."
 EOS
     end
 
