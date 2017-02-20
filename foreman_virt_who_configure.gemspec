@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/theforeman/foreman_virt_who_configure'
   s.summary     = 'A plugin to make virt-who configuration easy'
   s.description = 'A plugin to make virt-who configuration easy'
+  s.license     = 'GPLv3'
 
   s.files = Dir['{app,config,db,lib,locale}/**/*'] + ['LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
