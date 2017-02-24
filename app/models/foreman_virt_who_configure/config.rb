@@ -69,7 +69,8 @@ module ForemanVirtWhoConfigure
     validates :hypervisor_id, :inclusion => HYPERVISOR_IDS
     validates :interval, :inclusion => AVAILABLE_INTERVALS.keys.map(&:to_i)
     validates_lengths_from_database
-    validates :satellite_url, :format => { :with => URI.regexp }
+
+    before_validation :remove_whitespaces
 
     def create_service_user
       password = User.random_password
@@ -138,6 +139,12 @@ module ForemanVirtWhoConfigure
       else
         generator.missing_virt_who_input_messages.join("\n")
       end
+    end
+
+    private
+
+    def remove_whitespaces
+      satellite_url.strip!
     end
   end
 end
