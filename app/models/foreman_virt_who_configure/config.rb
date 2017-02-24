@@ -143,7 +143,7 @@ module ForemanVirtWhoConfigure
     private
 
     def remove_whitespaces
-      satellite_url.strip!
+      satellite_url.strip! if satellite_url.present?
     end
   end
 end
