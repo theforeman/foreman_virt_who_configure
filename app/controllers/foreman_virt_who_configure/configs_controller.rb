@@ -6,7 +6,8 @@ module ForemanVirtWhoConfigure
 
     # in 1.11 we can't use welcome from application controller since it does not work with namespaces
     def welcome
-      if model_of_controller.first.nil?
+      scope = apply_organization_filter(model_of_controller)
+      if scope.first.nil?
         @welcome = true
         render :action => :welcome
       end
@@ -19,6 +20,7 @@ module ForemanVirtWhoConfigure
         base = resource_base.search_for(params[:search], :order => params[:order])
         @configs = base.paginate(:page => params[:page], :per_page => params[:per_page])
       end
+      @configs = apply_organization_filter(@configs)
     end
 
     def new
@@ -77,6 +79,16 @@ module ForemanVirtWhoConfigure
       else
         params[:foreman_virt_who_configure_config]
       end
+    end
+
+    private
+
+    def apply_organization_filter(scope)
+      Organization.current ? scope.where(:organization_id => Organization.current) : scope
+    end
+
+    def resource_scope(*args)
+      apply_organization_filter(super)
     end
   end
 end
