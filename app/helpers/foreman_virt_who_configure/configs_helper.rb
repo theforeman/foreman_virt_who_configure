@@ -3,11 +3,11 @@ module ForemanVirtWhoConfigure
     def hypervisor_server_help_data
       {
         'esx' => _('VMware vCenter server’s fully qualified host name or IP address.'),
-        'rhevm' => _('Red Hat Virtualization Manager’s fully qualified host name or IP address. For example, https://hostname:443/ovirt-engine/ for v4, https://hostname_or_IP:443 for v3'),
+        'rhevm' => _('Red Hat Virtualization Manager’s fully qualified host name or IP address. For example, <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https://hostname_or_IP:443</code> for v3'),
         # 'vdsm' => 'Red Hat Enterprise Linux Hypervisor (vdsm)',
         'hyperv' => _('Microsoft Hyper-V fully qualified host name or IP address.'),
         'xen' => _('XenServer server’s fully qualified host name or IP address.'),
-        'libvirt' => _('Libvirt server’s fully qualified host name or IP address.')
+        'libvirt' => _('Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root\'s SSH key on target host for a user specified at hypervisor username field')
       }
     end
 
