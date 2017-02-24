@@ -118,9 +118,8 @@ module ForemanVirtWhoConfigure
       compute_resource ? compute_resource.name : hypervisor_server
     end
 
-    # TODO convert to hours if needed
     def humanized_interval
-      _("every %s minutes") % self.interval
+      _("every %s hours") % (self.interval / 60)
     end
 
     def step_name(step_key)
