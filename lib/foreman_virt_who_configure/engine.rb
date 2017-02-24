@@ -38,7 +38,12 @@ module ForemanVirtWhoConfigure
           # permissions could not be loaded yet, probably a migration run
           logger.debug "Skipping permissions detection because of #{e.message}"
         end
-        role 'Virt-who Reporter', reporter_permissions
+
+        begin
+          role 'Virt-who Reporter', reporter_permissions
+        rescue ArgumentError => e
+          # could not configure role, some persmissions are missing
+        end
 
         role 'Virt-who Manager', [ :view_virt_who_config, :create_virt_who_config, :edit_virt_who_config, :destroy_virt_who_config ]
         role 'Virt-who Viewer', [ :view_virt_who_config ]
