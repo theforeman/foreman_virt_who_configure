@@ -73,10 +73,7 @@ module ForemanVirtWhoConfigure
 
     # Include concerns in this config.to_prepare block
     config.to_prepare do
-      begin
-      rescue => e
-        Rails.logger.warn "ForemanVirtWhoConfigure: skipping engine hook (#{e})"
-      end
+      SSO::METHODS.unshift SSO::BasicWithHidden
     end
 
     rake_tasks do
