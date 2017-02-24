@@ -96,7 +96,7 @@ EOS
     end
 
     def owner
-      config.organization.name
+      config.organization.label
     end
 
     def type
