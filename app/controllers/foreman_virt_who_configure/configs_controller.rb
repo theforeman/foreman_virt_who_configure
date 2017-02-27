@@ -1,7 +1,7 @@
 module ForemanVirtWhoConfigure
   class ConfigsController < ::ForemanVirtWhoConfigure::ApplicationController
     include Foreman::Controller::AutoCompleteSearch
-    include ForemanVirtWhoConfigure::Concerns::ConfigParameters if defined?(Foreman::ParameterFilter)
+    include ForemanVirtWhoConfigure::Concerns::ConfigParameters if Foreman::Version.new.short >= '1.13'
     before_action :find_resource, :only => [:edit, :update, :destroy, :show]
 
     # in 1.11 we can't use welcome from application controller since it does not work with namespaces
