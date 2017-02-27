@@ -1,4 +1,4 @@
-require 'deface'
+# require 'deface'
 
 module ForemanVirtWhoConfigure
   class Engine < ::Rails::Engine
@@ -7,7 +7,8 @@ module ForemanVirtWhoConfigure
     config.autoload_paths += Dir["#{config.root}/app/controllers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/helpers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/models/concerns"]
-    config.autoload_paths += Dir["#{config.root}/app/overrides"]
+    # config.autoload_paths += Dir["#{config.root}/app/overrides"]
+    config.autoload_paths += Dir["#{config.root}/test/"]
 
     # Add any db migrations
     initializer 'foreman_virt_who_configure.load_app_instance_data' do |app|
@@ -34,15 +35,14 @@ module ForemanVirtWhoConfigure
             # old Katello permissions detected (6.2 era)
             reporter_permissions += [:create_content_hosts, :edit_content_hosts]
           end
-        rescue => e
-          # permissions could not be loaded yet, probably a migration run
-          logger.debug "Skipping permissions detection because of #{e.message}"
+        rescue ActiveRecord::StatementInvalid
+          # permissions could not be loaded, probably migration hasn't been run yet
         end
 
         begin
           role 'Virt-who Reporter', reporter_permissions
-        rescue ArgumentError => e
-          # could not configure role, some persmissions are missing
+        rescue ArgumentError
+          # could not configure role, some permissions are missing
         end
 
         role 'Virt-who Manager', [ :view_virt_who_config, :create_virt_who_config, :edit_virt_who_config, :destroy_virt_who_config ]
