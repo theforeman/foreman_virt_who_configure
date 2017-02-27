@@ -76,7 +76,7 @@ module ForemanVirtWhoConfigure
       password = User.random_password
       service_user = self.build_service_user
       user = service_user.build_user
-      user.auth_source = AuthSourceHiddenWithAuthentication.first
+      user.auth_source = AuthSourceHiddenWithAuthentication.default
       user.password = password
       user.login = "virt_who_reporter_#{self.id}"
       user.organizations = [ self.organization ]
