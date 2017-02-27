@@ -8,5 +8,6 @@ FactoryGirl.define do
     hypervisor_username 'root'
     hypervisor_password 'changeme'
     satellite_url 'foreman.example.com'
+    listing_mode ForemanVirtWhoConfigure::Config::UNLIMITED
   end
 end

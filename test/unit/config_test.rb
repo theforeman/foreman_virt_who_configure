@@ -35,5 +35,30 @@ module ForemanVirtWhoConfigure
         end
       end
     end
+
+    describe 'listing mode' do
+      test 'whitelisting mode requires blacklist to be set' do
+        config.listing_mode = ForemanVirtWhoConfigure::Config::WHITELIST
+        refute config.valid?
+        assert_includes config.errors.keys, :whitelist
+
+        config.whitelist = 'a.host'
+        assert config.valid?
+      end
+
+      test 'blacklisting mode requires blacklist to be set' do
+        config.listing_mode = ForemanVirtWhoConfigure::Config::BLACKLIST
+        refute config.valid?
+        assert_includes config.errors.keys, :blacklist
+
+        config.blacklist = 'a.host'
+        assert config.valid?
+      end
+
+      test 'whitelisting accepts regular expressions' do
+        config.whitelist = '^some.*'
+        assert config.valid?
+      end
+    end
   end
 end

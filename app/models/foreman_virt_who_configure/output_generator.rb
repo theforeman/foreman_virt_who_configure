@@ -36,7 +36,7 @@ owner=#{owner}
 env=Library
 server=#{cr_server}
 username=#{cr_username}
-encrypted_password=$cr_password
+encrypted_password=$cr_password#{filtering}
 rhsm_hostname=#{satellite_url}
 rhsm_username=#{service_user_username}
 rhsm_encrypted_password=$user_password
@@ -50,6 +50,25 @@ EOF
 
 echo "Done."
 EOS
+    end
+
+    def filtering
+      case config.listing_mode.to_i
+        when ForemanVirtWhoConfigure::Config::UNLIMITED
+          return ''
+        when ForemanVirtWhoConfigure::Config::WHITELIST
+          return filtering_line_sanitized('filter_hosts', config.whitelist)
+        when ForemanVirtWhoConfigure::Config::BLACKLIST
+          return filtering_line_sanitized('exclude_hosts', config.blacklist)
+      end
+    end
+
+    def filtering_line_sanitized(filter, list)
+      "\n" + filter + '=' + sanitize_filter(list.to_s)
+    end
+
+    def sanitize_filter(list)
+      list.tr("\r\n", '').strip.chomp(",")
     end
 
     def cron_line
