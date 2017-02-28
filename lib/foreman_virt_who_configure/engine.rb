@@ -21,10 +21,10 @@ module ForemanVirtWhoConfigure
 
         # Add permissions
         security_block :foreman_virt_who_configure do
-          permission :view_virt_who_config, :'foreman_virt_who_configure/configs' => [:index, :show, :auto_complete_search], :resource => 'ForemanVirtWhoConfigure::Config'
-          permission :create_virt_who_config, :'foreman_virt_who_configure/configs' => [:new, :create], :resource => 'ForemanVirtWhoConfigure::Config'
-          permission :edit_virt_who_config, :'foreman_virt_who_configure/configs' => [:edit, :update], :resource => 'ForemanVirtWhoConfigure::Config'
-          permission :destroy_virt_who_config, :'foreman_virt_who_configure/configs' => [:destroy], :resource => 'ForemanVirtWhoConfigure::Config'
+          permission :view_virt_who_config, :'foreman_virt_who_configure/configs' => [:index, :show, :auto_complete_search], :resource_type => 'ForemanVirtWhoConfigure::Config'
+          permission :create_virt_who_config, :'foreman_virt_who_configure/configs' => [:new, :create], :resource_type => 'ForemanVirtWhoConfigure::Config'
+          permission :edit_virt_who_config, :'foreman_virt_who_configure/configs' => [:edit, :update], :resource_type => 'ForemanVirtWhoConfigure::Config'
+          permission :destroy_virt_who_config, :'foreman_virt_who_configure/configs' => [:destroy], :resource_type => 'ForemanVirtWhoConfigure::Config'
         end
 
         reporter_permissions = [ :create_hosts, :edit_hosts, :view_lifecycle_environments, :my_organizations ]
