@@ -1,4 +1,5 @@
 require 'test_plugin_helper'
+
 module ForemanVirtWhoConfigure
   class ConfigTest < ActiveSupport::TestCase
     let(:config) { FactoryGirl.build(:virt_who_config) }
