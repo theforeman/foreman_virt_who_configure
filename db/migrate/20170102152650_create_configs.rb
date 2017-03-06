@@ -2,7 +2,7 @@ class CreateConfigs < ActiveRecord::Migration
   def change
     create_table :foreman_virt_who_configure_configs do |t|
       t.integer :interval, :default => 60, :null => true
-      # this is not a foreign key
+      # this is not a foreign key but one of 'hostname', 'uuid', 'hwuuid'
       t.string :hypervisor_id, :null => true
       t.integer :listing_mode, :null => true
       t.text :whitelist, :null => true
