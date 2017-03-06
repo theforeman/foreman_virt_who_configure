@@ -1,7 +1,7 @@
 module SSO
   class BasicWithHidden < Basic
     def available?
-      controller.api_request? && http_auth_set? && controller.is_a?(Katello::Api::Rhsm::CandlepinProxiesController)
+      controller.api_request? && http_auth_set? && controller.is_a?(::Katello::Api::Rhsm::CandlepinProxiesController)
     end
 
     def current_user
