@@ -47,7 +47,7 @@ echo "Creating sysconfig virt-who configuration.."
 cat > /etc/sysconfig/virt-who << EOF
 VIRTWHO_SATELLITE6=1
 VIRTWHO_DEBUG=#{config.debug? ? 1 : 0}
-VIRTWHO_INTERVAL=#{config.interval * 60}
+VIRTWHO_INTERVAL=#{config.interval * 60}#{proxy_strings}
 EOF
 
 echo "Enabling and restarting the virt-who service"
@@ -74,7 +74,7 @@ EOS
     end
 
     def sanitize_filter(list)
-      list.tr("\r\n", '').strip.chomp(",")
+      sanitize(list)
     end
 
     def config_file_path
@@ -124,6 +124,29 @@ EOS
 
     def cr
       config.compute_resource
+    end
+
+    def proxy
+      config.proxy
+    end
+
+    def no_proxy
+      config.no_proxy
+    end
+
+    def sanitize_proxy(string)
+      sanitize(string)
+    end
+
+    def proxy_strings
+      output = ''
+      output << "\nhttp_proxy=#{sanitize_proxy(proxy)}" if proxy.present?
+      output << "\nno_proxy=#{sanitize_proxy(no_proxy)}" if no_proxy.present?
+      output
+    end
+
+    def sanitize(string)
+      string.tr("\r\n", '').strip.chomp(",")
     end
   end
 end
