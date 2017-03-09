@@ -43,48 +43,23 @@ rhsm_encrypted_password=$user_password
 rhsm_prefix=/rhsm
 EOF
 
-echo "Creating cronjob entry.."
-cat > /etc/cron.d/virt-who-config-#{identifier} << EOF
-#{cron_line}
+echo "Creating sysconfig virt-who configuration.."
+cat > /etc/sysconfig/virt-who << EOF
+VIRTWHO_SATELLITE6=1
+VIRTWHO_DEBUG=#{config.debug? ? 1 : 0}
+VIRTWHO_INTERVAL=#{config.interval * 60}
 EOF
+
+echo "Enabling and restarting the virt-who service"
+chkconfig virt-who on
+service virt-who restart
 
 echo "Done."
 EOS
     end
 
-    def cron_line
-      "#{interval_minute} #{interval_hour} * * * virt-who #{virt_who_arguments}"
-    end
-
     def config_file_path
       "/etc/virt-who.d/#{identifier}.conf"
-    end
-
-    def virt_who_arguments
-      args = "--one-shot "
-      args << "--debug " if config.debug?
-      args << "--config=#{config_file_path} "
-      args
-    end
-
-    def interval_hour
-      if config.interval <= 60
-        "*"
-      elsif config.interval % 60 == 0
-        "*/#{config.interval / 60}"
-      else
-        raise 'unsupporter hour granularity'
-      end
-    end
-
-    def interval_minute
-      if config.interval < 60
-        "*/#{config.interval}"
-      elsif config.interval % 60
-        "0" # potentially generate and save random number to avoid collisions with other reporters
-      else
-        raise 'unsupported minute granularity'
-      end
     end
 
     def identifier
