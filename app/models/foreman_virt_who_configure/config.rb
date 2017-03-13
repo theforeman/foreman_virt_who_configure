@@ -12,6 +12,11 @@ module ForemanVirtWhoConfigure
     UNLIMITED = 0
     WHITELIST = 1
     BLACKLIST = 2
+    FILTERING_MODES = {
+      UNLIMITED.to_s => _('Unlimited'),
+      WHITELIST.to_s => _('Whitelist'),
+      BLACKLIST.to_s => _('Blacklist'),
+    }
 
     WIZARD_STEPS = {
       'general_information' => _('General information'),
@@ -68,6 +73,9 @@ module ForemanVirtWhoConfigure
     validates :hypervisor_type, :inclusion => HYPERVISOR_TYPES.keys
     validates :hypervisor_id, :inclusion => HYPERVISOR_IDS
     validates :interval, :inclusion => AVAILABLE_INTERVALS.keys.map(&:to_i)
+    validates :listing_mode, :inclusion => FILTERING_MODES.keys.map(&:to_i)
+    validates :whitelist, :presence => true, :if => Proc.new { |c| c.listing_mode.to_i == WHITELIST }
+    validates :blacklist, :presence => true, :if => Proc.new { |c| c.listing_mode.to_i == BLACKLIST }
     validates_lengths_from_database
 
     before_validation :remove_whitespaces
