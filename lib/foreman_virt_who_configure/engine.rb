@@ -1,4 +1,5 @@
-require 'deface'
+# require 'deface'
+require 'katello'
 
 module ForemanVirtWhoConfigure
   class Engine < ::Rails::Engine
@@ -7,7 +8,8 @@ module ForemanVirtWhoConfigure
     config.autoload_paths += Dir["#{config.root}/app/controllers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/helpers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/models/concerns"]
-    config.autoload_paths += Dir["#{config.root}/app/overrides"]
+    # config.autoload_paths += Dir["#{config.root}/app/overrides"]
+    config.autoload_paths += Dir["#{config.root}/test/"]
 
     # Add any db migrations
     initializer 'foreman_virt_who_configure.load_app_instance_data' do |app|
@@ -19,13 +21,14 @@ module ForemanVirtWhoConfigure
     initializer 'foreman_virt_who_configure.register_plugin', :before => :finisher_hook do |_app|
       Foreman::Plugin.register :foreman_virt_who_configure do
         requires_foreman '>= 1.11'
+        requires_foreman_plugin 'katello', '>= 3.0.0'
 
         # Add permissions
         security_block :foreman_virt_who_configure do
-          permission :view_virt_who_config, :'foreman_virt_who_configure/configs' => [:index, :show], :resource => 'ForemanVirtWhoConfigure::Config'
-          permission :create_virt_who_config, :'foreman_virt_who_configure/configs' => [:new, :create], :resource => 'ForemanVirtWhoConfigure::Config'
-          permission :edit_virt_who_config, :'foreman_virt_who_configure/configs' => [:edit, :update], :resource => 'ForemanVirtWhoConfigure::Config'
-          permission :destroy_virt_who_config, :'foreman_virt_who_configure/configs' => [:destroy], :resource => 'ForemanVirtWhoConfigure::Config'
+          permission :view_virt_who_config, :'foreman_virt_who_configure/configs' => [:index, :show, :auto_complete_search], :resource_type => 'ForemanVirtWhoConfigure::Config'
+          permission :create_virt_who_config, :'foreman_virt_who_configure/configs' => [:new, :create], :resource_type => 'ForemanVirtWhoConfigure::Config'
+          permission :edit_virt_who_config, :'foreman_virt_who_configure/configs' => [:edit, :update], :resource_type => 'ForemanVirtWhoConfigure::Config'
+          permission :destroy_virt_who_config, :'foreman_virt_who_configure/configs' => [:destroy], :resource_type => 'ForemanVirtWhoConfigure::Config'
         end
 
         reporter_permissions = [ :create_hosts, :edit_hosts, :view_lifecycle_environments, :my_organizations ]
@@ -34,15 +37,14 @@ module ForemanVirtWhoConfigure
             # old Katello permissions detected (6.2 era)
             reporter_permissions += [:create_content_hosts, :edit_content_hosts]
           end
-        rescue => e
-          # permissions could not be loaded yet, probably a migration run
-          logger.debug "Skipping permissions detection because of #{e.message}"
+        rescue ActiveRecord::StatementInvalid
+          # permissions could not be loaded, probably migration hasn't been run yet
         end
 
         begin
           role 'Virt-who Reporter', reporter_permissions
-        rescue ArgumentError => e
-          # could not configure role, some persmissions are missing
+        rescue ArgumentError
+          # could not configure role, some permissions are missing
         end
 
         role 'Virt-who Manager', [ :view_virt_who_config, :create_virt_who_config, :edit_virt_who_config, :destroy_virt_who_config ]
@@ -92,6 +94,10 @@ module ForemanVirtWhoConfigure
       locale_domain = 'foreman_virt_who_configure'
       Foreman::Gettext::Support.add_text_domain locale_domain, locale_dir
     end
+  end
+
+  def self.with_katello?
+    (Katello rescue false) ? true : false
   end
 
   def self.table_name_prefix
