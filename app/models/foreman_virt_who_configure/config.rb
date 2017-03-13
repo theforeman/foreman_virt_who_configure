@@ -3,7 +3,7 @@ module ForemanVirtWhoConfigure
     PERMITTED_PARAMS = [
       :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :listing_mode, :hypervisor_id,
       :hypervisor_type, :hypervisor_server, :hypervisor_username, :hypervisor_password, :debug,
-      :satellite_url
+      :satellite_url, :proxy, :no_proxy
     ]
     include Authorizable
     audited
