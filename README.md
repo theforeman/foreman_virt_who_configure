@@ -1,6 +1,6 @@
 # ForemanVirtWhoConfigure
 
-*Introdction here*
+A foreman plugin to make virt-who configuration easier.
 
 ## Installation
 
@@ -9,11 +9,8 @@ for how to install Foreman plugins
 
 ## Usage
 
-*Usage here*
-
-## TODO
-
-*Todo list here*
+After installation you should see Virt-who configurations menu item in Infrastructure menu. Create a new configuration
+and see the generated script for virt-who deployment.
 
 ## Contributing
 
@@ -21,7 +18,7 @@ Fork and send a Pull Request. Thanks!
 
 ## Copyright
 
-Copyright (c) *year* *your name*
+Copyright (c) 2017 - Foreman team
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
