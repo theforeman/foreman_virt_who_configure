@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :virt_who_config, :class => ::ForemanVirtWhoConfigure::Config do
+    sequence(:name) { |n| "config #{n}" }
     organization
     interval 120
     hypervisor_id 'hostname'
