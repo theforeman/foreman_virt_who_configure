@@ -48,6 +48,9 @@ module ForemanVirtWhoConfigure
         role 'Virt-who Manager', [ :view_virt_who_config, :create_virt_who_config, :edit_virt_who_config, :destroy_virt_who_config ]
         role 'Virt-who Viewer', [ :view_virt_who_config ]
 
+        # Available since Foreman 1.15
+        add_all_permissions_to_default_roles if respond_to?(:add_all_permissions_to_default_roles)
+
         # add menu entry
         menu :top_menu, :virt_who_configs,
              url_hash: { controller: 'foreman_virt_who_configure/configs', action: :index },
