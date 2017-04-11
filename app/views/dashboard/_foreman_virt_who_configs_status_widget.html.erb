@@ -1,0 +1,59 @@
+<% scope = ForemanVirtWhoConfigure::Config.for_organization(Organization.current) %>
+<% scope = scope.authorized(:view_virt_who_config) %>
+<% out_of_date = scope.out_of_date.order('out_of_date_at DESC') %>
+
+<h4 class="header ca"><%= _('Virt-who Configurations Statistics') %></h4>
+<table class="table table-striped ellipsis">
+  <thead>
+  <tr>
+    <th><%= _("Status") %></th>
+    <th><%= _("Count") %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><%= link_to _("Configurations Without Single Report"), foreman_virt_who_configure_configs_path(:search => "status = unknown") %></td>
+    <td><%= scope.where(:last_report_at => nil).count %></td>
+  </tr>
+  <tr>
+    <td><%= link_to _("Configurations Out Of Date"), foreman_virt_who_configure_configs_path(:search => "status = error") %></td>
+    <td><%= out_of_date.count %></td>
+  </tr>
+  <tr>
+    <td><%= link_to _("Configurations Up To Date"), foreman_virt_who_configure_configs_path(:search => "status = ok") %></td>
+    <td><%= scope.where.not(:last_report_at => nil).count - out_of_date.count %></td>
+  </tr>
+  <tr>
+    <td><%= link_to _("Total Configurations"), foreman_virt_who_configure_configs_path %></td>
+    <td><%= scope.count %></td>
+  </tr>
+  </tbody>
+</table>
+
+
+<h5 class="ca"><%= _('Out of Date Virt-who Configurations') %></h5>
+  <% if out_of_date.empty? %>
+  <%= _("No configuration for which the report has not been received during expected interval") %>
+  <% else %>
+    <table class="table table-striped ellipsis">
+      <thead>
+        <tr>
+          <th><%= s_("Config|Name") %></th>
+          <th><%= s_("Config|Last Report") %></th>
+          <th><%= s_("Config|Interval") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% out_of_date.limit(3).each do |config| %>
+          <tr>
+            <td><%= config_report_status_icon(config) %><%= link_to config.name, foreman_virt_who_configure_config_path(config) %></td>
+            <td><%= l(config.last_report_at, :format => :long) %></td>
+            <td><%= config.humanized_interval %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
+
+

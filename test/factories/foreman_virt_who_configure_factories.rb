@@ -10,4 +10,14 @@ FactoryGirl.define do
     satellite_url 'foreman.example.com'
     listing_mode ForemanVirtWhoConfigure::Config::UNLIMITED
   end
+
+  trait :out_of_date do
+    last_report_at (1.minute.ago - 120.minutes).utc
+    out_of_date_at (1.minute.ago).utc
+  end
+
+  trait :ok do
+    last_report_at (1.minute.ago).utc
+    out_of_date_at (1.minute.ago + 120.minutes).utc
+  end
 end

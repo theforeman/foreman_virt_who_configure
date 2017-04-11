@@ -7,6 +7,7 @@ module ForemanVirtWhoConfigure
     config.autoload_paths += Dir["#{config.root}/app/controllers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/helpers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/models/concerns"]
+    config.autoload_paths += Dir["#{config.root}/app/lib"]
     config.autoload_paths += Dir["#{config.root}/test/"]
 
     # Add any db migrations
@@ -60,7 +61,7 @@ module ForemanVirtWhoConfigure
              after: :compute_resources
 
         # add dashboard widget
-        # widget 'foreman_virt_who_configure_widget', name: N_('Foreman plugin template widget'), sizex: 4, sizey: 1
+        widget 'foreman_virt_who_configs_status_widget', :name => N_('Virt-who Configs Status'), sizex: 6, sizey: 1
       end
     end
 
@@ -78,6 +79,10 @@ module ForemanVirtWhoConfigure
     end
     initializer 'foreman_virt_who_configure.configure_assets', group: :assets do
       SETTINGS[:foreman_virt_who_configure] = { assets: { precompile: assets_to_precompile } }
+    end
+
+    initializer 'foreman_virt_who_configure.register_paths' do |_app|
+      ForemanTasks.dynflow.config.eager_load_paths.concat(%W(#{ForemanVirtWhoConfigure::Engine.root}/app/lib/actions))
     end
 
     # Include concerns in this config.to_prepare block
