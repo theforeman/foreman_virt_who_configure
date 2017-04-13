@@ -1,4 +1,6 @@
 <div id="config_general_information">
+  <%= text_f f, :name, :help_inline => popover('', _('Name of this configuration, e.g. the name of the hypervisor')) %>
+
   <% if f.object.organization_id.present? %>
     <%= f.hidden_field :organization_id %>
   <% else %>
