@@ -166,10 +166,14 @@ module ForemanVirtWhoConfigure
       WIZARD_STEPS.keys
     end
 
-    def virt_who_config_file
+    def virt_who_bash_script
+      virt_who_config_script(:bash_script)
+    end
+
+    def virt_who_config_script(format = nil)
       generator = OutputGenerator.new(self)
       if generator.ready_for_virt_who_output?
-        generator.virt_who_output
+        generator.virt_who_output(format)
       else
         generator.missing_virt_who_input_messages.join("\n")
       end
