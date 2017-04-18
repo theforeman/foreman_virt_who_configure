@@ -77,16 +77,6 @@ module ForemanVirtWhoConfigure
     scoped_search :on => :last_report_at, :complete_value => true, :only_explicit => true
     # TODO add more related objects and attributes
 
-    # Foreman 1.11 specifics, can be removed later, otherwise when string does not start with "encrypts" prefix
-    # we get 500 when we try to create log message that relies on name method
-    def name
-      title
-    end
-
-    def title
-      compute_resource ? compute_resource.name : hypervisor_server
-    end
-
     # compatibility layer for 1.11 - pre strong params patch
     if self.respond_to?(:attr_accessible)
       attr_accessible(*PERMITTED_PARAMS)
