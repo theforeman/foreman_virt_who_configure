@@ -1,4 +1,3 @@
 <div id="config_schedule">
-  <%= select_f f, :interval, ForemanVirtWhoConfigure::Config::AVAILABLE_INTERVALS, :first, :last, {},
-               :help_inline => popover('', _("How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours.")) %>
+  <%= selectable_f f, :interval, ForemanVirtWhoConfigure::Config::AVAILABLE_INTERVALS.map { |k,v| [_(v), k] }, {}, :help_inline => popover('', _("How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours.")) %>
 </div>
