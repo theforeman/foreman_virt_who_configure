@@ -6,7 +6,7 @@ module ForemanVirtWhoConfigure
       :satellite_url, :proxy, :no_proxy, :name
     ]
     include Authorizable
-    audited
+    audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at ]
     validates_lengths_from_database
 
     UNLIMITED = 0
