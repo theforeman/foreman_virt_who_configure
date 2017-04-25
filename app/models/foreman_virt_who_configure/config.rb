@@ -13,15 +13,15 @@ module ForemanVirtWhoConfigure
     WHITELIST = 1
     BLACKLIST = 2
     FILTERING_MODES = {
-      UNLIMITED.to_s => _('Unlimited'),
-      WHITELIST.to_s => _('Whitelist'),
-      BLACKLIST.to_s => _('Blacklist'),
+      UNLIMITED.to_s => N_('Unlimited'),
+      WHITELIST.to_s => N_('Whitelist'),
+      BLACKLIST.to_s => N_('Blacklist'),
     }
 
     WIZARD_STEPS = {
-      'general_information' => _('General information'),
-      'schedule' => _('Schedule'),
-      'connection' => _('Connection')
+      'general_information' => N_('General information'),
+      'schedule' => N_('Schedule'),
+      'connection' => N_('Connection')
     }
 
     HYPERVISOR_IDS = [ 'hostname', 'uuid', 'hwuuid' ]
@@ -38,11 +38,11 @@ module ForemanVirtWhoConfigure
     HYPERVISOR_DEFAULT_TYPE = 'esx'
 
     AVAILABLE_INTERVALS = {
-      '60' => _('Every hour'),
-      '120' => _('Every 2 hours'),
-      '240' => _('Every 4 hours'),
-      '480' => _('Every 8 hours'),
-      '720' => _('Every 12 hours'),
+      '60' => N_('Every hour'),
+      '120' => N_('Every 2 hours'),
+      '240' => N_('Every 4 hours'),
+      '480' => N_('Every 8 hours'),
+      '720' => N_('Every 12 hours'),
     }
 
     DEFAULT_INTERVAL = 120
@@ -159,7 +159,7 @@ module ForemanVirtWhoConfigure
     end
 
     def step_name(step_key)
-      WIZARD_STEPS[step_key]
+      _(WIZARD_STEPS[step_key])
     end
 
     def steps

@@ -1,19 +1,451 @@
-# foreman_virt_who_configure
-#
-# This file is distributed under the same license as foreman_virt_who_configure.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: version 0.0.1\n"
+"Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-20 08:46+0100\n"
-"PO-Revision-Date: 2014-08-20 08:46+0100\n"
-"Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language-Team: Foreman Team <foreman-dev@googlegroups.com>\n"
+"POT-Creation-Date: 2017-04-21 11:03+0200\n"
+"PO-Revision-Date: 2017-04-21 11:03+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#: ../app/helpers/foreman_virt_who_configure/compatibility_helper.rb:7
+msgid "Create Config"
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/compatibility_helper.rb:9
+msgid "New Config"
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/compatibility_helper.rb:16
+msgid "Help"
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:5
+msgid "VMware vCenter server’s fully qualified host name or IP address."
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:6
+msgid ""
+"Red Hat Virtualization Manager’s fully qualified host name or IP address. For "
+"example, <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https:/"
+"/hostname_or_IP:443</code> for v3"
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:8
+msgid "Microsoft Hyper-V fully qualified host name or IP address."
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:9
+msgid "XenServer server’s fully qualified host name or IP address."
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:10
+msgid ""
+"Libvirt server’s fully qualified host name or IP address. You can also specify"
+" preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</c"
+"ode>. If you use SSH, make sure you setup root's SSH key on target host for a "
+"user specified at hypervisor username field"
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:16
+msgid ""
+"Account name by which virt-who is to connect to the hypervisor, in the format "
+"<code>domain_name\\account_name</code>. Note that only a single backslash separ"
+"ates the values for domain_name and account_name. If you are using a domain ac"
+"count, and the global configuration file <code>/etc/sysconfig/virt-who</code>,"
+" then <b>two</b> backslashes are required. For further details, see <a href=\"h"
+"ttps://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How"
+" to use a windows domain account with virt-who</a> for more information."
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:17
+msgid ""
+"Account name by which virt-who is to connect to the Red Hat Enterprise Virtual"
+"ization Manager instance. The username option requires input in the format use"
+"rname@domain."
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:19
+msgid ""
+"Account name by which virt-who is to connect to the hypervisor. By default thi"
+"s is <code>Administrator</code>. To use an alternate account, create a user ac"
+"count and assign that account to the following groups (Windows 2012 Server): H"
+"yper-V Administrators and Remote Management Users."
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:20
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:21
+msgid "Account name by which virt-who is to connect to the hypervisor."
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:28
+msgid "No Report Yet"
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:34
+msgid "Unknown configuration status"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:16
+msgid "Unlimited"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:17
+msgid "Whitelist"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:18
+msgid "Blacklist"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:22
+msgid "General information"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:23
+msgid "Schedule"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:24
+msgid "Connection"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:41
+msgid "Every hour"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:42
+msgid "Every 2 hours"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:43
+msgid "Every 4 hours"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:44
+msgid "Every 8 hours"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:45
+msgid "Every 12 hours"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:51
+msgid "OK"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:52
+msgid "Error"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:53
+msgid "Unknown"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:56
+msgid "Unknown configuration status, caused by unexpected conditions"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:58
+msgid ""
+"The configuration was not deployed yet or the virt-who was unable to report th"
+"e status"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:59
+msgid "The virt-who report arrived within the interval"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:60
+msgid ""
+"The virt-who report has not arrived within the interval, please check the virt"
+"-who reporter status and logs"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:154
+msgid "every %s hours"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/output_generator.rb:15
+msgid "Owner was not provided"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/output_generator.rb:16
+msgid "Interval was not provided"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:5
+msgid "Virt-who Configurations Statistics"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:9
+#: ../app/views/foreman_virt_who_configure/configs/index.html.erb:10
+msgid "Status"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:10
+msgid "Count"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:15
+msgid "Configurations Without Single Report"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:19
+msgid "Configurations Out Of Date"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:23
+msgid "Configurations Up To Date"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:27
+msgid "Total Configurations"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:34
+msgid "Out of Date Virt-who Configurations"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:36
+msgid ""
+"No configuration for which the report has not been received during expected in"
+"terval"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:41
+#: ../app/views/foreman_virt_who_configure/configs/index.html.erb:8
+msgid "Config|Name"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:42
+msgid "Config|Last Report"
+msgstr ""
+
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:43
+#: ../app/views/foreman_virt_who_configure/configs/index.html.erb:9
+msgid "Config|Interval"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/edit.html.erb:1
+msgid "Edit Virt-who Config"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/index.html.erb:1
+msgid "Virt-who Configurations"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/index.html.erb:11
+msgid "Actions"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/index.html.erb:21
+msgid "Edit"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/index.html.erb:22
+msgid "Delete virt-who configuration %s?"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/new.html.erb:1
+msgid "New Virt-who Config"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:7
+msgid ""
+"Run this script on the target host which will run virt-who reporting, preferab"
+"ly Satellite host:"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:9
+msgid "On the target virt-who host:"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:10
+msgid "1. Copy this configuration script to a safe directory."
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:11
+msgid "2. Make the script executable and run it."
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:12
+msgid "3. Delete the script."
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:25
+msgid "Change this configuration"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:2
+msgid ""
+"Satellite Server’s fully-qualified host name, for example: satellite.example.c"
+"om"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:2
+msgid "Satellite Server FQDN"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:3
+msgid "Hypervisor ID"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:4
+msgid ""
+"Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uui"
+"d</b> or <b>hwuuid</b>.\n"
+"                                  Note that some virtualization backends don't"
+" have all of them implemented.\n"
+"                                  Default is <b>hostname</b>, which provides m"
+"ore meaningful hypervisor\n"
+"                                  names, but can cause duplicated hypervisor r"
+"egistrations if the host is renamed. To avoid that, you can use <b>uuid</b> in"
+"stead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
+"                                  This property is meant to be set up before t"
+"he initial run of virt-who. Changing it later will result in duplicated entrie"
+"s in the subscription manager."
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:9
+msgid "Filtering"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:10
+msgid ""
+"If you run a hybrid environment, with virtual machines running Red Hat Enterpr"
+"ise Linux and other operating systems, you may want to limit the scope of virt"
+"-who’s access to hosts. For example, if some hypervisors host only Microsoft W"
+"indows Server instances, there is no benefit in having those hypervisors repor"
+"ted by the virt-who agent."
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:11
+msgid ""
+"Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</co"
+"de>) is specified in comma-separated list in this option will be reported. Wil"
+"dcards and regular expressions are supported, multiple records must be separat"
+"ed by comma.  Put the value into the double-quotes if it contains special char"
+"acters like comma.  All new line characters will be removed in resulting confi"
+"guration file, white spaces are removed from beginning and end."
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:11
+msgid "Filter hosts"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:12
+msgid ""
+"Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) "
+"is specified in comma-separated list in this option will <b>NOT</b> be reporte"
+"d.  Wildcards and regular expressions are supported, multiple records must be "
+"separated by comma.  Put the value into the double-quotes if it contains speci"
+"al characters like comma.  All new line characters will be removed in resultin"
+"g configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:12
+msgid "Exclude hosts"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:13
+msgid "Do you want to enable debugging output?"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:14
+msgid ""
+"HTTP proxy that should be used for communication between the server on which v"
+"irt-who is running and the hypervisors and virtualization managers. Leave this"
+" blank if no proxy is used."
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:14
+msgid "HTTP Proxy"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:15
+msgid ""
+"A comma-separated list of hostnames or domains or ip addresses to ignore proxy"
+" settings for. Optionally this may be set to <code>*</code> to bypass proxy se"
+"ttings for all hostnames domains or ip addresses."
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:15
+msgid "Ignore Proxy"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_general_information_form.erb:2
+msgid "Name of this configuration, e.g. the name of the hypervisor"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_general_information_form.erb:7
+msgid "Owner"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_general_information_form.erb:13
+msgid "Account password by which virt-who is to connect to the hypervisor instance."
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/steps/_schedule_form.erb:2
+msgid ""
+"How often to check connected hypervisors for changes? Also affects how often a"
+" mapping is reported. The recommended value for most environments is every two"
+" hours."
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:5
+msgid "Configs"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:7
+msgid "On this page you can define virt-who configurations for your hypervisors."
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:8
+msgid ""
+"One virt-who configuration represents one config file in /etc/virt-who.d direc"
+"tory and maps to single hypervisor, organization and lifecycle environment."
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:9
+msgid ""
+"To define a new configuration, click the New Config button and fill in the for"
+"m. After you provide all required information a virt-who configuration script "
+"will be generated. You could either install it manually by copying the script "
+"or deploy it on a selected target host through Remote Execution."
+msgstr ""
+
+#: ../lib/foreman_virt_who_configure/engine.rb:59
+msgid "Virt-who configurations"
+msgstr ""
+
+#: ../lib/foreman_virt_who_configure/engine.rb:64
+msgid "Virt-who Configs Status"
+msgstr ""
+
+#: gemspec.rb:2
+msgid "A plugin to make virt-who configuration easy"
+msgstr ""
