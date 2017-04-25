@@ -30,7 +30,7 @@ module ForemanVirtWhoConfigure
       end
       @config.hypervisor_type ||= Config::HYPERVISOR_DEFAULT_TYPE
       @config.organization ||= Organization.current
-      @config.satellite_url ||= URI.parse(Setting.foreman_url).host
+      @config.satellite_url ||= URI.parse(Setting[:foreman_url]).host
     end
 
     def create
