@@ -2,25 +2,25 @@
 <% scope = scope.authorized(:view_virt_who_config) %>
 <% out_of_date = scope.out_of_date.order('out_of_date_at DESC') %>
 
-<h4 class="header ca"><%= _('Virt-who Configurations Statistics') %></h4>
+<h4 class="header"><%= _('Virt-who Configurations Status') %></h4>
 <table class="table table-striped ellipsis">
   <thead>
   <tr>
-    <th><%= _("Status") %></th>
+    <th><%= _("Configuration Status") %></th>
     <th><%= _("Count") %></th>
   </tr>
   </thead>
   <tbody>
   <tr>
-    <td><%= link_to _("Configurations Without Single Report"), foreman_virt_who_configure_configs_path(:search => "status = unknown") %></td>
+    <td><%= link_to _("No Reports"), foreman_virt_who_configure_configs_path(:search => "status = unknown") %></td>
     <td><%= scope.where(:last_report_at => nil).count %></td>
   </tr>
   <tr>
-    <td><%= link_to _("Configurations Out Of Date"), foreman_virt_who_configure_configs_path(:search => "status = error") %></td>
+    <td><%= link_to _("Out Of Date"), foreman_virt_who_configure_configs_path(:search => "status = error") %></td>
     <td><%= out_of_date.count %></td>
   </tr>
   <tr>
-    <td><%= link_to _("Configurations Up To Date"), foreman_virt_who_configure_configs_path(:search => "status = ok") %></td>
+    <td><%= link_to _("Up To Date"), foreman_virt_who_configure_configs_path(:search => "status = ok") %></td>
     <td><%= scope.where.not(:last_report_at => nil).count - out_of_date.count %></td>
   </tr>
   <tr>
@@ -30,10 +30,9 @@
   </tbody>
 </table>
 
-
-<h5 class="ca"><%= _('Out of Date Virt-who Configurations') %></h5>
+<h4 class="header" style="margin-top: 12px;"><%= _('Latest Out of Date Configurations') %></h4>
   <% if out_of_date.empty? %>
-  <%= _("No configuration for which the report has not been received during expected interval") %>
+    <div class="ca"><%= _("No configuration found") %></div>
   <% else %>
     <table class="table table-striped ellipsis">
       <thead>
