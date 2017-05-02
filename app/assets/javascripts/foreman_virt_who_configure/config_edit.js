@@ -20,9 +20,15 @@ $(document).ready(function () {
   $('#foreman_virt_who_configure_config_hypervisor_type').change(function () {
     selected_type = $(this).val();
     $.each(['hypervisor_server', 'hypervisor_username'], function(index, value) {
-      var element = $('#foreman_virt_who_configure_config_' + value)
+      var element = $('#foreman_virt_who_configure_config_' + value);
       var help = element.data("help")[selected_type];
-      element.parent().siblings('span.help-block.help-inline').children('a[rel=popover]').attr('data-content', help);
+      var inline_help_popover = element.parents('.form-group').find('.help-inline a[rel=popover]');
+      if (inline_help_popover[0]) {
+        // pre Foreman 1.15
+        inline_help_popover.attr('data-content', help);
+      } else {
+        element.parents('.form-group').find('label a[rel=popover]').attr('data-content', help);
+      }
     });
   });
 

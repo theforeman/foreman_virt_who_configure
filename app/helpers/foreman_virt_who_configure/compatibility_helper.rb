@@ -18,5 +18,14 @@ module ForemanVirtWhoConfigure
         help_path
       end
     end
+
+    def inline_help_popover(message)
+      version = Foreman::Version.new
+      if version.major.to_i >= 1 && version.minor.to_i >= 15
+        { :label_help => message.html_safe }
+      else
+        { :help_inline => popover('', message).html_safe }
+      end
+    end
   end
 end
