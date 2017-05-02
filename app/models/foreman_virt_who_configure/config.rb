@@ -6,7 +6,7 @@ module ForemanVirtWhoConfigure
       :satellite_url, :proxy, :no_proxy, :name
     ]
     include Authorizable
-    audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at ]
+    audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at, :reported_data ]
     validates_lengths_from_database
 
     UNLIMITED = 0
@@ -57,6 +57,7 @@ module ForemanVirtWhoConfigure
       {
         :unknown => N_('The configuration was not deployed yet or the virt-who was unable to report the status'),
         :ok => N_('The virt-who report arrived within the interval'),
+        :unchanged => N_('No change reported during the last update'),
         :error => N_('The virt-who report has not arrived within the interval, please check the virt-who reporter status and logs')
       }
     )
@@ -75,6 +76,7 @@ module ForemanVirtWhoConfigure
     scoped_search :on => :status, :complete_value => true, :only_explicit => true, :operators => ['= '], :ext_method => :search_by_status
     scoped_search :on => :out_of_date_at, :complete_value => true, :only_explicit => true
     scoped_search :on => :last_report_at, :complete_value => true, :only_explicit => true
+    scoped_search :on => :reported_data, :complete_value => { :true => true, :false => false }
     # TODO add more related objects and attributes
 
     # compatibility layer for 1.11 - pre strong params patch
@@ -111,6 +113,10 @@ module ForemanVirtWhoConfigure
                       sanitize_sql_for_conditions([' out_of_date_at < ? ', DateTime.now.utc.to_s(:db)])
                   end
       { :conditions => condition }
+    end
+
+    def self.find_by_user(user)
+      ::ForemanVirtWhoConfigure::ServiceUser.find_by_user_id(user.id).try(:config)
     end
 
     def create_service_user
@@ -175,9 +181,10 @@ module ForemanVirtWhoConfigure
       end
     end
 
-    def virt_who_touch!
+    def virt_who_touch!(with_data = true)
       self.last_report_at = DateTime.now.utc
       self.out_of_date_at = self.last_report_at + self.interval.minutes
+      self.reported_data = with_data
       self.save!
     end
 
@@ -193,7 +200,11 @@ module ForemanVirtWhoConfigure
     end
 
     def status_description
-      _(STATUS_DESCRIPTIONS[status])
+      description = _(STATUS_DESCRIPTIONS[status])
+      if self.status == :ok && !self.reported_data
+        description += '. ' + STATUS_DESCRIPTIONS[:unchanged]
+      end
+      description
     end
 
     private

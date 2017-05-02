@@ -128,6 +128,18 @@ module ForemanVirtWhoConfigure
         assert_equal out_of_date_config.out_of_date_at, out_of_date_config.last_report_at + out_of_date_config.interval.minutes
       end
 
+      test '#virt_who_touch! sets reported data to true' do
+        refute out_of_date_config.reported_data
+        out_of_date_config.virt_who_touch!
+        assert out_of_date_config.reported_data
+      end
+
+      test '#virt_who_touch!(false) sets reported data to false' do
+        assert ok_config.reported_data
+        ok_config.virt_who_touch!(false)
+        refute ok_config.reported_data
+      end
+
       test '#status returns the symbol representing the current status' do
         assert_equal :ok, ok_config.status
         assert_equal :error, out_of_date_config.status
@@ -138,6 +150,17 @@ module ForemanVirtWhoConfigure
         assert_kind_of String, ok_config.status_description
         assert_kind_of String, out_of_date_config.status_description
         assert_kind_of String, unknown_config.status_description
+      end
+    end
+
+    describe '.find_by_user' do
+      test 'it finds the configuration based on user object' do
+        config.save
+        assert_equal config, ForemanVirtWhoConfigure::Config.find_by_user(config.service_user.user)
+      end
+
+      test 'it returns nil for user that is not linked to any config' do
+        assert_nil ForemanVirtWhoConfigure::Config.find_by_user(FactoryGirl.create(:user))
       end
     end
   end

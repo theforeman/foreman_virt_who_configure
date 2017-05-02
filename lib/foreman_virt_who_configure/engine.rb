@@ -88,6 +88,9 @@ module ForemanVirtWhoConfigure
     # Include concerns in this config.to_prepare block
     config.to_prepare do
       SSO::METHODS.unshift SSO::BasicWithHidden
+      if ForemanVirtWhoConfigure.with_katello?
+        Katello::Api::Rhsm::CandlepinProxiesController.send(:include, ForemanVirtWhoConfigure::Concerns::VirtWhoPingTracker)
+      end
     end
 
     rake_tasks do

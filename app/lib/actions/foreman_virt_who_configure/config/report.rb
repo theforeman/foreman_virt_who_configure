@@ -20,7 +20,7 @@ module Actions
           #   hypervisor = ::Host.joins(:subscription_facet).where(:'katello_subscription_facets.uuid' => hv_attrs['uuid']).first
           # end
 
-          config = ::ForemanVirtWhoConfigure::ServiceUser.find_by_user_id(User.current.id).try(:config)
+          config = ::ForemanVirtWhoConfigure::Config.find_by_user(User.current)
           if config.present?
             config.virt_who_touch!
           end
