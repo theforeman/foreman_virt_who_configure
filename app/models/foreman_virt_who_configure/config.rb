@@ -49,7 +49,7 @@ module ForemanVirtWhoConfigure
 
     STATUSES = {
       'ok' => N_('OK'),
-      'error' => N_('Error'),
+      'out_of_date' => N_('No change'),
       'unknown' => N_('Unknown')
     }
 
@@ -57,7 +57,7 @@ module ForemanVirtWhoConfigure
       {
         :unknown => N_('The configuration was not deployed yet or the virt-who was unable to report the status'),
         :ok => N_('The virt-who report arrived within the interval'),
-        :error => N_('The virt-who report has not arrived within the interval, please check the virt-who reporter status and logs')
+        :out_of_date => N_('The virt-who report has not arrived within the interval, which indicates there was no change on hypervisor')
       }
     )
 
@@ -107,7 +107,7 @@ module ForemanVirtWhoConfigure
                       sanitize_sql_for_conditions([' out_of_date_at >= ? ', DateTime.now.utc.to_s(:db)])
                     when 'unknown'
                       sanitize_sql_for_conditions({:last_report_at => nil})
-                    when 'error'
+                    when 'out_of_date'
                       sanitize_sql_for_conditions([' out_of_date_at < ? ', DateTime.now.utc.to_s(:db)])
                   end
       { :conditions => condition }
@@ -188,7 +188,8 @@ module ForemanVirtWhoConfigure
         when !self.out_of_date?
           :ok
         else
-          :error
+          # out of date is currently considered ok too, virt-who does not send any report if there's no change on hypervisor
+          :out_of_date
       end
     end
 
