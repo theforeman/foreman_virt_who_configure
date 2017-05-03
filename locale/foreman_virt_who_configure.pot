@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 11:03+0200\n"
-"PO-Revision-Date: 2017-04-21 11:03+0200\n"
+"POT-Creation-Date: 2017-05-03 14:31+0200\n"
+"PO-Revision-Date: 2017-05-03 14:31+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -185,12 +185,11 @@ msgid "Interval was not provided"
 msgstr ""
 
 #: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:5
-msgid "Virt-who Configurations Statistics"
+msgid "Virt-who Configurations Status"
 msgstr ""
 
 #: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:9
-#: ../app/views/foreman_virt_who_configure/configs/index.html.erb:10
-msgid "Status"
+msgid "Configuration Status"
 msgstr ""
 
 #: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:10
@@ -198,41 +197,39 @@ msgid "Count"
 msgstr ""
 
 #: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:15
-msgid "Configurations Without Single Report"
+msgid "No Reports"
 msgstr ""
 
 #: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:19
-msgid "Configurations Out Of Date"
+msgid "Out Of Date"
 msgstr ""
 
 #: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:23
-msgid "Configurations Up To Date"
+msgid "Up To Date"
 msgstr ""
 
 #: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:27
 msgid "Total Configurations"
 msgstr ""
 
-#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:34
-msgid "Out of Date Virt-who Configurations"
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:33
+msgid "Latest Out of Date Configurations"
 msgstr ""
 
-#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:36
-msgid ""
-"No configuration for which the report has not been received during expected in"
-"terval"
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:35
+msgid "No configuration found"
 msgstr ""
 
-#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:41
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:40
 #: ../app/views/foreman_virt_who_configure/configs/index.html.erb:8
 msgid "Config|Name"
 msgstr ""
 
-#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:42
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:41
 msgid "Config|Last Report"
 msgstr ""
 
-#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:43
+#: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:42
 #: ../app/views/foreman_virt_who_configure/configs/index.html.erb:9
 msgid "Config|Interval"
 msgstr ""
@@ -243,6 +240,10 @@ msgstr ""
 
 #: ../app/views/foreman_virt_who_configure/configs/index.html.erb:1
 msgid "Virt-who Configurations"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/index.html.erb:10
+msgid "Status"
 msgstr ""
 
 #: ../app/views/foreman_virt_who_configure/configs/index.html.erb:11
@@ -305,10 +306,10 @@ msgstr ""
 msgid ""
 "Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uui"
 "d</b> or <b>hwuuid</b>.\n"
-"                                  Note that some virtualization backends don't"
-" have all of them implemented.\n"
-"                                  Default is <b>hostname</b>, which provides m"
-"ore meaningful hypervisor\n"
+"                              Note that some virtualization backends don't hav"
+"e all of them implemented.\n"
+"                              Default is <b>hostname</b>, which provides more "
+"meaningful hypervisor\n"
 "                                  names, but can cause duplicated hypervisor r"
 "egistrations if the host is renamed. To avoid that, you can use <b>uuid</b> in"
 "stead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
