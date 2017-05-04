@@ -4,6 +4,7 @@ module ForemanVirtWhoConfigure
     let(:config) { FactoryGirl.create(:virt_who_config) }
     let(:generator) { OutputGenerator.new(config) }
     let(:output) { generator.virt_who_output }
+    let(:bash_script_output) { generator.virt_who_output(:bash_script) }
 
     describe 'filtering' do
       test 'it should not filter anything for unlimited configs' do
@@ -83,6 +84,34 @@ module ForemanVirtWhoConfigure
         config.no_proxy = "\nx\ny\nz"
         assert_includes generator.proxy_strings, "\nhttp_proxy=abc"
         assert_includes generator.proxy_strings, "\nno_proxy=xyz"
+      end
+    end
+
+    describe 'error codes' do
+      test 'returns code number for known error name specified as symbol' do
+        assert_equal 1, generator.error_code(:virt_who_too_old)
+      end
+
+      test 'returns code number for known error name specified as string' do
+        assert_equal 0, generator.error_code('success')
+      end
+
+      test 'returns nil for unknown error name' do
+        assert_nil generator.error_code('unknown')
+      end
+    end
+
+    describe 'output format' do
+      test 'it returns the inline content of script if no format is specified' do
+        assert_not_includes output, '#!/usr/bin/bash'
+        assert_not_includes output, 'exit $result_code'
+        assert_includes output, 'echo "Installing virt-who.."'
+      end
+
+      test 'it returns the bash script with shebang and exit code for :bash_script format' do
+        assert_includes bash_script_output, "#!/usr/bin/bash\n"
+        assert_includes bash_script_output, 'exit $result_code'
+        assert_includes bash_script_output, 'echo "Installing virt-who.."'
       end
     end
   end
