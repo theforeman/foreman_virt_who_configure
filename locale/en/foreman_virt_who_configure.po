@@ -57,13 +57,7 @@ msgstr ""
 msgid "Configs"
 msgstr ""
 
-msgid "Configurations Out Of Date"
-msgstr ""
-
-msgid "Configurations Up To Date"
-msgstr ""
-
-msgid "Configurations Without Single Report"
+msgid "Configuration Status"
 msgstr ""
 
 msgid "Config|Interval"
@@ -153,6 +147,9 @@ msgstr ""
 msgid "Interval was not provided"
 msgstr ""
 
+msgid "Latest Out of Date Configurations"
+msgstr ""
+
 msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
 msgstr ""
 
@@ -171,7 +168,10 @@ msgstr ""
 msgid "No Report Yet"
 msgstr ""
 
-msgid "No configuration for which the report has not been received during expected interval"
+msgid "No Reports"
+msgstr ""
+
+msgid "No configuration found"
 msgstr ""
 
 msgid "OK"
@@ -189,7 +189,7 @@ msgstr ""
 msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma.  Put the value into the double-quotes if it contains special characters like comma.  All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
-msgid "Out of Date Virt-who Configurations"
+msgid "Out Of Date"
 msgstr ""
 
 msgid "Owner"
@@ -215,8 +215,8 @@ msgstr ""
 
 msgid ""
 "Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
-"                                  Note that some virtualization backends don't have all of them implemented.\n"
-"                                  Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
+"                              Note that some virtualization backends don't have all of them implemented.\n"
+"                              Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
 "                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
 "                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
 msgstr ""
@@ -251,6 +251,9 @@ msgstr ""
 msgid "Unlimited"
 msgstr ""
 
+msgid "Up To Date"
+msgstr ""
+
 msgid "VMware vCenter server’s fully qualified host name or IP address."
 msgstr ""
 
@@ -260,7 +263,7 @@ msgstr ""
 msgid "Virt-who Configurations"
 msgstr ""
 
-msgid "Virt-who Configurations Statistics"
+msgid "Virt-who Configurations Status"
 msgstr ""
 
 msgid "Virt-who configurations"
