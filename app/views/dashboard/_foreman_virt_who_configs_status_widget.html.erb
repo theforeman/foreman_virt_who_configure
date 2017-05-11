@@ -16,7 +16,7 @@
     <td><%= scope.where(:last_report_at => nil).count %></td>
   </tr>
   <tr>
-    <td><%= link_to _("Out Of Date"), foreman_virt_who_configure_configs_path(:search => "status = error") %></td>
+    <td><%= link_to _("Out Of Date"), foreman_virt_who_configure_configs_path(:search => "status = out_of_date") %></td>
     <td><%= out_of_date.count %></td>
   </tr>
   <tr>

@@ -26,9 +26,7 @@ module ForemanVirtWhoConfigure
       message = case config.status
                   when :unknown
                     _('No Report Yet')
-                  when :ok
-                    l(config.last_report_at, :format => :long)
-                  when :error
+                  when :ok, :out_of_date
                     l(config.last_report_at, :format => :long)
                   else
                     _('Unknown configuration status')
@@ -43,10 +41,8 @@ module ForemanVirtWhoConfigure
 
     def report_status_class(status)
       icon_class = case status
-                     when :ok
+                     when :ok, :out_of_date
                        'pficon-ok'
-                     when :error
-                       'pficon-error-circle-o'
                      when :unknown
                        'pficon-info'
                      else
@@ -58,12 +54,10 @@ module ForemanVirtWhoConfigure
 
     def status_class(status)
       case status
-        when :ok
+        when :ok, :out_of_date
           'status-ok'.html_safe
         when :unknown
           'status-info'.html_safe
-        when :error
-          'status-error'.html_safe
         else
           'status-warn'.html_safe
       end
