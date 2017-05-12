@@ -35,7 +35,7 @@ module ForemanVirtWhoConfigure
         # Add permissions
         security_block :foreman_virt_who_configure do
           permission_options = { :resource_type => 'ForemanVirtWhoConfigure::Config' }
-          permission :view_virt_who_config, { :'foreman_virt_who_configure/configs' => [:index, :show, :auto_complete_search],
+          permission :view_virt_who_config, { :'foreman_virt_who_configure/configs' => [:index, :show, :auto_complete_search, :deploy_script],
                                               :'foreman_virt_who_configure/api/v2/configs' => [:index, :show, :deploy_script] }, permission_options
           permission :create_virt_who_config, { :'foreman_virt_who_configure/configs' => [:new, :create],
                                                 :'foreman_virt_who_configure/api/v2/configs' => [:create] }, permission_options

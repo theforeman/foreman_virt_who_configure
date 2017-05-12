@@ -2,7 +2,7 @@ module ForemanVirtWhoConfigure
   class ConfigsController < ::ForemanVirtWhoConfigure::ApplicationController
     include Foreman::Controller::AutoCompleteSearch
     include ForemanVirtWhoConfigure::Concerns::ConfigParameters if Foreman::Version.new.short >= '1.13'
-    before_action :find_resource, :only => [:edit, :update, :destroy, :show]
+    before_action :find_resource, :only => [:edit, :update, :destroy, :show, :deploy_script]
 
     # in 1.11 we can't use welcome from application controller since it does not work with namespaces
     def welcome
@@ -64,6 +64,10 @@ module ForemanVirtWhoConfigure
       end
     end
 
+    def deploy_script
+      send_data @config.virt_who_bash_script, :filename => "deploy_virt_who_config_#{@config.id}.sh", :type => 'text/x-shellscript', :disposition => :attachment
+    end
+
     def auto_complete_controller_name
       'foreman_virt_who_configure_configs'
     end
@@ -89,6 +93,17 @@ module ForemanVirtWhoConfigure
 
     def resource_scope(*args)
       apply_organization_filter(super)
+    end
+
+    # equivalent to which was added after 1.11
+    #   define_action_permission ['deploy_script'], :view
+    def action_permission
+      case params[:action]
+        when 'deploy_script'
+          :view
+        else
+          super
+      end
     end
   end
 end
