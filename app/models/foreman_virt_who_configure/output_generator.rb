@@ -1,9 +1,33 @@
 module ForemanVirtWhoConfigure
   class OutputGenerator
+    class ConfigurationResult
+      attr_reader :code, :identifier, :message
+      def initialize(code, identifier, message)
+        @code, @message, @identifier = code, message, identifier
+      end
+    end
+
+    MINIMUM_VIRT_WHO_VERSION = '0.19'
+
+    CONFIGURATION_RESULTS = [
+      ConfigurationResult.new(0, 'success', N_('Success')),
+      ConfigurationResult.new(1, 'virt_who_too_old', N_('Newer version of virt-who is required, minimum version is %s') % MINIMUM_VIRT_WHO_VERSION),
+      ConfigurationResult.new(2, 'virt_who_config_file_issue', N_('Unable to create virt-who config file')),
+      ConfigurationResult.new(4, 'virt_who_sysconfig_file_issue', N_('Unable to create sysconfig file')),
+      ConfigurationResult.new(8, 'virt_who_chkconfig_issue', N_('Unable to enable virt-who service using chkconfig')),
+      ConfigurationResult.new(16, 'virt_who_service_issue', N_('Unable to start virt-who service, please see virt-who logs for more details')),
+      ConfigurationResult.new(32, 'virt_who_installation', N_('Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository')),
+    ]
+
     attr_reader :config
 
     def initialize(config)
       @config = config
+    end
+
+    def error_code(error_name)
+      result = CONFIGURATION_RESULTS.find { |result| result.identifier == error_name.to_s }
+      result.try(:code)
     end
 
     def ready_for_virt_who_output?
@@ -19,16 +43,41 @@ module ForemanVirtWhoConfigure
       messages
     end
 
-    def virt_who_output
-<<EOS
-echo "Installing virt-who.."
-yum install -y virt-who
-echo "Encrypting password.."
-cr_password=`virt-who-password --password "#{cr_password}" 2> /dev/null`
-user_password=`virt-who-password --password "#{service_user_password}" 2> /dev/null`
+    def virt_who_output(format = nil)
+      result = ''
+      result += "#!/usr/bin/bash\n" if format == :bash_script
+      result += <<EOS
+version_lte() {
+  [ "$1" = "`echo -e "$1\\n$2" | sort -V | head -n1`" ]
+}
 
-echo "Creating virt-who configuration.."
-cat > #{config_file_path} << EOF
+version_lt() {
+  [ "$1" = "$2" ] && return 1 || version_lte $1 $2
+}
+
+verify_minimal_version() {
+  minimal_version=#{MINIMUM_VIRT_WHO_VERSION}
+  installed_version=`rpm -q --queryformat '%{VERSION}' virt-who`
+
+  if version_lt $installed_version $minimal_version; then
+    echo "virt-who $installed_version does not meet minimum requirements, please make sure this host is properly subscribed and has access to satellite-tools repository, minimal virt-who version is $minimal_version"
+    return 1
+  else
+    return 0
+  fi
+}
+
+result_code=#{error_code(:success)}
+echo "Installing virt-who.."
+yum install -y virt-who || result_code=$(($result_code|#{error_code(:virt_who_installation)}))
+
+if verify_minimal_version; then
+  echo "Encrypting password.."
+  cr_password=`virt-who-password --password "#{cr_password}" 2> /dev/null`
+  user_password=`virt-who-password --password "#{service_user_password}" 2> /dev/null`
+
+  echo "Creating virt-who configuration.."
+  cat > #{config_file_path} << EOF
 [#{identifier}]
 type=#{type}
 hypervisor_id=#{hypervisor_id}
@@ -42,20 +91,39 @@ rhsm_username=#{service_user_username}
 rhsm_encrypted_password=$user_password
 rhsm_prefix=/rhsm
 EOF
+  if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_config_file_issue)})); fi
 
-echo "Creating sysconfig virt-who configuration.."
-cat > /etc/sysconfig/virt-who << EOF
+  echo "Creating sysconfig virt-who configuration.."
+  cat > #{sysconfig_file_path} << EOF
 VIRTWHO_SATELLITE6=1
 VIRTWHO_DEBUG=#{config.debug? ? 1 : 0}
 VIRTWHO_INTERVAL=#{config.interval * 60}#{proxy_strings}
 EOF
+  if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_sysconfig_file_issue)})); fi
 
-echo "Enabling and restarting the virt-who service"
-chkconfig virt-who on
-service virt-who restart
+  echo "Enabling and restarting the virt-who service"
+  chkconfig virt-who on || result_code=$(($result_code|#{error_code(:virt_who_chkconfig_issue)}))
+  service virt-who restart || result_code=$(($result_code|#{error_code(:virt_who_service_issue)}))
+else
+  result_code=$(($result_code|#{error_code(:virt_who_too_old)}))
+fi
 
-echo "Done."
+if [ $result_code -ne 0 ]; then
+  echo "There were some errors during configuration:"
+  #{error_handling}
+else
+  echo "Finished successully"
+fi
+
 EOS
+      result += "exit $result_code\n" if format == :bash_script
+      result
+    end
+
+    def error_handling
+      CONFIGURATION_RESULTS.map do |result|
+        "[ $(($result_code&#{result.code})) -ge 1 ] && echo '#{result.message}'"
+      end.join("\n  ")
     end
 
     def filtering
@@ -79,6 +147,10 @@ EOS
 
     def config_file_path
       "/etc/virt-who.d/#{identifier}.conf"
+    end
+
+    def sysconfig_file_path
+      '/etc/sysconfig/virt-who'
     end
 
     def identifier
