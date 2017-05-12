@@ -17,18 +17,32 @@ module ForemanVirtWhoConfigure
       end
     end
 
+    initializer 'foreman_virt_who_configure.register_shell_script_mime_type' do
+      Mime::Type.register "text/x-shellscript", :sh
+    end
+
+    initializer 'foreman_virt_who_configure.apipie' do
+      Apipie.configuration.checksum_path += ['/api/']
+    end
+
     initializer 'foreman_virt_who_configure.register_plugin', :before => :finisher_hook do |_app|
       Foreman::Plugin.register :foreman_virt_who_configure do
         requires_foreman '>= 1.11'
         requires_foreman_plugin 'katello', '>= 3.0.0'
 
+        apipie_documented_controllers ["#{ForemanVirtWhoConfigure::Engine.root}/app/controllers/foreman_virt_who_configure/api/v2/*.rb"]
+
         # Add permissions
         security_block :foreman_virt_who_configure do
           permission_options = { :resource_type => 'ForemanVirtWhoConfigure::Config' }
-          permission :view_virt_who_config, { :'foreman_virt_who_configure/configs' => [:index, :show, :auto_complete_search] }, permission_options
-          permission :create_virt_who_config, { :'foreman_virt_who_configure/configs' => [:new, :create] }, permission_options
-          permission :edit_virt_who_config, { :'foreman_virt_who_configure/configs' => [:edit, :update] }, permission_options
-          permission :destroy_virt_who_config, { :'foreman_virt_who_configure/configs' => [:destroy] }, permission_options
+          permission :view_virt_who_config, { :'foreman_virt_who_configure/configs' => [:index, :show, :auto_complete_search],
+                                              :'foreman_virt_who_configure/api/v2/configs' => [:index, :show, :deploy_script] }, permission_options
+          permission :create_virt_who_config, { :'foreman_virt_who_configure/configs' => [:new, :create],
+                                                :'foreman_virt_who_configure/api/v2/configs' => [:create] }, permission_options
+          permission :edit_virt_who_config, { :'foreman_virt_who_configure/configs' => [:edit, :update],
+                                              :'foreman_virt_who_configure/api/v2/configs' => [:update] }, permission_options
+          permission :destroy_virt_who_config, { :'foreman_virt_who_configure/configs' => [:destroy],
+                                                 :'foreman_virt_who_configure/api/v2/configs' => [:destroy] }, permission_options
         end
 
         reporter_permissions = [ :create_hosts, :edit_hosts, :view_lifecycle_environments, :my_organizations ]
