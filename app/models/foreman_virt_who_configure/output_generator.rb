@@ -47,6 +47,15 @@ module ForemanVirtWhoConfigure
       result = ''
       result += "#!/usr/bin/bash\n" if format == :bash_script
       result += <<EOS
+heading() {
+  echo -e "\n== $1 =="
+}
+
+step() {
+  step_count=5
+  heading "[$1/$step_count] $2"
+}
+
 version_lte() {
   [ "$1" = "`echo -e "$1\\n$2" | sort -V | head -n1`" ]
 }
@@ -68,15 +77,15 @@ verify_minimal_version() {
 }
 
 result_code=#{error_code(:success)}
-echo "Installing virt-who.."
+step 1 "Installing virt-who"
 yum install -y virt-who || result_code=$(($result_code|#{error_code(:virt_who_installation)}))
 
 if verify_minimal_version; then
-  echo "Encrypting password.."
+  step 2 "Encrypting password"
   cr_password=`virt-who-password --password "#{cr_password}" 2> /dev/null`
   user_password=`virt-who-password --password "#{service_user_password}" 2> /dev/null`
 
-  echo "Creating virt-who configuration.."
+  step 3 "Creating virt-who configuration"
   cat > #{config_file_path} << EOF
 [#{identifier}]
 type=#{type}
@@ -93,7 +102,7 @@ rhsm_prefix=/rhsm
 EOF
   if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_config_file_issue)})); fi
 
-  echo "Creating sysconfig virt-who configuration.."
+  step 4 "Creating sysconfig virt-who configuration"
   cat > #{sysconfig_file_path} << EOF
 VIRTWHO_SATELLITE6=1
 VIRTWHO_DEBUG=#{config.debug? ? 1 : 0}
@@ -101,13 +110,14 @@ VIRTWHO_INTERVAL=#{config.interval * 60}#{proxy_strings}
 EOF
   if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_sysconfig_file_issue)})); fi
 
-  echo "Enabling and restarting the virt-who service"
+  step 5 "Enabling and restarting the virt-who service"
   chkconfig virt-who on || result_code=$(($result_code|#{error_code(:virt_who_chkconfig_issue)}))
   service virt-who restart || result_code=$(($result_code|#{error_code(:virt_who_service_issue)}))
 else
   result_code=$(($result_code|#{error_code(:virt_who_too_old)}))
 fi
 
+heading "Finished"
 if [ $result_code -ne 0 ]; then
   echo "There were some errors during configuration:"
   #{error_handling}
