@@ -48,7 +48,7 @@ module ForemanVirtWhoConfigure
       result += "#!/usr/bin/bash\n" if format == :bash_script
       result += <<EOS
 heading() {
-  echo -e "\n== $1 =="
+  echo -e "\\n== $1 =="
 }
 
 step() {
