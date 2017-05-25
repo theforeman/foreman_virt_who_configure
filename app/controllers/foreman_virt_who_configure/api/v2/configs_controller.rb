@@ -9,6 +9,7 @@ module ForemanVirtWhoConfigure
         end
 
         before_action :find_resource, :only => %w{show deploy_script update destroy}
+        before_action :translate_filtering_mode, :only => %w{create update}
 
         api :GET, '/configs', N_("List of virt-who configurations")
         api :GET, "/organizations/:organization_id/configs", N_("List of virt-who configurations per organization")
@@ -109,6 +110,11 @@ module ForemanVirtWhoConfigure
           else
             params[:foreman_virt_who_configure_config]
           end
+        end
+
+        def translate_filtering_mode
+          mode = params[:foreman_virt_who_configure_config].delete(:filtering_mode)
+          params[:foreman_virt_who_configure_config][:listing_mode] = mode if mode
         end
 
         def allowed_nested_id

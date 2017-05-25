@@ -1,9 +1,12 @@
 module ForemanVirtWhoConfigure
   class Config < ActiveRecord::Base
     PERMITTED_PARAMS = [
-      :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :listing_mode, :hypervisor_id,
+      :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :hypervisor_id,
       :hypervisor_type, :hypervisor_server, :hypervisor_username, :hypervisor_password, :debug,
-      :satellite_url, :proxy, :no_proxy, :name
+      :satellite_url, :proxy, :no_proxy, :name,
+      # API parameter filtering_mode gets translated to listing_mode in the controller
+      # We keep both params permitted for compatibility with 1.11
+      :listing_mode, :filtering_mode
     ]
     include Authorizable
     audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at ]
