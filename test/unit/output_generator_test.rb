@@ -105,13 +105,13 @@ module ForemanVirtWhoConfigure
       test 'it returns the inline content of script if no format is specified' do
         assert_not_includes output, '#!/usr/bin/bash'
         assert_not_includes output, 'exit $result_code'
-        assert_includes output, 'echo "Installing virt-who.."'
+        assert_includes output, 'step 1 "Installing virt-who"'
       end
 
       test 'it returns the bash script with shebang and exit code for :bash_script format' do
         assert_includes bash_script_output, "#!/usr/bin/bash\n"
         assert_includes bash_script_output, 'exit $result_code'
-        assert_includes bash_script_output, 'echo "Installing virt-who.."'
+        assert_includes bash_script_output, 'step 1 "Installing virt-who"'
       end
     end
   end
