@@ -31,7 +31,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     refute_nil result_config
     assert_equal 'my vmware', result_config['name']
     assert_equal 120, result_config['interval']
-    assert_equal ForemanVirtWhoConfigure::Config::WHITELIST, result_config['listing_mode']
+    assert_equal ForemanVirtWhoConfigure::Config::WHITELIST, result_config['filtering_mode']
     assert_equal 'a,b', result_config['whitelist']
     assert_equal 'hostname', result_config['hypervisor_id']
     assert_equal 'esx', result_config['hypervisor_type']
@@ -53,7 +53,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     assert_equal @ok_config.out_of_date_at.to_s, Time.zone.parse(result_config['out_of_date_at']).to_s
 
     result_config = response['results'].find { |r| r['id'] == @out_of_date_config.id }
-    assert_equal 'error', result_config['status']
+    assert_equal 'out_of_date', result_config['status']
     assert_equal @out_of_date_config.last_report_at.to_s, Time.zone.parse(result_config['last_report_at']).to_s
     assert_equal @out_of_date_config.out_of_date_at.to_s, Time.zone.parse(result_config['out_of_date_at']).to_s
   end
@@ -64,7 +64,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
 
     assert_equal 'my vmware', response['name']
     assert_equal 120, response['interval']
-    assert_equal ForemanVirtWhoConfigure::Config::WHITELIST, response['listing_mode']
+    assert_equal ForemanVirtWhoConfigure::Config::WHITELIST, response['filtering_mode']
     assert_equal 'a,b', response['whitelist']
     assert_equal 'hostname', response['hypervisor_id']
     assert_equal 'esx', response['hypervisor_type']
@@ -97,7 +97,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     get :show, { :id => @out_of_date_config.to_param }, set_session_user
     response = ActiveSupport::JSON.decode(@response.body)
 
-    assert_equal 'error', response['status']
+    assert_equal 'out_of_date', response['status']
     assert_equal @out_of_date_config.last_report_at.to_s, Time.zone.parse(response['last_report_at']).to_s
     assert_equal @out_of_date_config.out_of_date_at.to_s, Time.zone.parse(response['out_of_date_at']).to_s
     assert_response :success
@@ -108,7 +108,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     response = ActiveSupport::JSON.decode(@response.body)
 
     assert_response :success
-    assert_equal @out_of_date_config.virt_who_config_script, response['virt_who_config_script']
+    assert_equal @out_of_date_config.virt_who_config_script(:bash_script), response['virt_who_config_script']
   end
 
   test "should get deploy script for plain/text format" do
@@ -116,7 +116,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     response = @response.body
 
     assert_response :success
-    assert_equal @out_of_date_config.virt_who_config_script, response
+    assert_equal @out_of_date_config.virt_who_config_script(:bash_script), response
   end
 
   test "should get deploy script for shell script format" do
@@ -124,14 +124,14 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     response = @response.body
 
     assert_response :success
-    assert_equal @out_of_date_config.virt_who_config_script, response
+    assert_equal @out_of_date_config.virt_who_config_script(:bash_script), response
   end
 
   test "should create the config" do
     org = FactoryGirl.create(:organization)
     post :create, { :foreman_virt_who_configure_config => { :name => 'my new config',
                                                             :interval => 240,
-                                                            :listing_mode => ForemanVirtWhoConfigure::Config::BLACKLIST,
+                                                            :filtering_mode => ForemanVirtWhoConfigure::Config::BLACKLIST,
                                                             :blacklist => ' a,b ',
                                                             :hypervisor_id => 'uuid',
                                                             :hypervisor_type => 'esx',

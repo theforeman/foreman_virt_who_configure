@@ -96,7 +96,7 @@ module ForemanVirtWhoConfigure
 
       test 'scoped search definitions work correctly' do
         assert_equal [ok_config], ForemanVirtWhoConfigure::Config.search_for('status = ok')
-        assert_equal [out_of_date_config], ForemanVirtWhoConfigure::Config.search_for('status = error')
+        assert_equal [out_of_date_config], ForemanVirtWhoConfigure::Config.search_for('status = out_of_date')
         assert_equal [unknown_config], ForemanVirtWhoConfigure::Config.search_for('status = unknown')
       end
 
@@ -130,7 +130,7 @@ module ForemanVirtWhoConfigure
 
       test '#status returns the symbol representing the current status' do
         assert_equal :ok, ok_config.status
-        assert_equal :error, out_of_date_config.status
+        assert_equal :out_of_date, out_of_date_config.status
         assert_equal :unknown, unknown_config.status
       end
 
