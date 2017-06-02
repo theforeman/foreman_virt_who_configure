@@ -16,11 +16,11 @@
     <td><%= scope.where(:last_report_at => nil).count %></td>
   </tr>
   <tr>
-    <td><%= link_to _("Out Of Date"), foreman_virt_who_configure_configs_path(:search => "status = out_of_date") %></td>
+    <td><%= link_to _("No Change"), foreman_virt_who_configure_configs_path(:search => "status = out_of_date") %></td>
     <td><%= out_of_date.count %></td>
   </tr>
   <tr>
-    <td><%= link_to _("Up To Date"), foreman_virt_who_configure_configs_path(:search => "status = ok") %></td>
+    <td><%= link_to _("OK"), foreman_virt_who_configure_configs_path(:search => "status = ok") %></td>
     <td><%= scope.where.not(:last_report_at => nil).count - out_of_date.count %></td>
   </tr>
   <tr>
@@ -30,7 +30,7 @@
   </tbody>
 </table>
 
-<h4 class="header" style="margin-top: 12px;"><%= _('Latest Out of Date Configurations') %></h4>
+<h4 class="header" style="margin-top: 12px;"><%= _('Latest Configurations Without Change') %></h4>
   <% if out_of_date.empty? %>
     <div class="ca"><%= _("No configuration found") %></div>
   <% else %>
