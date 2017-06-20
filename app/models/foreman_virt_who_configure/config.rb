@@ -182,6 +182,10 @@ module ForemanVirtWhoConfigure
       end
     end
 
+    def virt_who_config_command
+      "hammer virt-who-config deploy --id #{self.id}"
+    end
+
     def virt_who_touch!
       self.last_report_at = DateTime.now.utc
       self.out_of_date_at = self.last_report_at + self.interval.minutes

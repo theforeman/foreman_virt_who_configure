@@ -2,6 +2,7 @@ pre.terminal {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
+  max-height: 300px;
   font-size: 12px;
   word-break: break-all;
   word-wrap: break-word;
@@ -10,4 +11,7 @@ pre.terminal {
   border: 1px solid #000000;
   border-radius: 0px;
   font-family: Menlo, Monaco, Consolas, monospace;
+}
+ .terminal-buttons {
+  margin-bottom: 10px;
 }
