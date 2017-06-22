@@ -26,12 +26,12 @@
     </div>
     <div class="row">
       <div class="col-md-8">
+        <pre class="terminal" id="config_command"><%= @config.virt_who_config_command %></pre>
+      </div>
+      <div class="col-md-8">
         <div class="terminal-buttons">
           <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_command").html())' %>
         </div>
-      </div>
-      <div class="col-md-8">
-        <pre class="terminal" id="config_command"><%= @config.virt_who_config_command %></pre>
       </div>
     </div>
 
@@ -50,13 +50,13 @@
     </div>
     <div class="row">
       <div class="col-md-8">
-        <div class="terminal-buttons">
-          <%= link_to _('Download the script'), deploy_script_foreman_virt_who_configure_config_path(@config), :class => 'btn btn-default' %>
-          <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_script").html())' %>
-        </div>
+        <pre class="terminal" id="config_script"><%= @config.virt_who_config_script %></pre>
       </div>
       <div class="col-md-8">
-        <pre class="terminal" id="config_script"><%= @config.virt_who_config_script %></pre>
+        <div class="terminal-buttons">
+          <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_script").html())' %>
+          <%= link_to _('Download the script'), deploy_script_foreman_virt_who_configure_config_path(@config), :class => 'btn btn-default' %>
+        </div>
       </div>
     </div>
   </div>
