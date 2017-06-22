@@ -88,9 +88,10 @@ module ForemanVirtWhoConfigure
     after_create :create_service_user
     after_destroy :destroy_service_user
 
-    validates :interval, :hypervisor_type, :hypervisor_server, :hypervisor_username, :hypervisor_password,
+    validates :interval, :hypervisor_type, :hypervisor_server, :hypervisor_username,
               :satellite_url, :hypervisor_id, :organization_id, :name,
               :presence => true
+    validates :hypervisor_password, :presence => true, :if => Proc.new { |c| c.hypervisor_type != 'libvirt' }
     validates :hypervisor_type, :inclusion => HYPERVISOR_TYPES.keys
     validates :hypervisor_id, :inclusion => HYPERVISOR_IDS
     validates :interval, :inclusion => AVAILABLE_INTERVALS.keys.map(&:to_i)
