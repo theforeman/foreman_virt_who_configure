@@ -5,7 +5,41 @@
   <div class="form-group">
     <div class="row">
       <div class="col-md-12">
-        <label><%= _("To deploy this configuration. run this script on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:") %></label>
+        <h1><%= _("Virt-who Configuration %s") % @config.name %></h1>
+      </div>
+      <div class="col-md-6">
+        <%= _("Use either hammer command or the script below to deploy this configuration. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:") %>
+      </div>
+      <div class="col-md-2">
+        <div class="pull-right">
+          <p>
+            <%= link_to _('Edit this configuration'), edit_foreman_virt_who_configure_config_path(@config), :class => 'btn btn-default' %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2><%= 'a) ' + _('Hammer command: ') %></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <pre class="terminal" id="config_command"><%= @config.virt_who_config_command %></pre>
+      </div>
+      <div class="col-md-8">
+        <div class="terminal-buttons">
+          <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_command").html())' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2><%= 'b) ' + _('Configuration script: ') %></h2>
+      </div>
+      <div class="col-md-8">
         <p>
           <%= _("On the target virt-who host:") %></br>
           <%= _("1. Copy this configuration script to a safe directory.") %></br>
@@ -14,17 +48,15 @@
         </p>
       </div>
     </div>
-
     <div class="row">
       <div class="col-md-8">
-        <div class="pull-right">
-          <%= link_to _('Edit this configuration'), edit_foreman_virt_who_configure_config_path(@config), :class => 'btn btn-default' %>
+        <pre class="terminal" id="config_script"><%= @config.virt_who_config_script %></pre>
+      </div>
+      <div class="col-md-8">
+        <div class="terminal-buttons">
+          <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_script").html())' %>
           <%= link_to _('Download the script'), deploy_script_foreman_virt_who_configure_config_path(@config), :class => 'btn btn-default' %>
-          <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("pre.terminal").html())' %>
         </div>
-
-        <h3><%= _('Configuration script: ') %></h3>
-        <pre class="terminal"><%= @config.virt_who_config_script %></pre>
       </div>
     </div>
   </div>
