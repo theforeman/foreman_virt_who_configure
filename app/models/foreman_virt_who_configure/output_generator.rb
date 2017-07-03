@@ -9,6 +9,8 @@ module ForemanVirtWhoConfigure
 
     MINIMUM_VIRT_WHO_VERSION = '0.19'
 
+    LIBVIRT_FAKE_PASSWORD = 'libvirt_fake_password'
+
     CONFIGURATION_RESULTS = [
       ConfigurationResult.new(0, 'success', N_('Success')),
       ConfigurationResult.new(1, 'virt_who_too_old', N_('Newer version of virt-who is required, minimum version is %s') % MINIMUM_VIRT_WHO_VERSION),
@@ -189,7 +191,7 @@ EOS
     end
 
     def cr_password
-      config.hypervisor_password
+      config.hypervisor_type == 'libvirt' && config.hypervisor_password.blank? ? LIBVIRT_FAKE_PASSWORD : config.hypervisor_password
     end
 
     def satellite_url

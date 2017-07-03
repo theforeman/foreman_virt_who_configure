@@ -6,6 +6,14 @@ module ForemanVirtWhoConfigure
     let(:output) { generator.virt_who_output }
     let(:bash_script_output) { generator.virt_who_output(:bash_script) }
 
+    describe 'cr_password for libvirt' do
+      test 'empty password is replaced by fake value so that virt-who runs in an non-interactive mode' do
+        config.hypervisor_password = nil
+        config.hypervisor_type = 'libvirt'
+        assert_includes output, 'virt-who-password --password "' + OutputGenerator::LIBVIRT_FAKE_PASSWORD + '"'
+      end
+    end
+
     describe 'filtering' do
       test 'it should not filter anything for unlimited configs' do
         assert_equal ForemanVirtWhoConfigure::Config::UNLIMITED, config.listing_mode.to_i
