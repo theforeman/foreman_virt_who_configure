@@ -89,6 +89,8 @@ if verify_minimal_version; then
 
   step 3 "Creating virt-who configuration"
   cat > #{config_file_path} << EOF
+### This configuration file is managed via the virt-who configure plugin
+### manual edits will be deleted.
 [#{identifier}]
 type=#{type}
 hypervisor_id=#{hypervisor_id}
@@ -106,6 +108,8 @@ EOF
 
   step 4 "Creating sysconfig virt-who configuration"
   cat > #{sysconfig_file_path} << EOF
+### This configuration file is managed via the virt-who configure plugin
+### manual edits will be deleted.
 VIRTWHO_SATELLITE6=1
 VIRTWHO_DEBUG=#{config.debug? ? 1 : 0}
 VIRTWHO_INTERVAL=#{config.interval * 60}#{proxy_strings}
