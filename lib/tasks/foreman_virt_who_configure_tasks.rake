@@ -2,11 +2,9 @@ require 'rake/testtask'
 
 # Tasks
 namespace :foreman_virt_who_configure do
-  namespace :example do
-    desc 'Example Task'
-    task task: :environment do
-      # Task goes here
-    end
+  desc 'Clean default data created by this plugin, this will permanently delete the data!' 
+  task cleanup: :environment do
+    ForemanVirtWhoConfigure::Cleaner.new.clean_up!
   end
 end
 
