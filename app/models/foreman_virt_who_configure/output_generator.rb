@@ -47,7 +47,7 @@ module ForemanVirtWhoConfigure
 
     def virt_who_output(format = nil)
       result = ''
-      result += "#!/usr/bin/bash\n" if format == :bash_script
+      result += "#!/bin/bash\n" if format == :bash_script
       result += <<EOS
 heading() {
   echo -e "\\n== $1 =="
