@@ -13,7 +13,7 @@
       <div class="col-md-2">
         <div class="pull-right">
           <p>
-            <%= link_to _('Edit this configuration'), edit_foreman_virt_who_configure_config_path(@config), :class => 'btn btn-default' %>
+            <%= display_link_if_authorized _('Edit this configuration'), hash_for_edit_foreman_virt_who_configure_config_path(@config).merge(:permission => 'show_virt_who_config', :auth_object => @config), :class => 'btn btn-default' %>
           </p>
         </div>
       </div>

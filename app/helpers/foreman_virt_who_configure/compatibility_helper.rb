@@ -4,9 +4,9 @@ module ForemanVirtWhoConfigure
 
     def new_config_link(options = {}, html_options = {})
       if ApplicationHelper.instance_methods.include?(:new_link)
-        new_link(_("Create Config"), options, html_options)
+        new_link(_("Create Config"), options.merge(:permission => 'create_virt_who_config'), html_options)
       else
-        display_link_if_authorized(_("New Config"), hash_for_new_foreman_virt_who_configure_config_path, html_options)
+        display_link_if_authorized(_("New Config"), hash_for_new_foreman_virt_who_configure_config_path.merge(:permission => 'create_virt_who_config'), html_options)
       end
     end
 

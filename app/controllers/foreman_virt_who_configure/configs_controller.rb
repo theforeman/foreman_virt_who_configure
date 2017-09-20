@@ -85,6 +85,10 @@ module ForemanVirtWhoConfigure
       end
     end
 
+    def controller_permission
+      'virt_who_config'
+    end
+
     private
 
     def apply_organization_filter(scope)

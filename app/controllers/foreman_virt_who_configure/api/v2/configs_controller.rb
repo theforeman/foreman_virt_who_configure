@@ -92,6 +92,10 @@ module ForemanVirtWhoConfigure
 
         protected
 
+        def controller_permission
+          'virt_who_config'
+        end
+
         def action_permission
           case params[:action]
             when 'deploy_script'
