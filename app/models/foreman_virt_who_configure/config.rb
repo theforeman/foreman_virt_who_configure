@@ -137,7 +137,7 @@ module ForemanVirtWhoConfigure
 
     def destroy_service_user
       # skip validation that prevents hidden user deletion
-      user = service_user.user
+      user = User.unscoped.find_by_id(service_user.user_id)
       service_user.destroy
       user.delete
     end
