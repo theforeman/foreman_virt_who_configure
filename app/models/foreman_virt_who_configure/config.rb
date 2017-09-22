@@ -110,7 +110,7 @@ module ForemanVirtWhoConfigure
                     when 'ok'
                       sanitize_sql_for_conditions([' out_of_date_at >= ? ', DateTime.now.utc.to_s(:db)])
                     when 'unknown'
-                      sanitize_sql_for_conditions({:last_report_at => nil})
+                      sanitize_sql_for_conditions([' last_report_at IS NULL'])
                     when 'out_of_date'
                       sanitize_sql_for_conditions([' out_of_date_at < ? ', DateTime.now.utc.to_s(:db)])
                   end
