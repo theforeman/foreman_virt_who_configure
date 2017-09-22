@@ -15,7 +15,9 @@ module ForemanVirtWhoConfigure
     end
 
     def username
-      self.user.login if self.user
+      User.as_anonymous_admin do
+        self.user.login if self.user
+      end
     end
   end
 end
