@@ -117,29 +117,44 @@ module ForemanVirtWhoConfigure
       { :conditions => condition }
     end
 
+    def permission_name(action)
+      case action
+        when :create
+          'create_virt_who_config'
+        when :edit
+          'edit_virt_who_config'
+        else
+          raise "unknown permission for action #{action}"
+      end
+    end
+
     def create_service_user
-      password = User.random_password
-      service_user = self.build_service_user
-      user = service_user.build_user
-      user.auth_source = AuthSourceHiddenWithAuthentication.default
-      user.password = password
-      user.login = "virt_who_reporter_#{self.id}"
-      user.organizations = [ self.organization ]
-      user.roles = [ Role.where(:name => 'Virt-who Reporter').first ]
-      user.valid? # to trigger password hashing
-      user.save!(:validate => false)
+      User.skip_permission_check do
+        password = User.random_password
+        service_user = self.build_service_user
+        user = service_user.build_user
+        user.auth_source = AuthSourceHiddenWithAuthentication.default
+        user.password = password
+        user.login = "virt_who_reporter_#{self.id}"
+        user.organizations = [self.organization]
+        user.roles = [Role.where(:name => 'Virt-who Reporter').first]
+        user.valid? # to trigger password hashing
+        user.save!(:validate => false)
 
-      service_user.encrypted_password = password
-      service_user.save!
+        service_user.encrypted_password = password
+        service_user.save!
 
-      self.update_attribute :service_user_id, service_user.id
+        self.update_attribute :service_user_id, service_user.id
+      end
     end
 
     def destroy_service_user
-      # skip validation that prevents hidden user deletion
-      user = User.unscoped.find_by_id(service_user.user_id)
-      service_user.destroy
-      user.delete
+      User.skip_permission_check do
+        # skip validation that prevents hidden user deletion
+        user = User.unscoped.find_by_id(service_user.user_id)
+        service_user.destroy
+        user.delete
+      end
     end
 
     # mapping of supported CR types
