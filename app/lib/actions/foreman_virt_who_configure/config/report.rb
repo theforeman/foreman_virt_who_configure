@@ -9,7 +9,7 @@ module Actions
         end
 
         def plan(hypervisors)
-          plan_self(:hypervisors => hypervisors)
+          plan_self(:hypervisors => hypervisors) if User.current.try(:id)
         end
 
         def run
