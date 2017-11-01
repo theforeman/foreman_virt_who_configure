@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :virt_who_config, :class => ::ForemanVirtWhoConfigure::Config do
     sequence(:name) { |n| "config #{n}" }
     organization

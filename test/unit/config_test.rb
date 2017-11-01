@@ -2,7 +2,7 @@ require 'test_plugin_helper'
 
 module ForemanVirtWhoConfigure
   class ConfigTest < ActiveSupport::TestCase
-    let(:config) { FactoryGirl.build(:virt_who_config) }
+    let(:config) { FactoryBot.build(:virt_who_config) }
 
     test 'config can be saved' do
       config.save
@@ -63,9 +63,9 @@ module ForemanVirtWhoConfigure
     end
 
     describe 'organization scoping' do
-      let(:another_org) { FactoryGirl.create(:organization) }
-      let(:config_1) { FactoryGirl.create(:virt_who_config) }
-      let(:config_2) { FactoryGirl.create(:virt_who_config, :organization => another_org) }
+      let(:another_org) { FactoryBot.create(:organization) }
+      let(:config_1) { FactoryBot.create(:virt_who_config) }
+      let(:config_2) { FactoryBot.create(:virt_who_config, :organization => another_org) }
 
       before do
         # let is lazy
@@ -86,9 +86,9 @@ module ForemanVirtWhoConfigure
     end
 
     describe 'statuses and expiration' do
-      let(:out_of_date_config) { FactoryGirl.create(:virt_who_config, :out_of_date) }
-      let(:ok_config) { FactoryGirl.create(:virt_who_config, :ok) }
-      let(:unknown_config) { FactoryGirl.create(:virt_who_config) }
+      let(:out_of_date_config) { FactoryBot.create(:virt_who_config, :out_of_date) }
+      let(:ok_config) { FactoryBot.create(:virt_who_config, :ok) }
+      let(:unknown_config) { FactoryBot.create(:virt_who_config) }
       before do
         # let is lazy
         preload = out_of_date_config, ok_config, unknown_config
