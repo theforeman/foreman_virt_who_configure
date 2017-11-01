@@ -2,7 +2,7 @@ require 'test_plugin_helper'
 
 class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController::TestCase
   setup do
-    @new_config = FactoryGirl.create(:virt_who_config,
+    @new_config = FactoryBot.create(:virt_who_config,
                                  :name => 'my vmware',
                                  :interval => 120,
                                  :listing_mode => ForemanVirtWhoConfigure::Config::WHITELIST,
@@ -17,8 +17,8 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
                                  :no_proxy => nil
     )
 
-    @out_of_date_config = FactoryGirl.create(:virt_who_config, :out_of_date)
-    @ok_config = FactoryGirl.create(:virt_who_config, :ok)
+    @out_of_date_config = FactoryBot.create(:virt_who_config, :out_of_date)
+    @ok_config = FactoryBot.create(:virt_who_config, :ok)
   end
 
   test "should get index" do
@@ -128,7 +128,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should create the config" do
-    org = FactoryGirl.create(:organization)
+    org = FactoryBot.create(:organization)
     post :create, { :foreman_virt_who_configure_config => { :name => 'my new config',
                                                             :interval => 240,
                                                             :filtering_mode => ForemanVirtWhoConfigure::Config::BLACKLIST,

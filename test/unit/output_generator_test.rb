@@ -1,7 +1,7 @@
 require 'test_plugin_helper'
 module ForemanVirtWhoConfigure
   class OutputGeneratorTest < ActiveSupport::TestCase
-    let(:config) { FactoryGirl.create(:virt_who_config) }
+    let(:config) { FactoryBot.create(:virt_who_config) }
     let(:generator) { OutputGenerator.new(config) }
     let(:output) { generator.virt_who_output }
     let(:bash_script_output) { generator.virt_who_output(:bash_script) }
