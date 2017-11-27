@@ -91,6 +91,7 @@ module ForemanVirtWhoConfigure
     validates :interval, :hypervisor_type, :hypervisor_server, :hypervisor_username,
               :satellite_url, :hypervisor_id, :organization_id, :name,
               :presence => true
+    validates :name, :uniqueness => { :scope => :organization_id }
     validates :hypervisor_password, :presence => true, :if => Proc.new { |c| c.hypervisor_type != 'libvirt' }
     validates :hypervisor_type, :inclusion => HYPERVISOR_TYPES.keys
     validates :hypervisor_id, :inclusion => HYPERVISOR_IDS
