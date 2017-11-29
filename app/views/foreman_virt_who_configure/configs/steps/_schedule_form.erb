@@ -1,3 +1,3 @@
 <div id="config_schedule">
-  <%= selectable_f f, :interval, ForemanVirtWhoConfigure::Config::AVAILABLE_INTERVALS.map { |k,v| [_(v), k] }, {}, inline_help_popover(_("How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours.")) %>
+  <%= selectable_f f, :interval, ForemanVirtWhoConfigure::Config::AVAILABLE_INTERVALS.map { |k,v| [_(v), k] }, {}, inline_help_popover(_("How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours. Different interval can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed.")) %>
 </div>
