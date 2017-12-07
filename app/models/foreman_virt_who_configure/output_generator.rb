@@ -128,7 +128,7 @@ if [ $result_code -ne 0 ]; then
   echo "There were some errors during configuration:"
   #{error_handling}
 else
-  echo "Finished successully"
+  echo "Finished successfully"
 fi
 
 EOS
