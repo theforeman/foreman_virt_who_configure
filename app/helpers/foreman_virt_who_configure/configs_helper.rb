@@ -62,5 +62,27 @@ module ForemanVirtWhoConfigure
           'status-warn'.html_safe
       end
     end
+
+    def config_attribute_default_label(attr)
+      s_(ForemanVirtWhoConfigure::Config.gettext_translation_for_attribute_name(attr).titleize)
+    end
+
+    def config_attribute_label(attr, label)
+      content_tag :div, :class => 'col-md-2' do
+        content_tag :strong, (label || config_attribute_default_label(attr))
+      end
+    end
+
+    def config_attribute_value(attribute, value)
+      content_tag :div, :class => 'config-status' do
+        content_tag :span, value, :class => "config-#{attribute}"
+      end
+    end
+
+    def config_attribute(attribute, value, label = nil)
+      content_tag :div, :class => 'row' do
+        config_attribute_label(attribute, label) + config_attribute_value(attribute, value)
+      end
+    end
   end
 end

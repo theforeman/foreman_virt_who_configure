@@ -12,6 +12,24 @@ pre.terminal {
   border-radius: 0px;
   font-family: Menlo, Monaco, Consolas, monospace;
 }
- .terminal-buttons {
+
+.terminal-buttons {
   margin-bottom: 10px;
+}
+
+#config-tab.nav {
+  margin-bottom: 0;
+}
+
+#config-tab.nav {
+  clear: both;
+}
+
+.config-tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  border-top: 0;
+  display: inline-block;
+  width: 100%;
 }
