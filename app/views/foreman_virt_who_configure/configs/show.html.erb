@@ -1,61 +1,91 @@
 <% stylesheet 'foreman_virt_who_configure/config' %>
 <% javascript 'foreman_virt_who_configure/config_copy_and_paste' %>
+<% title(_("Virt-who Configuration %s") % @config.name) %>
+<%= title_actions(
+        display_link_if_authorized(_('Edit'), hash_for_edit_foreman_virt_who_configure_config_path(@config).merge(:permission => 'edit_virt_who_config', :auth_object => @config), :class => 'btn btn-default'),
+        display_delete_if_authorized(hash_for_foreman_virt_who_configure_config_path(@config).merge(:permission => 'destroy_virt_who_config', :auth_object => @config), :class => 'btn btn-default', :data => {:confirm => _("Delete virt-who configuration %s?") % config.name})
+    ) %>
 
-<div class="clearfix">
-  <div class="form-group">
-    <div class="row">
-      <div class="col-md-12">
-        <h1><%= _("Virt-who Configuration %s") % @config.name %></h1>
-      </div>
-      <div class="col-md-6">
-        <%= _("Use either hammer command or the script below to deploy this configuration. Both require root privileges.  Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:") %>
-      </div>
-      <div class="col-md-2">
-        <div class="pull-right">
-          <p>
-            <%= display_link_if_authorized _('Edit this configuration'), hash_for_edit_foreman_virt_who_configure_config_path(@config).merge(:permission => 'show_virt_who_config', :auth_object => @config), :class => 'btn btn-default' %>
-          </p>
+<ul id="config-tab" class="nav nav-tabs">
+  <li class="active"><a href="#overview" data-toggle="tab"><%= _('Overview') %></a></li>
+  <li><a href="#deploy" data-toggle="tab"><%= _('Deploy') %></a></li>
+</ul>
+
+<div id="config-tab-content" class="config-tab-content tab-content">
+  <div class="tab-pane active in" id="overview">
+    <div class="clearfix">
+      <div class="form-group">
+        <div class="col-md-12">
+          <div class="row">
+            <h3><%= _('Details') %></h3>
+          </div>
+
+          <%= config_attribute :status, config_report_status(@config), _('Status') %>
+          <%= config_attribute :hypervisor_type, _(ForemanVirtWhoConfigure::Config::HYPERVISOR_TYPES[@config.hypervisor_type]) %>
+          <%= config_attribute :hypervisor_server, @config.hypervisor_server %>
+          <%= config_attribute :hypervisor_username, @config.hypervisor_username %>
+          <%= config_attribute :interval, _(ForemanVirtWhoConfigure::Config::AVAILABLE_INTERVALS[@config.interval.to_s]) %>
+          <%= config_attribute :satellite_url, @config.satellite_url, _('Satellite server FQDN')%>
+          <%= config_attribute :hypervisor_id, @config.hypervisor_id, _('Hypervisor ID') %>
+          <%= config_attribute :listing_mode, _(ForemanVirtWhoConfigure::Config::FILTERING_MODES[@config.listing_mode.to_s]), _('Filtering') %>
+          <%= config_attribute :whitelist, @config.whitelist if @config.whitelist.present? %>
+          <%= config_attribute :blacklist, @config.blacklist if @config.blacklist.present? %>
+          <%= config_attribute :debug, checked_icon(@config.debug), _('Enable debugging output?') %>
+          <%= config_attribute :proxy, @config.proxy if @config.proxy.present? %>
+          <%= config_attribute :no_proxy, @config.no_proxy if @config.no_proxy.present? %>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <h2><%= 'a) ' + _('Hammer command: ') %></h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8">
-        <pre class="terminal" id="config_command"><%= @config.virt_who_config_command %></pre>
-      </div>
-      <div class="col-md-8">
-        <div class="terminal-buttons">
-          <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_command").html())' %>
+  <div class="tab-pane in" id="deploy">
+    <div class="clearfix">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <%= _("Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:") %>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <h2><%= 'b) ' + _('Configuration script: ') %></h2>
-      </div>
-      <div class="col-md-8">
-        <p>
-          <%= _("On the target virt-who host:") %></br>
-          <%= _("1. Copy this configuration script to a safe directory.") %></br>
-          <%= _("2. Make the script executable and run it.") %></br>
-          <%= _("3. Delete the script.") %></br>
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8">
-        <pre class="terminal" id="config_script"><%= @config.virt_who_config_script %></pre>
-      </div>
-      <div class="col-md-8">
-        <div class="terminal-buttons">
-          <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_script").html())' %>
-          <%= link_to _('Download the script'), deploy_script_foreman_virt_who_configure_config_path(@config), :class => 'btn btn-default' %>
+        <div class="row">
+          <div class="col-md-12">
+            <h3><%= 'a) ' + _('Hammer command: ') %></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <pre class="terminal" id="config_command"><%= @config.virt_who_config_command %></pre>
+          </div>
+          <div class="col-md-8">
+            <div class="terminal-buttons">
+              <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_command").html()); return false' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3><%= 'b) ' + _('Configuration script: ') %></h3>
+          </div>
+          <div class="col-md-8">
+            <p>
+              <%= _("On the target virt-who host:") %></br>
+              <%= _("1. Copy this configuration script to a safe directory.") %></br>
+              <%= _("2. Make the script executable and run it.") %></br>
+              <%= _("3. Delete the script.") %></br>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <pre class="terminal" id="config_script"><%= @config.virt_who_config_script %></pre>
+          </div>
+          <div class="col-md-8">
+            <div class="terminal-buttons">
+              <%= link_to _('Copy to clipboard'), nil, :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_script").html()); return false' %>
+              <%= link_to _('Download the script'), deploy_script_foreman_virt_who_configure_config_path(@config), :class => 'btn btn-default' %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
