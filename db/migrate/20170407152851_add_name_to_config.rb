@@ -1,4 +1,4 @@
-class AddNameToConfig < ActiveRecord::Migration
+class AddNameToConfig < ActiveRecord::Migration[4.2]
   def change
     add_column :foreman_virt_who_configure_configs, :name, :string, :null => false, :default => ''
   end

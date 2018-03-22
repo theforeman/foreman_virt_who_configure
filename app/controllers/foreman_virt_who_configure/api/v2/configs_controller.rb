@@ -29,8 +29,8 @@ module ForemanVirtWhoConfigure
         param :id, :identifier, :required => true
         def deploy_script
           respond_to do |format|
-            format.text { render :text => @config.virt_who_bash_script }
-            format.sh { render :text => @config.virt_who_bash_script }
+            format.text { send_data @config.virt_who_bash_script, :filename => "deploy_virt_who_config_#{@config.id}.sh", :type => 'text/x-shellscript', :disposition => :attachment }
+            format.sh { send_data @config.virt_who_bash_script, :filename => "deploy_virt_who_config_#{@config.id}.sh", :type => 'text/x-shellscript', :disposition => :attachment }
             format.json
           end
         end

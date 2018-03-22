@@ -22,7 +22,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should get index" do
-    get :index, {}, set_session_user
+    get :index, :params => {}, :session => set_session_user
     response = ActiveSupport::JSON.decode(@response.body)
     assert_not response['results'].empty?
     assert_response :success
@@ -59,7 +59,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should get show for new config" do
-    get :show, { :id => @new_config.to_param }, set_session_user
+    get :show, :params => { :id => @new_config.to_param }, :session => set_session_user
     response = ActiveSupport::JSON.decode(@response.body)
 
     assert_equal 'my vmware', response['name']
@@ -84,7 +84,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should get show for ok config" do
-    get :show, { :id => @ok_config.to_param }, set_session_user
+    get :show, :params => { :id => @ok_config.to_param }, :session => set_session_user
     response = ActiveSupport::JSON.decode(@response.body)
 
     assert_equal 'ok', response['status']
@@ -94,7 +94,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should get show for out of date config" do
-    get :show, { :id => @out_of_date_config.to_param }, set_session_user
+    get :show, :params => { :id => @out_of_date_config.to_param }, :session => set_session_user
     response = ActiveSupport::JSON.decode(@response.body)
 
     assert_equal 'out_of_date', response['status']
@@ -104,7 +104,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should get deploy script for config" do
-    get :deploy_script, { :id => @out_of_date_config.to_param }, set_session_user
+    get :deploy_script, :params => { :id => @out_of_date_config.to_param }, :session => set_session_user
     response = ActiveSupport::JSON.decode(@response.body)
 
     assert_response :success
@@ -112,7 +112,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should get deploy script for plain/text format" do
-    get :deploy_script, { :id => @out_of_date_config.to_param, :format => 'txt' }, set_session_user
+    get :deploy_script, :params => { :id => @out_of_date_config.to_param }, :session => set_session_user, :format => :txt
     response = @response.body
 
     assert_response :success
@@ -120,7 +120,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should get deploy script for shell script format" do
-    get :deploy_script, { :id => @out_of_date_config.to_param, :format => 'sh' }, set_session_user
+    get :deploy_script, :params => { :id => @out_of_date_config.to_param }, :session => set_session_user, :format => :sh
     response = @response.body
 
     assert_response :success
@@ -129,7 +129,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
 
   test "should create the config" do
     org = FactoryBot.create(:organization)
-    post :create, { :foreman_virt_who_configure_config => { :name => 'my new config',
+    post :create, :params => { :foreman_virt_who_configure_config => { :name => 'my new config',
                                                             :interval => 240,
                                                             :filtering_mode => ForemanVirtWhoConfigure::Config::BLACKLIST,
                                                             :blacklist => ' a,b ',
@@ -141,7 +141,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
                                                             :debug => true,
                                                             :satellite_url => "foreman.example.com",
                                                             :organization_id => org.id }
-    }, set_session_user
+    }, :session => set_session_user
 
     assert_response :success
 
@@ -161,7 +161,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should update the config" do
-    put :update, { :id => @ok_config.to_param, :foreman_virt_who_configure_config => { :name => 'updated', :interval => 240, :hypervisor_password => 'new_pass' } }, set_session_user
+    put :update, :params => { :id => @ok_config.to_param, :foreman_virt_who_configure_config => { :name => 'updated', :interval => 240, :hypervisor_password => 'new_pass' } }, :session => set_session_user
     assert_response :success
     @ok_config.reload
     assert_equal 'updated', @ok_config.name
@@ -170,7 +170,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
   end
 
   test "should destroy the config" do
-    delete :destroy, { :id => @ok_config.to_param }, set_session_user
+    delete :destroy, :params => { :id => @ok_config.to_param }, :session => set_session_user
     assert_response :success
 
     assert_empty ForemanVirtWhoConfigure::Config.where(:id => @ok_config.id).all

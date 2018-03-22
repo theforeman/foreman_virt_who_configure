@@ -1,4 +1,4 @@
-class AddProxyAndNoProxyToConfig < ActiveRecord::Migration
+class AddProxyAndNoProxyToConfig < ActiveRecord::Migration[4.2]
   def up
     add_column :foreman_virt_who_configure_configs, :proxy, :string
     add_column :foreman_virt_who_configure_configs, :no_proxy, :string
