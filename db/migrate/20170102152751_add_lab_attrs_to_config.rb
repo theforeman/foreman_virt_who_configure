@@ -1,4 +1,4 @@
-class AddLabAttrsToConfig < ActiveRecord::Migration
+class AddLabAttrsToConfig < ActiveRecord::Migration[4.2]
   def change
     add_column :foreman_virt_who_configure_configs, :debug, :boolean, :default => false, :null => true
     add_column :foreman_virt_who_configure_configs, :hypervisor_type, :string, :null => true

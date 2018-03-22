@@ -1,4 +1,4 @@
-class CreateServiceUsers < ActiveRecord::Migration
+class CreateServiceUsers < ActiveRecord::Migration[4.2]
   def change
     create_table :foreman_virt_who_configure_service_users do |t|
       t.string :encrypted_password, :null => false

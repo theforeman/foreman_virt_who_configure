@@ -1,4 +1,4 @@
-class CreateConfigs < ActiveRecord::Migration
+class CreateConfigs < ActiveRecord::Migration[4.2]
   def change
     create_table :foreman_virt_who_configure_configs do |t|
       t.integer :interval, :default => 60, :null => true
