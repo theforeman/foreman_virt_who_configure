@@ -84,8 +84,8 @@ yum install -y virt-who || result_code=$(($result_code|#{error_code(:virt_who_in
 
 if verify_minimal_version; then
   step 2 "Encrypting password"
-  cr_password=`virt-who-password --password "#{cr_password}" 2> /dev/null`
-  user_password=`virt-who-password --password "#{service_user_password}" 2> /dev/null`
+  cr_password=`virt-who-password --password '#{cr_password}' 2> /dev/null`
+  user_password=`virt-who-password --password '#{service_user_password}' 2> /dev/null`
 
   step 3 "Creating virt-who configuration"
   cat > #{config_file_path} << EOF
