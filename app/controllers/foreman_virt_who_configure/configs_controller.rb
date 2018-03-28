@@ -36,7 +36,7 @@ module ForemanVirtWhoConfigure
     def create
       @config = Config.new(config_params)
       if @config.save
-        process_success :success_redirect => foreman_virt_who_configure_config_path(@config)
+        process_success :success_redirect => foreman_virt_who_configure_config_path(@config), :object => @config
       else
         render 'new'
       end
