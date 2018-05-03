@@ -6,6 +6,17 @@
         display_delete_if_authorized(hash_for_foreman_virt_who_configure_config_path(@config).merge(:permission => 'destroy_virt_who_config', :auth_object => @config), :class => 'btn btn-default', :data => {:confirm => _("Delete virt-who configuration %s?") % config.name})
     ) %>
 
+<%= breadcrumbs(:resource_url => foreman_virt_who_configure_api_configs_path,
+                :items => [
+                    {:caption => _('Configurations'),
+                     :url => url_for(foreman_virt_who_configure_configs_path)
+                    },
+                    {:caption => @config.name,
+                     :url => (edit_foreman_virt_who_configure_config_path(@config) if authorized_for(hash_for_edit_foreman_virt_who_configure_config_path(@config)))
+                    }
+                ]
+    ) %>
+
 <ul id="config-tab" class="nav nav-tabs">
   <li class="active"><a href="#overview" data-toggle="tab"><%= _('Overview') %></a></li>
   <li><a href="#deploy" data-toggle="tab"><%= _('Deploy') %></a></li>
