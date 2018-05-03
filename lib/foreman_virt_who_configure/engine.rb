@@ -27,7 +27,7 @@ module ForemanVirtWhoConfigure
 
     initializer 'foreman_virt_who_configure.register_plugin', :before => :finisher_hook do |_app|
       Foreman::Plugin.register :foreman_virt_who_configure do
-        requires_foreman '>= 1.16'
+        requires_foreman '>= 1.18'
         requires_foreman_plugin 'katello', '>= 3.0.0'
 
         apipie_documented_controllers ["#{ForemanVirtWhoConfigure::Engine.root}/app/controllers/foreman_virt_who_configure/api/v2/*.rb"]
