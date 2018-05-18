@@ -8,7 +8,7 @@ module ForemanVirtWhoConfigure
       # We keep both params permitted for compatibility with 1.11
       :listing_mode, :filtering_mode
     ]
-    audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at ]
+    audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at ], :associations => []
     include Authorizable
     validates_lengths_from_database
 
