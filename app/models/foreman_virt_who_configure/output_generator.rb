@@ -1,3 +1,5 @@
+require 'shellwords'
+
 module ForemanVirtWhoConfigure
   class OutputGenerator
     class ConfigurationResult
@@ -191,7 +193,7 @@ EOS
     end
 
     def cr_username
-      config.hypervisor_username
+      Shellwords.escape(config.hypervisor_username)
     end
 
     def cr_password
