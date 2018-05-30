@@ -5,7 +5,8 @@ module ForemanVirtWhoConfigure
         include ::Api::Version2
         include ForemanVirtWhoConfigure::Concerns::ConfigParameters if Foreman::Version.new.short >= '1.13'
         resource_description do
-          api_base_url "/foreman_virt_who_configure/api"
+          api_version 'v2'
+          api_base_url "/foreman_virt_who_configure/api/v2"
         end
 
         before_action :find_resource, :only => %w{show deploy_script update destroy}
