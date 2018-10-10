@@ -27,7 +27,7 @@ module ForemanVirtWhoConfigure
 
     initializer 'foreman_virt_who_configure.register_plugin', :before => :finisher_hook do |_app|
       Foreman::Plugin.register :foreman_virt_who_configure do
-        requires_foreman '>= 1.18'
+        requires_foreman '>= 1.20'
 
         apipie_documented_controllers ["#{ForemanVirtWhoConfigure::Engine.root}/app/controllers/foreman_virt_who_configure/api/v2/*.rb"]
 
@@ -55,13 +55,14 @@ module ForemanVirtWhoConfigure
         end
 
         begin
-          role 'Virt-who Reporter', reporter_permissions
+          role 'Virt-who Reporter', reporter_permissions, 'Role granting minimal set of permissions for virt-who to upload the report, it can be used if you configure virt-who manually and want to use user that has locked down account.'
         rescue ArgumentError
           # could not configure role, some permissions are missing
         end
 
-        role 'Virt-who Manager', [ :view_virt_who_config, :create_virt_who_config, :edit_virt_who_config, :destroy_virt_who_config ]
-        role 'Virt-who Viewer', [ :view_virt_who_config ]
+        role 'Virt-who Manager',  [ :view_virt_who_config, :create_virt_who_config, :edit_virt_who_config, :destroy_virt_who_config ], 'Role granting all permissions to manage virt-who configurations, user needs this role to create, delete or update configurations.'
+
+        role 'Virt-who Viewer',  [ :view_virt_who_config ], 'Role granting permissions to see all configurations including their configuration scripts, which means viewers could still deploy the virt-who instances for existing virt-who configurations.'
 
         # Available since Foreman 1.15
         add_all_permissions_to_default_roles if respond_to?(:add_all_permissions_to_default_roles)
