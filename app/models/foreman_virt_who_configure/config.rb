@@ -200,7 +200,7 @@ module ForemanVirtWhoConfigure
     end
 
     def virt_who_config_command
-      "hammer virt-who-config deploy --id #{self.id}"
+      "hammer virt-who-config deploy --id #{self.id} --organization-id #{self.organization_id}"
     end
 
     def virt_who_touch!
