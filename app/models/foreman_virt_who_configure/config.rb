@@ -206,7 +206,7 @@ module ForemanVirtWhoConfigure
     def virt_who_touch!
       self.last_report_at = DateTime.now.utc
       self.out_of_date_at = self.last_report_at + self.interval.minutes
-      self.save!
+      self.class.skip_permission_check { self.save! }
     end
 
     def status
