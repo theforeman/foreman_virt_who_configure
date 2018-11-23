@@ -103,11 +103,11 @@ module ForemanVirtWhoConfigure
       case listing_mode.to_i
         when WHITELIST
           unless whitelist.present? || filter_host_parents.present?
-            [:whitelist,:filter_host_parents].each {|f| errors.add(f, "Can't be blank")}
+            [:whitelist, :filter_host_parents].each {|f| errors.add(f, "Can't be blank")}
           end
         when BLACKLIST
           unless blacklist.present? || exclude_host_parents.present?
-            [:blacklist,:exclude_host_parents].each {|f| errors.add(f, "Can't be blank")}
+            [:blacklist, :exclude_host_parents].each {|f| errors.add(f, "Can't be blank")}
           end
       end
     end
@@ -118,7 +118,6 @@ module ForemanVirtWhoConfigure
 
     scope :out_of_date, ->(deadline = DateTime.now.utc) { where(["out_of_date_at < ?", deadline.utc.to_s(:db)]) }
     scope :for_organization, ->(org) { org.nil? ? where(nil) : where(:organization_id => org) }
-
 
     def self.search_by_status(key, operator, value)
       condition = case value

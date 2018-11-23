@@ -156,15 +156,11 @@ EOS
     end
 
     def enabled_filters(filter)
-      filters = ''
-      filter.each do |filter,list|
-        filters += filtering_line_sanitized(filter, list) if !list.empty?
-      end
-      return filters
+      filter.reject { |_, list| list.empty? }.map { |filter,list| filtering_line_sanitized(filter, list) }.join(',')
     end
 
     def filtering_line_sanitized(filter, list)
-     "\n" + filter + '=' + sanitize_filter(list.to_s)
+      "\n" + filter + '=' + sanitize_filter(list.to_s)
     end
 
     def sanitize_filter(list)
