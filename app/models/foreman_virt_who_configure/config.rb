@@ -103,11 +103,11 @@ module ForemanVirtWhoConfigure
       case listing_mode.to_i
         when WHITELIST
           unless whitelist.present? || filter_host_parents.present?
-            [:whitelist, :filter_host_parents].each {|f| errors.add(f, "Can't be blank")}
+            [:whitelist, :filter_host_parents].each {|f| errors.add(f, "Filter hosts or Filter host parents is required")}
           end
         when BLACKLIST
           unless blacklist.present? || exclude_host_parents.present?
-            [:blacklist, :exclude_host_parents].each {|f| errors.add(f, "Can't be blank")}
+            [:blacklist, :exclude_host_parents].each {|f| errors.add(f, "Exclude hosts or Exclude host parents is required")}
           end
       end
     end
