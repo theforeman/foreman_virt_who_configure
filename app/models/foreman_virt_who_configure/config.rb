@@ -46,6 +46,9 @@ module ForemanVirtWhoConfigure
       '240' => N_('Every 4 hours'),
       '480' => N_('Every 8 hours'),
       '720' => N_('Every 12 hours'),
+      '1440' => N_('Every 24 hours'),
+      '2880' => N_('Every 2 days'),
+      '4320' => N_('Every 3 days'),
     }
 
     DEFAULT_INTERVAL = 120
