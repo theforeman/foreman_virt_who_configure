@@ -56,11 +56,11 @@ module ForemanVirtWhoConfigure
     end
 
     describe 'proxy attributes' do
-      test 'it does not set any proxy attributes by default' do
+      test 'it does not set any proxy attributes by default and set no_proxy to * to bypass sub-man proxy' do
         assert_nil config.proxy
         assert_nil config.no_proxy
         assert_not_includes output, 'http_proxy'
-        assert_not_includes output, 'no_proxy'
+        assert_includes output, 'NO_PROXY=*'
       end
 
       test 'it configures proxy when set' do
@@ -70,28 +70,28 @@ module ForemanVirtWhoConfigure
 
       test 'it configures no_proxy when set' do
         config.no_proxy = '*'
-        assert_includes output, 'no_proxy=*'
+        assert_includes output, 'NO_PROXY=*'
       end
 
       test 'proxy_strings prints both proxy and no proxy if present' do
         config.proxy = 'a'
         config.no_proxy = 'b'
         assert_includes generator.proxy_strings, "\nhttp_proxy=a"
-        assert_includes generator.proxy_strings, "\nno_proxy=b"
+        assert_includes generator.proxy_strings, "\NO_PROXY=b"
       end
 
       test 'proxy_strings ignores empty string values' do
         config.proxy = ''
         config.no_proxy = ''
         assert_not_includes generator.proxy_strings, 'http_proxy'
-        assert_not_includes generator.proxy_strings, 'no_proxy'
+        assert_includes generator.proxy_strings, 'NO_PROXY=*'
       end
 
       test 'proxy_strings removes any new line chars' do
         config.proxy = "\na\nb\nc\n"
         config.no_proxy = "\nx\ny\nz"
         assert_includes generator.proxy_strings, "\nhttp_proxy=abc"
-        assert_includes generator.proxy_strings, "\nno_proxy=xyz"
+        assert_includes generator.proxy_strings, "\NO_PROXY=xyz"
       end
     end
 
