@@ -2,17 +2,25 @@ function virt_who_update_listing_mode() {
   var filtering_mode = $('#foreman_virt_who_configure_config_listing_mode').val();
   var whitelist = $('#foreman_virt_who_configure_config_whitelist').parents('div.form-group');
   var blacklist = $('#foreman_virt_who_configure_config_blacklist').parents('div.form-group');
+  var whitelist_parent = $('#foreman_virt_who_configure_config_filter_host_parents').parents('div.form-group');
+  var blacklist_parent = $('#foreman_virt_who_configure_config_exclude_host_parents').parents('div.form-group');
 
   // UNLIMITED = 0, WHITELIST = 1, BLACKLIST = 2, see config.rb model for the definition
   if (filtering_mode == '0') {
     whitelist.hide();
     blacklist.hide();
+    whitelist_parent.hide();
+    blacklist_parent.hide();
   } else if (filtering_mode == '1') {
     whitelist.show();
+    whitelist_parent.show();
     blacklist.hide();
+    blacklist_parent.hide();
   } else if (filtering_mode == '2') {
     whitelist.hide();
+    whitelist_parent.hide();
     blacklist.show();
+    blacklist_parent.show();
   }
 }
 

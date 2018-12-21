@@ -6,7 +6,7 @@ module ForemanVirtWhoConfigure
       :satellite_url, :proxy, :no_proxy, :name,
       # API parameter filtering_mode gets translated to listing_mode in the controller
       # We keep both params permitted for compatibility with 1.11
-      :listing_mode, :filtering_mode
+      :listing_mode, :filtering_mode, :filter_host_parents, :exclude_host_parents
     ]
     audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at ], :associations => []
     include Authorizable
@@ -100,8 +100,21 @@ module ForemanVirtWhoConfigure
     validates :hypervisor_id, :inclusion => HYPERVISOR_IDS
     validates :interval, :inclusion => AVAILABLE_INTERVALS.keys.map(&:to_i)
     validates :listing_mode, :inclusion => FILTERING_MODES.keys.map(&:to_i)
-    validates :whitelist, :presence => true, :if => Proc.new { |c| c.listing_mode.to_i == WHITELIST }
-    validates :blacklist, :presence => true, :if => Proc.new { |c| c.listing_mode.to_i == BLACKLIST }
+    validate :validates_whitelist_blacklist
+
+    def validates_whitelist_blacklist
+      case listing_mode.to_i
+        when WHITELIST
+          unless whitelist.present? || filter_host_parents.present?
+            [:whitelist, :filter_host_parents].each {|f| errors.add(f, "Filter hosts or Filter host parents is required")}
+          end
+        when BLACKLIST
+          unless blacklist.present? || exclude_host_parents.present?
+            [:blacklist, :exclude_host_parents].each {|f| errors.add(f, "Exclude hosts or Exclude host parents is required")}
+          end
+      end
+    end
+
     validates_lengths_from_database
 
     before_validation :remove_whitespaces

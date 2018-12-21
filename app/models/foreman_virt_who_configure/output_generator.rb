@@ -146,13 +146,17 @@ EOS
 
     def filtering
       case config.listing_mode.to_i
-        when ForemanVirtWhoConfigure::Config::UNLIMITED
-          return ''
-        when ForemanVirtWhoConfigure::Config::WHITELIST
-          return filtering_line_sanitized('filter_hosts', config.whitelist)
-        when ForemanVirtWhoConfigure::Config::BLACKLIST
-          return filtering_line_sanitized('exclude_hosts', config.blacklist)
+      when ForemanVirtWhoConfigure::Config::UNLIMITED
+        ''
+      when ForemanVirtWhoConfigure::Config::WHITELIST
+        enabled_filters({'filter_hosts' => config.whitelist, 'filter_host_parents' => config.filter_host_parents})
+      when ForemanVirtWhoConfigure::Config::BLACKLIST
+        enabled_filters({'exclude_hosts' => config.blacklist, 'exclude_host_parents' => config.exclude_host_parents})
       end
+    end
+
+    def enabled_filters(filter)
+      filter.reject { |_, list| list.empty? }.map { |filter,list| filtering_line_sanitized(filter, list) }.join(',')
     end
 
     def filtering_line_sanitized(filter, list)
