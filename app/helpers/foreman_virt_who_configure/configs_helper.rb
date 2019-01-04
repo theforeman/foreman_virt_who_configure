@@ -64,7 +64,7 @@ module ForemanVirtWhoConfigure
     end
 
     def config_attribute_default_label(attr)
-      s_(ForemanVirtWhoConfigure::Config.gettext_translation_for_attribute_name(attr).titleize)
+      s_(ForemanVirtWhoConfigure::Config.gettext_translation_for_attribute_name(attr)).titleize
     end
 
     def config_attribute_label(attr, label)
