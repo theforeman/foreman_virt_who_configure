@@ -1,16 +1,24 @@
 # ForemanVirtWhoConfigure
 
-A foreman plugin to make virt-who configuration easier.
+A foreman plugin to make virt-who configuration easier. This provides simple UI for obtaining required information about the desired virt-who configuration, such as hypervisor credentials, check interval and similar. After the information is gathered, it provides a configuration script that can be used to install and configure the virt-who instance. All incoming reports from such virt-who instance are tracked and monitored by the plugin.
 
 ## Installation
 
-See [How_to_Install_a_Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Install_a_Plugin)
-for how to install Foreman plugins
+This plugins requires Katello to be installed in your Foreman instance. If its there, simply install a package with the plugin (rpm only), run migrations and seed by running,
+
+yum install rubygem-foreman_virt_who_configure
+foreman-rake db:migrate
+foreman-rake db:seed
 
 ## Usage
 
-After installation you should see Virt-who configurations menu item in Infrastructure menu. Create a new configuration
-and see the generated script for virt-who deployment.
+After installation there is new "Virt-who configurations" menu added in "Infrastructure" tab. The "Virt-who configurations" -> "Create Config" provides options to add details about configuration, most of the fields are having inline help.
+
+The virt-who configuration should be in an organization. If organization has not selected then Owner field would be displayed where it is required to select organization. If organization is already selected then Owner field is not displayed and virt-configuration will be automatically created in selected organization scope.
+
+To deploy the configuration click on configuration name on "Virt-who configurations" list page, "Overview" page shows details about configuration and "Deploy page" has all details on deploying configuration.
+
+More details are available at - https://theforeman.org/plugins/foreman_virt_who_configure
 
 ## Contributing
 
@@ -32,4 +40,3 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
