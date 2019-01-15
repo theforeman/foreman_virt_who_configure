@@ -154,6 +154,7 @@ module ForemanVirtWhoConfigure
         # skip validation that prevents hidden user deletion
         user = User.unscoped.find_by_id(service_user.user_id)
         service_user.destroy
+        user.notification_recipients.delete_all
         user.delete
       end
     end
