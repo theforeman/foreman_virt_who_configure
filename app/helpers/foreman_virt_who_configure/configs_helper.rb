@@ -7,7 +7,8 @@ module ForemanVirtWhoConfigure
         # 'vdsm' => 'Red Hat Enterprise Linux Hypervisor (vdsm)',
         'hyperv' => _('Microsoft Hyper-V fully qualified host name or IP address.'),
         'xen' => _('XenServer server’s fully qualified host name or IP address.'),
-        'libvirt' => _('Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root\'s SSH key on target host for a user specified at hypervisor username field')
+        'libvirt' => _('Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root\'s SSH key on target host for a user specified at hypervisor username field'),
+        'kubevirt' => _('Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token.')
       }
     end
 
@@ -18,7 +19,8 @@ module ForemanVirtWhoConfigure
         # 'vdsm' => '',
         'hyperv' => _('Account name by which virt-who is to connect to the hypervisor. By default this is <code>Administrator</code>. To use an alternate account, create a user account and assign that account to the following groups (Windows 2012 Server): Hyper-V Administrators and Remote Management Users.'),
         'xen' => _('Account name by which virt-who is to connect to the hypervisor.'),
-        'libvirt' => _('Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href="https://access.redhat.com/solutions/1515983">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information.')
+        'libvirt' => _('Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href="https://access.redhat.com/solutions/1515983">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information.'),
+        'kubevirt' => ''
       }
     end
 
