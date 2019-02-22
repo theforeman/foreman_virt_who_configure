@@ -69,7 +69,7 @@ module ForemanVirtWhoConfigure
     end
 
     def auto_complete_controller_name
-      'foreman_virt_who_configure_configs'
+      'configs'
     end
 
     def controller_name
