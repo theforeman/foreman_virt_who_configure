@@ -1,4 +1,5 @@
 function virt_who_update_listing_mode() {
+  var hypervisor_type = $('#foreman_virt_who_configure_config_hypervisor_type').val();
   var filtering_mode = $('#foreman_virt_who_configure_config_listing_mode').val();
   var whitelist = $('#foreman_virt_who_configure_config_whitelist').parents('div.form-group');
   var blacklist = $('#foreman_virt_who_configure_config_blacklist').parents('div.form-group');
@@ -13,14 +14,14 @@ function virt_who_update_listing_mode() {
     blacklist_parent.hide();
   } else if (filtering_mode == '1') {
     whitelist.show();
-    whitelist_parent.show();
+    if (hypervisor_type == 'esx') { whitelist_parent.show(); } else { whitelist_parent.hide(); }
     blacklist.hide();
     blacklist_parent.hide();
   } else if (filtering_mode == '2') {
     whitelist.hide();
     whitelist_parent.hide();
     blacklist.show();
-    blacklist_parent.show();
+    if (hypervisor_type == 'esx') { blacklist_parent.show(); } else { blacklist_parent.hide(); }
   }
 }
 
@@ -32,6 +33,7 @@ function virt_who_update_hypervisor_fields() {
   element.closest('.form-group').toggle(selected_type != 'libvirt' && selected_type != 'kubevirt');
   var element = $('#foreman_virt_who_configure_config_kubeconfig_path');
   element.closest('.form-group').toggle(selected_type == 'kubevirt');
+  virt_who_update_listing_mode();
 }
 
 function virt_who_update_credentials_help() {
