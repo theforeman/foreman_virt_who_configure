@@ -39,8 +39,14 @@
           <%= config_attribute :satellite_url, @config.satellite_url, _('Satellite server FQDN')%>
           <%= config_attribute :hypervisor_id, @config.hypervisor_id, _('Hypervisor ID') %>
           <%= config_attribute :listing_mode, _(ForemanVirtWhoConfigure::Config::FILTERING_MODES[@config.listing_mode.to_s]), _('Filtering') %>
-          <%= config_attribute :whitelist, @config.whitelist if @config.whitelist.present? %>
-          <%= config_attribute :blacklist, @config.blacklist if @config.blacklist.present? %>
+          <% if @config.listing_mode == ForemanVirtWhoConfigure::Config::WHITELIST %>
+            <%= config_attribute :whitelist, @config.whitelist, _('Filter Hosts') if @config.whitelist.present? %>
+            <%= config_attribute :filter_host_parents, @config.filter_host_parents if @config.filter_host_parents.present? %>
+          <% end %>
+          <% if @config.listing_mode == ForemanVirtWhoConfigure::Config::BLACKLIST %>
+            <%= config_attribute :blacklist, @config.blacklist, _('Exclude Hosts') if @config.blacklist.present? %>
+            <%= config_attribute :exclude_host_parents, @config.exclude_host_parents if @config.exclude_host_parents.present? %>
+          <% end %>
           <%= config_attribute :debug, checked_icon(@config.debug), _('Enable debugging output?') %>
           <%= config_attribute :proxy, @config.proxy if @config.proxy.present? %>
           <%= config_attribute :no_proxy, @config.no_proxy if @config.no_proxy.present? %>
