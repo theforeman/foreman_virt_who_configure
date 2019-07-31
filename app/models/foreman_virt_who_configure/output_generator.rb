@@ -12,6 +12,7 @@ module ForemanVirtWhoConfigure
     MINIMUM_VIRT_WHO_VERSION = '0.24.2'
 
     LIBVIRT_FAKE_PASSWORD = 'libvirt_fake_password'
+    KUBEVIRT_FAKE_PASSWORD = 'kubevirt_fake_password'
 
     CONFIGURATION_RESULTS = [
       ConfigurationResult.new(0, 'success', N_('Success')),
@@ -201,7 +202,14 @@ EOS
     end
 
     def cr_password
-      config.hypervisor_type == 'libvirt' && config.hypervisor_password.blank? ? LIBVIRT_FAKE_PASSWORD : config.hypervisor_password
+      case config.hypervisor_type
+      when 'libvirt'
+        config.hypervisor_password.blank? ? LIBVIRT_FAKE_PASSWORD : config.hypervisor_password
+      when 'kubevirt' 
+        config.hypervisor_password.blank? ? KUBEVIRT_FAKE_PASSWORD : config.hypervisor_password
+      else
+        config.hypervisor_password
+      end
     end
 
     def satellite_url
