@@ -33,6 +33,8 @@ function virt_who_update_hypervisor_fields() {
   element.closest('.form-group').toggle(selected_type != 'libvirt' && selected_type != 'kubevirt');
   var element = $('#foreman_virt_who_configure_config_kubeconfig_path');
   element.closest('.form-group').toggle(selected_type == 'kubevirt');
+  var element = $('#foreman_virt_who_configure_config_hypervisor_server');
+  element.closest('.form-group').toggle(selected_type != 'kubevirt');
   virt_who_update_listing_mode();
 }
 
