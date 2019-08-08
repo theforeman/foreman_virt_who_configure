@@ -15,311 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "List of virt-who configurations"
-msgstr ""
-
-msgid "List of virt-who configurations per organization"
-msgstr ""
-
-msgid "Show a virt-who configuration"
-msgstr ""
-
-msgid "Renders a deploy script for the specified virt-who configuration"
-msgstr ""
-
-msgid "Configuration name"
-msgstr ""
-
-msgid "Configuration interval in minutes"
-msgstr ""
-
-msgid ""
-"Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means"
-" whitelist, %{blacklist} means blacklist"
-msgstr ""
-
-msgid ""
-"Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcar"
-"ds and regular expressions are supported, multiple records must be separated b"
-"y comma."
-msgstr ""
-
-msgid ""
-"Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcar"
-"ds and regular expressions are supported, multiple records must be separated b"
-"y comma."
-msgstr ""
-
-msgid "Specifies how the hypervisor will be identified."
-msgstr ""
-
-msgid "Hypervisor type"
-msgstr ""
-
-msgid "Fully qualified host name or IP address of the hypervisor"
-msgstr ""
-
-msgid "Account name by which virt-who is to connect to the hypervisor."
-msgstr ""
-
-msgid "Hypervisor password, required for all hypervisor types except for libvirt"
-msgstr ""
-
-msgid "Satellite server FQDN"
-msgstr ""
-
-msgid "Enable debugging output"
-msgstr ""
-
-msgid ""
-"HTTP proxy that should be used for communication between the server on which v"
-"irt-who is running and the hypervisors and virtualization managers."
-msgstr ""
-
-msgid ""
-"Ignore proxy. A comma-separated list of hostnames or domains or ip addresses t"
-"o ignore proxy settings for. Optionally this may be set to * to bypass proxy s"
-"ettings for all hostnames domains or ip addresses."
-msgstr ""
-
-msgid "Organization of the virt-who configuration"
-msgstr ""
-
-msgid "Create a virt-who configuration"
-msgstr ""
-
-msgid "Update a virt-who configuration"
-msgstr ""
-
-msgid "Configuration numeric identifier"
-msgstr ""
-
-msgid "Delete a virt-who configuration"
-msgstr ""
-
-msgid "Create Config"
-msgstr ""
-
-msgid "New Config"
-msgstr ""
-
-msgid "Help"
-msgstr ""
-
-msgid "VMware vCenter server’s fully qualified host name or IP address."
-msgstr ""
-
-msgid ""
-"Red Hat Virtualization Manager’s fully qualified host name or IP address. For "
-"example, <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https:/"
-"/hostname_or_IP:443</code> for v3"
-msgstr ""
-
-msgid "Microsoft Hyper-V fully qualified host name or IP address."
-msgstr ""
-
-msgid "XenServer server’s fully qualified host name or IP address."
-msgstr ""
-
-msgid ""
-"Libvirt server’s fully qualified host name or IP address. You can also specify"
-" preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</c"
-"ode>. If you use SSH, make sure you setup root's SSH key on target host for a "
-"user specified at hypervisor username field"
-msgstr ""
-
-msgid ""
-"Account name by which virt-who is to connect to the hypervisor, in the format "
-"<code>domain_name\\account_name</code>. Note that only a single backslash separ"
-"ates the values for domain_name and account_name. If you are using a domain ac"
-"count, and the global configuration file <code>/etc/sysconfig/virt-who</code>,"
-" then <b>two</b> backslashes are required. For further details, see <a href=\"h"
-"ttps://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How"
-" to use a windows domain account with virt-who</a> for more information."
-msgstr ""
-
-msgid ""
-"Account name by which virt-who is to connect to the Red Hat Enterprise Virtual"
-"ization Manager instance. The username option requires input in the format use"
-"rname@domain."
-msgstr ""
-
-msgid ""
-"Account name by which virt-who is to connect to the hypervisor. By default thi"
-"s is <code>Administrator</code>. To use an alternate account, create a user ac"
-"count and assign that account to the following groups (Windows 2012 Server): H"
-"yper-V Administrators and Remote Management Users."
-msgstr ""
-
-msgid ""
-"Account name by which virt-who is to connect to the hypervisor. Virt-who does "
-"not support password based authentication, you must manually setup SSH key, se"
-"e <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase "
-"solution How to configure virt-who for a KVM host</a> for more information."
-msgstr ""
-
-msgid "No Report Yet"
-msgstr ""
-
-msgid "Unknown configuration status"
-msgstr ""
-
-msgid "Unlimited"
-msgstr ""
-
-msgid "Whitelist"
-msgstr ""
-
-msgid "Blacklist"
-msgstr ""
-
-msgid "General information"
-msgstr ""
-
-msgid "Schedule"
-msgstr ""
-
-msgid "Connection"
-msgstr ""
-
-msgid "Every hour"
-msgstr ""
-
-msgid "Every 2 hours"
-msgstr ""
-
-msgid "Every 4 hours"
-msgstr ""
-
-msgid "Every 8 hours"
-msgstr ""
-
-msgid "Every 12 hours"
-msgstr ""
-
-msgid "OK"
-msgstr ""
-
-msgid "No change"
-msgstr ""
-
-msgid "Unknown"
-msgstr ""
-
-msgid "Unknown configuration status, caused by unexpected conditions"
-msgstr ""
-
-msgid ""
-"The configuration was not deployed yet or the virt-who was unable to report th"
-"e status"
-msgstr ""
-
-msgid "The virt-who report arrived within the interval"
-msgstr ""
-
-msgid ""
-"The virt-who report has not arrived within the interval, which indicates there"
-" was no change on hypervisor"
-msgstr ""
-
-msgid "every %s hours"
-msgstr ""
-
-msgid "Success"
-msgstr ""
-
-msgid "Newer version of virt-who is required, minimum version is %s"
-msgstr ""
-
-msgid "Unable to create virt-who config file"
-msgstr ""
-
-msgid "Unable to create sysconfig file"
-msgstr ""
-
-msgid "Unable to enable virt-who service using chkconfig"
-msgstr ""
-
-msgid "Unable to start virt-who service, please see virt-who logs for more details"
-msgstr ""
-
-msgid ""
-"Unable to install virt-who package, make sure the host is properly subscribed "
-"and has access to satellite-tools repository"
-msgstr ""
-
-msgid "Owner was not provided"
-msgstr ""
-
-msgid "Interval was not provided"
-msgstr ""
-
-msgid "Virt-who Configurations Status"
-msgstr ""
-
-msgid "Configuration Status"
-msgstr ""
-
-msgid "Count"
-msgstr ""
-
-msgid "No Reports"
-msgstr ""
-
-msgid "Out Of Date"
-msgstr ""
-
-msgid "Up To Date"
-msgstr ""
-
-msgid "Total Configurations"
-msgstr ""
-
-msgid "Latest Out of Date Configurations"
-msgstr ""
-
-msgid "No configuration found"
-msgstr ""
-
-msgid "Config|Name"
-msgstr ""
-
-msgid "Config|Last Report"
-msgstr ""
-
-msgid "Config|Interval"
-msgstr ""
-
-msgid "Edit Virt-who Config"
-msgstr ""
-
-msgid "Virt-who Configurations"
-msgstr ""
-
-msgid "Status"
-msgstr ""
-
-msgid "Actions"
-msgstr ""
-
-msgid "Edit"
-msgstr ""
-
-msgid "Delete virt-who configuration %s?"
-msgstr ""
-
-msgid "New Virt-who Config"
-msgstr ""
-
-msgid ""
-"To deploy this configuration. run this script on the target host which has acc"
-"ess to Red Hat Satellite Tools repository and will run virt-who reporting, pre"
-"ferably Satellite host:"
-msgstr ""
-
-msgid "On the target virt-who host:"
-msgstr ""
-
 msgid "1. Copy this configuration script to a safe directory."
 msgstr ""
 
@@ -329,149 +24,43 @@ msgstr ""
 msgid "3. Delete the script."
 msgstr ""
 
-msgid "Edit this configuration"
+msgid "A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr ""
 
-msgid "Download the script"
+msgid "A plugin to make virt-who configuration easy"
 msgstr ""
 
-msgid "Copy to clipboard"
+msgid "Abstract async task"
 msgstr ""
 
-msgid "Configuration script: "
+msgid "Account name by which virt-who is to connect to the Red Hat Enterprise Virtualization Manager instance. The username option requires input in the format username@domain."
 msgstr ""
 
-msgid ""
-"Satellite Server’s fully-qualified host name, for example: satellite.example.c"
-"om"
+msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/sysconfig/virt-who</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
 
-msgid "Hypervisor ID"
+msgid "Account name by which virt-who is to connect to the hypervisor."
 msgstr ""
 
-msgid ""
-"Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uui"
-"d</b> or <b>hwuuid</b>.\n"
-"                              Note that some virtualization backends don't hav"
-"e all of them implemented.\n"
-"                              Default is <b>hostname</b>, which provides more "
-"meaningful hypervisor\n"
-"                                  names, but can cause duplicated hypervisor r"
-"egistrations if the host is renamed. To avoid that, you can use <b>uuid</b> in"
-"stead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
-"                                  This property is meant to be set up before t"
-"he initial run of virt-who. Changing it later will result in duplicated entrie"
-"s in the subscription manager."
+msgid "Account name by which virt-who is to connect to the hypervisor. By default this is <code>Administrator</code>. To use an alternate account, create a user account and assign that account to the following groups (Windows 2012 Server): Hyper-V Administrators and Remote Management Users."
 msgstr ""
 
-msgid "Filtering"
-msgstr ""
-
-msgid ""
-"If you run a hybrid environment, with virtual machines running Red Hat Enterpr"
-"ise Linux and other operating systems, you may want to limit the scope of virt"
-"-who’s access to hosts. For example, if some hypervisors host only Microsoft W"
-"indows Server instances, there is no benefit in having those hypervisors repor"
-"ted by the virt-who agent."
-msgstr ""
-
-msgid ""
-"Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</co"
-"de>) is specified in comma-separated list in this option will be reported. Wil"
-"dcards and regular expressions are supported, multiple records must be separat"
-"ed by comma.  Put the value into the double-quotes if it contains special char"
-"acters like comma.  All new line characters will be removed in resulting confi"
-"guration file, white spaces are removed from beginning and end."
-msgstr ""
-
-msgid "Filter hosts"
-msgstr ""
-
-msgid ""
-"Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) "
-"is specified in comma-separated list in this option will <b>NOT</b> be reporte"
-"d.  Wildcards and regular expressions are supported, multiple records must be "
-"separated by comma.  Put the value into the double-quotes if it contains speci"
-"al characters like comma.  All new line characters will be removed in resultin"
-"g configuration file, white spaces are removed from beginning and end."
-msgstr ""
-
-msgid "Exclude hosts"
-msgstr ""
-
-msgid "Do you want to enable debugging output?"
-msgstr ""
-
-msgid ""
-"HTTP proxy that should be used for communication between the server on which v"
-"irt-who is running and the hypervisors and virtualization managers. Leave this"
-" blank if no proxy is used."
-msgstr ""
-
-msgid "HTTP proxy"
-msgstr ""
-
-msgid ""
-"A comma-separated list of hostnames or domains or ip addresses to ignore proxy"
-" settings for. Optionally this may be set to <code>*</code> to bypass proxy se"
-"ttings for all hostnames domains or ip addresses."
-msgstr ""
-
-msgid "Ignore proxy"
-msgstr ""
-
-msgid "Name of this configuration, e.g. the name of the hypervisor"
-msgstr ""
-
-msgid "Owner"
+msgid "Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information."
 msgstr ""
 
 msgid "Account password by which virt-who is to connect to the hypervisor instance."
 msgstr ""
 
-msgid ""
-"How often to check connected hypervisors for changes? Also affects how often a"
-" mapping is reported. The recommended value for most environments is every two"
-" hours."
+msgid "Action with sub plans"
 msgstr ""
 
-msgid "Configs"
+msgid "Actions"
 msgstr ""
 
-msgid "On this page you can define virt-who configurations for your hypervisors."
+msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
-msgid ""
-"One virt-who configuration represents one config file in /etc/virt-who.d direc"
-"tory and maps to single hypervisor, organization and lifecycle environment."
-msgstr ""
-
-msgid ""
-"To define a new configuration, click the New Config button and fill in the for"
-"m. After you provide all required information a virt-who configuration script "
-"will be generated. You could either install it manually by copying the script "
-"or deploy it on a selected target host through Remote Execution."
-msgstr ""
-
-msgid "Virt-who configurations"
-msgstr ""
-
-msgid "Virt-who Configs Status"
-msgstr ""
-
-msgid "Create"
-msgstr ""
-
-msgid "Delete"
-msgstr ""
-
-msgid "Export"
-msgstr ""
-
-msgid "Incremental Update"
-msgstr ""
-
-msgid "Delete Lifecycle Environment"
+msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
 msgid "Attach subscriptions"
@@ -480,13 +69,241 @@ msgstr ""
 msgid "Auto attach subscriptions"
 msgstr ""
 
+msgid "Auto-attach subscriptions"
+msgstr ""
+
+msgid "Blacklist"
+msgstr ""
+
+msgid "Combined Profile Update"
+msgstr ""
+
+msgid "Configs"
+msgstr ""
+
+msgid "Configuration Status"
+msgstr ""
+
+msgid "Configuration file containing details about how to connect to the cluster and authentication details"
+msgstr ""
+
+msgid "Configuration interval in minutes"
+msgstr ""
+
+msgid "Configuration name"
+msgstr ""
+
+msgid "Configuration numeric identifier"
+msgstr ""
+
+msgid "Configuration script: "
+msgstr ""
+
+msgid "Configurations"
+msgstr ""
+
+msgid "Config|Interval"
+msgstr ""
+
+msgid "Config|Last Report"
+msgstr ""
+
+msgid "Config|Name"
+msgstr ""
+
+msgid "Connection"
+msgstr ""
+
+msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
+msgstr ""
+
+msgid "Copy to clipboard"
+msgstr ""
+
+msgid "Count"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Create Config"
+msgstr ""
+
+msgid "Create Package Group"
+msgstr ""
+
+msgid "Create a virt-who configuration"
+msgstr ""
+
+msgid "Create repos"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Delete Activation Key"
+msgstr ""
+
+msgid "Delete Lifecycle Environment"
+msgstr ""
+
+msgid "Delete Package Group"
+msgstr ""
+
+msgid "Delete Product"
+msgstr ""
+
+msgid "Delete a virt-who configuration"
+msgstr ""
+
+msgid "Delete virt-who configuration %s?"
+msgstr ""
+
+msgid "Deploy"
+msgstr ""
+
+msgid "Destroy"
+msgstr ""
+
 msgid "Destroy Content Host"
 msgstr ""
 
-msgid "Install Applicable Errata"
+msgid "Details"
 msgstr ""
 
-msgid "Install erratum"
+msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid "Discover"
+msgstr ""
+
+msgid "Download the script"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit Virt-who Config"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid "Enable debugging output"
+msgstr ""
+
+msgid "Enable debugging output?"
+msgstr ""
+
+msgid "Errata mail"
+msgstr ""
+
+msgid "Every 12 hours"
+msgstr ""
+
+msgid "Every 2 days"
+msgstr ""
+
+msgid "Every 2 hours"
+msgstr ""
+
+msgid "Every 24 hours"
+msgstr ""
+
+msgid "Every 3 days"
+msgstr ""
+
+msgid "Every 4 hours"
+msgstr ""
+
+msgid "Every 8 hours"
+msgstr ""
+
+msgid "Every hour"
+msgstr ""
+
+msgid "Exclude Hosts"
+msgstr ""
+
+msgid "Exclude host parents"
+msgstr ""
+
+msgid "Exclude hosts"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Fetch pxe files"
+msgstr ""
+
+msgid "Filter Hosts"
+msgstr ""
+
+msgid "Filter host parents"
+msgstr ""
+
+msgid "Filter hosts"
+msgstr ""
+
+msgid "Filtered index content"
+msgstr ""
+
+msgid "Filtering"
+msgstr ""
+
+msgid "Fully qualified host name or IP address of the hypervisor"
+msgstr ""
+
+msgid "General information"
+msgstr ""
+
+msgid "HTTP Proxy"
+msgstr ""
+
+msgid "HTTP proxy"
+msgstr ""
+
+msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
+msgstr ""
+
+msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used."
+msgstr ""
+
+msgid "Hammer command: "
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours. Different interval can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
+msgstr ""
+
+msgid "Hypervisor ID"
+msgstr ""
+
+msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
+msgstr ""
+
+msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
+msgstr ""
+
+msgid "Hypervisor password, required for all hypervisor types except for libvirt"
+msgstr ""
+
+msgid "Hypervisor type"
+msgstr ""
+
+msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr ""
 
 msgid "Hypervisors"
@@ -495,61 +312,28 @@ msgstr ""
 msgid "Hypervisors update"
 msgstr ""
 
-msgid "Install package"
+msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
 msgstr ""
 
-msgid "Remove package"
+msgid "Ignore Proxy"
 msgstr ""
 
-msgid "Update package"
+msgid "Ignore proxy"
 msgstr ""
 
-msgid "Install package group"
+msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr ""
 
-msgid "Remove package group"
+msgid "Import Puppet classes"
 msgstr ""
 
-msgid "Register Host"
+msgid "Import facts"
 msgstr ""
 
-msgid "Remove subscriptions"
+msgid "Incremental Update"
 msgstr ""
 
-msgid "Unregister Host"
-msgstr ""
-
-msgid "Update for host"
-msgstr ""
-
-msgid "Package Profile Update"
-msgstr ""
-
-msgid "Auto-attach subscriptions"
-msgstr ""
-
-msgid "Destroy"
-msgstr ""
-
-msgid "Product Create"
-msgstr ""
-
-msgid "Delete Product"
-msgstr ""
-
-msgid "Reindex subscriptions"
-msgstr ""
-
-msgid "Update"
-msgstr ""
-
-msgid "Errata mail"
-msgstr ""
-
-msgid "Filtered index content"
-msgstr ""
-
-msgid "Upload into"
+msgid "Incremental Update of  Content View Version(s) "
 msgstr ""
 
 msgid "Index content"
@@ -558,79 +342,130 @@ msgstr ""
 msgid "Index errata"
 msgstr ""
 
+msgid "Index module streams"
+msgstr ""
+
 msgid "Index package groups"
 msgstr ""
 
-msgid "Remove Content"
+msgid "Install Applicable Errata"
 msgstr ""
 
-msgid "Synchronize"
+msgid "Install erratum"
 msgstr ""
 
-msgid "Upload errata into"
+msgid "Install package"
 msgstr ""
 
-msgid "Disable"
+msgid "Install package group"
 msgstr ""
 
-msgid "Enable"
+msgid "Instance update"
 msgstr ""
 
-msgid "Add Sync Plan Products"
+msgid "Interval was not provided"
 msgstr ""
 
-msgid "Update Sync Plan Products"
+msgid "Latest Configurations Without Change"
 msgstr ""
 
-msgid "Update Sync Plan"
+msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
 msgstr ""
 
-msgid "Remote action:"
+msgid "List of virt-who configurations"
 msgstr ""
 
-msgid "Report"
+msgid "List of virt-who configurations per organization"
 msgstr ""
 
-msgid "Action with sub plans"
+msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr ""
 
-msgid "Create architecture"
+msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr ""
 
-msgid "Delete architecture"
+msgid "New Config"
 msgstr ""
 
-msgid "Update architecture"
+msgid "New Virt-who Config"
 msgstr ""
 
-msgid "Import facts"
+msgid "Newer version of virt-who is required, minimum version is %s"
 msgstr ""
 
-msgid "Import Puppet classes"
+msgid "No Change"
 msgstr ""
 
-msgid "Abstract async task"
+msgid "No Report Yet"
 msgstr ""
 
-msgid "Delete Activation Key"
+msgid "No Reports"
 msgstr ""
 
-msgid "Configure capsule"
+msgid "No change"
 msgstr ""
 
-msgid "Create repos"
+msgid "No configuration found"
 msgstr ""
 
-msgid "Synchronize capsule content"
+msgid "OK"
 msgstr ""
 
-msgid "Promotion"
+msgid "On the target virt-who host:"
+msgstr ""
+
+msgid "On this page you can define virt-who configurations for your hypervisors."
+msgstr ""
+
+msgid "One virt-who configuration represents one config file in /etc/virt-who.d directory and maps to single hypervisor, organization and lifecycle environment."
+msgstr ""
+
+msgid "Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Organization of the virt-who configuration"
+msgstr ""
+
+msgid "Overview"
+msgstr ""
+
+msgid "Owner"
+msgstr ""
+
+msgid "Owner was not provided"
+msgstr ""
+
+msgid "Package Profile Update"
+msgstr ""
+
+msgid "Path to kubeconfig file"
+msgstr ""
+
+msgid "Product Create"
+msgstr ""
+
+msgid "Promote"
+msgstr ""
+
+msgid "Promotion to Environment"
 msgstr ""
 
 msgid "Publish"
 msgstr ""
 
-msgid "Remove from Environment"
+msgid "Publish Lifecycle Environment Repositories"
+msgstr ""
+
+msgid "Red Hat Virtualization Manager’s fully qualified host name or IP address. For example, <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https://hostname_or_IP:443</code> for v3"
+msgstr ""
+
+msgid "Reindex subscriptions"
+msgstr ""
+
+msgid "Remove Content"
 msgstr ""
 
 msgid "Remove Version"
@@ -639,5 +474,163 @@ msgstr ""
 msgid "Remove Versions and Associations"
 msgstr ""
 
-msgid "A plugin to make virt-who configuration easy"
+msgid "Remove from Environment"
+msgstr ""
+
+msgid "Remove package"
+msgstr ""
+
+msgid "Remove package group"
+msgstr ""
+
+msgid "Remove subscriptions"
+msgstr ""
+
+msgid "Renders a deploy script for the specified virt-who configuration"
+msgstr ""
+
+msgid "Report"
+msgstr ""
+
+msgid "Republish Version Repositories"
+msgstr ""
+
+msgid "Run Sync Plan:"
+msgstr ""
+
+msgid "Satellite Server’s fully-qualified host name, for example: satellite.example.com"
+msgstr ""
+
+msgid "Satellite server FQDN"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "Show a virt-who configuration"
+msgstr ""
+
+msgid "Specifies how the hypervisor will be identified."
+msgstr ""
+
+msgid ""
+"Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
+"                              Note that some virtualization backends don't have all of them implemented.\n"
+"                              Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
+"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
+"                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Success"
+msgstr ""
+
+msgid "Synchronize"
+msgstr ""
+
+msgid "Synchronize smart proxy"
+msgstr ""
+
+msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
+msgstr ""
+
+msgid "The virt-who report arrived within the interval"
+msgstr ""
+
+msgid "The virt-who report has not arrived within the interval, which indicates there was no change on hypervisor"
+msgstr ""
+
+msgid "To define a new configuration, click the New Config button and fill in the form. After you provide all required information a virt-who configuration script will be generated. You could either install it manually by copying the script or deploy it on a selected target host through Remote Execution."
+msgstr ""
+
+msgid "Total Configurations"
+msgstr ""
+
+msgid "Unable to create sysconfig file"
+msgstr ""
+
+msgid "Unable to create virt-who config file"
+msgstr ""
+
+msgid "Unable to enable virt-who service using chkconfig"
+msgstr ""
+
+msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository"
+msgstr ""
+
+msgid "Unable to start virt-who service, please see virt-who logs for more details"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Unknown configuration status"
+msgstr ""
+
+msgid "Unknown configuration status, caused by unexpected conditions"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Update Content Overrides"
+msgstr ""
+
+msgid "Update a virt-who configuration"
+msgstr ""
+
+msgid "Update content urls"
+msgstr ""
+
+msgid "Update for host"
+msgstr ""
+
+msgid "Update package"
+msgstr ""
+
+msgid "Update redhat repository"
+msgstr ""
+
+msgid "Update release version for host"
+msgstr ""
+
+msgid "Upload errata into"
+msgstr ""
+
+msgid "Upload into"
+msgstr ""
+
+msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:"
+msgstr ""
+
+msgid "VMware vCenter server’s fully qualified host name or IP address."
+msgstr ""
+
+msgid "Virt-who Configs Status"
+msgstr ""
+
+msgid "Virt-who Configuration %s"
+msgstr ""
+
+msgid "Virt-who Configurations"
+msgstr ""
+
+msgid "Virt-who Configurations Status"
+msgstr ""
+
+msgid "Virt-who configurations"
+msgstr ""
+
+msgid "Whitelist"
+msgstr ""
+
+msgid "XenServer server’s fully qualified host name or IP address."
+msgstr ""
+
+msgid "every %s hours"
 msgstr ""
