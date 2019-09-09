@@ -157,7 +157,7 @@ EOS
     end
 
     def enabled_filters(filter)
-      filter.reject { |_, list| list.empty? }.map { |filter,list| filtering_line_sanitized(filter, list) }.join(',')
+      filter.reject { |_, list| list.blank? }.map { |filter,list| filtering_line_sanitized(filter, list) }.join
     end
 
     def filtering_line_sanitized(filter, list)
