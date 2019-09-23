@@ -99,10 +99,7 @@ if verify_minimal_version; then
 type=#{type}
 hypervisor_id=#{hypervisor_id}
 owner=#{owner}
-env=Library
-server=#{cr_server}
-username=#{cr_username}
-encrypted_password=$cr_password#{filtering}
+env=Library#{connection_details}
 rhsm_hostname=#{satellite_url}
 rhsm_username=#{service_user_username}
 rhsm_encrypted_password=$user_password
@@ -137,6 +134,16 @@ fi
 EOS
       result += "exit $result_code\n" if format == :bash_script
       result
+    end
+
+    def connection_details
+      if config.hypervisor_type == 'kubevirt'
+        ""
+      else
+        "\nserver=#{cr_server}
+username=#{cr_username}
+encrypted_password=$cr_password#{filtering}"
+      end
     end
 
     def error_handling
