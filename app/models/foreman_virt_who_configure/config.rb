@@ -174,6 +174,8 @@ module ForemanVirtWhoConfigure
         user = User.unscoped.find_by_id(service_user.user_id)
         service_user.destroy
         user.notification_recipients.delete_all
+        # we can't use destroy, because internal users can't be deleted
+        user.tasks.update_all :user_id => nil
         user.delete
       end
     end
