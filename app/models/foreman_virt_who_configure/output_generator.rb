@@ -99,7 +99,7 @@ if verify_minimal_version; then
 type=#{type}
 hypervisor_id=#{hypervisor_id}
 owner=#{owner}
-env=Library#{connection_details}
+env=Library#{connection_details}#{filtering}
 rhsm_hostname=#{satellite_url}
 rhsm_username=#{service_user_username}
 rhsm_encrypted_password=$user_password
@@ -142,7 +142,7 @@ EOS
       else
         "\nserver=#{cr_server}
 username=#{cr_username}
-encrypted_password=$cr_password#{filtering}"
+encrypted_password=$cr_password"
       end
     end
 
