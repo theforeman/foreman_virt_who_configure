@@ -83,8 +83,25 @@ verify_minimal_version() {
 }
 
 result_code=#{error_code(:success)}
+
+compose_install_command() {
+  $1 packages unlock
+  $1 advanced procedure run packages-install --packages virt-who --assumeyes || result_code=$(($result_code|#{error_code(:virt_who_installation)}))
+  $1 packages lock
+}
+
+install_virt_who() {
+  if `rpm -q satellite-maintain > /dev/null`; then
+    compose_install_command satellite-maintain
+  elif `rpm -q rubygem-foreman_maintain > /dev/null`; then
+    compose_install_command foreman-maintain
+  else
+    yum install -y virt-who || result_code=$(($result_code|#{error_code(:virt_who_installation)}))
+  fi
+}
+
 step 1 "Installing virt-who"
-yum install -y virt-who || result_code=$(($result_code|#{error_code(:virt_who_installation)}))
+install_virt_who
 
 if verify_minimal_version; then
   step 2 "Encrypting password"
