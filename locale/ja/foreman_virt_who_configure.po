@@ -1,0 +1,658 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Tomoyuki KATO <inactive+katomo@transifex.com>, 2017
+# 0868a4d1af5275b3f70b0a6dac4c99a4, 2019
+# Bryan Kearney <bryan.kearney@gmail.com>, 2019
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/foreman/teams/114/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "1. Copy this configuration script to a safe directory."
+msgstr "1. この設定スクリプトを安全なディレクトリーにコピーします。"
+
+msgid "2. Make the script executable and run it."
+msgstr "2. スクリプトを実行可能な状態にし、これを実行します。"
+
+msgid "3. Delete the script."
+msgstr "3. スクリプトを削除します。"
+
+msgid "A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses."
+msgstr "プロキシー設定を無視するホスト名、ドメインまたは IP アドレスのコンマ区切りの一覧です。オプションとして、これは <code>*</code> に設定でき、すべてのホスト名ドメインまたは IP アドレスのプロキシー設定をバイパスします。"
+
+msgid "A plugin to make virt-who configuration easy"
+msgstr "virt-who 設定を容易にするプラグイン"
+
+msgid "Abstract async task"
+msgstr "非同期タスクの概要"
+
+msgid "Account name by which virt-who is to connect to the Red Hat Enterprise Virtualization Manager instance. The username option requires input in the format username@domain."
+msgstr "virt-who を Red Hat Enterprise Virtualization Manager インスタンスに接続する際に使用されるアカウント名。ユーザー名オプションには、username@domain 形式の入力が必要になります。"
+
+msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/sysconfig/virt-who</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
+msgstr "virt-who を <code>domain_name\\account_name</code> 形式でハイパーバイザーに接続する際に使用するアカウント名。単一のバックスラッシュのみが domain_name および account_name の値を区別することに注意してください。ドメインアカウント、グローバル設定ファイル <code>/etc/sysconfig/virt-who</code> を使用している場合、<b>2 つの</b> バックスラッシュが必要になります。詳細は、<a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> を参照してください。"
+
+msgid "Account name by which virt-who is to connect to the hypervisor."
+msgstr "virt-who をハイパーバイザーに接続する際に使用されるアカウント名。"
+
+msgid "Account name by which virt-who is to connect to the hypervisor. By default this is <code>Administrator</code>. To use an alternate account, create a user account and assign that account to the following groups (Windows 2012 Server): Hyper-V Administrators and Remote Management Users."
+msgstr "virt-who をハイパーバイザーに接続する際に使用されるアカウント名。デフォルトで、これは <code>Administrator</code> になります。代替アカウントを使用するには、ユーザーアカウントを作成し、そのアカウントを以下のグループに割り当てます (Windows 2012 Server): Hyper-V 管理者およびリモート管理ユーザー。"
+
+msgid "Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information."
+msgstr "virt-who をハイパーバイザーに接続する際に使用されるアカウント名。Virt-who はパスワードベースの認証をサポートしないため、SSH 鍵を手動で設定する必要があります。詳細は、<a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> を参照してください。"
+
+msgid "Account password by which virt-who is to connect to the hypervisor instance."
+msgstr "virt-who をハイパーバイザーインスタンスに接続する際に使用されるアカウントパスワード。"
+
+msgid "Action with sub plans"
+msgstr "サブプランによるアクション"
+
+msgid "Actions"
+msgstr "アクション"
+
+msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Attach subscriptions"
+msgstr "サブスクリプションの割り当て"
+
+msgid "Auto attach subscriptions"
+msgstr "サブスクリプションの自動割り当て"
+
+msgid "Blacklist"
+msgstr "ブラックリスト"
+
+msgid "Bulk generate applicability for hosts"
+msgstr ""
+
+msgid "Combined Profile Update"
+msgstr "統合プロファイルの更新"
+
+msgid "Configs"
+msgstr "設定"
+
+msgid "Configuration Status"
+msgstr "設定ステータス"
+
+msgid "Configuration file containing details about how to connect to the cluster and authentication details"
+msgstr ""
+
+msgid "Configuration interval in minutes"
+msgstr "設定の間隔 (分単位)"
+
+msgid "Configuration name"
+msgstr "設定名"
+
+msgid "Configuration numeric identifier"
+msgstr "設定数値 ID"
+
+msgid "Configuration script: "
+msgstr "設定スクリプト: "
+
+msgid "Configurations"
+msgstr ""
+
+msgid "Config|Interval"
+msgstr "間隔"
+
+msgid "Config|Last Report"
+msgstr "最後のレポート"
+
+msgid "Config|Name"
+msgstr "名前"
+
+msgid "Connection"
+msgstr "接続"
+
+msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
+msgstr ""
+
+msgid "Copy to clipboard"
+msgstr "クリップボードへのコピー"
+
+msgid "Count"
+msgstr "数量"
+
+msgid "Create"
+msgstr "作成"
+
+msgid "Create Config"
+msgstr "設定の作成"
+
+msgid "Create Package Group"
+msgstr "パッケージグループの作成"
+
+msgid "Create a virt-who configuration"
+msgstr "virt-who 設定の作成"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Delete Activation Key"
+msgstr "アクティベーションキーの削除"
+
+msgid "Delete Lifecycle Environment"
+msgstr "ライフサイクル環境の削除"
+
+msgid "Delete Package Group"
+msgstr "パッケージグループの削除"
+
+msgid "Delete Product"
+msgstr "製品の削除"
+
+msgid "Delete a virt-who configuration"
+msgstr "virt-who 設定の削除"
+
+msgid "Delete virt-who configuration %s?"
+msgstr "virt-who 設定 %s を削除しますか?"
+
+msgid "Deploy"
+msgstr ""
+
+msgid "Destroy"
+msgstr "破棄"
+
+msgid "Destroy Content Host"
+msgstr "コンテンツホストの破棄"
+
+msgid "Details"
+msgstr "詳細"
+
+msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
+msgstr ""
+
+msgid "Disable"
+msgstr "無効化"
+
+msgid "Discover"
+msgstr "検出"
+
+msgid "Download the script"
+msgstr "スクリプトのダウンロード"
+
+msgid "Edit"
+msgstr "編集"
+
+msgid "Edit Virt-who Config"
+msgstr "Virt-who 設定の編集"
+
+msgid "Enable"
+msgstr "有効化"
+
+msgid "Enable debugging output"
+msgstr "デバッグ出力の有効化"
+
+msgid "Enable debugging output?"
+msgstr ""
+
+msgid "Errata mail"
+msgstr "エラータメール"
+
+msgid "Every 12 hours"
+msgstr "12 時間ごと"
+
+msgid "Every 2 days"
+msgstr ""
+
+msgid "Every 2 hours"
+msgstr "2 時間ごと"
+
+msgid "Every 24 hours"
+msgstr ""
+
+msgid "Every 3 days"
+msgstr ""
+
+msgid "Every 4 hours"
+msgstr "4 時間ごと"
+
+msgid "Every 8 hours"
+msgstr "8 時間ごと"
+
+msgid "Every hour"
+msgstr "毎時"
+
+msgid "Exclude Hosts"
+msgstr ""
+
+msgid "Exclude host parents"
+msgstr ""
+
+msgid "Exclude hosts"
+msgstr "ホストの除外"
+
+msgid "Export"
+msgstr "エクスポート"
+
+msgid "Fetch pxe files"
+msgstr "PXE ファイルを取得"
+
+msgid "Filter Hosts"
+msgstr ""
+
+msgid "Filter host parents"
+msgstr ""
+
+msgid "Filter hosts"
+msgstr "ホストのフィルター"
+
+msgid "Filtered index content"
+msgstr "フィルターされたインデックスコンテンツ"
+
+msgid "Filtering"
+msgstr "フィルタリング"
+
+msgid "Fully qualified host name or IP address of the hypervisor"
+msgstr "ハイパーバイザーの完全修飾ホスト名または IP アドレス"
+
+msgid "General information"
+msgstr "一般情報"
+
+msgid "Generate host applicability"
+msgstr ""
+
+msgid "Generate repository applicability"
+msgstr ""
+
+msgid "HTTP Proxy"
+msgstr "HTTP プロキシー"
+
+msgid "HTTP proxy"
+msgstr "HTTP プロキシー"
+
+msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
+msgstr "virt-who が実行されているサーバーとハイパーバイザーおよび仮想化マネージャー間の通信に使用する必要のある HTTP プロキシー。"
+
+msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used."
+msgstr "virt-who が実行されているサーバーとハイパーバイザーおよび仮想化マネージャー間の通信に使用する必要のある HTTP プロキシー。プロキシーが使用されていない場合はこれを空白にします。"
+
+msgid "Hammer command: "
+msgstr ""
+
+msgid "Help"
+msgstr "ヘルプ"
+
+msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours. Different interval can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
+msgstr ""
+
+msgid "Hypervisor ID"
+msgstr "ハイパーバイザー ID"
+
+msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
+msgstr "フィルタリングモードが 2 に設定されている場合にのみ適用できるハイパーバイザーのブラックリストです。ワイルドカードおよび正規表現がサポートされており、複数のレコードはコンマで区切られる必要があります。"
+
+msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
+msgstr "ハイパーバイザーのフィルタリングモード。%{unlimited} はフィルタリングがないことを意味し、%{whitelist} はホワイトリスト、%{blacklist} はブラックリストを意味します。"
+
+msgid "Hypervisor password, required for all hypervisor types except for libvirt"
+msgstr "libvirt を除くすべてのハイパーバイザーのタイプに必要なハイパーバイザーのパスワード"
+
+msgid "Hypervisor type"
+msgstr "ハイパーバイザーのタイプ"
+
+msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
+msgstr "フィルタリングモードが 1 に設定されている場合にのみ適用できるハイパーバイザーのホワイトリストです。ワイルドカードおよび正規表現がサポートされており、複数のレコードはコンマで区切られる必要があります。"
+
+msgid "Hypervisors"
+msgstr "ハイパーバイザー"
+
+msgid "Hypervisors update"
+msgstr "ハイパーバイザーの更新"
+
+msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
+msgstr "Red Hat Enterprise Linux およびその他のオペレーティングシステムを実行する仮想マシンでハイブリッド環境を実行する場合、virt-who のホストへのアクセスの範囲を制限する必要がある場合があります。たとえば、一部のハイパーバイザーが Microsoft Windows Server インスタンスのみをホストする場合、これらのハイパーバイザーについて virt-who エージェントが報告する利点はありません。"
+
+msgid "Ignore Proxy"
+msgstr ""
+
+msgid "Ignore proxy"
+msgstr "プロキシーを無視"
+
+msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
+msgstr "プロキシーを無視します。プロキシー設定を無視するホスト名、ドメインまたは IP アドレスのコンマ区切りの一覧です。オプションとして、これは * に設定でき、すべてのホスト名ドメインまたは IP アドレスのプロキシー設定をバイパスします。"
+
+msgid "Import Puppet classes"
+msgstr "Puppet クラスのインポート"
+
+msgid "Import facts"
+msgstr "ファクトのインポート"
+
+msgid "Incremental Update"
+msgstr "増分更新"
+
+msgid "Incremental Update of  Content View Version(s) "
+msgstr "コンテンツビューバージョンの増分アップデート"
+
+msgid "Index content"
+msgstr "コンテンツのインデックス化"
+
+msgid "Index errata"
+msgstr "エラータのインデックス化"
+
+msgid "Index module streams"
+msgstr "モジュールストリームのインデックス化"
+
+msgid "Index package groups"
+msgstr "パッケージグループのインデックス化"
+
+msgid "Install Applicable Errata"
+msgstr "適用できるエラータのインストール"
+
+msgid "Install erratum"
+msgstr "エラータのインストール"
+
+msgid "Install package"
+msgstr "パッケージのインストール"
+
+msgid "Install package group"
+msgstr "パッケージグループのインストール"
+
+msgid "Instance update"
+msgstr "インスタンスの更新"
+
+msgid "Interval was not provided"
+msgstr "間隔は指定されていません"
+
+msgid "Latest Configurations Without Change"
+msgstr ""
+
+msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
+msgstr "Libvirt サーバーの完全修飾ホスト名または IP アドレス。優先するスキーマを指定することもできます (例: <code>qemu+ssh://libvirt.example.com/system</code>)。SSH を使用する場合は、ターゲットホストでハイパーバイザーのユーザー名フィールドで指定されたユーザーの root の SSH 鍵を設定していることを確認します。"
+
+msgid "List of virt-who configurations"
+msgstr "virt-who 設定の一覧"
+
+msgid "List of virt-who configurations per organization"
+msgstr "組織別の virt-who 設定の一覧"
+
+msgid "Microsoft Hyper-V fully qualified host name or IP address."
+msgstr "Microsoft Hyper-V の完全修飾ホスト名または IP アドレス。"
+
+msgid "Name of this configuration, e.g. the name of the hypervisor"
+msgstr "この設定の名前。例: ハイパーバイザーの名前"
+
+msgid "New Config"
+msgstr "新規設定"
+
+msgid "New Virt-who Config"
+msgstr "新規 Virt-who 設定"
+
+msgid "Newer version of virt-who is required, minimum version is %s"
+msgstr "virt-who の新規バージョンが必要です。最小バージョンは %s です"
+
+msgid "No Change"
+msgstr ""
+
+msgid "No Report Yet"
+msgstr "レポートがありません"
+
+msgid "No Reports"
+msgstr "レポートがありません"
+
+msgid "No change"
+msgstr "変更なし"
+
+msgid "No configuration found"
+msgstr "設定が見つかりません"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "On the target virt-who host:"
+msgstr "ターゲット virt-who ホスト上:"
+
+msgid "On this page you can define virt-who configurations for your hypervisors."
+msgstr "このページで、ハイパーバイザーの virt-who 設定を定義できます。"
+
+msgid "One virt-who configuration represents one config file in /etc/virt-who.d directory and maps to single hypervisor, organization and lifecycle environment."
+msgstr "1 つの virt-who 設定は /etc/virt-who.d ディレクトリーの 1 つの設定ファイルを表し、単一のハイパーバイザー、組織およびライフサイクル環境にマップされます。"
+
+msgid "Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Organization of the virt-who configuration"
+msgstr "virt-who 設定の組織"
+
+msgid "Overview"
+msgstr "概要"
+
+msgid "Owner"
+msgstr "所有者"
+
+msgid "Owner was not provided"
+msgstr "所有者は指定されていません"
+
+msgid "Package Profile Update"
+msgstr "パッケージプロファイル更新"
+
+msgid "Path to kubeconfig file"
+msgstr ""
+
+msgid "Product Create"
+msgstr "製品の作成"
+
+msgid "Promote"
+msgstr "プロモート"
+
+msgid "Promotion to Environment"
+msgstr "環境へのプロモーション"
+
+msgid "Publish"
+msgstr "公開"
+
+msgid "Publish Lifecycle Environment Repositories"
+msgstr "ライフサイクル環境のリポジトリーの公開"
+
+msgid "Red Hat Virtualization Manager’s fully qualified host name or IP address. For example, <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https://hostname_or_IP:443</code> for v3"
+msgstr "Red Hat Virtualization Manager の完全修飾ホスト名または IP アドレス。例:  <code>https://hostname:443/ovirt-engine/</code> (v4 の場合)、 <code>https://hostname_or_IP:443</code> (v3 の場合)"
+
+msgid "Reindex subscriptions"
+msgstr "サブスクリプションを再インデックス化"
+
+msgid "Remove Content"
+msgstr "コンテンツの削除"
+
+msgid "Remove Version"
+msgstr "バージョンの削除"
+
+msgid "Remove Versions and Associations"
+msgstr "バージョンおよび関連付けの削除"
+
+msgid "Remove from Environment"
+msgstr "環境からの削除"
+
+msgid "Remove package"
+msgstr "パッケージの削除"
+
+msgid "Remove package group"
+msgstr "パッケージグループの削除"
+
+msgid "Remove subscriptions"
+msgstr "サブスクリプションの削除"
+
+msgid "Renders a deploy script for the specified virt-who configuration"
+msgstr "指定された virt-who 設定のデプロイスクリプトをレンダリング"
+
+msgid "Report"
+msgstr "レポート"
+
+msgid "Republish Version Repositories"
+msgstr "バージョンリポジトリーの再公開"
+
+msgid "Run Sync Plan:"
+msgstr ""
+
+msgid "Satellite Server’s fully-qualified host name, for example: satellite.example.com"
+msgstr "Satellite Server の完全修飾ホスト名。例: satellite.example.com"
+
+msgid "Satellite server FQDN"
+msgstr "Satellite サーバー FQDN"
+
+msgid "Schedule"
+msgstr "スケジュール"
+
+msgid "Show a virt-who configuration"
+msgstr "virt-who 設定の表示"
+
+msgid "Specifies how the hypervisor will be identified."
+msgstr "ハイパーバイザーの特定方法を指定します。"
+
+msgid ""
+"Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
+"                              Note that some virtualization backends don't have all of them implemented.\n"
+"                              Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
+"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
+"                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
+msgstr ""
+"ハイパーバイザーが <b>hostname</b>、<b>uuid</b> または <b>hwuuid</b> で特定されるように指定します。\n"
+"                              一部の仮想化バックエンドではそれらのすべてが実装されていません。\n"
+"                              デフォルトは <b>hostname</b> であり、意味を付したハイパーバイザー名を提供しますが、ホストの名前が変更される場合は、ハイパーバーザー登録の重複が生じます。これを避けるには、代わりに <b>uuid</b> を使用できます。<b>hwuuid</b> は esx および rhevm のみに適用されます。\n"
+"                                  このプロパティーは、virt-who の初回の実行前に設定されることになっています。これを後で変更すると、サブスクリプションマネージャーでエントリーの重複が生じます。"
+
+msgid "Status"
+msgstr "ステータス"
+
+msgid "Success"
+msgstr "成功"
+
+msgid "Sync capsule"
+msgstr ""
+
+msgid "Synchronize"
+msgstr "同期"
+
+msgid "Synchronize smart proxy"
+msgstr "Smart Proxy の同期"
+
+msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
+msgstr "設定がデプロイされていないか、または virt-who がステータスを報告できませんでした"
+
+msgid "The virt-who report arrived within the interval"
+msgstr "期間内に着信した virt-who レポート"
+
+msgid "The virt-who report has not arrived within the interval, which indicates there was no change on hypervisor"
+msgstr "virt-who レポートは期間内に着信しておらず、これはハイパーバイザーに変更がないことを示しています"
+
+msgid "To define a new configuration, click the New Config button and fill in the form. After you provide all required information a virt-who configuration script will be generated. You could either install it manually by copying the script or deploy it on a selected target host through Remote Execution."
+msgstr "新規設定を定義するには、新規設定ボタンをクリックしてフォームに記入します。すべての必須情報を入力した後に、virt-who 設定スクリプトが生成されます。スクリプトをコピーしてこれを手動でインストールするか、またはこれをリモート実行により、選択したターゲットホスト上でデプロイすることができます。"
+
+msgid "Total Configurations"
+msgstr "合計の設定"
+
+msgid "Unable to create sysconfig file"
+msgstr "sysconfig ファイルを作成できません"
+
+msgid "Unable to create virt-who config file"
+msgstr "virt-who 設定ファイルを作成できません"
+
+msgid "Unable to enable virt-who service using chkconfig"
+msgstr "chkconfig を使用して virt-who サービスを有効にできません"
+
+msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository"
+msgstr "virt-who パッケージをインストールできません。ホストが適切にサブスクライブされており、satellite-tools リポジトリーへのアクセスがあることを確認します。"
+
+msgid "Unable to start virt-who service, please see virt-who logs for more details"
+msgstr "virt-who サービスを起動できません。詳細は、virt-who ログを参照してください"
+
+msgid "Unknown"
+msgstr "不明"
+
+msgid "Unknown configuration status"
+msgstr "不明な設定ステータス"
+
+msgid "Unknown configuration status, caused by unexpected conditions"
+msgstr "予期しない状況によって生じる不明な設定ステータス"
+
+msgid "Unlimited"
+msgstr "無制限"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Update Content Overrides"
+msgstr "コンテンツ上書きの更新"
+
+msgid "Update a virt-who configuration"
+msgstr "virt-who 設定の更新"
+
+msgid "Update content urls"
+msgstr ""
+
+msgid "Update for host"
+msgstr "ホストの更新"
+
+msgid "Update http proxy"
+msgstr ""
+
+msgid "Update http proxy details"
+msgstr ""
+
+msgid "Update package"
+msgstr "パッケージの更新"
+
+msgid "Update redhat repository"
+msgstr ""
+
+msgid "Update release version for host"
+msgstr "ホストのリリースバージョンの更新"
+
+msgid "Upload errata into"
+msgstr "エラータのアップロード先"
+
+msgid "Upload into"
+msgstr "情報のアップロード"
+
+msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:"
+msgstr ""
+
+msgid "VMware vCenter server’s fully qualified host name or IP address."
+msgstr "VMware vCenter サーバーの完全修飾ホスト名または IP アドレス。"
+
+msgid "Virt-who Configs Status"
+msgstr "Virt-who 設定ステータス"
+
+msgid "Virt-who Configuration %s"
+msgstr ""
+
+msgid "Virt-who Configurations"
+msgstr "Virt-who 設定"
+
+msgid "Virt-who Configurations Status"
+msgstr "Virt-who 設定ステータス"
+
+msgid "Virt-who configurations"
+msgstr "Virt-who 設定"
+
+msgid "Whitelist"
+msgstr "ホワイトリスト"
+
+msgid "XenServer server’s fully qualified host name or IP address."
+msgstr "XenServer サーバーの完全修飾ホスト名または IP アドレス。"
+
+msgid "every %s hours"
+msgstr "%s 時間ごと"

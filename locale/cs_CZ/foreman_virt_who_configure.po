@@ -1,46 +1,54 @@
-# foreman_virt_who_configure
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# This file is distributed under the same license as foreman_virt_who_configure.
+# Translators:
+# mhulan <mhulan@redhat.com>, 2017
+# Lukáš Zapletal, 2019
+# Pavel Borecki <pavel.borecki@gmail.com>, 2020
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2014-08-20 08:54+0100\n"
-"Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language-Team: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>, 2020\n"
+"Language-Team: Czech (Czech Republic) (https://www.transifex.com/foreman/teams"
+"/114/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= "
+"4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 msgid "1. Copy this configuration script to a safe directory."
-msgstr ""
+msgstr "1. Zkopírujte tento nastavovací skript do bezpečného adresáře."
 
 msgid "2. Make the script executable and run it."
-msgstr ""
+msgstr "2. nastavte skript jako spustitelný a spusťte ho."
 
 msgid "3. Delete the script."
-msgstr ""
+msgstr "3. smazat skript."
 
 msgid "A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr ""
 
 msgid "A plugin to make virt-who configuration easy"
-msgstr ""
+msgstr "Zásuvný modul pro usnadnění nastavování virt-who"
 
 msgid "Abstract async task"
 msgstr ""
 
 msgid "Account name by which virt-who is to connect to the Red Hat Enterprise Virtualization Manager instance. The username option requires input in the format username@domain."
-msgstr ""
+msgstr "Přihlašovací jméno pod kterým se virt-who bude připojovat k instanci Red Hat Enterprise Virtualization Manager. Uživatelské jméno vyžaduje formát username@domain."
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/sysconfig/virt-who</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor."
-msgstr ""
+msgstr "Název účtu kterým je virt-who připojen k hypervizoru."
 
 msgid "Account name by which virt-who is to connect to the hypervisor. By default this is <code>Administrator</code>. To use an alternate account, create a user account and assign that account to the following groups (Windows 2012 Server): Hyper-V Administrators and Remote Management Users."
 msgstr ""
@@ -52,10 +60,10 @@ msgid "Account password by which virt-who is to connect to the hypervisor instan
 msgstr ""
 
 msgid "Action with sub plans"
-msgstr ""
+msgstr "Akce s dílčími plány"
 
 msgid "Actions"
-msgstr ""
+msgstr "Akce"
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -64,13 +72,13 @@ msgid "Applicable only for esx provider type. Only hosts which parent (usually C
 msgstr ""
 
 msgid "Attach subscriptions"
-msgstr ""
+msgstr "Připojit předplatné"
 
 msgid "Auto attach subscriptions"
-msgstr ""
+msgstr "Automaticky připojovat předplatné"
 
 msgid "Blacklist"
-msgstr ""
+msgstr "Seznam vyloučených"
 
 msgid "Bulk generate applicability for hosts"
 msgstr ""
@@ -79,184 +87,184 @@ msgid "Combined Profile Update"
 msgstr ""
 
 msgid "Configs"
-msgstr ""
+msgstr "Nastavení"
 
 msgid "Configuration Status"
-msgstr ""
+msgstr "Stav nastavení"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details"
 msgstr ""
 
 msgid "Configuration interval in minutes"
-msgstr ""
+msgstr "Interval nastavení (v minutách)"
 
 msgid "Configuration name"
-msgstr ""
+msgstr "Název nastavení"
 
 msgid "Configuration numeric identifier"
-msgstr ""
+msgstr "Číselný identifikátor nastaven"
 
 msgid "Configuration script: "
-msgstr ""
+msgstr "Nastavovací skript:"
 
 msgid "Configurations"
-msgstr ""
+msgstr "Nastavení"
 
 msgid "Config|Interval"
-msgstr ""
+msgstr "Interval"
 
 msgid "Config|Last Report"
-msgstr ""
+msgstr "Config|Poslední hlášení"
 
 msgid "Config|Name"
-msgstr ""
+msgstr "Název"
 
 msgid "Connection"
-msgstr ""
+msgstr "Připojení"
 
 msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
 msgstr ""
 
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "Zkopírovat do schránky"
 
 msgid "Count"
-msgstr ""
+msgstr "Počet"
 
 msgid "Create"
-msgstr ""
+msgstr "Vytvořit"
 
 msgid "Create Config"
-msgstr ""
+msgstr "Vytvořit nastavení"
 
 msgid "Create Package Group"
-msgstr ""
+msgstr "Vytvořit skupinu balíčků"
 
 msgid "Create a virt-who configuration"
-msgstr ""
+msgstr "Vytvořit nastavení pro virt-who"
 
 msgid "Delete"
-msgstr ""
+msgstr "Smazat"
 
 msgid "Delete Activation Key"
-msgstr ""
+msgstr "Smazat aktivační klíč"
 
 msgid "Delete Lifecycle Environment"
-msgstr ""
+msgstr "Smazat prostředí životního cyklu"
 
 msgid "Delete Package Group"
-msgstr ""
+msgstr "Smazat skupinu balíčků"
 
 msgid "Delete Product"
-msgstr ""
+msgstr "Smazat produkt"
 
 msgid "Delete a virt-who configuration"
-msgstr ""
+msgstr "Smazat nastavení pro virt-who"
 
 msgid "Delete virt-who configuration %s?"
-msgstr ""
+msgstr "Smazat nastavení pro virt-who %s?"
 
 msgid "Deploy"
-msgstr ""
+msgstr "Nasadit"
 
 msgid "Destroy"
-msgstr ""
+msgstr "Zničit"
 
 msgid "Destroy Content Host"
 msgstr ""
 
 msgid "Details"
-msgstr ""
+msgstr "Podrobnosti"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr ""
 
 msgid "Disable"
-msgstr ""
+msgstr "Vypnout"
 
 msgid "Discover"
-msgstr ""
+msgstr "Objevit"
 
 msgid "Download the script"
-msgstr ""
+msgstr "Stáhnout skript"
 
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 msgid "Edit Virt-who Config"
-msgstr ""
+msgstr "Upravit nastavení pro Virt-who"
 
 msgid "Enable"
-msgstr ""
+msgstr "Zapnout"
 
 msgid "Enable debugging output"
-msgstr ""
+msgstr "Zapnout ladící výstup"
 
 msgid "Enable debugging output?"
-msgstr ""
+msgstr "Zapnout ladící výstup?"
 
 msgid "Errata mail"
 msgstr ""
 
 msgid "Every 12 hours"
-msgstr ""
+msgstr "Každých 12 hodin"
 
 msgid "Every 2 days"
-msgstr ""
+msgstr "Každé dva dny"
 
 msgid "Every 2 hours"
-msgstr ""
+msgstr "Každé 2 hodiny"
 
 msgid "Every 24 hours"
-msgstr ""
+msgstr "Každých 24 hodin"
 
 msgid "Every 3 days"
-msgstr ""
+msgstr "Každé 3 dny"
 
 msgid "Every 4 hours"
-msgstr ""
+msgstr "Každé 4 hodiny"
 
 msgid "Every 8 hours"
-msgstr ""
+msgstr "Každých 8 hodin"
 
 msgid "Every hour"
-msgstr ""
+msgstr "Každou hodinu"
 
 msgid "Exclude Hosts"
-msgstr ""
+msgstr "Vynechat stroje"
 
 msgid "Exclude host parents"
 msgstr ""
 
 msgid "Exclude hosts"
-msgstr ""
+msgstr "Vynechat stroje"
 
 msgid "Export"
-msgstr ""
+msgstr "Export"
 
 msgid "Fetch pxe files"
-msgstr ""
+msgstr "Stáhnout pxe soubory"
 
 msgid "Filter Hosts"
-msgstr ""
+msgstr "Filtrovat stroje"
 
 msgid "Filter host parents"
 msgstr ""
 
 msgid "Filter hosts"
-msgstr ""
+msgstr "Filtrovat stroje"
 
 msgid "Filtered index content"
 msgstr ""
 
 msgid "Filtering"
-msgstr ""
+msgstr "Filtrování"
 
 msgid "Fully qualified host name or IP address of the hypervisor"
 msgstr ""
 
 msgid "General information"
-msgstr ""
+msgstr "Obecné informace"
 
 msgid "Generate host applicability"
 msgstr ""
@@ -265,10 +273,10 @@ msgid "Generate repository applicability"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr ""
+msgstr "HTTP proxy"
 
 msgid "HTTP proxy"
-msgstr ""
+msgstr "HTTP proxy"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
 msgstr ""
@@ -277,10 +285,10 @@ msgid "HTTP proxy that should be used for communication between the server on wh
 msgstr ""
 
 msgid "Hammer command: "
-msgstr ""
+msgstr "Příkaz v hammer:"
 
 msgid "Help"
-msgstr ""
+msgstr "Nápověda"
 
 msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -292,7 +300,7 @@ msgid "How often to check connected hypervisors for changes? Also affects how of
 msgstr ""
 
 msgid "Hypervisor ID"
-msgstr ""
+msgstr "Identifikátor hypervizoru"
 
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr ""
@@ -304,43 +312,43 @@ msgid "Hypervisor password, required for all hypervisor types except for libvirt
 msgstr ""
 
 msgid "Hypervisor type"
-msgstr ""
+msgstr "Typ hypervizoru"
 
 msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr ""
 
 msgid "Hypervisors"
-msgstr ""
+msgstr "Hypervizory"
 
 msgid "Hypervisors update"
-msgstr ""
+msgstr "Aktualizace hypervizoru"
 
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
 msgstr ""
 
 msgid "Ignore Proxy"
-msgstr ""
+msgstr "Ignorovat proxy"
 
 msgid "Ignore proxy"
-msgstr ""
+msgstr "Ignorovat proxy"
 
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr ""
 
 msgid "Import Puppet classes"
-msgstr ""
+msgstr "Importovat Puppet třídy"
 
 msgid "Import facts"
-msgstr ""
+msgstr "Importovat fakta"
 
 msgid "Incremental Update"
-msgstr ""
+msgstr "Postupná aktualizace"
 
 msgid "Incremental Update of  Content View Version(s) "
 msgstr ""
 
 msgid "Index content"
-msgstr ""
+msgstr "Obsah rejstříku"
 
 msgid "Index errata"
 msgstr ""
@@ -358,67 +366,67 @@ msgid "Install erratum"
 msgstr ""
 
 msgid "Install package"
-msgstr ""
+msgstr "Nainstalovat balíček"
 
 msgid "Install package group"
-msgstr ""
+msgstr "Nainstalovat skupinu balíčků"
 
 msgid "Instance update"
-msgstr ""
+msgstr "Aktualizace instance"
 
 msgid "Interval was not provided"
-msgstr ""
+msgstr "Interval nebyl zadán"
 
 msgid "Latest Configurations Without Change"
-msgstr ""
+msgstr "Nejnovější nastavení beze změny"
 
 msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr ""
+msgstr "Plně kvalifikované doménové jméno nebo IP adresa vašeho Libvirtu. Můžete také uvést preferovaný protokol, například <code>qemu+ssh://libvirt.example.com/system</code>. Pokud používáte k autentizaci SSH, ujistěte se, že jste nastavili SSH klíč uživatele root na cílovém serveru pro uživatele, kterého jste uvedli v políčku přihlašovací jméno."
 
 msgid "List of virt-who configurations"
-msgstr ""
+msgstr "Vypsat nastavení pro virt-who"
 
 msgid "List of virt-who configurations per organization"
 msgstr ""
 
 msgid "Microsoft Hyper-V fully qualified host name or IP address."
-msgstr ""
+msgstr "Plně kvalifikované doménové jméno nebo IP adresa vašeho stroje."
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
-msgstr ""
+msgstr "Název tohoto nastavení, např. název hypervizoru"
 
 msgid "New Config"
-msgstr ""
+msgstr "Nové nastavení"
 
 msgid "New Virt-who Config"
-msgstr ""
+msgstr "Nové virt-who nastavení"
 
 msgid "Newer version of virt-who is required, minimum version is %s"
-msgstr ""
+msgstr "Je zapotřebí novější verze virt-who, nejnižší možná verze je %s"
 
 msgid "No Change"
-msgstr ""
+msgstr "Beze změny"
 
 msgid "No Report Yet"
-msgstr ""
+msgstr "Zatím žádné hlášení"
 
 msgid "No Reports"
-msgstr ""
+msgstr "Žádné výkazy"
 
 msgid "No change"
-msgstr ""
+msgstr "Beze změny"
 
 msgid "No configuration found"
-msgstr ""
+msgstr "Nenalezeno žádné nastavení"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "On the target virt-who host:"
-msgstr ""
+msgstr "Na cílovém hostiteli virt-who:"
 
 msgid "On this page you can define virt-who configurations for your hypervisors."
-msgstr ""
+msgstr "Na této stránce je možné zadat nastavení virt-who pro své hypervizory."
 
 msgid "One virt-who configuration represents one config file in /etc/virt-who.d directory and maps to single hypervisor, organization and lifecycle environment."
 msgstr ""
@@ -433,108 +441,108 @@ msgid "Organization of the virt-who configuration"
 msgstr ""
 
 msgid "Overview"
-msgstr ""
+msgstr "Přehled"
 
 msgid "Owner"
-msgstr ""
+msgstr "Vlastník"
 
 msgid "Owner was not provided"
-msgstr ""
+msgstr "Vlastník nebyl poskytnut"
 
 msgid "Package Profile Update"
-msgstr ""
+msgstr "Aktualizace profilu balíčku"
 
 msgid "Path to kubeconfig file"
-msgstr ""
+msgstr "Popis umístění souboru s nastaveními kubeconfig"
 
 msgid "Product Create"
-msgstr ""
+msgstr "Vytvořit produkt"
 
 msgid "Promote"
-msgstr ""
+msgstr "Povýšit"
 
 msgid "Promotion to Environment"
-msgstr ""
+msgstr "Povýšení do prostředí"
 
 msgid "Publish"
-msgstr ""
+msgstr "Zveřejnit"
 
 msgid "Publish Lifecycle Environment Repositories"
 msgstr ""
 
 msgid "Red Hat Virtualization Manager’s fully qualified host name or IP address. For example, <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https://hostname_or_IP:443</code> for v3"
-msgstr ""
+msgstr "Plně kvalifikované doménové jméno nebo IP adresa vašeho Red Hat Virtualization Managera. Například <code>https://hostname:443/ovirt-engine/</code> v případě v4, <code>https://hostname_or_IP:443</code> v případě v3"
 
 msgid "Reindex subscriptions"
 msgstr ""
 
 msgid "Remove Content"
-msgstr ""
+msgstr "Odebrat obsah"
 
 msgid "Remove Version"
-msgstr ""
+msgstr "Verze na protějšku"
 
 msgid "Remove Versions and Associations"
 msgstr ""
 
 msgid "Remove from Environment"
-msgstr ""
+msgstr "Odebrat z prostředí"
 
 msgid "Remove package"
-msgstr ""
+msgstr "Odebrat balíček"
 
 msgid "Remove package group"
-msgstr ""
+msgstr "Odebrat skupinu balíčků"
 
 msgid "Remove subscriptions"
-msgstr ""
+msgstr "Odebrat předplatné"
 
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr ""
 
 msgid "Report"
-msgstr ""
+msgstr "Výkaz"
 
 msgid "Republish Version Repositories"
-msgstr ""
+msgstr "Znovu zveřejnit repozitáře verze"
 
 msgid "Run Sync Plan:"
+msgstr "Spustit synchronizační plán:"
+
+msgid "Satellite Server’s fully-qualified host name, for example: satellite.example.com"
 msgstr ""
 
-msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
-msgstr ""
-
-msgid "Foreman server FQDN"
+msgid "Satellite server FQDN"
 msgstr ""
 
 msgid "Schedule"
-msgstr ""
+msgstr "Plán"
 
 msgid "Show a virt-who configuration"
-msgstr ""
+msgstr "Zobrazit nastavení pro virt-who"
 
 msgid "Specifies how the hypervisor will be identified."
-msgstr ""
+msgstr "Určuje jak budou identifikovány hypervizory."
 
 msgid ""
 "Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
 "                              Note that some virtualization backends don't have all of them implemented.\n"
 "                              Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
-"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx only.\n"
+"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
 "                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Stav"
 
 msgid "Success"
-msgstr ""
+msgstr "Úspěch"
 
 msgid "Sync capsule"
 msgstr ""
 
 msgid "Synchronize"
-msgstr ""
+msgstr "Synchronizovat"
 
 msgid "Synchronize smart proxy"
 msgstr ""
@@ -552,49 +560,49 @@ msgid "To define a new configuration, click the New Config button and fill in th
 msgstr ""
 
 msgid "Total Configurations"
-msgstr ""
+msgstr "Celkem nastavení"
 
 msgid "Unable to create sysconfig file"
-msgstr ""
+msgstr "Nedaří se vytvořit sysconfig soubor"
 
 msgid "Unable to create virt-who config file"
-msgstr ""
+msgstr "Nedaří se vytvořit soubor s nastaveními pro virt-who"
 
 msgid "Unable to enable virt-who service using chkconfig"
-msgstr ""
+msgstr "Nedaří se zapnout službu virt-who pomocí chkconfig"
 
-msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
+msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository"
 msgstr ""
 
 msgid "Unable to start virt-who service, please see virt-who logs for more details"
-msgstr ""
+msgstr "Nedaří se spustit službu virt-who, další podrobnosti naleznete v záznamu událostí (log) ve virt-who"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámý"
 
 msgid "Unknown configuration status"
-msgstr ""
+msgstr "Neznámý stav nastavení"
 
 msgid "Unknown configuration status, caused by unexpected conditions"
-msgstr ""
+msgstr "Neznámý stav nastavení, způsobený neočekávanými podmínkami"
 
 msgid "Unlimited"
-msgstr ""
+msgstr "Neomezený"
 
 msgid "Update"
-msgstr ""
+msgstr "Aktualizovat"
 
 msgid "Update Content Overrides"
-msgstr ""
+msgstr "Aktualizovat přepsání obsahu"
 
 msgid "Update a virt-who configuration"
-msgstr ""
+msgstr "Aktualizovat nastavení pro virt-who"
 
 msgid "Update content urls"
-msgstr ""
+msgstr "Aktualizovat url adresy obsahu"
 
 msgid "Update for host"
-msgstr ""
+msgstr "Aktualizace pro stroj"
 
 msgid "Update http proxy"
 msgstr ""
@@ -603,46 +611,46 @@ msgid "Update http proxy details"
 msgstr ""
 
 msgid "Update package"
-msgstr ""
+msgstr "Aktualizovat balíček"
 
 msgid "Update redhat repository"
-msgstr ""
+msgstr "Aktualizovat redhat repozitář"
 
 msgid "Update release version for host"
-msgstr ""
+msgstr "Aktualizovat verzi vydání pro stroj"
 
 msgid "Upload errata into"
 msgstr ""
 
 msgid "Upload into"
-msgstr ""
+msgstr "Nahrát do"
 
-msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
+msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:"
 msgstr ""
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
-msgstr ""
+msgstr "Plně kvalifikované doménové jméno nebo IP adresa vašeho VMware vCenter"
 
 msgid "Virt-who Configs Status"
-msgstr ""
+msgstr "Stav nastavení virt-who"
 
 msgid "Virt-who Configuration %s"
-msgstr ""
+msgstr "Nastavení virt-who %s"
 
 msgid "Virt-who Configurations"
-msgstr ""
+msgstr "Nastavení pro virt-who"
 
 msgid "Virt-who Configurations Status"
-msgstr ""
+msgstr "Stav nastavení pro virt-who"
 
 msgid "Virt-who configurations"
-msgstr ""
+msgstr "Virt-who konfigurace"
 
 msgid "Whitelist"
-msgstr ""
+msgstr "Seznam povolených"
 
 msgid "XenServer server’s fully qualified host name or IP address."
-msgstr ""
+msgstr "Plně kvalifikované doménové jméno nebo IP adresa vašeho XenServer serveru"
 
 msgid "every %s hours"
-msgstr ""
+msgstr "každých %s hodin"

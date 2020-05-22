@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-08 12:31+0200\n"
-"PO-Revision-Date: 2019-08-08 12:31+0200\n"
+"POT-Creation-Date: 2020-05-22 19:00+0530\n"
+"PO-Revision-Date: 2020-05-22 19:00+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -350,7 +350,7 @@ msgid ""
 " was no change on hypervisor"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:193
+#: ../app/models/foreman_virt_who_configure/config.rb:196
 msgid "every %s hours"
 msgstr ""
 
@@ -454,6 +454,7 @@ msgid "Edit"
 msgstr ""
 
 #: ../app/views/foreman_virt_who_configure/configs/index.html.erb:1
+#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:3
 msgid "Virt-who Configurations"
 msgstr ""
 
@@ -727,21 +728,21 @@ msgid ""
 "ill be deployed."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:5
+#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:6
 msgid "Configs"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:7
+#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:8
 msgid "On this page you can define virt-who configurations for your hypervisors."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:8
+#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:9
 msgid ""
 "One virt-who configuration represents one config file in /etc/virt-who.d direc"
 "tory and maps to single hypervisor, organization and lifecycle environment."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:9
+#: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:10
 msgid ""
 "To define a new configuration, click the New Config button and fill in the for"
 "m. After you provide all required information a virt-who configuration script "
@@ -758,267 +759,283 @@ msgid "Virt-who Configs Status"
 msgstr ""
 
 #: action_names.rb:2
-msgid "Report"
+msgid "Action with sub plans"
 msgstr ""
 
 #: action_names.rb:3
-msgid "Run Sync Plan:"
-msgstr ""
-
-#: action_names.rb:4
-msgid "Enable"
-msgstr ""
-
-#: action_names.rb:5
-msgid "Disable"
-msgstr ""
-
-#: action_names.rb:6
-msgid "Create Package Group"
-msgstr ""
-
-#: action_names.rb:7
-msgid "Upload into"
-msgstr ""
-
-#: action_names.rb:8
-msgid "Upload errata into"
-msgstr ""
-
-#: action_names.rb:9
-msgid "Update redhat repository"
-msgstr ""
-
-#: action_names.rb:10
-msgid "Update content urls"
-msgstr ""
-
-#: action_names.rb:11
-msgid "Update"
-msgstr ""
-
-#: action_names.rb:12
-msgid "Synchronize"
-msgstr ""
-
-#: action_names.rb:13
-msgid "Remove Content"
-msgstr ""
-
-#: action_names.rb:14
-msgid "Instance update"
-msgstr ""
-
-#: action_names.rb:15
-msgid "Index package groups"
-msgstr ""
-
-#: action_names.rb:16
-msgid "Index module streams"
-msgstr ""
-
-#: action_names.rb:17
-msgid "Index errata"
-msgstr ""
-
-#: action_names.rb:18
-msgid "Index content"
-msgstr ""
-
-#: action_names.rb:19
-msgid "Filtered index content"
-msgstr ""
-
-#: action_names.rb:20
-msgid "Fetch pxe files"
-msgstr ""
-
-#: action_names.rb:21
-msgid "Export"
-msgstr ""
-
-#: action_names.rb:22
-msgid "Errata mail"
-msgstr ""
-
-#: action_names.rb:23
-msgid "Discover"
-msgstr ""
-
-#: action_names.rb:24
-msgid "Delete Package Group"
-msgstr ""
-
-#: action_names.rb:25
-msgid "Delete"
-msgstr ""
-
-#: action_names.rb:26
-msgid "Create"
-msgstr ""
-
-#: action_names.rb:27
-msgid "Reindex subscriptions"
-msgstr ""
-
-#: action_names.rb:28
-msgid "Delete Product"
-msgstr ""
-
-#: action_names.rb:29
-msgid "Product Create"
-msgstr ""
-
-#: action_names.rb:30
-msgid "Destroy"
-msgstr ""
-
-#: action_names.rb:31
-msgid "Auto-attach subscriptions"
-msgstr ""
-
-#: action_names.rb:32
-msgid "Combined Profile Update"
-msgstr ""
-
-#: action_names.rb:33
-msgid "Package Profile Update"
-msgstr ""
-
-#: action_names.rb:34
-msgid "Update release version for host"
-msgstr ""
-
-#: action_names.rb:35
-msgid "Update for host"
-msgstr ""
-
-#: action_names.rb:36
-msgid "Update Content Overrides"
-msgstr ""
-
-#: action_names.rb:37
-msgid "Remove subscriptions"
-msgstr ""
-
-#: action_names.rb:38
-msgid "Remove package group"
-msgstr ""
-
-#: action_names.rb:39
-msgid "Install package group"
-msgstr ""
-
-#: action_names.rb:40
-msgid "Update package"
-msgstr ""
-
-#: action_names.rb:41
-msgid "Remove package"
-msgstr ""
-
-#: action_names.rb:42
-msgid "Install package"
-msgstr ""
-
-#: action_names.rb:43
-msgid "Hypervisors update"
-msgstr ""
-
-#: action_names.rb:44
-msgid "Hypervisors"
-msgstr ""
-
-#: action_names.rb:45
-msgid "Install erratum"
-msgstr ""
-
-#: action_names.rb:46
-msgid "Install Applicable Errata"
-msgstr ""
-
-#: action_names.rb:47
-msgid "Destroy Content Host"
-msgstr ""
-
-#: action_names.rb:48
-msgid "Auto attach subscriptions"
-msgstr ""
-
-#: action_names.rb:49
-msgid "Attach subscriptions"
-msgstr ""
-
-#: action_names.rb:50
-msgid "Publish Lifecycle Environment Repositories"
-msgstr ""
-
-#: action_names.rb:51
-msgid "Delete Lifecycle Environment"
-msgstr ""
-
-#: action_names.rb:52
-msgid "Republish Version Repositories"
-msgstr ""
-
-#: action_names.rb:53
-msgid "Incremental Update"
-msgstr ""
-
-#: action_names.rb:54
-msgid "Remove Version"
-msgstr ""
-
-#: action_names.rb:55
-msgid "Remove from Environment"
-msgstr ""
-
-#: action_names.rb:56
-msgid "Remove Versions and Associations"
-msgstr ""
-
-#: action_names.rb:57
-msgid "Create repos"
-msgstr ""
-
-#: action_names.rb:58
-msgid "Delete Activation Key"
-msgstr ""
-
-#: action_names.rb:59
-msgid "Abstract async task"
-msgstr ""
-
-#: action_names.rb:60
-msgid "Incremental Update of  Content View Version(s) "
-msgstr ""
-
-#: action_names.rb:61
-msgid "Publish"
-msgstr ""
-
-#: action_names.rb:62
-msgid "Promotion to Environment"
-msgstr ""
-
-#: action_names.rb:63
-msgid "Promote"
-msgstr ""
-
-#: action_names.rb:64
-msgid "Synchronize smart proxy"
-msgstr ""
-
-#: action_names.rb:65
-msgid "Import Puppet classes"
-msgstr ""
-
-#: action_names.rb:66
 msgid "Import facts"
 msgstr ""
 
+#: action_names.rb:4
+msgid "Import Puppet classes"
+msgstr ""
+
+#: action_names.rb:5
+msgid "Abstract async task"
+msgstr ""
+
+#: action_names.rb:6
+msgid "Create"
+msgstr ""
+
+#: action_names.rb:7
+msgid "Delete Activation Key"
+msgstr ""
+
+#: action_names.rb:8
+msgid "Update"
+msgstr ""
+
+#: action_names.rb:9
+msgid "Generate host applicability"
+msgstr ""
+
+#: action_names.rb:10
+msgid "Bulk generate applicability for hosts"
+msgstr ""
+
+#: action_names.rb:11
+msgid "Generate repository applicability"
+msgstr ""
+
+#: action_names.rb:12
+msgid "Synchronize smart proxy"
+msgstr ""
+
+#: action_names.rb:13
+msgid "Sync capsule"
+msgstr ""
+
+#: action_names.rb:14
+msgid "Delete"
+msgstr ""
+
+#: action_names.rb:15
+msgid "Errata mail"
+msgstr ""
+
+#: action_names.rb:16
+msgid "Incremental Update of  Content View Version(s) "
+msgstr ""
+
+#: action_names.rb:17
+msgid "Promote"
+msgstr ""
+
+#: action_names.rb:18
+msgid "Promotion to Environment"
+msgstr ""
+
+#: action_names.rb:19
+msgid "Publish"
+msgstr ""
+
+#: action_names.rb:20
+msgid "Remove Versions and Associations"
+msgstr ""
+
+#: action_names.rb:21
+msgid "Remove from Environment"
+msgstr ""
+
+#: action_names.rb:22
+msgid "Remove Version"
+msgstr ""
+
+#: action_names.rb:23
+msgid "Export"
+msgstr ""
+
+#: action_names.rb:24
+msgid "Incremental Update"
+msgstr ""
+
+#: action_names.rb:25
+msgid "Republish Version Repositories"
+msgstr ""
+
+#: action_names.rb:26
+msgid "Delete Lifecycle Environment"
+msgstr ""
+
+#: action_names.rb:27
+msgid "Publish Lifecycle Environment Repositories"
+msgstr ""
+
+#: action_names.rb:28
+msgid "Attach subscriptions"
+msgstr ""
+
+#: action_names.rb:29
+msgid "Auto attach subscriptions"
+msgstr ""
+
+#: action_names.rb:30
+msgid "Destroy Content Host"
+msgstr ""
+
+#: action_names.rb:31
+msgid "Install Applicable Errata"
+msgstr ""
+
+#: action_names.rb:32
+msgid "Install erratum"
+msgstr ""
+
+#: action_names.rb:33
+msgid "Hypervisors"
+msgstr ""
+
+#: action_names.rb:34
+msgid "Hypervisors update"
+msgstr ""
+
+#: action_names.rb:35
+msgid "Install package"
+msgstr ""
+
+#: action_names.rb:36
+msgid "Remove package"
+msgstr ""
+
+#: action_names.rb:37
+msgid "Update package"
+msgstr ""
+
+#: action_names.rb:38
+msgid "Install package group"
+msgstr ""
+
+#: action_names.rb:39
+msgid "Remove package group"
+msgstr ""
+
+#: action_names.rb:40
+msgid "Remove subscriptions"
+msgstr ""
+
+#: action_names.rb:41
+msgid "Update Content Overrides"
+msgstr ""
+
+#: action_names.rb:42
+msgid "Update for host"
+msgstr ""
+
+#: action_names.rb:43
+msgid "Update release version for host"
+msgstr ""
+
+#: action_names.rb:44
+msgid "Package Profile Update"
+msgstr ""
+
+#: action_names.rb:45
+msgid "Combined Profile Update"
+msgstr ""
+
+#: action_names.rb:46
+msgid "Destroy"
+msgstr ""
+
+#: action_names.rb:47
+msgid "Product Create"
+msgstr ""
+
+#: action_names.rb:48
+msgid "Delete Product"
+msgstr ""
+
+#: action_names.rb:49
+msgid "Reindex subscriptions"
+msgstr ""
+
+#: action_names.rb:50
+msgid "Update http proxy"
+msgstr ""
+
+#: action_names.rb:51
+msgid "Delete Package Group"
+msgstr ""
+
+#: action_names.rb:52
+msgid "Discover"
+msgstr ""
+
+#: action_names.rb:53
+msgid "Fetch pxe files"
+msgstr ""
+
+#: action_names.rb:54
+msgid "Filtered index content"
+msgstr ""
+
+#: action_names.rb:55
+msgid "Upload into"
+msgstr ""
+
+#: action_names.rb:56
+msgid "Index content"
+msgstr ""
+
+#: action_names.rb:57
+msgid "Index errata"
+msgstr ""
+
+#: action_names.rb:58
+msgid "Index module streams"
+msgstr ""
+
+#: action_names.rb:59
+msgid "Index package groups"
+msgstr ""
+
+#: action_names.rb:60
+msgid "Instance update"
+msgstr ""
+
+#: action_names.rb:61
+msgid "Remove Content"
+msgstr ""
+
+#: action_names.rb:62
+msgid "Synchronize"
+msgstr ""
+
+#: action_names.rb:63
+msgid "Update content urls"
+msgstr ""
+
+#: action_names.rb:64
+msgid "Update http proxy details"
+msgstr ""
+
+#: action_names.rb:65
+msgid "Update redhat repository"
+msgstr ""
+
+#: action_names.rb:66
+msgid "Upload errata into"
+msgstr ""
+
 #: action_names.rb:67
-msgid "Action with sub plans"
+msgid "Create Package Group"
+msgstr ""
+
+#: action_names.rb:68
+msgid "Disable"
+msgstr ""
+
+#: action_names.rb:69
+msgid "Enable"
+msgstr ""
+
+#: action_names.rb:70
+msgid "Run Sync Plan:"
+msgstr ""
+
+#: action_names.rb:71
+msgid "Report"
 msgstr ""
 
 #: gemspec.rb:2
