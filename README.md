@@ -6,9 +6,11 @@ A foreman plugin to make virt-who configuration easier. This provides simple UI 
 
 This plugins requires Katello to be installed in your Foreman instance. If its there, simply install a package with the plugin (rpm only), run migrations and seed by running,
 
+```
 yum install rubygem-foreman_virt_who_configure
 foreman-rake db:migrate
 foreman-rake db:seed
+```
 
 ## Usage
 
