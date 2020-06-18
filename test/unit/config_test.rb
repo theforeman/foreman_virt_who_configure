@@ -16,6 +16,12 @@ module ForemanVirtWhoConfigure
       test 'config creates service user upon creation' do
         assert existing_config.service_user
         assert_equal "virt_who_reporter_#{config.id}", existing_config.service_user.username
+        assert_equal "http", existing_config.proxy_type
+      end
+
+      test 'creates https proxy config' do
+        existing_config.https!
+        assert_equal "https", existing_config.proxy_type
       end
 
       test 'config creates hidden user' do

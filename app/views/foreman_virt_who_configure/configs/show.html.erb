@@ -48,7 +48,8 @@
             <%= config_attribute :exclude_host_parents, @config.exclude_host_parents if @config.exclude_host_parents.present? %>
           <% end %>
           <%= config_attribute :debug, checked_icon(@config.debug), _('Enable debugging output?') %>
-          <%= config_attribute :proxy, @config.proxy, _('HTTP Proxy') if @config.proxy.present? %>
+          <%= config_attribute :proxy_type, checked_icon(@config.https?), _('Enable HTTPS proxy?') if @config.proxy.present? %>
+          <%= config_attribute :proxy, @config.proxy, _(@config.proxy_label) if @config.proxy.present? %>
           <%= config_attribute :no_proxy, @config.no_proxy, _('Ignore Proxy') if @config.no_proxy.present? %>
           <%= config_attribute :kubeconfig_path, @config.kubeconfig_path if @config.hypervisor_type == 'kubevirt' %>
         </div>
