@@ -2,6 +2,7 @@ require 'test_plugin_helper'
 
 class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController::TestCase
   setup do
+    @http_proxy = FactoryBot.create(:http_proxy, name: "test", url: "http://test.com")
     @new_config = FactoryBot.create(:virt_who_config,
                                  :name => 'my vmware',
                                  :interval => 120,
@@ -13,7 +14,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
                                  :hypervisor_username => "root",
                                  :debug => false,
                                  :satellite_url => "foreman.example.com",
-                                 :proxy => 'proxy.example.com',
+                                 :http_proxy_id => @http_proxy.id,
                                  :no_proxy => nil
     )
 
@@ -41,7 +42,6 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     refute result_config['debug']
     assert_not_nil result_config['debug']
     assert_equal 'foreman.example.com', result_config['satellite_url']
-    assert_equal 'proxy.example.com', result_config['proxy']
     assert_nil result_config['no_proxy']
     assert_equal 'unknown', result_config['status']
     assert_nil result_config['last_report_at']
@@ -74,11 +74,11 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     refute response['debug']
     assert_not_nil response['debug']
     assert_equal 'foreman.example.com', response['satellite_url']
-    assert_equal 'proxy.example.com', response['proxy']
     assert_nil response['no_proxy']
     assert_equal 'unknown', response['status']
     assert_nil response['last_report_at']
     assert_nil response['out_of_date_at']
+    assert_equal @http_proxy.id, ForemanVirtWhoConfigure::Config.find(response['id']).http_proxy_id
 
     assert_response :success
   end
