@@ -3,7 +3,7 @@ module ForemanVirtWhoConfigure
     PERMITTED_PARAMS = [
       :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :hypervisor_id,
       :hypervisor_type, :hypervisor_server, :hypervisor_username, :hypervisor_password, :debug,
-      :satellite_url, :proxy, :no_proxy, :name,
+      :satellite_url, :http_proxy_id, :no_proxy, :name,
       # API parameter filtering_mode gets translated to listing_mode in the controller
       # We keep both params permitted for compatibility with 1.11
       :listing_mode, :filtering_mode, :filter_host_parents, :exclude_host_parents, :kubeconfig_path
@@ -73,6 +73,7 @@ module ForemanVirtWhoConfigure
 
     belongs_to :compute_resource
     belongs_to :organization
+    belongs_to :http_proxy
 
     # service user used by virt-who to report back
     belongs_to :service_user

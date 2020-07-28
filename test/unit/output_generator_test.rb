@@ -57,15 +57,16 @@ module ForemanVirtWhoConfigure
 
     describe 'proxy attributes' do
       test 'it does not set any proxy attributes by default and set no_proxy to * to bypass sub-man proxy' do
-        assert_nil config.proxy
+        assert_nil config.http_proxy
         assert_nil config.no_proxy
         assert_not_includes output, 'http_proxy'
         assert_includes output, 'NO_PROXY=*'
       end
 
       test 'it configures proxy when set' do
-        config.proxy = 'http://proxy.com'
-        assert_includes output, 'http_proxy=http://proxy.com'
+        http_proxy = HttpProxy.create!(name: "test", url: "http://test.com")
+        config.http_proxy = http_proxy
+        assert_includes output, 'http_proxy=http://test.com'
       end
 
       test 'it configures no_proxy when set' do
@@ -74,24 +75,29 @@ module ForemanVirtWhoConfigure
       end
 
       test 'proxy_strings prints both proxy and no proxy if present' do
-        config.proxy = 'a'
+        http_proxy = HttpProxy.create!(name: "test", url: "http://test.com")
+        config.http_proxy = http_proxy
         config.no_proxy = 'b'
-        assert_includes generator.proxy_strings, "\nhttp_proxy=a"
+        assert_includes generator.proxy_strings, "\nhttp_proxy=http://test.com"
         assert_includes generator.proxy_strings, "\NO_PROXY=b"
       end
 
       test 'proxy_strings ignores empty string values' do
-        config.proxy = ''
+        config.http_proxy = nil
         config.no_proxy = ''
         assert_not_includes generator.proxy_strings, 'http_proxy'
         assert_includes generator.proxy_strings, 'NO_PROXY=*'
       end
 
       test 'proxy_strings removes any new line chars' do
-        config.proxy = "\na\nb\nc\n"
         config.no_proxy = "\nx\ny\nz"
-        assert_includes generator.proxy_strings, "\nhttp_proxy=abc"
         assert_includes generator.proxy_strings, "\NO_PROXY=xyz"
+      end
+
+      test 'it configures https proxy when https proxy is set' do
+        http_proxy = HttpProxy.create!(name: "test", url: "https://test.com")
+        config.http_proxy = http_proxy
+        assert_includes output, 'https_proxy=https://test.com'
       end
     end
 
