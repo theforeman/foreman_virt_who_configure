@@ -8,12 +8,13 @@
 
 <%= breadcrumbs(:resource_url => foreman_virt_who_configure_api_configs_path,
                 :items => [
-                    {:caption => _('Configurations'),
-                     :url => url_for(foreman_virt_who_configure_configs_path)
-                    },
-                    {:caption => @config.name,
-                     :url => (edit_foreman_virt_who_configure_config_path(@config) if authorized_for(hash_for_edit_foreman_virt_who_configure_config_path(@config)))
-                    }
+                  {
+                    :caption => _('Virt-who Configurations'),
+                    :url => foreman_virt_who_configure_configs_path
+                  },
+                  {
+                    :caption => @config.name
+                  }
                 ]
     ) %>
 
