@@ -78,7 +78,8 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     assert_equal 'unknown', response['status']
     assert_nil response['last_report_at']
     assert_nil response['out_of_date_at']
-    assert_equal @http_proxy.id, ForemanVirtWhoConfigure::Config.find(response['id']).http_proxy_id
+    assert_equal @http_proxy.id, response['http_proxy']['id']
+    assert_equal @http_proxy.url, response['proxy']
 
     assert_response :success
   end
@@ -140,6 +141,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
                                                             :hypervisor_password => "password",
                                                             :debug => true,
                                                             :satellite_url => "foreman.example.com",
+                                                            :http_proxy_id => @http_proxy.id,
                                                             :organization_id => org.id }
     }, :session => set_session_user
 
@@ -158,6 +160,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     assert_equal 'password', new_config.hypervisor_password
     assert_equal true, new_config.debug
     assert_equal 'foreman.example.com', new_config.satellite_url
+    assert_equal @http_proxy.id, response['http_proxy']['id']
   end
 
   test "should update the config" do
