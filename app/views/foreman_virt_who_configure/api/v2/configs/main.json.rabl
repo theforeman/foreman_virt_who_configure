@@ -9,7 +9,7 @@ end
 attributes :name, :interval, :organization_id, :whitelist, :blacklist, :hypervisor_id,
            :hypervisor_type, :hypervisor_server, :hypervisor_username, :debug,
            :satellite_url, :proxy, :no_proxy, :status, :last_report_at, :out_of_date_at,
-           :filter_host_parents, :exclude_host_parents
+           :filter_host_parents, :exclude_host_parents, :kubeconfig_path
 
 child :http_proxy do
   attributes :id, :name, :url
