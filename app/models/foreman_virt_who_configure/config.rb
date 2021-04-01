@@ -32,9 +32,7 @@ module ForemanVirtWhoConfigure
     HYPERVISOR_TYPES = {
       'esx' => 'VMware vSphere / vCenter (esx)',
       'rhevm' => 'Red Hat Virtualization Hypervisor (rhevm)',
-      # 'vdsm' => 'Red Hat Enterprise Linux Hypervisor (vdsm)',
       'hyperv' => 'Microsoft Hyper-V (hyperv)',
-      'xen' => 'XenServer (xen)',
       'libvirt' => 'libvirt',
       'kubevirt' => 'Container-native virtualization'
     }
