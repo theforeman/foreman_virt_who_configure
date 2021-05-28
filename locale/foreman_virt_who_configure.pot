@@ -123,7 +123,7 @@ msgstr ""
 #: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:53
 #: ../app/views/foreman_virt_who_configure/configs/show.html.erb:39
 #: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:2
-msgid "Satellite server FQDN"
+msgid "Foreman server FQDN"
 msgstr ""
 
 #:
@@ -381,7 +381,7 @@ msgstr ""
 #: ../app/models/foreman_virt_who_configure/output_generator.rb:24
 msgid ""
 "Unable to install virt-who package, make sure the host is properly subscribed "
-"and has access to satellite-tools repository"
+"and has access to katello-host-tools repository"
 msgstr ""
 
 #: ../app/models/foreman_virt_who_configure/output_generator.rb:44
@@ -525,8 +525,8 @@ msgstr ""
 msgid ""
 "Use either hammer command or the script below to deploy this configuration. Bo"
 "th require root privileges. Run one of them on the target host which has acces"
-"s to Red Hat Satellite Tools repository and will run virt-who reporting, prefe"
-"rably Satellite host:"
+"s to katello-host-tools repository and will run virt-who reporting, prefe"
+"rably Foreman host:"
 msgstr ""
 
 #: ../app/views/foreman_virt_who_configure/configs/show.html.erb:70
@@ -564,8 +564,7 @@ msgstr ""
 
 #: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:2
 msgid ""
-"Satellite Server’s fully-qualified host name, for example: satellite.example.c"
-"om"
+"Foreman server’s fully-qualified host name, for example: foreman.example.com"
 msgstr ""
 
 #: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:4

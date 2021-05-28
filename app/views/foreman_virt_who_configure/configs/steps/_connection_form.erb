@@ -1,5 +1,5 @@
 <div id="config_connection">
-  <%= text_f f, :satellite_url, inline_help_popover(_('Satellite Server’s fully-qualified host name, for example: satellite.example.com')).merge(:label => _('Satellite server FQDN')) %>
+  <%= text_f f, :satellite_url, inline_help_popover(_('Foreman server’s fully-qualified host name, for example: foreman.example.com')).merge(:label => _('Foreman server FQDN')) %>
   <%= select_f f, :hypervisor_id, ForemanVirtWhoConfigure::Config::HYPERVISOR_IDS, :to_s, :to_s, {}, { :label => _('Hypervisor ID') }.merge(
         inline_help_popover(_("Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.
                               Note that some virtualization backends don't have all of them implemented.

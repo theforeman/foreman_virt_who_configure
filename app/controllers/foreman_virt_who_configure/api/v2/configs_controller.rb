@@ -50,7 +50,7 @@ module ForemanVirtWhoConfigure
             param :hypervisor_server, String, :desc => N_("Fully qualified host name or IP address of the hypervisor"), :required => true
             param :hypervisor_username, String, :desc => N_("Account name by which virt-who is to connect to the hypervisor."), :required => true
             param :hypervisor_password, String, :desc => N_("Hypervisor password, required for all hypervisor types except for libvirt"), :required => false
-            param :satellite_url, String, :desc => N_("Satellite server FQDN"), :required => true
+            param :satellite_url, String, :desc => N_("Foreman server FQDN"), :required => true
             param :debug, :bool, :desc => N_("Enable debugging output")
             param :http_proxy_id, Integer, :desc => N_('HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers.')
             param :no_proxy, String, :desc => N_("Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses.")

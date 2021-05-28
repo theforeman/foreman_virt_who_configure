@@ -498,10 +498,10 @@ msgstr ""
 msgid "Run Sync Plan:"
 msgstr ""
 
-msgid "Satellite Server’s fully-qualified host name, for example: satellite.example.com"
+msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
 msgstr ""
 
-msgid "Satellite server FQDN"
+msgid "Foreman server FQDN"
 msgstr ""
 
 msgid "Schedule"
@@ -557,7 +557,7 @@ msgstr ""
 msgid "Unable to enable virt-who service using chkconfig"
 msgstr ""
 
-msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository"
+msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
 msgstr ""
 
 msgid "Unable to start virt-who service, please see virt-who logs for more details"
@@ -605,7 +605,7 @@ msgstr ""
 msgid "Upload into"
 msgstr ""
 
-msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:"
+msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."

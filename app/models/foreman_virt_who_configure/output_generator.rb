@@ -21,7 +21,7 @@ module ForemanVirtWhoConfigure
       ConfigurationResult.new(4, 'virt_who_sysconfig_file_issue', N_('Unable to create sysconfig file')),
       ConfigurationResult.new(8, 'virt_who_systemctl_issue', N_('Unable to enable virt-who service using systemctl')),
       ConfigurationResult.new(16, 'virt_who_service_issue', N_('Unable to start virt-who service, please see virt-who logs for more details')),
-      ConfigurationResult.new(32, 'virt_who_installation', N_('Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository')),
+      ConfigurationResult.new(32, 'virt_who_installation', N_('Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository')),
     ]
 
     attr_reader :config
@@ -75,7 +75,7 @@ verify_minimal_version() {
   installed_version=`rpm -q --queryformat '%{VERSION}' virt-who`
 
   if version_lt $installed_version $minimal_version; then
-    echo "virt-who $installed_version does not meet minimum requirements, please make sure this host is properly subscribed and has access to satellite-tools repository, minimal virt-who version is $minimal_version"
+    echo "virt-who $installed_version does not meet minimum requirements, please make sure this host is properly subscribed and has access to katello-host-tools repository, minimal virt-who version is $minimal_version"
     return 1
   else
     return 0
@@ -231,7 +231,7 @@ encrypted_password=$cr_password"
       case config.hypervisor_type
       when 'libvirt'
         config.hypervisor_password.blank? ? LIBVIRT_FAKE_PASSWORD : config.hypervisor_password
-      when 'kubevirt' 
+      when 'kubevirt'
         config.hypervisor_password.blank? ? KUBEVIRT_FAKE_PASSWORD : config.hypervisor_password
       else
         config.hypervisor_password

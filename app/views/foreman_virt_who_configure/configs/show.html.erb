@@ -37,7 +37,7 @@
           <%= config_attribute :hypervisor_server, @config.hypervisor_server %>
           <%= config_attribute :hypervisor_username, @config.hypervisor_username if @config.hypervisor_type != 'kubevirt' %>
           <%= config_attribute :interval, _(ForemanVirtWhoConfigure::Config::AVAILABLE_INTERVALS[@config.interval.to_s]) %>
-          <%= config_attribute :satellite_url, @config.satellite_url, _('Satellite server FQDN')%>
+          <%= config_attribute :satellite_url, @config.satellite_url, _('Foreman server FQDN')%>
           <%= config_attribute :hypervisor_id, @config.hypervisor_id, _('Hypervisor ID') %>
           <%= config_attribute :listing_mode, _(ForemanVirtWhoConfigure::Config::FILTERING_MODES[@config.listing_mode.to_s]), _('Filtering') %>
           <% if @config.listing_mode == ForemanVirtWhoConfigure::Config::WHITELIST %>
@@ -62,7 +62,7 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-6">
-            <%= _("Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:") %>
+            <%= _("Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:") %>
           </div>
         </div>
 
