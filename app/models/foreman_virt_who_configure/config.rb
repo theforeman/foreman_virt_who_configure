@@ -31,7 +31,6 @@ module ForemanVirtWhoConfigure
 
     HYPERVISOR_TYPES = {
       'esx' => 'VMware vSphere / vCenter (esx)',
-      'rhevm' => 'Red Hat Virtualization Hypervisor (rhevm)',
       'hyperv' => 'Microsoft Hyper-V (hyperv)',
       'libvirt' => 'libvirt',
       'kubevirt' => 'Container-native virtualization'
@@ -185,8 +184,6 @@ module ForemanVirtWhoConfigure
     #     'libvirt'
     #   when Foreman::Model::Vmware
     #     'esx'
-    #   when Foreman::Model::Ovirt
-    #     'rhevm'
     #   else
     #     raise 'unsupported compute resource type'
     # end
