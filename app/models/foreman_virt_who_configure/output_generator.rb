@@ -19,7 +19,7 @@ module ForemanVirtWhoConfigure
       ConfigurationResult.new(1, 'virt_who_too_old', N_('Newer version of virt-who is required, minimum version is %s') % MINIMUM_VIRT_WHO_VERSION),
       ConfigurationResult.new(2, 'virt_who_config_file_issue', N_('Unable to create virt-who config file')),
       ConfigurationResult.new(4, 'virt_who_sysconfig_file_issue', N_('Unable to create sysconfig file')),
-      ConfigurationResult.new(8, 'virt_who_chkconfig_issue', N_('Unable to enable virt-who service using chkconfig')),
+      ConfigurationResult.new(8, 'virt_who_systemctl_issue', N_('Unable to enable virt-who service using systemctl')),
       ConfigurationResult.new(16, 'virt_who_service_issue', N_('Unable to start virt-who service, please see virt-who logs for more details')),
       ConfigurationResult.new(32, 'virt_who_installation', N_('Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository')),
     ]
@@ -125,17 +125,19 @@ EOF
   if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_config_file_issue)})); fi
 
   step 4 "Creating sysconfig virt-who configuration"
-  cat > #{sysconfig_file_path} << EOF
+  cat > #{default_config_path} << EOF
 ### This configuration file is managed via the virt-who configure plugin
 ### manual edits will be deleted.
-VIRTWHO_DEBUG=#{config.debug? ? 1 : 0}
-VIRTWHO_INTERVAL=#{config.interval * 60}#{proxy_strings}
+[global]
+debug=#{config.debug? ? 1 : 0}
+interval=#{config.interval * 60}#{proxy_strings}
+oneshot=False
 EOF
   if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_sysconfig_file_issue)})); fi
 
   step 5 "Enabling and restarting the virt-who service"
-  chkconfig virt-who on || result_code=$(($result_code|#{error_code(:virt_who_chkconfig_issue)}))
-  service virt-who restart || result_code=$(($result_code|#{error_code(:virt_who_service_issue)}))
+  systemctl enable virt-who || result_code=$(($result_code|#{error_code(:virt_who_systemctl_issue)}))
+  systemctl restart virt-who || result_code=$(($result_code|#{error_code(:virt_who_service_issue)}))
 else
   result_code=$(($result_code|#{error_code(:virt_who_too_old)}))
 fi
@@ -196,8 +198,8 @@ encrypted_password=$cr_password"
       "/etc/virt-who.d/#{identifier}.conf"
     end
 
-    def sysconfig_file_path
-      '/etc/sysconfig/virt-who'
+    def default_config_path
+      '/etc/virt-who.conf'
     end
 
     def identifier
@@ -271,8 +273,8 @@ encrypted_password=$cr_password"
     def proxy_strings
       output = ''
       output << "\n#{proxy_type}=#{sanitize_proxy(proxy.full_url)}" if proxy.present?
-      output << "\nNO_PROXY=#{sanitize_proxy(no_proxy)}" if no_proxy.present?
-      output << "\nNO_PROXY=*" if !proxy.present? && !no_proxy.present?
+      output << "\nno_proxy=#{sanitize_proxy(no_proxy)}" if no_proxy.present?
+      output << "\nno_proxy=*" if !proxy.present? && !no_proxy.present?
       output
     end
 

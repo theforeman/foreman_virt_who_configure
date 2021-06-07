@@ -60,7 +60,7 @@ module ForemanVirtWhoConfigure
         assert_nil config.http_proxy
         assert_nil config.no_proxy
         assert_not_includes output, 'http_proxy'
-        assert_includes output, 'NO_PROXY=*'
+        assert_includes output, 'no_proxy=*'
       end
 
       test 'it configures proxy when set' do
@@ -71,7 +71,7 @@ module ForemanVirtWhoConfigure
 
       test 'it configures no_proxy when set' do
         config.no_proxy = '*'
-        assert_includes output, 'NO_PROXY=*'
+        assert_includes output, 'no_proxy=*'
       end
 
       test 'proxy_strings prints both proxy and no proxy if present' do
@@ -79,19 +79,19 @@ module ForemanVirtWhoConfigure
         config.http_proxy = http_proxy
         config.no_proxy = 'b'
         assert_includes generator.proxy_strings, "\nhttp_proxy=http://test.com"
-        assert_includes generator.proxy_strings, "\NO_PROXY=b"
+        assert_includes generator.proxy_strings, "\nno_proxy=b"
       end
 
       test 'proxy_strings ignores empty string values' do
         config.http_proxy = nil
         config.no_proxy = ''
         assert_not_includes generator.proxy_strings, 'http_proxy'
-        assert_includes generator.proxy_strings, 'NO_PROXY=*'
+        assert_includes generator.proxy_strings, 'no_proxy=*'
       end
 
       test 'proxy_strings removes any new line chars' do
         config.no_proxy = "\nx\ny\nz"
-        assert_includes generator.proxy_strings, "\NO_PROXY=xyz"
+        assert_includes generator.proxy_strings, "\nno_proxy=xyz"
       end
 
       test 'it configures https proxy when https proxy is set' do
