@@ -38,10 +38,7 @@ msgstr ""
 msgid "Abstract async task"
 msgstr "비동기 작업 개요"
 
-msgid "Account name by which virt-who is to connect to the Red Hat Enterprise Virtualization Manager instance. The username option requires input in the format username@domain."
-msgstr ""
-
-msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/sysconfig/virt-who</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
+msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor."
@@ -61,6 +58,9 @@ msgstr "하위 계획이 있는 작업"
 
 msgid "Actions"
 msgstr "작업"
+
+msgid "Agent action"
+msgstr ""
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -104,9 +104,6 @@ msgstr ""
 msgid "Configuration script: "
 msgstr ""
 
-msgid "Configurations"
-msgstr ""
-
 msgid "Config|Interval"
 msgstr ""
 
@@ -125,6 +122,9 @@ msgstr ""
 msgid "Copy to clipboard"
 msgstr ""
 
+msgid "Copy version units to library"
+msgstr ""
+
 msgid "Count"
 msgstr "개수"
 
@@ -132,6 +132,12 @@ msgid "Create"
 msgstr "생성"
 
 msgid "Create Config"
+msgstr ""
+
+msgid "Create Export History"
+msgstr ""
+
+msgid "Create Import History"
 msgstr ""
 
 msgid "Create Package Group"
@@ -239,6 +245,9 @@ msgstr ""
 msgid "Export"
 msgstr "내보내기"
 
+msgid "Export Library"
+msgstr ""
+
 msgid "Fetch pxe files"
 msgstr ""
 
@@ -257,6 +266,12 @@ msgstr "필터링된 인덱스 컨텐츠"
 msgid "Filtering"
 msgstr ""
 
+msgid "Foreman server FQDN"
+msgstr ""
+
+msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
+msgstr ""
+
 msgid "Fully qualified host name or IP address of the hypervisor"
 msgstr ""
 
@@ -271,9 +286,6 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr ""
-
-msgid "HTTP proxy"
-msgstr "HTTP 프록시"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
 msgstr ""
@@ -332,6 +344,15 @@ msgstr ""
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr ""
 
+msgid "Import"
+msgstr ""
+
+msgid "Import Content View Version"
+msgstr ""
+
+msgid "Import Default Content View"
+msgstr ""
+
 msgid "Import Puppet classes"
 msgstr "Puppet 클래스 가져오기"
 
@@ -358,15 +379,6 @@ msgstr "패키지 그룹 인덱싱"
 
 msgid "Install Applicable Errata"
 msgstr "적용 가능한 에라타 설치 "
-
-msgid "Install erratum"
-msgstr "에라타 설치"
-
-msgid "Install package"
-msgstr "패키지 설치 "
-
-msgid "Install package group"
-msgstr "패키지 그룹 설치 "
 
 msgid "Instance update"
 msgstr ""
@@ -467,11 +479,11 @@ msgstr "공개 "
 msgid "Publish Lifecycle Environment Repositories"
 msgstr ""
 
-msgid "Red Hat Virtualization Manager’s fully qualified host name or IP address. For example, <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https://hostname_or_IP:443</code> for v3"
-msgstr ""
-
 msgid "Reindex subscriptions"
 msgstr "서브스크립션 다시 인덱싱"
+
+msgid "Remote action:"
+msgstr ""
 
 msgid "Remove Content"
 msgstr "컨텐츠 삭제 "
@@ -484,12 +496,6 @@ msgstr "버전 및 연결 삭제 "
 
 msgid "Remove from Environment"
 msgstr "환경에서 삭제 "
-
-msgid "Remove package"
-msgstr "패키지 삭제 "
-
-msgid "Remove package group"
-msgstr "패키지 그룹 삭제 "
 
 msgid "Remove subscriptions"
 msgstr "서브스크립션 삭제"
@@ -506,12 +512,6 @@ msgstr ""
 msgid "Run Sync Plan:"
 msgstr ""
 
-msgid "Satellite Server’s fully-qualified host name, for example: satellite.example.com"
-msgstr ""
-
-msgid "Satellite server FQDN"
-msgstr ""
-
 msgid "Schedule"
 msgstr "스케줄 "
 
@@ -525,7 +525,7 @@ msgid ""
 "Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
 "                              Note that some virtualization backends don't have all of them implemented.\n"
 "                              Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
-"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
+"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx only.\n"
 "                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
 msgstr ""
 
@@ -565,10 +565,10 @@ msgstr ""
 msgid "Unable to create virt-who config file"
 msgstr ""
 
-msgid "Unable to enable virt-who service using chkconfig"
+msgid "Unable to enable virt-who service using systemctl"
 msgstr ""
 
-msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository"
+msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
 msgstr ""
 
 msgid "Unable to start virt-who service, please see virt-who logs for more details"
@@ -607,25 +607,25 @@ msgstr ""
 msgid "Update http proxy details"
 msgstr ""
 
-msgid "Update package"
-msgstr "패키지 업데이트 "
-
 msgid "Update redhat repository"
 msgstr ""
 
 msgid "Update release version for host"
 msgstr ""
 
-msgid "Upload errata into"
-msgstr "다음에 에라타 업로드"
+msgid "Updating System Purpose for host"
+msgstr ""
 
 msgid "Upload into"
 msgstr "업로드 "
 
-msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:"
+msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
+msgstr ""
+
+msgid "Verify checksum"
 msgstr ""
 
 msgid "Virt-who Configs Status"
@@ -644,9 +644,6 @@ msgid "Virt-who configurations"
 msgstr ""
 
 msgid "Whitelist"
-msgstr ""
-
-msgid "XenServer server’s fully qualified host name or IP address."
 msgstr ""
 
 msgid "every %s hours"

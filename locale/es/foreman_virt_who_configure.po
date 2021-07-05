@@ -41,11 +41,8 @@ msgstr "Complemento para simplificar la configuración de virt-who"
 msgid "Abstract async task"
 msgstr "Tarea de sincronización abstracta"
 
-msgid "Account name by which virt-who is to connect to the Red Hat Enterprise Virtualization Manager instance. The username option requires input in the format username@domain."
-msgstr "Nombre de cuenta con el cual virt-who se conecta a la instancia de Red Hat Enterprise Virtualization. La opción de nombre de usuario requiere del ingreso con el formato username@domain."
-
-msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/sysconfig/virt-who</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
-msgstr "Nombre de cuenta con el cual virt-who se conecta al hipervisor con el formato <code>domain_name\\account_name</code>. Cabe destacar que una sola barra diagonal separa los valores de domain_name y account_name. Si utiliza una cuenta de dominio y el archivo global de configuración <code>/etc/sysconfig/virt-who</code>, entonces se requiere de <b>dos</b> barras diagonales. Para mayor información, consulte <a href=\"https://access.redhat.com/solutions/1270223\"> la solución de Conocimientos de Red Hat \"Cómo usar una cuenta de dominio de Windows con virt-who\"</a>."
+msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
+msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor."
 msgstr "Nombre de cuenta con el cual virt-who se conecta al hipervisor."
@@ -64,6 +61,9 @@ msgstr "Acción con subplanes"
 
 msgid "Actions"
 msgstr "Acciones"
+
+msgid "Agent action"
+msgstr ""
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -107,9 +107,6 @@ msgstr "Identificador numérico de la configuración"
 msgid "Configuration script: "
 msgstr "Script de configuración:"
 
-msgid "Configurations"
-msgstr ""
-
 msgid "Config|Interval"
 msgstr "Configuración|Intervalo"
 
@@ -128,6 +125,9 @@ msgstr ""
 msgid "Copy to clipboard"
 msgstr "Copiar al portapapeles"
 
+msgid "Copy version units to library"
+msgstr ""
+
 msgid "Count"
 msgstr "Conteo"
 
@@ -136,6 +136,12 @@ msgstr "Crear"
 
 msgid "Create Config"
 msgstr "Crear configuración"
+
+msgid "Create Export History"
+msgstr ""
+
+msgid "Create Import History"
+msgstr ""
 
 msgid "Create Package Group"
 msgstr "Crear grupo de paquetes"
@@ -242,6 +248,9 @@ msgstr "Excluir hosts"
 msgid "Export"
 msgstr "Exportar"
 
+msgid "Export Library"
+msgstr ""
+
 msgid "Fetch pxe files"
 msgstr "Buscar archivos pxe"
 
@@ -260,6 +269,12 @@ msgstr "Contenido del índice filtrado"
 msgid "Filtering"
 msgstr "Filtrando"
 
+msgid "Foreman server FQDN"
+msgstr ""
+
+msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
+msgstr ""
+
 msgid "Fully qualified host name or IP address of the hypervisor"
 msgstr "Nombre de host totalmente calificado o dirección IP del hipervisor"
 
@@ -273,9 +288,6 @@ msgid "Generate repository applicability"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr "Proxy HTTP"
-
-msgid "HTTP proxy"
 msgstr "Proxy HTTP"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
@@ -335,6 +347,15 @@ msgstr "Ignorar el proxy"
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr "Ignorar el proxy. Lista de nombres de host o dominios separados por comas o direcciones ip para determinar cómo ignorar la configuración del proxy. De manera opcional, esto puede definirse en la configuración de proxy como *to bypass en todos los dominios de nombres de hosts o direcciones ip."
 
+msgid "Import"
+msgstr ""
+
+msgid "Import Content View Version"
+msgstr ""
+
+msgid "Import Default Content View"
+msgstr ""
+
 msgid "Import Puppet classes"
 msgstr "Importar clases Puppet"
 
@@ -361,15 +382,6 @@ msgstr "Grupos de paquete del índice"
 
 msgid "Install Applicable Errata"
 msgstr "Instalación de erratas aplicables"
-
-msgid "Install erratum"
-msgstr "Instalación de errata"
-
-msgid "Install package"
-msgstr "Instalar paquete"
-
-msgid "Install package group"
-msgstr "Instalación de grupo de paquetes"
 
 msgid "Instance update"
 msgstr "Actualización de instancia"
@@ -470,11 +482,11 @@ msgstr "Publicar"
 msgid "Publish Lifecycle Environment Repositories"
 msgstr "Publicar repositorios del entorno de ciclo de vida"
 
-msgid "Red Hat Virtualization Manager’s fully qualified host name or IP address. For example, <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https://hostname_or_IP:443</code> for v3"
-msgstr "Nombre de host o dirección IP totalmente calificados de Red Hat Virtualization Manager. Por ejemplo: <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https://hostname_or_IP:443</code> para v3"
-
 msgid "Reindex subscriptions"
 msgstr "Reindexar suscripciones"
+
+msgid "Remote action:"
+msgstr ""
 
 msgid "Remove Content"
 msgstr "Eliminar contenido"
@@ -487,12 +499,6 @@ msgstr "Retirar versiones y asociaciones"
 
 msgid "Remove from Environment"
 msgstr "Retirar del entorno"
-
-msgid "Remove package"
-msgstr "Eliminar paquete"
-
-msgid "Remove package group"
-msgstr "Eliminar grupo de paquetes"
 
 msgid "Remove subscriptions"
 msgstr "Eliminar suscripciones"
@@ -509,12 +515,6 @@ msgstr "Volver a publicar repositorios de la versión"
 msgid "Run Sync Plan:"
 msgstr ""
 
-msgid "Satellite Server’s fully-qualified host name, for example: satellite.example.com"
-msgstr "Nombre de host totalmente calificado de Satellite Server, por ejemplo: satellite.example.com"
-
-msgid "Satellite server FQDN"
-msgstr "Servidor satélite FQDN"
-
 msgid "Schedule"
 msgstr "Programación"
 
@@ -528,13 +528,9 @@ msgid ""
 "Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
 "                              Note that some virtualization backends don't have all of them implemented.\n"
 "                              Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
-"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
+"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx only.\n"
 "                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
 msgstr ""
-"Especifica que los hipervisores se identificarán por  <b>nombre de host</b>, <b>uuid</b> o <b>hwuuid</b>.\n"
-"                              Cabe destacar que algunos backends de virtualización no tienen todos ellos implementados.\n"
-"                              El valor predeterminado es <b>nombre de host</b>, que ofrece nombres de hipervisor más significativos, pero que puede provocar registros duplicados de hipervisor, en caso de que se le asigne un nuevo nombre al host. Para evitarlo, puede usar <b>uuid</b> . <b>hwuuid</b> es aplicable únicamente a esx y rhevm.\n"
-"                                  Esta propiedad debe configurarse antes de la ejecución inicial de virt-who. Modificarlo más adelante provocará entradas duplicadas en el administrador de suscripciones."
 
 msgid "Status"
 msgstr "Estatus"
@@ -572,11 +568,11 @@ msgstr "No es posible crear el archivo de configuración del sistema"
 msgid "Unable to create virt-who config file"
 msgstr "No es posible crear el archivo de configuración virt-who"
 
-msgid "Unable to enable virt-who service using chkconfig"
-msgstr "No es posible habilitar el servicio virt-who por medio del uso de chkconfig"
+msgid "Unable to enable virt-who service using systemctl"
+msgstr ""
 
-msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository"
-msgstr "No es posible instalar el paquete virt-who. Asegúrese de que el host esté bien suscrito y que tenga acceso al repositorio satellite-tools"
+msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
+msgstr ""
 
 msgid "Unable to start virt-who service, please see virt-who logs for more details"
 msgstr "No es posible iniciar el servicio virt-who. Consulte los registros de virt-who para obtener información detallada"
@@ -614,26 +610,26 @@ msgstr ""
 msgid "Update http proxy details"
 msgstr ""
 
-msgid "Update package"
-msgstr "Actualizar paquete"
-
 msgid "Update redhat repository"
 msgstr ""
 
 msgid "Update release version for host"
 msgstr "Actualizar versión de lanzamiento para el host"
 
-msgid "Upload errata into"
-msgstr "Cargar errata en"
+msgid "Updating System Purpose for host"
+msgstr ""
 
 msgid "Upload into"
 msgstr "Cargar a "
 
-msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:"
+msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
 msgstr "Nombre de host o dirección IP totalmente calificados del servidor vCenter de VMWare."
+
+msgid "Verify checksum"
+msgstr ""
 
 msgid "Virt-who Configs Status"
 msgstr "Estado de las configuraciones virt-who"
@@ -652,9 +648,6 @@ msgstr "Configuraciones virt-who"
 
 msgid "Whitelist"
 msgstr "Lista blanca"
-
-msgid "XenServer server’s fully qualified host name or IP address."
-msgstr "Nombre de host o dirección IP totalmente calificados del servidor XenServer."
 
 msgid "every %s hours"
 msgstr "cada %s horas"

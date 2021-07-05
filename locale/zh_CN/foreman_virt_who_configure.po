@@ -40,11 +40,8 @@ msgstr "简化 virt-who 配置的插件"
 msgid "Abstract async task"
 msgstr "提取 async 任务"
 
-msgid "Account name by which virt-who is to connect to the Red Hat Enterprise Virtualization Manager instance. The username option requires input in the format username@domain."
-msgstr "virt-who 连接 Red Hat Enterprise Virtualization Manager 所用的帐户名。用户名选项需要以 username@domain 格式输入。"
-
-msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/sysconfig/virt-who</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
-msgstr "virt-who 用于连接 hypervisor 的帐户名，格式为 <code>domain_name\\account_name</code>。注意只使用单斜线来分离 domain_name 和 account_name 的值。如果您使用域帐户，以及全局配置文件 <code>/etc/sysconfig/virt-who</code>，则需要使用 <b>双</b>斜线。有关进一步详情，请参见<a href=\"https://access.redhat.com/solutions/1270223\">红帽知识库解决方案 如何将 windows 域名帐户用于 在 virt-who</a>了解更多信息。"
+msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
+msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor."
 msgstr "virt-who 用于连接 hypervisor 的帐户名。"
@@ -63,6 +60,9 @@ msgstr "有子计划的操作"
 
 msgid "Actions"
 msgstr "动作"
+
+msgid "Agent action"
+msgstr ""
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -106,9 +106,6 @@ msgstr "配置数字识别符"
 msgid "Configuration script: "
 msgstr "配置脚本："
 
-msgid "Configurations"
-msgstr ""
-
 msgid "Config|Interval"
 msgstr "配置|间隔"
 
@@ -127,6 +124,9 @@ msgstr ""
 msgid "Copy to clipboard"
 msgstr "复制到剪贴板"
 
+msgid "Copy version units to library"
+msgstr ""
+
 msgid "Count"
 msgstr "计数"
 
@@ -135,6 +135,12 @@ msgstr "创建"
 
 msgid "Create Config"
 msgstr "创建配置"
+
+msgid "Create Export History"
+msgstr ""
+
+msgid "Create Import History"
+msgstr ""
 
 msgid "Create Package Group"
 msgstr "创建软件包组"
@@ -241,6 +247,9 @@ msgstr "排除主机"
 msgid "Export"
 msgstr "导出"
 
+msgid "Export Library"
+msgstr ""
+
 msgid "Fetch pxe files"
 msgstr "获取 pxe 文件"
 
@@ -259,6 +268,12 @@ msgstr "过滤的索引内容"
 msgid "Filtering"
 msgstr "过滤"
 
+msgid "Foreman server FQDN"
+msgstr ""
+
+msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
+msgstr ""
+
 msgid "Fully qualified host name or IP address of the hypervisor"
 msgstr "Hypervisor 的完全限定主机名或 IP 地址"
 
@@ -273,9 +288,6 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP 代理"
-
-msgid "HTTP proxy"
-msgstr "HTTP 代理服务器"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
 msgstr "应当用于 virt-who 运行所在服务器和 hypervisor 及虚拟化管理器之间通信的 HTTP 代理服务器。"
@@ -334,6 +346,15 @@ msgstr "忽略代理服务器"
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr "忽略代理服务器。忽略代理服务器设置的主机名、域或 ip 地址逗号分隔列表。可选择性地设置为 *，以便为所有主机名、域或 ip 地址跳过代理服务器设置。"
 
+msgid "Import"
+msgstr ""
+
+msgid "Import Content View Version"
+msgstr ""
+
+msgid "Import Default Content View"
+msgstr ""
+
 msgid "Import Puppet classes"
 msgstr "导入 Puppet 分类"
 
@@ -360,15 +381,6 @@ msgstr "索引软件包组"
 
 msgid "Install Applicable Errata"
 msgstr "安装可应用勘误"
-
-msgid "Install erratum"
-msgstr "安装勘误表"
-
-msgid "Install package"
-msgstr "安装软件包"
-
-msgid "Install package group"
-msgstr "安装软件包组"
 
 msgid "Instance update"
 msgstr "实例更新"
@@ -471,11 +483,11 @@ msgstr "发布"
 msgid "Publish Lifecycle Environment Repositories"
 msgstr "发布生命周期环境仓库"
 
-msgid "Red Hat Virtualization Manager’s fully qualified host name or IP address. For example, <code>https://hostname:443/ovirt-engine/</code> for v4, <code>https://hostname_or_IP:443</code> for v3"
-msgstr "Red Hat Virtualization Manager 的完全限定主机名或 IP 地址。例如，v4 的 <code>https://hostname:443/ovirt-engine/</code> 和 v3 的 <code>https://hostname_or_IP:443</code>"
-
 msgid "Reindex subscriptions"
 msgstr "重新索引订阅"
+
+msgid "Remote action:"
+msgstr ""
 
 msgid "Remove Content"
 msgstr "删除内容"
@@ -488,12 +500,6 @@ msgstr "删除版本及关联"
 
 msgid "Remove from Environment"
 msgstr "从环境中删除 "
-
-msgid "Remove package"
-msgstr "删除软件包 "
-
-msgid "Remove package group"
-msgstr "删除软件包组"
 
 msgid "Remove subscriptions"
 msgstr "删除订阅"
@@ -510,12 +516,6 @@ msgstr "重新发布版本库"
 msgid "Run Sync Plan:"
 msgstr ""
 
-msgid "Satellite Server’s fully-qualified host name, for example: satellite.example.com"
-msgstr "Satellite 服务器的完全限定主机名，例如：satellite.example.com"
-
-msgid "Satellite server FQDN"
-msgstr "Satellite 服务器 FQDN"
-
 msgid "Schedule"
 msgstr "时间表"
 
@@ -529,14 +529,9 @@ msgid ""
 "Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
 "                              Note that some virtualization backends don't have all of them implemented.\n"
 "                              Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
-"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx and rhevm only.\n"
+"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx only.\n"
 "                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
 msgstr ""
-"指定 hypervisor 由其 <b>hostname</b>、<b>uuid</b> 或 <b>hwuuid</b> 标识。\n"
-"                              注意某些虚拟化后端并未完全实施。\n"
-"                              默认为<b>主机名</b>，它提供更具意义的 hypervisor \n"
-"                                  名称，但如果主机重命名，则可能造成重复的 hypervisor 注册。为了避免这种情况，可使用 <b>uuid</b> 代替。<b>hwuuid</b> 仅适用于 esx 和 rhevm。\n"
-"                                  此特性应在首次运行 virt-who 之前设置。之后更改将导致订阅管理器中出现重复条目。"
 
 msgid "Status"
 msgstr "状态"
@@ -574,11 +569,11 @@ msgstr "无法创建 sysconfig 文件"
 msgid "Unable to create virt-who config file"
 msgstr "无法创建 virt-who 配置文件"
 
-msgid "Unable to enable virt-who service using chkconfig"
-msgstr "无法使用 chkconfig 启用 virt-who 服务"
+msgid "Unable to enable virt-who service using systemctl"
+msgstr ""
 
-msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to satellite-tools repository"
-msgstr "无法安装 virt-who 软件包，确保已正确订阅主机，且具备访问 satellite 工具库的访问权限"
+msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
+msgstr ""
 
 msgid "Unable to start virt-who service, please see virt-who logs for more details"
 msgstr "无法开始 virt-who 服务，请查看 virt-who 日志了解详情"
@@ -616,26 +611,26 @@ msgstr ""
 msgid "Update http proxy details"
 msgstr ""
 
-msgid "Update package"
-msgstr "更新软件包"
-
 msgid "Update redhat repository"
 msgstr ""
 
 msgid "Update release version for host"
 msgstr "为主机更新发行版本"
 
-msgid "Upload errata into"
-msgstr "上传勘误至"
+msgid "Updating System Purpose for host"
+msgstr ""
 
 msgid "Upload into"
 msgstr "上传到"
 
-msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to Red Hat Satellite Tools repository and will run virt-who reporting, preferably Satellite host:"
+msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
 msgstr "VMware vCenter 服务器的完全限定主机名或 IP 地址。"
+
+msgid "Verify checksum"
+msgstr ""
 
 msgid "Virt-who Configs Status"
 msgstr "Virt-who 配置状态"
@@ -654,9 +649,6 @@ msgstr "Virt-who 配置"
 
 msgid "Whitelist"
 msgstr "白名单"
-
-msgid "XenServer server’s fully qualified host name or IP address."
-msgstr "XenServer 服务器的完全限定主机名或 IP 地址。"
 
 msgid "every %s hours"
 msgstr "每 %s 小时"
