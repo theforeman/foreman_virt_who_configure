@@ -1,58 +1,65 @@
-# foreman_virt_who_configure
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# This file is distributed under the same license as foreman_virt_who_configure.
+# Translators:
+# 0868a4d1af5275b3f70b0a6dac4c99a4, 2017
+# tim123, 2017
+# Bryan Kearney <bryan.kearney@gmail.com>, 2019
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2014-08-20 08:54+0100\n"
-"Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language-Team: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2019\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/foreman/teams/114/zh"
+"_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "1. Copy this configuration script to a safe directory."
-msgstr ""
+msgstr "1. 将这个配置脚本复制到安全目录。"
 
 msgid "2. Make the script executable and run it."
-msgstr ""
+msgstr "2. 使脚本可执行，并运行脚本。"
 
 msgid "3. Delete the script."
-msgstr ""
+msgstr "3. 删除该脚本。"
 
 msgid "A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses."
-msgstr ""
+msgstr "忽略代理服务器设置的主机名、域或 ip 地址逗号分隔列表。可选择性地设置为<code>*</code>，以便为所有主机名、域或 ip 地址跳过代理服务器设置。"
 
 msgid "A plugin to make virt-who configuration easy"
-msgstr ""
+msgstr "简化 virt-who 配置的插件"
 
 msgid "Abstract async task"
-msgstr ""
+msgstr "提取 async 任务"
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor."
-msgstr ""
+msgstr "virt-who 用于连接 hypervisor 的帐户名。"
 
 msgid "Account name by which virt-who is to connect to the hypervisor. By default this is <code>Administrator</code>. To use an alternate account, create a user account and assign that account to the following groups (Windows 2012 Server): Hyper-V Administrators and Remote Management Users."
-msgstr ""
+msgstr "virt-who 连接 hypervisor 所用的帐户名。默认为 <code>管理员</code>。要使用替换帐户，请创建用户帐户并将该帐户分配给以下组（Windows 2012 服务器）：Hyper-V 管理员和远程管理用户。"
 
 msgid "Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information."
-msgstr ""
+msgstr "virt-who 连接 hypervisor 所用的帐户名。Virt-who 不支持基于密码的验证，您必须手动设置 SSH 密钥，有关更多信息，请参见 <a href=\"https://access.redhat.com/solutions/1515983\">红帽知识库解决方案 如何为 KVM 主机配置 virt-who</a>。"
 
 msgid "Account password by which virt-who is to connect to the hypervisor instance."
-msgstr ""
+msgstr "virt-who 用于连接 hypervisor 实例的帐户密码。"
 
 msgid "Action with sub plans"
-msgstr ""
+msgstr "有子计划的操作"
 
 msgid "Actions"
-msgstr ""
+msgstr "动作"
 
 msgid "Agent action"
 msgstr ""
@@ -64,70 +71,70 @@ msgid "Applicable only for esx provider type. Only hosts which parent (usually C
 msgstr ""
 
 msgid "Attach subscriptions"
-msgstr ""
+msgstr "附加订阅"
 
 msgid "Auto attach subscriptions"
-msgstr ""
+msgstr "自动附加订阅"
 
 msgid "Blacklist"
-msgstr ""
+msgstr "黑名单"
 
 msgid "Bulk generate applicability for hosts"
 msgstr ""
 
 msgid "Combined Profile Update"
-msgstr ""
+msgstr "组合的配置集更新"
 
 msgid "Configs"
-msgstr ""
+msgstr "配置"
 
 msgid "Configuration Status"
-msgstr ""
+msgstr "配置状态"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details"
 msgstr ""
 
 msgid "Configuration interval in minutes"
-msgstr ""
+msgstr "以分钟为单位的配置间隔"
 
 msgid "Configuration name"
-msgstr ""
+msgstr "配置名称"
 
 msgid "Configuration numeric identifier"
-msgstr ""
+msgstr "配置数字识别符"
 
 msgid "Configuration script: "
-msgstr ""
+msgstr "配置脚本："
 
 msgid "Config|Interval"
-msgstr ""
+msgstr "配置|间隔"
 
 msgid "Config|Last Report"
-msgstr ""
+msgstr "配置|最新报告"
 
 msgid "Config|Name"
-msgstr ""
+msgstr "配置|名称"
 
 msgid "Connection"
-msgstr ""
+msgstr "连接"
 
 msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
 msgstr ""
 
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "复制到剪贴板"
 
 msgid "Copy version units to library"
 msgstr ""
 
 msgid "Count"
-msgstr ""
+msgstr "计数"
 
 msgid "Create"
-msgstr ""
+msgstr "创建"
 
 msgid "Create Config"
-msgstr ""
+msgstr "创建配置"
 
 msgid "Create Export History"
 msgstr ""
@@ -136,82 +143,82 @@ msgid "Create Import History"
 msgstr ""
 
 msgid "Create Package Group"
-msgstr ""
+msgstr "创建软件包组"
 
 msgid "Create a virt-who configuration"
-msgstr ""
+msgstr "创建 virt-who 配置"
 
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 msgid "Delete Activation Key"
-msgstr ""
+msgstr "删除激活码"
 
 msgid "Delete Lifecycle Environment"
-msgstr ""
+msgstr "删除生命周期环境"
 
 msgid "Delete Package Group"
-msgstr ""
+msgstr "删除软件包组"
 
 msgid "Delete Product"
-msgstr ""
+msgstr "删除产品"
 
 msgid "Delete a virt-who configuration"
-msgstr ""
+msgstr "删除 virt-who 配置"
 
 msgid "Delete virt-who configuration %s?"
-msgstr ""
+msgstr "删除 virt-who 配置 %s？"
 
 msgid "Deploy"
 msgstr ""
 
 msgid "Destroy"
-msgstr ""
+msgstr "消除"
 
 msgid "Destroy Content Host"
-msgstr ""
+msgstr "消除内容主机"
 
 msgid "Details"
-msgstr ""
+msgstr "详情"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr ""
 
 msgid "Disable"
-msgstr ""
+msgstr "禁用"
 
 msgid "Discover"
-msgstr ""
+msgstr "发现"
 
 msgid "Download the script"
-msgstr ""
+msgstr "下载该脚本"
 
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 msgid "Edit Virt-who Config"
-msgstr ""
+msgstr "编辑 Virt-who 配置"
 
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 msgid "Enable debugging output"
-msgstr ""
+msgstr "启用调试输出"
 
 msgid "Enable debugging output?"
 msgstr ""
 
 msgid "Errata mail"
-msgstr ""
+msgstr "勘误邮件"
 
 msgid "Every 12 hours"
-msgstr ""
+msgstr "每 12 小时"
 
 msgid "Every 2 days"
 msgstr ""
 
 msgid "Every 2 hours"
-msgstr ""
+msgstr "每 2 小时"
 
 msgid "Every 24 hours"
 msgstr ""
@@ -220,13 +227,13 @@ msgid "Every 3 days"
 msgstr ""
 
 msgid "Every 4 hours"
-msgstr ""
+msgstr "每 4 小时"
 
 msgid "Every 8 hours"
-msgstr ""
+msgstr "每 8 小时"
 
 msgid "Every hour"
-msgstr ""
+msgstr "每小时"
 
 msgid "Exclude Hosts"
 msgstr ""
@@ -235,16 +242,16 @@ msgid "Exclude host parents"
 msgstr ""
 
 msgid "Exclude hosts"
-msgstr ""
+msgstr "排除主机"
 
 msgid "Export"
-msgstr ""
+msgstr "导出"
 
 msgid "Export Library"
 msgstr ""
 
 msgid "Fetch pxe files"
-msgstr ""
+msgstr "获取 pxe 文件"
 
 msgid "Filter Hosts"
 msgstr ""
@@ -253,13 +260,13 @@ msgid "Filter host parents"
 msgstr ""
 
 msgid "Filter hosts"
-msgstr ""
+msgstr "过滤主机"
 
 msgid "Filtered index content"
-msgstr ""
+msgstr "过滤的索引内容"
 
 msgid "Filtering"
-msgstr ""
+msgstr "过滤"
 
 msgid "Foreman server FQDN"
 msgstr ""
@@ -268,10 +275,10 @@ msgid "Foreman server’s fully-qualified host name, for example: foreman.exampl
 msgstr ""
 
 msgid "Fully qualified host name or IP address of the hypervisor"
-msgstr ""
+msgstr "Hypervisor 的完全限定主机名或 IP 地址"
 
 msgid "General information"
-msgstr ""
+msgstr "通用信息"
 
 msgid "Generate host applicability"
 msgstr ""
@@ -280,19 +287,19 @@ msgid "Generate repository applicability"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr ""
+msgstr "HTTP 代理"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
-msgstr ""
+msgstr "应当用于 virt-who 运行所在服务器和 hypervisor 及虚拟化管理器之间通信的 HTTP 代理服务器。"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used."
-msgstr ""
+msgstr "应当用于 virt-who 运行所在服务器和 hypervisor 及虚拟管理器之间通信的 HTTP 代理服务器。如果未使用代理服务器，则留空。"
 
 msgid "Hammer command: "
 msgstr ""
 
 msgid "Help"
-msgstr ""
+msgstr "帮助"
 
 msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -304,40 +311,40 @@ msgid "How often to check connected hypervisors for changes? Also affects how of
 msgstr ""
 
 msgid "Hypervisor ID"
-msgstr ""
+msgstr "Hypervisor  ID"
 
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
-msgstr ""
+msgstr "Hypervisor 黑名单，仅在过滤模式设置为 2 时适用。支持通配符和正则表达式，必须用逗号分隔多项记录。"
 
 msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
-msgstr ""
+msgstr "Hypervisor 过滤模式，%{unlimited} 表示无过滤，%{whitelist} 表示白名单，%{blacklist} 表示黑名单"
 
 msgid "Hypervisor password, required for all hypervisor types except for libvirt"
-msgstr ""
+msgstr "Hypervisor 密码，除 libvirt 以外的所有 hypervisor 类型都需要"
 
 msgid "Hypervisor type"
-msgstr ""
+msgstr "Hypervisor 类型"
 
 msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
-msgstr ""
+msgstr "Hypervisor 白名单，仅在过滤模式设置为 1 时适用。支持通配符和正则表达式，必须用逗号分隔多项记录。"
 
 msgid "Hypervisors"
-msgstr ""
+msgstr "Hypervisor"
 
 msgid "Hypervisors update"
-msgstr ""
+msgstr "Hypervisor 更新"
 
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
-msgstr ""
+msgstr "如果您运行混合环境，且虚拟机运行 Red Hat Enterprise Linux 和其他操作系统，您可能想要限制 virt-who 对主机的访问权限范围。例如，如果某些 hypervisor 只托管 Microsoft Windows Server 实例，那么让 virt-who agent 报告这些 hypervisor 没有任何意义。"
 
 msgid "Ignore Proxy"
 msgstr ""
 
 msgid "Ignore proxy"
-msgstr ""
+msgstr "忽略代理服务器"
 
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
-msgstr ""
+msgstr "忽略代理服务器。忽略代理服务器设置的主机名、域或 ip 地址逗号分隔列表。可选择性地设置为 *，以便为所有主机名、域或 ip 地址跳过代理服务器设置。"
 
 msgid "Import"
 msgstr ""
@@ -349,91 +356,93 @@ msgid "Import Default Content View"
 msgstr ""
 
 msgid "Import Puppet classes"
-msgstr ""
+msgstr "导入 Puppet 分类"
 
 msgid "Import facts"
-msgstr ""
+msgstr "导入详情"
 
 msgid "Incremental Update"
-msgstr ""
+msgstr "增量更新"
 
 msgid "Incremental Update of  Content View Version(s) "
-msgstr ""
+msgstr "内容视图版本的增量更新"
 
 msgid "Index content"
-msgstr ""
+msgstr "索引内容"
 
 msgid "Index errata"
-msgstr ""
+msgstr "索引勘误"
 
 msgid "Index module streams"
-msgstr ""
+msgstr "索引模块流"
 
 msgid "Index package groups"
-msgstr ""
+msgstr "索引软件包组"
 
 msgid "Install Applicable Errata"
-msgstr ""
+msgstr "安装可应用勘误"
 
 msgid "Instance update"
-msgstr ""
+msgstr "实例更新"
 
 msgid "Interval was not provided"
-msgstr ""
+msgstr "未提供间隔"
 
 msgid "Latest Configurations Without Change"
 msgstr ""
 
 msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr ""
+msgstr "Libvirt 服务器的完全限定主机名或 IP 地址。您也可以指定首选的方案，例如：<code>qemu+ssh://libvirt.example.com/system</code>。如果您使用 SSH，确保您在目标主机上为 hypervisor 用户名字段指定的用户设置根的 SSH 密钥"
 
 msgid "List of virt-who configurations"
-msgstr ""
+msgstr "virt-who 配置列表"
 
 msgid "List of virt-who configurations per organization"
-msgstr ""
+msgstr "每个机构的 virt-who 配置列表"
 
 msgid "Microsoft Hyper-V fully qualified host name or IP address."
-msgstr ""
+msgstr "Microsoft Hyper-V fully 的完全限定主机名或 IP 地址。"
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
-msgstr ""
+msgstr "此配置的名称，例如 hypervisor 的名称"
 
 msgid "New Config"
-msgstr ""
+msgstr "新建配置"
 
 msgid "New Virt-who Config"
-msgstr ""
+msgstr "新建 Virt-who 配置"
 
 msgid "Newer version of virt-who is required, minimum version is %s"
-msgstr ""
+msgstr "需要更高的 virt-who 版本，最低为 %s 版本"
 
 msgid "No Change"
 msgstr ""
 
 msgid "No Report Yet"
-msgstr ""
+msgstr "尚没有报告"
 
 msgid "No Reports"
-msgstr ""
+msgstr "没有报告"
 
 msgid "No change"
-msgstr ""
+msgstr "不更改"
 
 msgid "No configuration found"
-msgstr ""
+msgstr "未找到配置"
 
 msgid "OK"
-msgstr ""
+msgstr "确定"
 
 msgid "On the target virt-who host:"
-msgstr ""
+msgstr "在目标 virt-who 主机上："
 
 msgid "On this page you can define virt-who configurations for your hypervisors."
-msgstr ""
+msgstr "在本页面，您可以为您的 hypervisor 定义 virt-who 配置。"
 
 msgid "One virt-who configuration represents one config file in /etc/virt-who.d directory and maps to single hypervisor, organization and lifecycle environment."
 msgstr ""
+"一个 virt-who 配置代表 /etc/virt-who.d 目录中的一个配置文件，映射至单个\n"
+" hypervisor、机构和生命周期环境。"
 
 msgid "Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -442,79 +451,79 @@ msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_i
 msgstr ""
 
 msgid "Organization of the virt-who configuration"
-msgstr ""
+msgstr "virt-who 配置机构"
 
 msgid "Overview"
-msgstr ""
+msgstr "概览"
 
 msgid "Owner"
-msgstr ""
+msgstr "所有者"
 
 msgid "Owner was not provided"
-msgstr ""
+msgstr "未提供所有者"
 
 msgid "Package Profile Update"
-msgstr ""
+msgstr "软件包配置文件更新"
 
 msgid "Path to kubeconfig file"
 msgstr ""
 
 msgid "Product Create"
-msgstr ""
+msgstr "产品创建"
 
 msgid "Promote"
-msgstr ""
+msgstr "提升"
 
 msgid "Promotion to Environment"
-msgstr ""
+msgstr "提升到环境"
 
 msgid "Publish"
-msgstr ""
+msgstr "发布"
 
 msgid "Publish Lifecycle Environment Repositories"
-msgstr ""
+msgstr "发布生命周期环境仓库"
 
 msgid "Reindex subscriptions"
-msgstr ""
+msgstr "重新索引订阅"
 
 msgid "Remote action:"
 msgstr ""
 
 msgid "Remove Content"
-msgstr ""
+msgstr "删除内容"
 
 msgid "Remove Version"
-msgstr ""
+msgstr "删除版本"
 
 msgid "Remove Versions and Associations"
-msgstr ""
+msgstr "删除版本及关联"
 
 msgid "Remove from Environment"
-msgstr ""
+msgstr "从环境中删除 "
 
 msgid "Remove subscriptions"
-msgstr ""
+msgstr "删除订阅"
 
 msgid "Renders a deploy script for the specified virt-who configuration"
-msgstr ""
+msgstr "为指定的 virt-who 配置提供部署脚本"
 
 msgid "Report"
-msgstr ""
+msgstr "报表"
 
 msgid "Republish Version Repositories"
-msgstr ""
+msgstr "重新发布版本库"
 
 msgid "Run Sync Plan:"
 msgstr ""
 
 msgid "Schedule"
-msgstr ""
+msgstr "时间表"
 
 msgid "Show a virt-who configuration"
-msgstr ""
+msgstr "显示 virt-who 配置"
 
 msgid "Specifies how the hypervisor will be identified."
-msgstr ""
+msgstr "指定如何识别 hypervisor。"
 
 msgid ""
 "Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
@@ -525,40 +534,40 @@ msgid ""
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "状态"
 
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 msgid "Sync capsule"
 msgstr ""
 
 msgid "Synchronize"
-msgstr ""
+msgstr "同步"
 
 msgid "Synchronize smart proxy"
-msgstr ""
+msgstr "同步智能代理"
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
-msgstr ""
+msgstr "尚未部署配置，或者 virt-who 无法报告状态"
 
 msgid "The virt-who report arrived within the interval"
-msgstr ""
+msgstr "在间隔期间收到 virt-who 报告"
 
 msgid "The virt-who report has not arrived within the interval, which indicates there was no change on hypervisor"
-msgstr ""
+msgstr "未在间隔期间收到 virt-who 报告，表示 hypervisor 无更改"
 
 msgid "To define a new configuration, click the New Config button and fill in the form. After you provide all required information a virt-who configuration script will be generated. You could either install it manually by copying the script or deploy it on a selected target host through Remote Execution."
-msgstr ""
+msgstr "如要定义新配置，请点击 New Config 按钮，填写表格。当您提供所有所需信息之后，会生成 virt-who 配置脚本。您可以通过复制脚本进行手动安装，也可以通过 Remote Execution 在选定的目标主机上部署。"
 
 msgid "Total Configurations"
-msgstr ""
+msgstr "全部配置"
 
 msgid "Unable to create sysconfig file"
-msgstr ""
+msgstr "无法创建 sysconfig 文件"
 
 msgid "Unable to create virt-who config file"
-msgstr ""
+msgstr "无法创建 virt-who 配置文件"
 
 msgid "Unable to enable virt-who service using systemctl"
 msgstr ""
@@ -567,34 +576,34 @@ msgid "Unable to install virt-who package, make sure the host is properly subscr
 msgstr ""
 
 msgid "Unable to start virt-who service, please see virt-who logs for more details"
-msgstr ""
+msgstr "无法开始 virt-who 服务，请查看 virt-who 日志了解详情"
 
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 msgid "Unknown configuration status"
-msgstr ""
+msgstr "未知配置状态"
 
 msgid "Unknown configuration status, caused by unexpected conditions"
-msgstr ""
+msgstr "未知配置状态，由意外情况造成"
 
 msgid "Unlimited"
-msgstr ""
+msgstr "无限"
 
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 msgid "Update Content Overrides"
-msgstr ""
+msgstr "更新内容覆盖"
 
 msgid "Update a virt-who configuration"
-msgstr ""
+msgstr "更新 virt-who 配置"
 
 msgid "Update content urls"
 msgstr ""
 
 msgid "Update for host"
-msgstr ""
+msgstr "更新主机"
 
 msgid "Update http proxy"
 msgstr ""
@@ -606,40 +615,40 @@ msgid "Update redhat repository"
 msgstr ""
 
 msgid "Update release version for host"
-msgstr ""
+msgstr "为主机更新发行版本"
 
 msgid "Updating System Purpose for host"
 msgstr ""
 
 msgid "Upload into"
-msgstr ""
+msgstr "上传到"
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
-msgstr ""
+msgstr "VMware vCenter 服务器的完全限定主机名或 IP 地址。"
 
 msgid "Verify checksum"
 msgstr ""
 
 msgid "Virt-who Configs Status"
-msgstr ""
+msgstr "Virt-who 配置状态"
 
 msgid "Virt-who Configuration %s"
 msgstr ""
 
 msgid "Virt-who Configurations"
-msgstr ""
+msgstr "Virt-who 配置"
 
 msgid "Virt-who Configurations Status"
-msgstr ""
+msgstr "Virt-who 配置状态"
 
 msgid "Virt-who configurations"
-msgstr ""
+msgstr "Virt-who 配置"
 
 msgid "Whitelist"
-msgstr ""
+msgstr "白名单"
 
 msgid "every %s hours"
-msgstr ""
+msgstr "每 %s 小时"

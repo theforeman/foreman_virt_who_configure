@@ -1,18 +1,24 @@
-# foreman_virt_who_configure
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# This file is distributed under the same license as foreman_virt_who_configure.
+# Translators:
+# Mikael Fridh <frimik@gmail.com>, 2017
+# johnny.westerlund <johnny.westerlund@gmail.com>, 2019
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2014-08-20 08:54+0100\n"
-"Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language-Team: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: johnny.westerlund <johnny.westerlund@gmail.com>, 2019\n"
+"Language-Team: Swedish (Sweden) (https://www.transifex.com/foreman/teams/114/s"
+"v_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: sv_SE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "1. Copy this configuration script to a safe directory."
@@ -52,7 +58,7 @@ msgid "Action with sub plans"
 msgstr ""
 
 msgid "Actions"
-msgstr ""
+msgstr "Åtgärder"
 
 msgid "Agent action"
 msgstr ""
@@ -172,7 +178,7 @@ msgid "Destroy Content Host"
 msgstr ""
 
 msgid "Details"
-msgstr ""
+msgstr "Detaljer"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr ""
@@ -187,7 +193,7 @@ msgid "Download the script"
 msgstr ""
 
 msgid "Edit"
-msgstr ""
+msgstr "Redigera"
 
 msgid "Edit Virt-who Config"
 msgstr ""
@@ -292,7 +298,7 @@ msgid "Hammer command: "
 msgstr ""
 
 msgid "Help"
-msgstr ""
+msgstr "Hjälp"
 
 msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -424,7 +430,7 @@ msgid "No configuration found"
 msgstr ""
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "On the target virt-who host:"
 msgstr ""
@@ -445,10 +451,10 @@ msgid "Organization of the virt-who configuration"
 msgstr ""
 
 msgid "Overview"
-msgstr ""
+msgstr "Överblick"
 
 msgid "Owner"
-msgstr ""
+msgstr "Ägare"
 
 msgid "Owner was not provided"
 msgstr ""
@@ -525,7 +531,7 @@ msgid ""
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Success"
 msgstr ""
@@ -570,7 +576,7 @@ msgid "Unable to start virt-who service, please see virt-who logs for more detai
 msgstr ""
 
 msgid "Unknown"
-msgstr ""
+msgstr "Okänd"
 
 msgid "Unknown configuration status"
 msgstr ""

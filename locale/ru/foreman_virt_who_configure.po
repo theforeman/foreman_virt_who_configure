@@ -1,19 +1,28 @@
-# foreman_virt_who_configure
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# This file is distributed under the same license as foreman_virt_who_configure.
+# Translators:
+# Yulia <yulia.poyarkova@redhat.com>, 2017
+# Andrei Burd <burdandrei@gmail.com>, 2017
+# 0868a4d1af5275b3f70b0a6dac4c99a4, 2019
+# Bryan Kearney <bryan.kearney@gmail.com>, 2019
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2014-08-20 08:54+0100\n"
-"Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language-Team: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2019\n"
+"Language-Team: Russian (https://www.transifex.com/foreman/teams/114/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=1"
+"1 && n%100<=14)? 2 : 3);\n"
 
 msgid "1. Copy this configuration script to a safe directory."
 msgstr ""
@@ -31,7 +40,7 @@ msgid "A plugin to make virt-who configuration easy"
 msgstr ""
 
 msgid "Abstract async task"
-msgstr ""
+msgstr "Абстрактная асинхронная задача"
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
@@ -49,10 +58,10 @@ msgid "Account password by which virt-who is to connect to the hypervisor instan
 msgstr ""
 
 msgid "Action with sub plans"
-msgstr ""
+msgstr "Действия с подпланами"
 
 msgid "Actions"
-msgstr ""
+msgstr "Действия"
 
 msgid "Agent action"
 msgstr ""
@@ -64,10 +73,10 @@ msgid "Applicable only for esx provider type. Only hosts which parent (usually C
 msgstr ""
 
 msgid "Attach subscriptions"
-msgstr ""
+msgstr "Выделить подписки"
 
 msgid "Auto attach subscriptions"
-msgstr ""
+msgstr "Выбрать подписки автоматически"
 
 msgid "Blacklist"
 msgstr ""
@@ -79,7 +88,7 @@ msgid "Combined Profile Update"
 msgstr ""
 
 msgid "Configs"
-msgstr ""
+msgstr "Конфигурация"
 
 msgid "Configuration Status"
 msgstr ""
@@ -109,7 +118,7 @@ msgid "Config|Name"
 msgstr ""
 
 msgid "Connection"
-msgstr ""
+msgstr "Соединение"
 
 msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
 msgstr ""
@@ -121,10 +130,10 @@ msgid "Copy version units to library"
 msgstr ""
 
 msgid "Count"
-msgstr ""
+msgstr "Счётчик"
 
 msgid "Create"
-msgstr ""
+msgstr "Создать"
 
 msgid "Create Config"
 msgstr ""
@@ -142,19 +151,19 @@ msgid "Create a virt-who configuration"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 msgid "Delete Activation Key"
-msgstr ""
+msgstr "Удалить ключ активации"
 
 msgid "Delete Lifecycle Environment"
-msgstr ""
+msgstr "Удалить окружение"
 
 msgid "Delete Package Group"
 msgstr ""
 
 msgid "Delete Product"
-msgstr ""
+msgstr "Удалить продукт"
 
 msgid "Delete a virt-who configuration"
 msgstr ""
@@ -166,34 +175,34 @@ msgid "Deploy"
 msgstr ""
 
 msgid "Destroy"
-msgstr ""
+msgstr "Удалить"
 
 msgid "Destroy Content Host"
-msgstr ""
+msgstr "Удалить узел"
 
 msgid "Details"
-msgstr ""
+msgstr "Свойства"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr ""
 
 msgid "Disable"
-msgstr ""
+msgstr "Отключить"
 
 msgid "Discover"
-msgstr ""
+msgstr "Поиск"
 
 msgid "Download the script"
 msgstr ""
 
 msgid "Edit"
-msgstr ""
+msgstr "Правка"
 
 msgid "Edit Virt-who Config"
 msgstr ""
 
 msgid "Enable"
-msgstr ""
+msgstr "Включить"
 
 msgid "Enable debugging output"
 msgstr ""
@@ -202,7 +211,7 @@ msgid "Enable debugging output?"
 msgstr ""
 
 msgid "Errata mail"
-msgstr ""
+msgstr "Почта"
 
 msgid "Every 12 hours"
 msgstr ""
@@ -238,7 +247,7 @@ msgid "Exclude hosts"
 msgstr ""
 
 msgid "Export"
-msgstr ""
+msgstr "Экспорт"
 
 msgid "Export Library"
 msgstr ""
@@ -256,7 +265,7 @@ msgid "Filter hosts"
 msgstr ""
 
 msgid "Filtered index content"
-msgstr ""
+msgstr "Содержимое фильтруемого индекса"
 
 msgid "Filtering"
 msgstr ""
@@ -292,7 +301,7 @@ msgid "Hammer command: "
 msgstr ""
 
 msgid "Help"
-msgstr ""
+msgstr "Справка"
 
 msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -322,10 +331,10 @@ msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wi
 msgstr ""
 
 msgid "Hypervisors"
-msgstr ""
+msgstr "Гипервизоры"
 
 msgid "Hypervisors update"
-msgstr ""
+msgstr "Обновление гипервизоров"
 
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
 msgstr ""
@@ -349,31 +358,31 @@ msgid "Import Default Content View"
 msgstr ""
 
 msgid "Import Puppet classes"
-msgstr ""
+msgstr "Импорт классов Puppet"
 
 msgid "Import facts"
-msgstr ""
+msgstr "Импорт фактов"
 
 msgid "Incremental Update"
-msgstr ""
+msgstr "Инкрементное обновление"
 
 msgid "Incremental Update of  Content View Version(s) "
 msgstr ""
 
 msgid "Index content"
-msgstr ""
+msgstr "Индексировать содержимое"
 
 msgid "Index errata"
-msgstr ""
+msgstr "Индексировать исправления"
 
 msgid "Index module streams"
 msgstr ""
 
 msgid "Index package groups"
-msgstr ""
+msgstr "Индексировать группы пакетов"
 
 msgid "Install Applicable Errata"
-msgstr ""
+msgstr "Установить исправления"
 
 msgid "Instance update"
 msgstr ""
@@ -424,7 +433,7 @@ msgid "No configuration found"
 msgstr ""
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "On the target virt-who host:"
 msgstr ""
@@ -445,61 +454,61 @@ msgid "Organization of the virt-who configuration"
 msgstr ""
 
 msgid "Overview"
-msgstr ""
+msgstr "Обзор"
 
 msgid "Owner"
-msgstr ""
+msgstr "Владелец"
 
 msgid "Owner was not provided"
 msgstr ""
 
 msgid "Package Profile Update"
-msgstr ""
+msgstr "Обновление профиля пакетов"
 
 msgid "Path to kubeconfig file"
 msgstr ""
 
 msgid "Product Create"
-msgstr ""
+msgstr "Создать продукт"
 
 msgid "Promote"
-msgstr ""
+msgstr "Продвижение"
 
 msgid "Promotion to Environment"
 msgstr ""
 
 msgid "Publish"
-msgstr ""
+msgstr "Опубликовать"
 
 msgid "Publish Lifecycle Environment Repositories"
 msgstr ""
 
 msgid "Reindex subscriptions"
-msgstr ""
+msgstr "Повторно индексировать подписки"
 
 msgid "Remote action:"
 msgstr ""
 
 msgid "Remove Content"
-msgstr ""
+msgstr "Удалить содержимое"
 
 msgid "Remove Version"
-msgstr ""
+msgstr "Удалить версию"
 
 msgid "Remove Versions and Associations"
-msgstr ""
+msgstr "Удалить версии и связи"
 
 msgid "Remove from Environment"
-msgstr ""
+msgstr "Удалить из окружения"
 
 msgid "Remove subscriptions"
-msgstr ""
+msgstr "Удалить подписки"
 
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr ""
 
 msgid "Report"
-msgstr ""
+msgstr "Сообщить"
 
 msgid "Republish Version Repositories"
 msgstr ""
@@ -508,7 +517,7 @@ msgid "Run Sync Plan:"
 msgstr ""
 
 msgid "Schedule"
-msgstr ""
+msgstr "Расписание"
 
 msgid "Show a virt-who configuration"
 msgstr ""
@@ -525,16 +534,16 @@ msgid ""
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Состояние"
 
 msgid "Success"
-msgstr ""
+msgstr "Успешно"
 
 msgid "Sync capsule"
 msgstr ""
 
 msgid "Synchronize"
-msgstr ""
+msgstr "Синхронизировать"
 
 msgid "Synchronize smart proxy"
 msgstr ""
@@ -570,7 +579,7 @@ msgid "Unable to start virt-who service, please see virt-who logs for more detai
 msgstr ""
 
 msgid "Unknown"
-msgstr ""
+msgstr "Неизвестно"
 
 msgid "Unknown configuration status"
 msgstr ""
@@ -579,10 +588,10 @@ msgid "Unknown configuration status, caused by unexpected conditions"
 msgstr ""
 
 msgid "Unlimited"
-msgstr ""
+msgstr "Не ограничено"
 
 msgid "Update"
-msgstr ""
+msgstr "Обновить"
 
 msgid "Update Content Overrides"
 msgstr ""
@@ -594,7 +603,7 @@ msgid "Update content urls"
 msgstr ""
 
 msgid "Update for host"
-msgstr ""
+msgstr "Обновление узла"
 
 msgid "Update http proxy"
 msgstr ""
@@ -612,7 +621,7 @@ msgid "Updating System Purpose for host"
 msgstr ""
 
 msgid "Upload into"
-msgstr ""
+msgstr "Добавить в"
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""

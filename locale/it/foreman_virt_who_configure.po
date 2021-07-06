@@ -1,18 +1,25 @@
-# foreman_virt_who_configure
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# This file is distributed under the same license as foreman_virt_who_configure.
+# Translators:
+# Giuseppe Pignataro <rogepix@gmail.com>, 2017
+# Andrea Perotti, 2019
+# 0868a4d1af5275b3f70b0a6dac4c99a4, 2019
+# Bryan Kearney <bryan.kearney@gmail.com>, 2019
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2014-08-20 08:54+0100\n"
-"Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language-Team: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2019\n"
+"Language-Team: Italian (https://www.transifex.com/foreman/teams/114/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "1. Copy this configuration script to a safe directory."
@@ -31,7 +38,7 @@ msgid "A plugin to make virt-who configuration easy"
 msgstr ""
 
 msgid "Abstract async task"
-msgstr ""
+msgstr "Evento asinc astratto"
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
@@ -52,7 +59,7 @@ msgid "Action with sub plans"
 msgstr ""
 
 msgid "Actions"
-msgstr ""
+msgstr "Azioni"
 
 msgid "Agent action"
 msgstr ""
@@ -67,7 +74,7 @@ msgid "Attach subscriptions"
 msgstr ""
 
 msgid "Auto attach subscriptions"
-msgstr ""
+msgstr "esegui l'auto attach delle sottoscrizioni"
 
 msgid "Blacklist"
 msgstr ""
@@ -79,7 +86,7 @@ msgid "Combined Profile Update"
 msgstr ""
 
 msgid "Configs"
-msgstr ""
+msgstr "Config"
 
 msgid "Configuration Status"
 msgstr ""
@@ -109,7 +116,7 @@ msgid "Config|Name"
 msgstr ""
 
 msgid "Connection"
-msgstr ""
+msgstr "Connessione"
 
 msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
 msgstr ""
@@ -121,10 +128,10 @@ msgid "Copy version units to library"
 msgstr ""
 
 msgid "Count"
-msgstr ""
+msgstr "Conteggio"
 
 msgid "Create"
-msgstr ""
+msgstr "Crea"
 
 msgid "Create Config"
 msgstr ""
@@ -142,19 +149,19 @@ msgid "Create a virt-who configuration"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Cancella"
 
 msgid "Delete Activation Key"
-msgstr ""
+msgstr "Cancella chiave di attivazione"
 
 msgid "Delete Lifecycle Environment"
-msgstr ""
+msgstr "Cancella ambiente ciclo di vita"
 
 msgid "Delete Package Group"
 msgstr ""
 
 msgid "Delete Product"
-msgstr ""
+msgstr "Cancella prodotto"
 
 msgid "Delete a virt-who configuration"
 msgstr ""
@@ -166,34 +173,34 @@ msgid "Deploy"
 msgstr ""
 
 msgid "Destroy"
-msgstr ""
+msgstr "Elimina"
 
 msgid "Destroy Content Host"
-msgstr ""
+msgstr "Elimina host di contenuto"
 
 msgid "Details"
-msgstr ""
+msgstr "Dettagli"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr ""
 
 msgid "Disable"
-msgstr ""
+msgstr "Disabilita"
 
 msgid "Discover"
-msgstr ""
+msgstr "Trova"
 
 msgid "Download the script"
 msgstr ""
 
 msgid "Edit"
-msgstr ""
+msgstr "Modifica"
 
 msgid "Edit Virt-who Config"
 msgstr ""
 
 msgid "Enable"
-msgstr ""
+msgstr "Abilita"
 
 msgid "Enable debugging output"
 msgstr ""
@@ -202,7 +209,7 @@ msgid "Enable debugging output?"
 msgstr ""
 
 msgid "Errata mail"
-msgstr ""
+msgstr "Posta per l'Errata"
 
 msgid "Every 12 hours"
 msgstr ""
@@ -238,7 +245,7 @@ msgid "Exclude hosts"
 msgstr ""
 
 msgid "Export"
-msgstr ""
+msgstr "Esporta"
 
 msgid "Export Library"
 msgstr ""
@@ -292,7 +299,7 @@ msgid "Hammer command: "
 msgstr ""
 
 msgid "Help"
-msgstr ""
+msgstr "Aiuto"
 
 msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -349,13 +356,13 @@ msgid "Import Default Content View"
 msgstr ""
 
 msgid "Import Puppet classes"
-msgstr ""
+msgstr "Importa classi Puppet"
 
 msgid "Import facts"
-msgstr ""
+msgstr "Importa gli eventi"
 
 msgid "Incremental Update"
-msgstr ""
+msgstr "Aggiornamento incrementale"
 
 msgid "Incremental Update of  Content View Version(s) "
 msgstr ""
@@ -364,7 +371,7 @@ msgid "Index content"
 msgstr ""
 
 msgid "Index errata"
-msgstr ""
+msgstr "Indice errata"
 
 msgid "Index module streams"
 msgstr ""
@@ -373,7 +380,7 @@ msgid "Index package groups"
 msgstr ""
 
 msgid "Install Applicable Errata"
-msgstr ""
+msgstr "Installa errata applicabile"
 
 msgid "Instance update"
 msgstr ""
@@ -424,7 +431,7 @@ msgid "No configuration found"
 msgstr ""
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "On the target virt-who host:"
 msgstr ""
@@ -445,10 +452,10 @@ msgid "Organization of the virt-who configuration"
 msgstr ""
 
 msgid "Overview"
-msgstr ""
+msgstr "Panoramica"
 
 msgid "Owner"
-msgstr ""
+msgstr "Proprietario"
 
 msgid "Owner was not provided"
 msgstr ""
@@ -463,13 +470,13 @@ msgid "Product Create"
 msgstr ""
 
 msgid "Promote"
-msgstr ""
+msgstr "Avanzamento"
 
 msgid "Promotion to Environment"
 msgstr ""
 
 msgid "Publish"
-msgstr ""
+msgstr "Pubblica"
 
 msgid "Publish Lifecycle Environment Repositories"
 msgstr ""
@@ -481,16 +488,16 @@ msgid "Remote action:"
 msgstr ""
 
 msgid "Remove Content"
-msgstr ""
+msgstr "Rimuovi contenuto"
 
 msgid "Remove Version"
-msgstr ""
+msgstr "Rimuovi versione"
 
 msgid "Remove Versions and Associations"
-msgstr ""
+msgstr "Rimuovi le versioni e le associazioni"
 
 msgid "Remove from Environment"
-msgstr ""
+msgstr "Rimuovi dall'ambiente"
 
 msgid "Remove subscriptions"
 msgstr ""
@@ -499,7 +506,7 @@ msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr ""
 
 msgid "Report"
-msgstr ""
+msgstr "Notifica"
 
 msgid "Republish Version Repositories"
 msgstr ""
@@ -508,7 +515,7 @@ msgid "Run Sync Plan:"
 msgstr ""
 
 msgid "Schedule"
-msgstr ""
+msgstr "Programmazione"
 
 msgid "Show a virt-who configuration"
 msgstr ""
@@ -525,16 +532,16 @@ msgid ""
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Stato"
 
 msgid "Success"
-msgstr ""
+msgstr "Successo"
 
 msgid "Sync capsule"
 msgstr ""
 
 msgid "Synchronize"
-msgstr ""
+msgstr "Sincronizza"
 
 msgid "Synchronize smart proxy"
 msgstr ""
@@ -570,7 +577,7 @@ msgid "Unable to start virt-who service, please see virt-who logs for more detai
 msgstr ""
 
 msgid "Unknown"
-msgstr ""
+msgstr "Sconosciuto"
 
 msgid "Unknown configuration status"
 msgstr ""
@@ -579,10 +586,10 @@ msgid "Unknown configuration status, caused by unexpected conditions"
 msgstr ""
 
 msgid "Unlimited"
-msgstr ""
+msgstr "Illimitato"
 
 msgid "Update"
-msgstr ""
+msgstr "Aggiorna"
 
 msgid "Update Content Overrides"
 msgstr ""
@@ -612,7 +619,7 @@ msgid "Updating System Purpose for host"
 msgstr ""
 
 msgid "Upload into"
-msgstr ""
+msgstr "Carica in"
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""

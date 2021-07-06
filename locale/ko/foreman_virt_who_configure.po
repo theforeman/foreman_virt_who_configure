@@ -1,19 +1,24 @@
-# foreman_virt_who_configure
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# This file is distributed under the same license as foreman_virt_who_configure.
+# Translators:
+# 0868a4d1af5275b3f70b0a6dac4c99a4, 2017
+# Bryan Kearney <bryan.kearney@gmail.com>, 2019
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2014-08-20 08:54+0100\n"
-"Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language-Team: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2019\n"
+"Language-Team: Korean (https://www.transifex.com/foreman/teams/114/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "1. Copy this configuration script to a safe directory."
 msgstr ""
@@ -31,7 +36,7 @@ msgid "A plugin to make virt-who configuration easy"
 msgstr ""
 
 msgid "Abstract async task"
-msgstr ""
+msgstr "비동기 작업 개요"
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
@@ -49,10 +54,10 @@ msgid "Account password by which virt-who is to connect to the hypervisor instan
 msgstr ""
 
 msgid "Action with sub plans"
-msgstr ""
+msgstr "하위 계획이 있는 작업"
 
 msgid "Actions"
-msgstr ""
+msgstr "작업"
 
 msgid "Agent action"
 msgstr ""
@@ -64,10 +69,10 @@ msgid "Applicable only for esx provider type. Only hosts which parent (usually C
 msgstr ""
 
 msgid "Attach subscriptions"
-msgstr ""
+msgstr "서브스크립션 연결"
 
 msgid "Auto attach subscriptions"
-msgstr ""
+msgstr "서브스크립션 자동 첨부"
 
 msgid "Blacklist"
 msgstr ""
@@ -79,7 +84,7 @@ msgid "Combined Profile Update"
 msgstr ""
 
 msgid "Configs"
-msgstr ""
+msgstr "설정 "
 
 msgid "Configuration Status"
 msgstr ""
@@ -109,7 +114,7 @@ msgid "Config|Name"
 msgstr ""
 
 msgid "Connection"
-msgstr ""
+msgstr "연결"
 
 msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
 msgstr ""
@@ -121,10 +126,10 @@ msgid "Copy version units to library"
 msgstr ""
 
 msgid "Count"
-msgstr ""
+msgstr "개수"
 
 msgid "Create"
-msgstr ""
+msgstr "생성"
 
 msgid "Create Config"
 msgstr ""
@@ -142,19 +147,19 @@ msgid "Create a virt-who configuration"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "삭제 "
 
 msgid "Delete Activation Key"
-msgstr ""
+msgstr "활성키 삭제 "
 
 msgid "Delete Lifecycle Environment"
-msgstr ""
+msgstr "라이프사이클 환경 삭제 "
 
 msgid "Delete Package Group"
 msgstr ""
 
 msgid "Delete Product"
-msgstr ""
+msgstr "제품 삭제 "
 
 msgid "Delete a virt-who configuration"
 msgstr ""
@@ -166,34 +171,34 @@ msgid "Deploy"
 msgstr ""
 
 msgid "Destroy"
-msgstr ""
+msgstr "삭제 "
 
 msgid "Destroy Content Host"
-msgstr ""
+msgstr "컨텐츠 호스트 삭제 "
 
 msgid "Details"
-msgstr ""
+msgstr "상세 정보 "
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr ""
 
 msgid "Disable"
-msgstr ""
+msgstr "비활성화 "
 
 msgid "Discover"
-msgstr ""
+msgstr "검색"
 
 msgid "Download the script"
 msgstr ""
 
 msgid "Edit"
-msgstr ""
+msgstr "편집"
 
 msgid "Edit Virt-who Config"
 msgstr ""
 
 msgid "Enable"
-msgstr ""
+msgstr "활성화"
 
 msgid "Enable debugging output"
 msgstr ""
@@ -202,7 +207,7 @@ msgid "Enable debugging output?"
 msgstr ""
 
 msgid "Errata mail"
-msgstr ""
+msgstr "에라타 메일"
 
 msgid "Every 12 hours"
 msgstr ""
@@ -238,7 +243,7 @@ msgid "Exclude hosts"
 msgstr ""
 
 msgid "Export"
-msgstr ""
+msgstr "내보내기"
 
 msgid "Export Library"
 msgstr ""
@@ -256,7 +261,7 @@ msgid "Filter hosts"
 msgstr ""
 
 msgid "Filtered index content"
-msgstr ""
+msgstr "필터링된 인덱스 컨텐츠"
 
 msgid "Filtering"
 msgstr ""
@@ -292,7 +297,7 @@ msgid "Hammer command: "
 msgstr ""
 
 msgid "Help"
-msgstr ""
+msgstr "도움말"
 
 msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -322,10 +327,10 @@ msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wi
 msgstr ""
 
 msgid "Hypervisors"
-msgstr ""
+msgstr "하이퍼바이저 "
 
 msgid "Hypervisors update"
-msgstr ""
+msgstr "하이퍼바이저 업데이트"
 
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
 msgstr ""
@@ -349,31 +354,31 @@ msgid "Import Default Content View"
 msgstr ""
 
 msgid "Import Puppet classes"
-msgstr ""
+msgstr "Puppet 클래스 가져오기"
 
 msgid "Import facts"
-msgstr ""
+msgstr "팩트 불러오기"
 
 msgid "Incremental Update"
-msgstr ""
+msgstr "증분 업데이트 "
 
 msgid "Incremental Update of  Content View Version(s) "
 msgstr ""
 
 msgid "Index content"
-msgstr ""
+msgstr "컨텐츠 인덱싱"
 
 msgid "Index errata"
-msgstr ""
+msgstr "에라타 인덱스"
 
 msgid "Index module streams"
 msgstr ""
 
 msgid "Index package groups"
-msgstr ""
+msgstr "패키지 그룹 인덱싱"
 
 msgid "Install Applicable Errata"
-msgstr ""
+msgstr "적용 가능한 에라타 설치 "
 
 msgid "Instance update"
 msgstr ""
@@ -424,7 +429,7 @@ msgid "No configuration found"
 msgstr ""
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "On the target virt-who host:"
 msgstr ""
@@ -445,61 +450,61 @@ msgid "Organization of the virt-who configuration"
 msgstr ""
 
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 msgid "Owner"
-msgstr ""
+msgstr "소유자"
 
 msgid "Owner was not provided"
 msgstr ""
 
 msgid "Package Profile Update"
-msgstr ""
+msgstr "패키지 프로파일 업데이트"
 
 msgid "Path to kubeconfig file"
 msgstr ""
 
 msgid "Product Create"
-msgstr ""
+msgstr "제품 생성"
 
 msgid "Promote"
-msgstr ""
+msgstr "승격 "
 
 msgid "Promotion to Environment"
 msgstr ""
 
 msgid "Publish"
-msgstr ""
+msgstr "공개 "
 
 msgid "Publish Lifecycle Environment Repositories"
 msgstr ""
 
 msgid "Reindex subscriptions"
-msgstr ""
+msgstr "서브스크립션 다시 인덱싱"
 
 msgid "Remote action:"
 msgstr ""
 
 msgid "Remove Content"
-msgstr ""
+msgstr "컨텐츠 삭제 "
 
 msgid "Remove Version"
-msgstr ""
+msgstr "버전 삭제 "
 
 msgid "Remove Versions and Associations"
-msgstr ""
+msgstr "버전 및 연결 삭제 "
 
 msgid "Remove from Environment"
-msgstr ""
+msgstr "환경에서 삭제 "
 
 msgid "Remove subscriptions"
-msgstr ""
+msgstr "서브스크립션 삭제"
 
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr ""
 
 msgid "Report"
-msgstr ""
+msgstr "보고  "
 
 msgid "Republish Version Repositories"
 msgstr ""
@@ -508,7 +513,7 @@ msgid "Run Sync Plan:"
 msgstr ""
 
 msgid "Schedule"
-msgstr ""
+msgstr "스케줄 "
 
 msgid "Show a virt-who configuration"
 msgstr ""
@@ -525,16 +530,16 @@ msgid ""
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "상태 "
 
 msgid "Success"
-msgstr ""
+msgstr "성공"
 
 msgid "Sync capsule"
 msgstr ""
 
 msgid "Synchronize"
-msgstr ""
+msgstr "동기화 "
 
 msgid "Synchronize smart proxy"
 msgstr ""
@@ -570,7 +575,7 @@ msgid "Unable to start virt-who service, please see virt-who logs for more detai
 msgstr ""
 
 msgid "Unknown"
-msgstr ""
+msgstr "알 수 없음 "
 
 msgid "Unknown configuration status"
 msgstr ""
@@ -579,10 +584,10 @@ msgid "Unknown configuration status, caused by unexpected conditions"
 msgstr ""
 
 msgid "Unlimited"
-msgstr ""
+msgstr "제한 없음 "
 
 msgid "Update"
-msgstr ""
+msgstr "업데이트"
 
 msgid "Update Content Overrides"
 msgstr ""
@@ -594,7 +599,7 @@ msgid "Update content urls"
 msgstr ""
 
 msgid "Update for host"
-msgstr ""
+msgstr "호스트에 대한 업데이트"
 
 msgid "Update http proxy"
 msgstr ""
@@ -612,7 +617,7 @@ msgid "Updating System Purpose for host"
 msgstr ""
 
 msgid "Upload into"
-msgstr ""
+msgstr "업로드 "
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""
