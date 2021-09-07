@@ -55,6 +55,9 @@ module ForemanVirtWhoConfigure
             param :http_proxy_id, Integer, :desc => N_('HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers.')
             param :no_proxy, String, :desc => N_("Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses.")
             param :organization_id, Integer, :required => true, :desc => N_("Organization of the virt-who configuration") if ::SETTINGS[:organizations_enabled]
+            param :prism_flavor, Config::PRISM_FLAVORS.keys, :desc => N_("Select the Prism flavor you are connecting to"), :required => false
+            param :ahv_update_interval, Integer, :desc => N_("The frequency of VM-to-host mapping updates for AHV(in seconds)"), :required => false
+            param :ahv_internal_debug, :bool, :desc => N_("Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"), :required => false
           end
         end
 

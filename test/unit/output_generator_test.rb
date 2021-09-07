@@ -128,5 +128,19 @@ module ForemanVirtWhoConfigure
         assert_includes bash_script_output, 'step 1 "Installing virt-who"'
       end
     end
+
+    describe 'nutanix ahv' do
+      test 'ahv specific options' do
+        config.hypervisor_type = 'ahv'
+        config.prism_flavor = 'central'
+        config.ahv_update_interval = 100
+        config.ahv_internal_debug = false
+
+        assert_includes output, 'type=ahv'
+        assert_includes output, 'prism_central=true'
+        assert_includes output, 'update_interval=100'
+        assert_includes output, 'internal_debug=false'
+      end
+    end
   end
 end
