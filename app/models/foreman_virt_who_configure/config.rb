@@ -6,7 +6,8 @@ module ForemanVirtWhoConfigure
       :satellite_url, :http_proxy_id, :no_proxy, :name,
       # API parameter filtering_mode gets translated to listing_mode in the controller
       # We keep both params permitted for compatibility with 1.11
-      :listing_mode, :filtering_mode, :filter_host_parents, :exclude_host_parents, :kubeconfig_path
+      :listing_mode, :filtering_mode, :filter_host_parents, :exclude_host_parents, :kubeconfig_path,
+      :prism_flavor, :ahv_update_interval, :ahv_internal_debug
     ]
     audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at ], :associations => []
     include Authorizable
@@ -33,7 +34,8 @@ module ForemanVirtWhoConfigure
       'esx' => 'VMware vSphere / vCenter (esx)',
       'hyperv' => 'Microsoft Hyper-V (hyperv)',
       'libvirt' => 'libvirt',
-      'kubevirt' => 'Container-native virtualization'
+      'kubevirt' => 'Container-native virtualization',
+      'ahv' => 'Nutanix AHV (ahv)'
     }
 
     HYPERVISOR_DEFAULT_TYPE = 'esx'
@@ -64,6 +66,11 @@ module ForemanVirtWhoConfigure
         :out_of_date => N_('The virt-who report has not arrived within the interval, which indicates there was no change on hypervisor')
       }
     )
+
+    PRISM_FLAVORS = {
+      'central' => N_('Prism Central'),
+      'element' => N_('Prism Element')
+    }       
 
     include Encryptable
     encrypts :hypervisor_password
@@ -101,7 +108,10 @@ module ForemanVirtWhoConfigure
     validates :hypervisor_id, :inclusion => HYPERVISOR_IDS
     validates :interval, :inclusion => AVAILABLE_INTERVALS.keys.map(&:to_i)
     validates :listing_mode, :inclusion => FILTERING_MODES.keys.map(&:to_i)
+    validates :ahv_update_interval, numericality: { only_integer: true, allow_nil: true, greater_than: 0 }
+    validates :prism_flavor, :inclusion => PRISM_FLAVORS.keys
     validate :validates_whitelist_blacklist
+    validate :validates_debug_settings
 
     def validates_whitelist_blacklist
       case listing_mode.to_i
@@ -115,6 +125,12 @@ module ForemanVirtWhoConfigure
           end
       end
     end
+
+    def validates_debug_settings
+      if ahv_internal_debug && !debug
+        errors.add(:ahv_internal_debug, "Enable debugging output is required for Enable AHV debug") 
+      end
+    end    
 
     validates_lengths_from_database
 

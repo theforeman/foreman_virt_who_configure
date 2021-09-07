@@ -120,7 +120,7 @@ env=Library#{connection_details}#{filtering}
 rhsm_hostname=#{satellite_url}
 rhsm_username=#{service_user_username}
 rhsm_encrypted_password=$user_password
-rhsm_prefix=/rhsm#{kubeconfig}
+rhsm_prefix=/rhsm#{kubeconfig}#{ahv_config_options}
 EOF
   if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_config_file_issue)})); fi
 
@@ -162,6 +162,18 @@ EOS
         "\nserver=#{cr_server}
 username=#{cr_username}
 encrypted_password=$cr_password"
+      end
+    end
+
+    def ahv_config_options
+      if config.hypervisor_type == 'ahv'
+        prism_central = config.prism_flavor == "central"
+        update_interval = config.ahv_update_interval.present? ? "\nupdate_interval=#{config.ahv_update_interval}" : nil
+
+        "\nprism_central=#{prism_central}
+internal_debug=#{config.ahv_internal_debug}#{update_interval}"
+      else
+        ""
       end
     end
 
