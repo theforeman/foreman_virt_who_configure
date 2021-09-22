@@ -23,7 +23,8 @@
   <%= text_f f, :no_proxy, inline_help_popover(_('A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses.')).merge(:label => _('Ignore proxy')) %>
   <%= text_f f, :kubeconfig_path, inline_help_popover(_('Configuration file containing details about how to connect to the cluster and authentication details')).merge(:label => _('Path to kubeconfig file')) %>
 
-  <%= selectable_f f, :prism_flavor, ForemanVirtWhoConfigure::Config::PRISM_FLAVORS.map { |k,v| [_(v), k] }, {}, { label: _('Prism Flavor'), :required => true }.merge(
+  <%= selectable_f f, :prism_flavor, {'' => 'Nothing selected'}.merge(ForemanVirtWhoConfigure::Config::PRISM_FLAVORS).map { |k,v| [_(v), k] },
+        {}, { label: _('Prism Flavor'), :required => true }.merge(
         inline_help_popover(_("Select the Prism flavor you are connecting to"))) %>
   <%= text_f f, :ahv_update_interval, inline_help_popover(_('The frequency of VM-to-host mapping updates for AHV(in seconds)')).merge(:label => _('AHV update interval')) %>
   <%= checkbox_f f, :ahv_internal_debug, inline_help_popover(_('Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled ')).merge(:label => _('Enable AHV debug')) %>

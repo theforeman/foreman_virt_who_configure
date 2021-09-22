@@ -72,6 +72,10 @@ module ForemanVirtWhoConfigure
       'element' => N_('Prism Element')
     }       
 
+    AHV_VALID_OPTIONS = %w(prism_flavor ahv_update_interval ahv_internal_debug)
+    KUBEVIRT_VALID_OPTIONS = %w(kubeconfig_path)
+    KUBEVIRT_INVALID_OPTIONS = %w(hypervisor_server hypervisor_username)
+
     include Encryptable
     encrypts :hypervisor_password
 
@@ -108,10 +112,11 @@ module ForemanVirtWhoConfigure
     validates :hypervisor_id, :inclusion => HYPERVISOR_IDS
     validates :interval, :inclusion => AVAILABLE_INTERVALS.keys.map(&:to_i)
     validates :listing_mode, :inclusion => FILTERING_MODES.keys.map(&:to_i)
-    validates :ahv_update_interval, numericality: { only_integer: true, allow_nil: true, greater_than: 0 }
-    validates :prism_flavor, :inclusion => PRISM_FLAVORS.keys
+    validates :ahv_update_interval, numericality: { only_integer: true, allow_nil: true, greater_than: 0 }, :if => Proc.new { |c| c.hypervisor_type == 'ahv' }
+    validates :prism_flavor, :inclusion => {:in => PRISM_FLAVORS.keys, :message => "should be either central or element"}, :if => Proc.new { |c| c.hypervisor_type == 'ahv' }
     validate :validates_whitelist_blacklist
-    validate :validates_debug_settings
+    validate :validates_debug_settings, :if => Proc.new { |c| c.hypervisor_type == 'ahv' }
+    validate :validates_hypervisor_options
 
     def validates_whitelist_blacklist
       case listing_mode.to_i
@@ -131,6 +136,12 @@ module ForemanVirtWhoConfigure
         errors.add(:ahv_internal_debug, "Enable debugging output is required for Enable AHV debug") 
       end
     end    
+
+    def validates_hypervisor_options
+      invalid = hypervisor_type == 'kubevirt' ? KUBEVIRT_INVALID_OPTIONS : KUBEVIRT_VALID_OPTIONS
+      invalid.concat(AHV_VALID_OPTIONS) unless hypervisor_type == 'ahv'
+      invalid.each { |f| errors.add(f, "Invalid option for hypervisor [#{hypervisor_type}]") if eval(f).present? }
+    end
 
     validates_lengths_from_database
 
