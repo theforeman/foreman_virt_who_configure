@@ -169,9 +169,9 @@ encrypted_password=$cr_password"
       if config.hypervisor_type == 'ahv'
         prism_central = config.prism_flavor == "central"
         update_interval = config.ahv_update_interval.present? ? "\nupdate_interval=#{config.ahv_update_interval}" : nil
+        internal_debug = config.ahv_internal_debug.present? ? "\ninternal_debug=#{config.ahv_internal_debug}" : nil
 
-        "\nprism_central=#{prism_central}
-internal_debug=#{config.ahv_internal_debug}#{update_interval}"
+        "\nprism_central=#{prism_central}#{internal_debug}#{update_interval}"
       else
         ""
       end
