@@ -17,7 +17,6 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
                                  :http_proxy_id => @http_proxy.id,
                                  :no_proxy => nil
     )
-
     @out_of_date_config = FactoryBot.create(:virt_who_config, :out_of_date)
     @ok_config = FactoryBot.create(:virt_who_config, :ok)
   end
@@ -126,6 +125,45 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
 
     assert_response :success
     assert_equal @out_of_date_config.virt_who_config_script(:bash_script), response
+  end
+
+  test 'should fail without kubeconfig_path in kubeconfig config' do
+    org = FactoryBot.create(:organization)
+    post :create, :params => { :foreman_virt_who_configure_config => { :name => 'my new config',
+                                                            :filtering_mode => ForemanVirtWhoConfigure::Config::UNLIMITED,
+                                                            :hypervisor_id => 'uuid',
+                                                            :hypervisor_type => 'kubevirt',
+                                                            :satellite_url => "foreman.example.com",
+                                                            :organization_id => org.id }
+    }, :session => set_session_user
+
+    assert_response :unprocessable_entity
+
+    response = ActiveSupport::JSON.decode(@response.body)
+    assert_equal "Kubeconfig path can't be blank", response['error']['full_messages'].join('')
+  end
+
+  test 'should not accept kubeconfig for other hypervisor types' do
+    org = FactoryBot.create(:organization)
+    post :create, :params => { :foreman_virt_who_configure_config => { :name => 'my new config',
+                                                            :interval => 240,
+                                                            :filtering_mode => ForemanVirtWhoConfigure::Config::BLACKLIST,
+                                                            :blacklist => ' a,b ',
+                                                            :hypervisor_id => 'uuid',
+                                                            :hypervisor_type => 'esx',
+                                                            :hypervisor_server => "vmware.example.com",
+                                                            :hypervisor_username => "root",
+                                                            :hypervisor_password => "password",
+                                                            :debug => true,
+                                                            :satellite_url => "foreman.example.com",
+                                                            :kubeconfig_path => '/tmp/food',
+                                                            :organization_id => org.id }
+    }, :session => set_session_user
+
+    assert_response :unprocessable_entity
+
+    response = ActiveSupport::JSON.decode(@response.body)
+    assert_equal "Kubeconfig path Invalid option for hypervisor [esx]", response['error']['full_messages'].join('')
   end
 
   test "should create the config" do
