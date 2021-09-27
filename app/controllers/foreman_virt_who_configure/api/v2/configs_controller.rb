@@ -47,11 +47,12 @@ module ForemanVirtWhoConfigure
             param :exclude_host_parents, String, :desc => N_("Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."), :required => false
             param :hypervisor_id, Config::HYPERVISOR_IDS, :desc => N_("Specifies how the hypervisor will be identified."), :required => true
             param :hypervisor_type, Config::HYPERVISOR_TYPES.keys, :desc => N_("Hypervisor type"), :required => true
-            param :hypervisor_server, String, :desc => N_("Fully qualified host name or IP address of the hypervisor"), :required => true
-            param :hypervisor_username, String, :desc => N_("Account name by which virt-who is to connect to the hypervisor."), :required => true
-            param :hypervisor_password, String, :desc => N_("Hypervisor password, required for all hypervisor types except for libvirt"), :required => false
+            param :hypervisor_server, String, :desc => N_("Fully qualified host name or IP address of the hypervisor"), :required => false
+            param :hypervisor_username, String, :desc => N_("Account name by which virt-who is to connect to the hypervisor."), :required => false
+            param :hypervisor_password, String, :desc => N_("Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."), :required => false
             param :satellite_url, String, :desc => N_("Foreman server FQDN"), :required => true
             param :debug, :bool, :desc => N_("Enable debugging output")
+            param :kubeconfig_path, String, :desc => N_('Configuration file containing details about how to connect to the cluster and authentication details.'), :required => false
             param :http_proxy_id, Integer, :desc => N_('HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers.')
             param :no_proxy, String, :desc => N_("Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses.")
             param :organization_id, Integer, :required => true, :desc => N_("Organization of the virt-who configuration") if ::SETTINGS[:organizations_enabled]
