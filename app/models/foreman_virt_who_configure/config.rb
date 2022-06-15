@@ -139,9 +139,7 @@ module ForemanVirtWhoConfigure
     end    
 
     def validates_hypervisor_options
-      invalid = hypervisor_type == 'kubevirt' ? KUBEVIRT_INVALID_OPTIONS : KUBEVIRT_VALID_OPTIONS
-      invalid.concat(AHV_VALID_OPTIONS) unless hypervisor_type == 'ahv'
-      invalid.each { |f| errors.add(f, "Invalid option for hypervisor [#{hypervisor_type}]") if eval(f).present? }
+      invalid_fields.each { |f| errors.add(f, "Invalid option for hypervisor [#{hypervisor_type}]") if eval(f).present? }
     end
 
     validates_lengths_from_database
@@ -275,6 +273,17 @@ module ForemanVirtWhoConfigure
 
     def remove_whitespaces
       satellite_url.strip! if satellite_url.present?
+    end
+
+    def invalid_fields
+      case hypervisor_type
+      when 'kubevirt'
+        KUBEVIRT_INVALID_OPTIONS + AHV_VALID_OPTIONS
+      when 'ahv'
+        KUBEVIRT_VALID_OPTIONS
+      else
+        KUBEVIRT_VALID_OPTIONS + AHV_VALID_OPTIONS
+      end
     end
   end
 end
