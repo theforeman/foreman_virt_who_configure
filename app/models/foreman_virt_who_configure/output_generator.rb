@@ -106,8 +106,8 @@ install_virt_who
 
 if verify_minimal_version; then
   step 2 "Encrypting password"
-  cr_password=`virt-who-password --password $(echo #{cr_password_base64}|base64 -d) 2> /dev/null`
-  user_password=`virt-who-password --password '#{service_user_password}' 2> /dev/null`
+  cr_password=$(virt-who-password --password $(echo #{cr_password_base64}|base64 -d) 2> /dev/null)
+  user_password=$(virt-who-password --password '#{service_user_password}' 2> /dev/null)
 
   step 3 "Creating virt-who configuration"
   cat > #{config_file_path} << EOF
