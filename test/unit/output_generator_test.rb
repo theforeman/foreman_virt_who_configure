@@ -139,7 +139,7 @@ module ForemanVirtWhoConfigure
         assert_includes output, 'type=ahv'
         assert_includes output, 'prism_central=true'
         assert_includes output, 'update_interval=100'
-        assert_includes output, 'internal_debug=true'
+        assert_includes output, 'ahv_internal_debug=true'
       end
 
       test 'options specific to ahv are not all set' do
