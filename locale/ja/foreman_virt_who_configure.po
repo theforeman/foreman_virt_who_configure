@@ -36,8 +36,17 @@ msgstr "プロキシー設定を無視するホスト名、ドメインまたは
 msgid "A plugin to make virt-who configuration easy"
 msgstr "virt-who 設定を容易にするプラグイン"
 
+msgid "AHV update interval"
+msgstr ""
+
+msgid "Abstract"
+msgstr ""
+
 msgid "Abstract async task"
 msgstr "非同期タスクの概要"
+
+msgid "Account name by which virt-who is to connect to Nutanix AHV."
+msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
@@ -93,6 +102,9 @@ msgstr "設定ステータス"
 msgid "Configuration file containing details about how to connect to the cluster and authentication details"
 msgstr ""
 
+msgid "Configuration file containing details about how to connect to the cluster and authentication details."
+msgstr ""
+
 msgid "Configuration interval in minutes"
 msgstr "設定の間隔 (分単位)"
 
@@ -132,6 +144,9 @@ msgstr "数量"
 msgid "Create"
 msgstr "作成"
 
+msgid "Create Alternate Content Source"
+msgstr ""
+
 msgid "Create Config"
 msgstr "設定の作成"
 
@@ -143,6 +158,9 @@ msgstr ""
 
 msgid "Create Package Group"
 msgstr "パッケージグループの作成"
+
+msgid "Create Syncable Export History"
+msgstr ""
 
 msgid "Create a virt-who configuration"
 msgstr "virt-who 設定の作成"
@@ -174,6 +192,9 @@ msgstr ""
 msgid "Destroy"
 msgstr "破棄"
 
+msgid "Destroy Alternate Content Source"
+msgstr ""
+
 msgid "Destroy Content Host"
 msgstr "コンテンツホストの破棄"
 
@@ -200,6 +221,9 @@ msgstr "Virt-who 設定の編集"
 
 msgid "Enable"
 msgstr "有効化"
+
+msgid "Enable AHV debug"
+msgstr ""
 
 msgid "Enable debugging output"
 msgstr "デバッグ出力の有効化"
@@ -243,10 +267,16 @@ msgstr ""
 msgid "Exclude hosts"
 msgstr "ホストの除外"
 
+msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
 msgid "Export"
 msgstr "エクスポート"
 
 msgid "Export Library"
+msgstr ""
+
+msgid "Export Repository"
 msgstr ""
 
 msgid "Fetch pxe files"
@@ -300,9 +330,6 @@ msgstr ""
 msgid "Help"
 msgstr "ヘルプ"
 
-msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
-
 msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
@@ -318,8 +345,8 @@ msgstr "フィルタリングモードが 2 に設定されている場合にの
 msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
 msgstr "ハイパーバイザーのフィルタリングモード。%{unlimited} はフィルタリングがないことを意味し、%{whitelist} はホワイトリスト、%{blacklist} はブラックリストを意味します。"
 
-msgid "Hypervisor password, required for all hypervisor types except for libvirt"
-msgstr "libvirt を除くすべてのハイパーバイザーのタイプに必要なハイパーバイザーのパスワード"
+msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
+msgstr ""
 
 msgid "Hypervisor type"
 msgstr "ハイパーバイザーのタイプ"
@@ -356,6 +383,9 @@ msgstr ""
 
 msgid "Import Puppet classes"
 msgstr "Puppet クラスのインポート"
+
+msgid "Import Repository"
+msgstr ""
 
 msgid "Import facts"
 msgstr "ファクトのインポート"
@@ -429,6 +459,9 @@ msgstr "変更なし"
 msgid "No configuration found"
 msgstr "設定が見つかりません"
 
+msgid "Nutanix AHV’s IP address."
+msgstr ""
+
 msgid "OK"
 msgstr "OK"
 
@@ -441,10 +474,16 @@ msgstr "このページで、ハイパーバイザーの virt-who 設定を定�
 msgid "One virt-who configuration represents one config file in /etc/virt-who.d directory and maps to single hypervisor, organization and lifecycle environment."
 msgstr "1 つの virt-who 設定は /etc/virt-who.d ディレクトリーの 1 つの設定ファイルを表し、単一のハイパーバイザー、組織およびライフサイクル環境にマップされます。"
 
-msgid "Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgid "Only hosts which cluster ID is specified in comma-separated list in this option will be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
 msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
+msgstr ""
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled "
 msgstr ""
 
 msgid "Organization of the virt-who configuration"
@@ -465,6 +504,15 @@ msgstr "パッケージプロファイル更新"
 msgid "Path to kubeconfig file"
 msgstr ""
 
+msgid "Prism Central"
+msgstr ""
+
+msgid "Prism Element"
+msgstr ""
+
+msgid "Prism Flavor"
+msgstr ""
+
 msgid "Product Create"
 msgstr "製品の作成"
 
@@ -480,11 +528,11 @@ msgstr "公開"
 msgid "Publish Lifecycle Environment Repositories"
 msgstr "ライフサイクル環境のリポジトリーの公開"
 
+msgid "Refresh Alternate Content Source"
+msgstr ""
+
 msgid "Reindex subscriptions"
 msgstr "サブスクリプションを再インデックス化"
-
-msgid "Remote action:"
-msgstr ""
 
 msgid "Remove Content"
 msgstr "コンテンツの削除"
@@ -516,6 +564,9 @@ msgstr ""
 msgid "Schedule"
 msgstr "スケジュール"
 
+msgid "Select the Prism flavor you are connecting to"
+msgstr ""
+
 msgid "Show a virt-who configuration"
 msgstr "virt-who 設定の表示"
 
@@ -539,6 +590,9 @@ msgstr "成功"
 msgid "Sync capsule"
 msgstr ""
 
+msgid "Syncable export"
+msgstr ""
+
 msgid "Synchronize"
 msgstr "同期"
 
@@ -547,6 +601,9 @@ msgstr "Smart Proxy の同期"
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr "設定がデプロイされていないか、または virt-who がステータスを報告できませんでした"
+
+msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
+msgstr ""
 
 msgid "The virt-who report arrived within the interval"
 msgstr "期間内に着信した virt-who レポート"
@@ -589,6 +646,12 @@ msgstr "無制限"
 
 msgid "Update"
 msgstr "更新"
+
+msgid "Update Alternate Content Source"
+msgstr ""
+
+msgid "Update CDN Configuration"
+msgstr ""
 
 msgid "Update Content Overrides"
 msgstr "コンテンツ上書きの更新"

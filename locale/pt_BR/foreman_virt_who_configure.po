@@ -37,8 +37,17 @@ msgstr "Uma lista separada por vírgulas de nomes de host ou domínios ou endere
 msgid "A plugin to make virt-who configuration easy"
 msgstr "Um plug-in para facilitar a configuração do virt-who"
 
+msgid "AHV update interval"
+msgstr ""
+
+msgid "Abstract"
+msgstr ""
+
 msgid "Abstract async task"
 msgstr "Tarefa assíncrona abstrata"
+
+msgid "Account name by which virt-who is to connect to Nutanix AHV."
+msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
@@ -94,6 +103,9 @@ msgstr "Status de configuração"
 msgid "Configuration file containing details about how to connect to the cluster and authentication details"
 msgstr ""
 
+msgid "Configuration file containing details about how to connect to the cluster and authentication details."
+msgstr ""
+
 msgid "Configuration interval in minutes"
 msgstr "Intervalo de configuração em minutos"
 
@@ -133,6 +145,9 @@ msgstr "Contagem"
 msgid "Create"
 msgstr "Criar"
 
+msgid "Create Alternate Content Source"
+msgstr ""
+
 msgid "Create Config"
 msgstr "Criar Configuração"
 
@@ -144,6 +159,9 @@ msgstr ""
 
 msgid "Create Package Group"
 msgstr "Criar grupo de pacotes"
+
+msgid "Create Syncable Export History"
+msgstr ""
 
 msgid "Create a virt-who configuration"
 msgstr "Criar uma configuração do virt-who"
@@ -175,6 +193,9 @@ msgstr ""
 msgid "Destroy"
 msgstr "Destruir"
 
+msgid "Destroy Alternate Content Source"
+msgstr ""
+
 msgid "Destroy Content Host"
 msgstr "Destruir Host de Conteúdo"
 
@@ -201,6 +222,9 @@ msgstr "Editar configuração do virt-who"
 
 msgid "Enable"
 msgstr "Habilitar"
+
+msgid "Enable AHV debug"
+msgstr ""
 
 msgid "Enable debugging output"
 msgstr "Habilitar saída de depuração"
@@ -244,10 +268,16 @@ msgstr ""
 msgid "Exclude hosts"
 msgstr "Excluir hosts"
 
+msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
 msgid "Export"
 msgstr "Exportar"
 
 msgid "Export Library"
+msgstr ""
+
+msgid "Export Repository"
 msgstr ""
 
 msgid "Fetch pxe files"
@@ -301,9 +331,6 @@ msgstr ""
 msgid "Help"
 msgstr "Ajuda"
 
-msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
-
 msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
@@ -319,8 +346,8 @@ msgstr "Lista de bloqueios do hipervisor, aplicável somente quando o modo de fi
 msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
 msgstr "Modo de filtragem do hipervisor, %{unlimited} significa sem filtros, %{whitelist} significa lista de permissões, %{blacklist} significa lista de bloqueios"
 
-msgid "Hypervisor password, required for all hypervisor types except for libvirt"
-msgstr "Senha do hipervisor, exigida para todos os tipos de hipervisor, exceto para o libvirt"
+msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
+msgstr ""
 
 msgid "Hypervisor type"
 msgstr "Tipo de hipervisor"
@@ -357,6 +384,9 @@ msgstr ""
 
 msgid "Import Puppet classes"
 msgstr "Importar classes de Puppet"
+
+msgid "Import Repository"
+msgstr ""
 
 msgid "Import facts"
 msgstr "Importar fatos"
@@ -430,6 +460,9 @@ msgstr "Sem alterações"
 msgid "No configuration found"
 msgstr "Nenhuma configuração encontrada"
 
+msgid "Nutanix AHV’s IP address."
+msgstr ""
+
 msgid "OK"
 msgstr "OK"
 
@@ -442,10 +475,16 @@ msgstr "Nessa página, você define as configurações do virt-who para seus hip
 msgid "One virt-who configuration represents one config file in /etc/virt-who.d directory and maps to single hypervisor, organization and lifecycle environment."
 msgstr "Uma configuração do virt-who representa um arquivo de configuração no diretório /etc/virt-who.d e mapeia um único hipervisor, organização e ambiente de ciclo de vida."
 
-msgid "Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgid "Only hosts which cluster ID is specified in comma-separated list in this option will be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
 msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
+msgstr ""
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled "
 msgstr ""
 
 msgid "Organization of the virt-who configuration"
@@ -466,6 +505,15 @@ msgstr "Atualização de Perfil de Pacote"
 msgid "Path to kubeconfig file"
 msgstr ""
 
+msgid "Prism Central"
+msgstr ""
+
+msgid "Prism Element"
+msgstr ""
+
+msgid "Prism Flavor"
+msgstr ""
+
 msgid "Product Create"
 msgstr "Criação de Produto"
 
@@ -481,11 +529,11 @@ msgstr "Publicar"
 msgid "Publish Lifecycle Environment Repositories"
 msgstr "Publicar repositórios do ambiente de ciclo de vida"
 
+msgid "Refresh Alternate Content Source"
+msgstr ""
+
 msgid "Reindex subscriptions"
 msgstr "Reindexar subscrições "
-
-msgid "Remote action:"
-msgstr ""
 
 msgid "Remove Content"
 msgstr "Remover Conteúdo"
@@ -517,6 +565,9 @@ msgstr ""
 msgid "Schedule"
 msgstr "Agendamento"
 
+msgid "Select the Prism flavor you are connecting to"
+msgstr ""
+
 msgid "Show a virt-who configuration"
 msgstr "Exibir uma configuração do virt-who"
 
@@ -540,6 +591,9 @@ msgstr "Sucesso"
 msgid "Sync capsule"
 msgstr ""
 
+msgid "Syncable export"
+msgstr ""
+
 msgid "Synchronize"
 msgstr "Sincronizar"
 
@@ -548,6 +602,9 @@ msgstr "Sincronizar proxy inteligente"
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr "A configuração não foi implantada ainda ou o virt-who não pode relatar o status"
+
+msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
+msgstr ""
 
 msgid "The virt-who report arrived within the interval"
 msgstr "O relatório do virt-who chegou no intervalo"
@@ -590,6 +647,12 @@ msgstr "Ilimitado"
 
 msgid "Update"
 msgstr "Atualizar"
+
+msgid "Update Alternate Content Source"
+msgstr ""
+
+msgid "Update CDN Configuration"
+msgstr ""
 
 msgid "Update Content Overrides"
 msgstr "Atualizar substituições do conteúdo"
