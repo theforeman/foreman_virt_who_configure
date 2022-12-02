@@ -1,0 +1,716 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# NorwayFun <temuri.doghonadze@gmail.com>, 2022
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>, 2022\n"
+"Language-Team: Georgian (https://www.transifex.com/foreman/teams/114/ka/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ka\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "1. Copy this configuration script to a safe directory."
+msgstr "1. კონფიგურაციის სკრიპტი უსაფრთხო საქაღალდეში დააკოპირეთ."
+
+msgid "2. Make the script executable and run it."
+msgstr "2. გახადეთ სკრიპტი გაშვებადი და შეასრულეთ ის."
+
+msgid "3. Delete the script."
+msgstr "3. წაშალეთ სკრიპტი."
+
+msgid "A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses."
+msgstr "ჰოსტის სახელების ან დომენების ან IP მისამართების მძიმით გამოყოფილი სია პროქსის პარამეტრების უგულებელყოფისთვის. სურვილისამებრ, ეს შეიძლება დაყენდეს <code>*</code> პროქსის პარამეტრების გვერდის ავლით ყველა ჰოსტის სახელების დომენისთვის ან IP მისამართისთვის."
+
+msgid "A plugin to make virt-who configuration easy"
+msgstr "დამატება virt-who-ის კონფიგურაციის გასაადვილებლად"
+
+msgid "AHV update interval"
+msgstr ""
+
+msgid "Abstract"
+msgstr ""
+
+msgid "Abstract async task"
+msgstr "ასინქრონული ამოცანის აბსტრაქცია"
+
+msgid "Account name by which virt-who is to connect to Nutanix AHV."
+msgstr ""
+
+msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
+msgstr "ანგარიშის სახელი, რომლითაც virt-who უნდა დაუკავშირდეს ჰიპერვიზორს, ფორმატში <code>domain_name\\account_name</code> . გაითვალისწინეთ, რომ მხოლოდ ერთი უკანა ხაზი გამოყოფს დომენის_სახელისა და ანგარიშის_სახელის მნიშვნელობებს. თუ იყენებთ დომენის ანგარიშს და გლობალური კონფიგურაციის ფაილს <code>/etc/virt-who.conf</code> , მაშინ საჭიროა <b>ორი</b> უკანა ხაზი. დამატებითი ინფორმაციისთვის იხილეთ <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase გადაწყვეტა როგორ გამოვიყენოთ windows დომენის ანგარიში virt-who-სთან</a> დამატებითი ინფორმაციისთვის."
+
+msgid "Account name by which virt-who is to connect to the hypervisor."
+msgstr "ანგარიში, რომლითაც virt-who ჰაიპერვაიზორს უკავშირდება."
+
+msgid "Account name by which virt-who is to connect to the hypervisor. By default this is <code>Administrator</code>. To use an alternate account, create a user account and assign that account to the following groups (Windows 2012 Server): Hyper-V Administrators and Remote Management Users."
+msgstr "ანგარიშის სახელი, რომლითაც virt-ვინ უნდა დაუკავშირდეს ჰიპერვიზორს. ნაგულისხმევად ეს არის <code>Administrator</code> . ალტერნატიული ანგარიშის გამოსაყენებლად შექმენით მომხმარებლის ანგარიში და მიანიშნეთ ეს ანგარიში შემდეგ ჯგუფებს (Windows 2012 სერვერი): Hyper-V ადმინისტრატორები და დისტანციური მართვის მომხმარებლები."
+
+msgid "Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information."
+msgstr "ანგარიშის სახელი, რომლითაც virt-who ჰიპერვიზორს უნდა დაუკავშირდეს . Virt-who-s არ აქვს პაროლზე დაფუძნებული ავტორიზაციის მხარდაჭერა, თქვენ ხელით უნდა დააყენოთ SSH გასაღები. დამატებითი ინფორმაციისთვის იხილეთ <a href=\"https://access.redhat.com/solutions/1515983\"> Red Hat ცოდნის ბაზის გადაწყვეტა როგორ დავაკონფიგურიროთ virt-who KVM ჰოსტი </a>."
+
+msgid "Account password by which virt-who is to connect to the hypervisor instance."
+msgstr "ანგარიშის პაროლი, რომლითაც virt-who ჰაიპერვაიზორს უკავშირდება."
+
+msgid "Action with sub plans"
+msgstr "ქმედება ქვე-გეგმებით"
+
+msgid "Actions"
+msgstr "ქმედებები"
+
+msgid "Agent action"
+msgstr "აგენტის ქმედება"
+
+msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr "გამოიყენება მხოლოდ esx პროვაიდერის ტიპისთვის. ჰოსტები, რომელთა მშობლის (ჩვეულებრივ, ComputeResource) სახელი მითითებულია მძიმით გამოყოფილ სიაში ამ პარამეტრში, <b>არ</b> იქნება მოხსენებული. Wildcards და რეგულარული გამონათქვამები მხარდაჭერილია, მრავალი ჩანაწერი უნდა იყოს გამოყოფილი მძიმით. ჩასვით მნიშვნელობა ორ ბრჭყალებში, თუ ის შეიცავს სპეციალურ სიმბოლოებს, როგორიცაა მძიმე. ყველა ახალი ხაზის სიმბოლო წაიშლება შედეგად კონფიგურაციის ფაილში, თეთრი სივრცეები ამოღებულია დასაწყისიდან და ბოლოდან."
+
+msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr "გამოიყენება მხოლოდ esx პროვაიდერის ტიპისთვის. მოხსენებული იქნება მხოლოდ ჰოსტები, რომელთა მშობლის (ჩვეულებრივ, ComputeResource) სახელი მითითებულია მძიმით გამოყოფილ სიაში ამ პარამეტრში. Wildcards და რეგულარული გამონათქვამები მხარდაჭერილია, მრავალი ჩანაწერი უნდა იყოს გამოყოფილი მძიმით. ჩასვით მნიშვნელობა ორ ბრჭყალებში, თუ ის შეიცავს სპეციალურ სიმბოლოებს, როგორიცაა მძიმე. ყველა ახალი ხაზის სიმბოლო წაიშლება მიღებულ კონფიგურაციის ფაილში, თეთრი სივრცე ამოღებულია თავიდან და ბოლოდან."
+
+msgid "Attach subscriptions"
+msgstr "გამოწერების მიმაგრება"
+
+msgid "Auto attach subscriptions"
+msgstr "გამოწერების ავტომატური მიმაგრება"
+
+msgid "Blacklist"
+msgstr "შავი სია"
+
+msgid "Bulk generate applicability for hosts"
+msgstr "გამოყენებადობის ერთდროულად მრავალი ჰოსტისთვის შექმნა"
+
+msgid "Combined Profile Update"
+msgstr "პროფილის კომბინირებული განახლება"
+
+msgid "Configs"
+msgstr "კონფიგურაციები"
+
+msgid "Configuration Status"
+msgstr "კონფიგურაციის სტატუსი"
+
+msgid "Configuration file containing details about how to connect to the cluster and authentication details"
+msgstr "კონფიგურაციის ფაილი, რომელიც შეიცავს დეტალებს კლასტერთან დაკავშირების და ავთენტიფიკაციის დეტალების შესახებ"
+
+msgid "Configuration file containing details about how to connect to the cluster and authentication details."
+msgstr ""
+
+msgid "Configuration interval in minutes"
+msgstr "კონფიგურაციის ინტერვალი წუთებში"
+
+msgid "Configuration name"
+msgstr "კონფიგურაციის სახელი"
+
+msgid "Configuration numeric identifier"
+msgstr "კონფიგურაცის რიცხვობრივი იდენტიფიკატორი"
+
+msgid "Configuration script: "
+msgstr "კონფიგურაციის სკრიპტი: "
+
+msgid "Config|Interval"
+msgstr "კონფიგურაცია|ინტერვალი"
+
+msgid "Config|Last Report"
+msgstr "კონფიგურაცია|ბოლო ანგარიში"
+
+msgid "Config|Name"
+msgstr "კონფიგურაცია|სახელი"
+
+msgid "Connection"
+msgstr "კავშირი"
+
+msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
+msgstr "კონტეინერის ვირტუალიზაციის სრული დომენური სახელი ან IP მისამართი. კლასტერთან დასაკავშირებლად საჭიროა მიუთითოთ გზა kubeconfig-მდე, რომელიც შეიცავს კავშირის დეტალებს და ავთენტიფიკაციის კოდს."
+
+msgid "Copy to clipboard"
+msgstr "ბუფერში კოპირება"
+
+msgid "Copy version units to library"
+msgstr "ვერსიის ერთეულების ბიბლიოთეკაში კოპირება"
+
+msgid "Count"
+msgstr "რაოდენობა"
+
+msgid "Create"
+msgstr "შექმნა"
+
+msgid "Create Alternate Content Source"
+msgstr ""
+
+msgid "Create Config"
+msgstr "კონფიგურაციის შექმნა"
+
+msgid "Create Export History"
+msgstr "გატანის ისტორიის შექმნა"
+
+msgid "Create Import History"
+msgstr "შემოტანის ისტორიის შექმნა"
+
+msgid "Create Package Group"
+msgstr "პაკეტების ჯგუფის შექმნა"
+
+msgid "Create Syncable Export History"
+msgstr ""
+
+msgid "Create a virt-who configuration"
+msgstr "Virt-who-ის კონფიგურაცის შექმნა"
+
+msgid "Delete"
+msgstr "წაშლა"
+
+msgid "Delete Activation Key"
+msgstr "აქტივაციის გასაღების წაშლა"
+
+msgid "Delete Lifecycle Environment"
+msgstr "ცხოვრების ციკლის გარემოს წაშლა"
+
+msgid "Delete Package Group"
+msgstr "პაკეტების ჯგუფის წაშლა"
+
+msgid "Delete Product"
+msgstr "პროდუქტის წაშლა"
+
+msgid "Delete a virt-who configuration"
+msgstr "Virt-who-ის კონფიგურაცის წაშლა"
+
+msgid "Delete virt-who configuration %s?"
+msgstr "წავშალო Virt-who-ის კონფიგურაცია %s?"
+
+msgid "Deploy"
+msgstr "განთავსება"
+
+msgid "Destroy"
+msgstr "განადგურება"
+
+msgid "Destroy Alternate Content Source"
+msgstr ""
+
+msgid "Destroy Content Host"
+msgstr "შემცველობის ჰოსტის განადგურება"
+
+msgid "Details"
+msgstr "დეტალები"
+
+msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
+msgstr "სხვადასხვა გამართვის მნიშვნელობის დაყენება შეუძლებელია ჰიპერვიზორზე, ამიტომ ის გავლენას მოახდენს ჰოსტზე ყველა სხვა განლაგებულ კონფიგურაციაზე, რომელზეც განთავსდება ეს კონფიგურაცია."
+
+msgid "Disable"
+msgstr "გამორთვა"
+
+msgid "Discover"
+msgstr "აღმოაჩინეთ"
+
+msgid "Download the script"
+msgstr "სკრიპტის გადმოწერა"
+
+msgid "Edit"
+msgstr "ჩასწორება"
+
+msgid "Edit Virt-who Config"
+msgstr "Virt-who-ის კონფიგურაციის ჩასწორება"
+
+msgid "Enable"
+msgstr "ჩართვა"
+
+msgid "Enable AHV debug"
+msgstr ""
+
+msgid "Enable debugging output"
+msgstr "დამატებითი ინფორმაციის გამოტანა"
+
+msgid "Enable debugging output?"
+msgstr "ჩავრთო დამატებითი ინფორმაციის გამოტანა?"
+
+msgid "Errata mail"
+msgstr "მორჩენილი ელფოსტა"
+
+msgid "Every 12 hours"
+msgstr "ყოველ 12 საათში"
+
+msgid "Every 2 days"
+msgstr "ყოველ 2 დღეში"
+
+msgid "Every 2 hours"
+msgstr "ყოველ 2 საათში"
+
+msgid "Every 24 hours"
+msgstr "ყოველ 24 საათში"
+
+msgid "Every 3 days"
+msgstr "ყოველ 3 დღეში"
+
+msgid "Every 4 hours"
+msgstr "ყოველ 4 საათში"
+
+msgid "Every 8 hours"
+msgstr "ყოველ 8 საათში"
+
+msgid "Every hour"
+msgstr "ყოველ საათში"
+
+msgid "Exclude Hosts"
+msgstr "ჰოსტების გამორიცხვა"
+
+msgid "Exclude host parents"
+msgstr "ჰოსტის მშობლების გამორიცხვა"
+
+msgid "Exclude hosts"
+msgstr "ჰოსტების გამორიცხვა"
+
+msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Export"
+msgstr "გატანა"
+
+msgid "Export Library"
+msgstr "ბიბლიოთეკის გატანა"
+
+msgid "Export Repository"
+msgstr ""
+
+msgid "Fetch pxe files"
+msgstr "PXE ფაილების გამოთხოვა"
+
+msgid "Filter Hosts"
+msgstr "ჰოსტების ფილტრი"
+
+msgid "Filter host parents"
+msgstr "ჰოსტის მშობლების ფილტრი"
+
+msgid "Filter hosts"
+msgstr "ჰოსტების ფილტრი"
+
+msgid "Filtered index content"
+msgstr "გაფილტრული ინდექსის შემცველობა"
+
+msgid "Filtering"
+msgstr "გაფილტვრა"
+
+msgid "Foreman server FQDN"
+msgstr "Foreman-ის სერვერის FQDN"
+
+msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
+msgstr "Foreman-ის სერვერის სრული დომენური სახელი. მაგ: foreman.example.com"
+
+msgid "Fully qualified host name or IP address of the hypervisor"
+msgstr "ჰაიპერვაიზორის სრულ დომენური სახელი ან IP მისამართი"
+
+msgid "General information"
+msgstr "ზოგადი ინფორმაცია"
+
+msgid "Generate host applicability"
+msgstr "ჰოსტის გამოყენებადობის გენერაცია"
+
+msgid "Generate repository applicability"
+msgstr "ჰოსტის გამოყენებადობის გენერაცია"
+
+msgid "HTTP Proxy"
+msgstr "HTTP პროქსი"
+
+msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
+msgstr "HTTP პროქსი, virt-who სერვერს შორისა და ჰიპერვიზორებსა და ვირტუალიზაციის მენეჯერებს შორის კომუნიკაციისთვის რომელიც უნდა იყოს გამოყენებული."
+
+msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used."
+msgstr "HTTP პროქსი, რომელიც უნდა იყოს გამოყენებული სერვერს შორის კომუნიკაციისთვის, რომელზეც მუშაობს virt-who და ჰიპერვიზორებსა და ვირტუალიზაციის მენეჯერებს შორის. თუ პროქსი არ გამოიყენება, დატოვეთ ცარიელი."
+
+msgid "Hammer command: "
+msgstr "Hammer-ის ბრძანება: "
+
+msgid "Help"
+msgstr "დახმარება"
+
+msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr "ჰოსტები, რომლების uuid (ან ჰოსტის სახელი ან hwuuid, <code>hypervisor_id</code>-ზე დაფუძნებული) მითითებულია მძიმით გამოყოფილ სიაში ამ პარამეტრში, <b>არ</b> იქნება მოხსენებული. Wildcards და რეგულარული გამონათქვამები მხარდაჭერილია, მრავალი ჩანაწერი უნდა იყოს გამოყოფილი მძიმით. ჩასვით მნიშვნელობა ორ ბრჭყალებში, თუ ის შეიცავს სპეციალურ სიმბოლოებს, როგორიცაა მძიმე. ყველა ახალი ხაზის სიმბოლო წაიშლება შედეგად კონფიგურაციის ფაილში, თეთრი სივრცეები ამოღებულია დასაწყისიდან და ბოლოდან."
+
+msgid "How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours. Different interval can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
+msgstr "რამდენად ხშირად უნდა შეამოწმოთ დაკავშირებული ჰიპერვიზორები ცვლილებებისთვის? ასევე გავლენას ახდენს რუკების შესახებ მოხსენების სიხშირეზე. რეკომენდირებული მნიშვნელობა უმეტეს გარემოსთვის არის ყოველ ორ საათში. სხვადასხვა ინტერვალის დაყენება შეუძლებელია ჰიპერვიზორზე, ამიტომ ის გავლენას მოახდენს ჰოსტზე ყველა სხვა განლაგებულ კონფიგურაციაზე, რომელზედაც განთავსდება ეს კონფიგურაცია."
+
+msgid "Hypervisor ID"
+msgstr "ჰაიპერვაიზორის ID"
+
+msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
+msgstr "ჰიპერვიზორის შავი სია, გამოიყენება მხოლოდ მაშინ, როდესაც ფილტრაციის რეჟიმი დაყენებულია 2-ზე. Wildcards და რეგულარული გამონათქვამები მხარდაჭერილია. ჩანაწერები მძიმით უნდა იყოს გამოყოფილი."
+
+msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
+msgstr "ჰიპერვიზორის ფილტრაციის რეჟიმი, %{unlimited} ნიშნავს ფილტრაციის გარეშე, %{whitelist} ნიშნავს თეთრ სიას, %{blacklist} ნიშნავს შავ სიას"
+
+msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
+msgstr ""
+
+msgid "Hypervisor type"
+msgstr "ჰაიპერვაიზორის ტიპი"
+
+msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
+msgstr "Hypervisor whitelist, გამოიყენება მხოლოდ მაშინ, როდესაც ფილტრაციის რეჟიმი დაყენებულია 1-ზე. Wildcards და რეგულარული გამონათქვამები მხარდაჭერილია, ჩანაწერები მძიმით უნდა იყოს გამოყოფილი."
+
+msgid "Hypervisors"
+msgstr "ჰაიპერვაიზორები"
+
+msgid "Hypervisors update"
+msgstr "ჰაიპერვაიზორის განახლება"
+
+msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
+msgstr "თუ თქვენ გაქვთ ჰიბრიდული გარემო ვირტუალური მანქანებით, რომლებიც მუშაობენ Red Hat Enterprise Linux-ით და სხვა ოპერაციული სისტემებით, შეგიძლიათ შეზღუდოთ Virt-Who's წვდომა ჰოსტებზე. მაგალითად, თუ ზოგიერთი ჰიპერვიზორი მასპინძლობს მხოლოდ Microsoft Windows Server-ის ინსტანციებს, არანაირი სარგებელი არ არის ამ ჰიპერვიზორების მოხსენებაში virt-who აგენტის მიერ."
+
+msgid "Ignore Proxy"
+msgstr "პროქსის იგნორი"
+
+msgid "Ignore proxy"
+msgstr "პროქსის იგნორი"
+
+msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
+msgstr "პროქსის იგნორირება. ჰოსტის სახელების ან დომენების ან IP მისამართების მძიმით გამოყოფილი სია პროქსის პარამეტრების უგულებელყოფისთვის. სურვილისამებრ, ეს შეიძლება დაყენდეს *-ზე პროქსის პარამეტრების გვერდის ავლით ყველა ჰოსტის სახელების დომენისთვის ან IP მისამართისთვის."
+
+msgid "Import"
+msgstr "იმპორტი"
+
+msgid "Import Content View Version"
+msgstr "შემცველობის ხედის ვერსიის შემოტანა"
+
+msgid "Import Default Content View"
+msgstr "ნაგულისხმები შემცველობის ხედის შემოტანა"
+
+msgid "Import Puppet classes"
+msgstr "Puppet-ის კლასების შემოტანა"
+
+msgid "Import Repository"
+msgstr ""
+
+msgid "Import facts"
+msgstr "ფაქტების შემოტანა"
+
+msgid "Incremental Update"
+msgstr "ინკრემენტული განახლება"
+
+msgid "Incremental Update of  Content View Version(s) "
+msgstr "შემცველობის ხედის ვერსიების ინკრემენტული განახლება "
+
+msgid "Index content"
+msgstr "შემცველობის ინდექსი"
+
+msgid "Index errata"
+msgstr "მორჩენილების ინდექსი"
+
+msgid "Index module streams"
+msgstr "მოდულების ნაკადების ინდექსი"
+
+msgid "Index package groups"
+msgstr "პაკეტის ჯგუფების ინდექსი"
+
+msgid "Install Applicable Errata"
+msgstr "განკუთვნილი მორჩენილი პაჩების დაყენება"
+
+msgid "Instance update"
+msgstr "გაშვებული ასლის განახლება"
+
+msgid "Interval was not provided"
+msgstr "ინტერვალი მითითებული არაა"
+
+msgid "Latest Configurations Without Change"
+msgstr "ბოლო კონფიგურაციები ცვლილებების გარეშე"
+
+msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
+msgstr "Libvirt-ის სერვერის სრული დომენური სახელი ან IP მისამართი. ასევე შეგიძლიათ მიუთითოთ სქემის სახით. მაგ: <code>qemu+ssh://libvirt.example.com/system</code>. თუ იყენებთ SSH-ს, დარწმუნდით, რომ ჰაიპერვაიზორში მითითებულ მომხმარებელს სამიზნე ჰოსტზე SSH გასაღებები ადგილზე აქვს"
+
+msgid "List of virt-who configurations"
+msgstr "Virt-who-ის კონფიგურაციების სია"
+
+msgid "List of virt-who configurations per organization"
+msgstr "Virt-who-ის კონფიგურაციების სია თითოეული ორგანიზაციისთვის"
+
+msgid "Microsoft Hyper-V fully qualified host name or IP address."
+msgstr "Microsoft Hyper-V-ის სრული დომენური სახელი ან IP მისამართი."
+
+msgid "Name of this configuration, e.g. the name of the hypervisor"
+msgstr "კონფიგურაციის სახელი. მაგ. ჰაიპერვაიზორის სახელი"
+
+msgid "New Config"
+msgstr "ახალი კონფიგურაცია"
+
+msgid "New Virt-who Config"
+msgstr "Virt-who-ის ახალი კონფიგურაცია"
+
+msgid "Newer version of virt-who is required, minimum version is %s"
+msgstr "საჭიროა virt-who-ის არსებულზე ახალი ვერსია. მინიმალური ვერსიაა %s"
+
+msgid "No Change"
+msgstr "ცვლილებების გარეშე"
+
+msgid "No Report Yet"
+msgstr "ანგარიშების გარეშე"
+
+msgid "No Reports"
+msgstr "ანგარიშების გარეშე"
+
+msgid "No change"
+msgstr "ცვლილების გარეშე"
+
+msgid "No configuration found"
+msgstr "კონფიგურაციები ნაპოვნი არაა"
+
+msgid "Nutanix AHV’s IP address."
+msgstr ""
+
+msgid "OK"
+msgstr "დიახ"
+
+msgid "On the target virt-who host:"
+msgstr "Virt-who-ის სამიზნე ჰოსტზე:"
+
+msgid "On this page you can define virt-who configurations for your hypervisors."
+msgstr "ამ გვერდზე თქვენ შეგიძლიათ განსაზღვროთ virt-who-ის კონფიგურაციები თქვენი ჰიპერვიზორებისთვის."
+
+msgid "One virt-who configuration represents one config file in /etc/virt-who.d directory and maps to single hypervisor, organization and lifecycle environment."
+msgstr "Virt-who-ის ერთი კონფიგურაცია წარმოადგენს ერთ კონფიგურაციის ფაილს /etc/virt-who.d დირექტორიაში და ასახავს ერთ ჰიპერვიზორს, ორგანიზაციას და სასიცოცხლო ციკლის გარემოს."
+
+msgid "Only hosts which cluster ID is specified in comma-separated list in this option will be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr "მოხსენებული იქნება მხოლოდ ჰოსტები, რომლებიც uuid (ან ჰოსტის სახელი ან hwuuid, <code>hypervisor_id</code>-ზე დაფუძნებული) მითითებულია მძიმით გამოყოფილ სიაში ამ პარამეტრში. Wildcards და რეგულარული გამონათქვამები მხარდაჭერილია, ჩანაწერები მძიმით უნდა იყოს გამოყოფილი. ჩასვით მნიშვნელობა ორ ბრჭყალში, თუ ის შეიცავს ისეთ სიმბოლოებს, როგორიცაა მძიმე. ყველა ახალი ხაზის სიმბოლო წაიშლება შედეგად კონფიგურაციის ფაილში, თეთრი სივრცეები ამოღებულია დასაწყისიდან და ბოლოდან."
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
+msgstr ""
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled "
+msgstr ""
+
+msgid "Organization of the virt-who configuration"
+msgstr "Virt-who-ის კონფიგურაციის ორგნიზაცია"
+
+msgid "Overview"
+msgstr "მიმოხილვა"
+
+msgid "Owner"
+msgstr "მფლობელი"
+
+msgid "Owner was not provided"
+msgstr "მფლობელი მითითებული არაა"
+
+msgid "Package Profile Update"
+msgstr "პაკეტის პროფილის განახლება"
+
+msgid "Path to kubeconfig file"
+msgstr "ბილიკი kubeconfig ფაილამდე"
+
+msgid "Prism Central"
+msgstr ""
+
+msgid "Prism Element"
+msgstr ""
+
+msgid "Prism Flavor"
+msgstr ""
+
+msgid "Product Create"
+msgstr "პროდუქტის შექმნა"
+
+msgid "Promote"
+msgstr "დაწინაურება"
+
+msgid "Promotion to Environment"
+msgstr "გარემოს წინ წაწევა"
+
+msgid "Publish"
+msgstr "გამოქვეყნება"
+
+msgid "Publish Lifecycle Environment Repositories"
+msgstr "ცხოვრების ციკლის გარემოს რეპოზიტორიების გასაჯაროება"
+
+msgid "Refresh Alternate Content Source"
+msgstr ""
+
+msgid "Reindex subscriptions"
+msgstr "გამოწერების თავიდან ინდექსირება"
+
+msgid "Remove Content"
+msgstr "შემცველობის წაშლა"
+
+msgid "Remove Version"
+msgstr "ვერსიის წაშლა"
+
+msgid "Remove Versions and Associations"
+msgstr "ვერსიებისა და ასოციაციების წაშლა"
+
+msgid "Remove from Environment"
+msgstr "გარემოდან წაშლა"
+
+msgid "Remove subscriptions"
+msgstr "გამოწერის წაშლა"
+
+msgid "Renders a deploy script for the specified virt-who configuration"
+msgstr "Virt-who-ს მითითებული კონფიგურაციის განშლის სკრიპტის რენდერი"
+
+msgid "Report"
+msgstr "ანგარიში"
+
+msgid "Republish Version Repositories"
+msgstr "ვერსიების რეპოზიტორიების თავიდან გამოჩენა"
+
+msgid "Run Sync Plan:"
+msgstr "სინქრონიზაციის გეგმის გაშვება:"
+
+msgid "Schedule"
+msgstr "განრიგი"
+
+msgid "Select the Prism flavor you are connecting to"
+msgstr ""
+
+msgid "Show a virt-who configuration"
+msgstr "Virt-who-ის კონფიგურაცის ჩვენება"
+
+msgid "Specifies how the hypervisor will be identified."
+msgstr "მიუთითებს, როგორ გამოვიცნოთ ჰაიპერვაიზორის ტიპი."
+
+msgid ""
+"Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
+"                              Note that some virtualization backends don't have all of them implemented.\n"
+"                              Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
+"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx only.\n"
+"                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
+msgstr ""
+"განსაზღვრავს, რომ ჰიპერვიზორები იდენტიფიცირებული იქნება მათი <b>ჰოსტის სახელით</b> , <b>uuid</b> ან <b>hwuuid</b>.\n"
+"                              გაითვალისწინეთ, რომ ზოგიერთ ვირტუალიზაციის უკანაბოლოს ყველა მათგანი არ აქვს დანერგილი. \n"
+"                               ნაგულისხმებია <b>ჰოსტის სახელი</b> , რომელიც უზრუნველყოფს ჰიპერვიზორის უფრო მნიშვნელოვან სახელებს. \n"
+"                              მაგრამ შეიძლება გამოიწვიოს ჰიპერვიზორის დუბლირებული რეგისტრაცია, თუ ჰოსტს სახელი გადაერქვა. ამის თავიდან ასაცილებლად, ამის ნაცვლად შეგიძლიათ გამოიყენოთ <b>uuid</b> . <b>hwuuid</b> ვრცელდება მხოლოდ esx-ზე. ეს ფუნქცია გამიზნულია, რომ შეიქმნას virt-who-ს თავდაპირველ გაშვებამდე. მოგვიანებით მისი შეცვლა გამოიწვევს გამოწერების მენეჯერში ჩანაწერების დუბლირებას."
+
+msgid "Status"
+msgstr "სტატუსი"
+
+msgid "Success"
+msgstr "წარმატება"
+
+msgid "Sync capsule"
+msgstr "სინქრონიზაციის კაპსულა"
+
+msgid "Syncable export"
+msgstr ""
+
+msgid "Synchronize"
+msgstr "სინქრონიზაცია"
+
+msgid "Synchronize smart proxy"
+msgstr "ჭკვიან პროქსისთან სინქრონიზაცია"
+
+msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
+msgstr "კონფიგურაცია ჯერ არ იყო განლაგებული ან Virt-მა ვერ შეძლო სტატუსის შესახებ შეტყობინება"
+
+msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
+msgstr ""
+
+msgid "The virt-who report arrived within the interval"
+msgstr "Virt-who-ის ანგარიში ინტერვალში იქნა გამოთხოვილი"
+
+msgid "The virt-who report has not arrived within the interval, which indicates there was no change on hypervisor"
+msgstr "Virt-who-ის ანგარიში არ მოვიდა ინტერვალის ფარგლებში, რაც მიუთითებს, რომ ჰიპერვიზორზე ცვლილება არ მომხდარა"
+
+msgid "To define a new configuration, click the New Config button and fill in the form. After you provide all required information a virt-who configuration script will be generated. You could either install it manually by copying the script or deploy it on a selected target host through Remote Execution."
+msgstr "ახალი კონფიგურაციის დასადგენად დააჭირეთ ღილაკს New Config და შეავსეთ ფორმა. მას შემდეგ რაც მიაწოდებთ ყველა საჭირო ინფორმაციას, წარმოიქმნება virt-who კონფიგურაციის სკრიპტი. შეგიძლიათ ან ხელით დააინსტალიროთ სკრიპტის კოპირებით, ან განათავსოთ იგი არჩეულ სამიზნე ჰოსტზე დისტანციური შესრულების საშუალებით."
+
+msgid "Total Configurations"
+msgstr "კონფიგურაციები ჯამში"
+
+msgid "Unable to create sysconfig file"
+msgstr "Sysconfig-ის ფაილის შექმნა შეუძლებელია"
+
+msgid "Unable to create virt-who config file"
+msgstr "Virt-who-ის კონფიგურაციის ფაილის შექმნა სეუძლებელია"
+
+msgid "Unable to enable virt-who service using systemctl"
+msgstr "Virt-who-ის სერვისის systemctl-ით შექმნა შეუძლებელია"
+
+msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
+msgstr "შეუძლებელია virt-who პაკეტის დაყენება, დარწმუნდით, რომ ჰოსტი სწორად არის გამოწერილი და აქვს წვდომა katello-host-tools-ის საცავზე"
+
+msgid "Unable to start virt-who service, please see virt-who logs for more details"
+msgstr "Virt-who-ის სერვსის გაშვების შეცდომა. მეტი დეტალებისთვის იხილეთ virt-who-ის ჟურნალი"
+
+msgid "Unknown"
+msgstr "უცნობი"
+
+msgid "Unknown configuration status"
+msgstr "კონფიგურაციის უცნობი სტატუსი"
+
+msgid "Unknown configuration status, caused by unexpected conditions"
+msgstr "კონფიგურაციის უცნობი სტატუსი. გამოწვეულია გაუთვალისწინებელი პირობებით"
+
+msgid "Unlimited"
+msgstr "შეუზღუდავი"
+
+msgid "Update"
+msgstr "განახლება"
+
+msgid "Update Alternate Content Source"
+msgstr ""
+
+msgid "Update CDN Configuration"
+msgstr ""
+
+msgid "Update Content Overrides"
+msgstr "შემცველობის გადაფარვს განახლება"
+
+msgid "Update a virt-who configuration"
+msgstr "Virt-who-ის კონფიგურაცის განახლება"
+
+msgid "Update content urls"
+msgstr "შემცველობის URL-ების განახლება"
+
+msgid "Update for host"
+msgstr "განახლება ჰოსტისთვის"
+
+msgid "Update http proxy"
+msgstr "HTTP პროქსის განახლება"
+
+msgid "Update http proxy details"
+msgstr "HTTP პროქსის დეტალების განახლება"
+
+msgid "Update redhat repository"
+msgstr "RH-ის რეპოზიტორიის განახლება"
+
+msgid "Update release version for host"
+msgstr "ჰოსტის რელიზის ვერსიის განახლება"
+
+msgid "Updating System Purpose for host"
+msgstr "ჰოსტის სისტემური დანიშნულების განახლება"
+
+msgid "Upload into"
+msgstr "ატვირთვის სამიზნე"
+
+msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
+msgstr "გამოიყენეთ ან hammer ბრძანება ან ქვემოთ მოცემული სკრიპტი ამ კონფიგურაციის განსათავსებლად. ორივეს სჭირდება root პრივილეგიები. გაუშვით ერთ-ერთი მათგანი სამიზნე ჰოსტზე, რომელსაც აქვს წვდომა katello-host-tools-ის საცავზე და გაუშვებს virt-who reporting, სასურველია Foreman-ის ჰოსტი:"
+
+msgid "VMware vCenter server’s fully qualified host name or IP address."
+msgstr "VMware vCenter-ის სერვერის სრული დომენური სახელი ან IP მისამართი."
+
+msgid "Verify checksum"
+msgstr "საკონტროლო ჯამის შემოწმება"
+
+msgid "Virt-who Configs Status"
+msgstr "Virt-who-ის კონფიგურაციების სტატუსი"
+
+msgid "Virt-who Configuration %s"
+msgstr "Virt-who-ის კონფიგურაცია %s"
+
+msgid "Virt-who Configurations"
+msgstr "Virt-who-ის კონფიგურაციები"
+
+msgid "Virt-who Configurations Status"
+msgstr "Virt-who-ის კონფიგურაციის სტატუსი"
+
+msgid "Virt-who configurations"
+msgstr "Virt-who-ის კონფიგურაციები"
+
+msgid "Whitelist"
+msgstr "თეთრი სია"
+
+msgid "every %s hours"
+msgstr "ყოველ %s საათში"

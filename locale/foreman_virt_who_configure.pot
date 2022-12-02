@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-05 16:31+0000\n"
-"PO-Revision-Date: 2021-07-05 16:31+0000\n"
+"POT-Creation-Date: 2022-11-24 19:33+0100\n"
+"PO-Revision-Date: 2022-11-24 19:33+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -115,7 +115,9 @@ msgstr ""
 
 #:
 #: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:52
-msgid "Hypervisor password, required for all hypervisor types except for libvirt"
+msgid ""
+"Hypervisor password, required for all hypervisor types except for libvirt/kube"
+"virt."
 msgstr ""
 
 #:
@@ -134,12 +136,19 @@ msgstr ""
 #:
 #: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:55
 msgid ""
+"Configuration file containing details about how to connect to the cluster and "
+"authentication details."
+msgstr ""
+
+#:
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:56
+msgid ""
 "HTTP proxy that should be used for communication between the server on which v"
 "irt-who is running and the hypervisors and virtualization managers."
 msgstr ""
 
 #:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:56
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:57
 msgid ""
 "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses t"
 "o ignore proxy settings for. Optionally this may be set to * to bypass proxy s"
@@ -147,28 +156,47 @@ msgid ""
 msgstr ""
 
 #:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:57
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:58
 msgid "Organization of the virt-who configuration"
 msgstr ""
 
 #:
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:59
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:28
+msgid "Select the Prism flavor you are connecting to"
+msgstr ""
+
+#:
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:60
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:29
+msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
+msgstr ""
+
+#:
 #: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:61
+msgid ""
+"Option Enable debugging output is required to enable AHV internal debug. It pr"
+"ovides extra AHV debug information when both options are enabled"
+msgstr ""
+
+#:
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:65
 msgid "Create a virt-who configuration"
 msgstr ""
 
 #:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:69
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:73
 msgid "Update a virt-who configuration"
 msgstr ""
 
 #:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:70
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:78
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:74
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:82
 msgid "Configuration numeric identifier"
 msgstr ""
 
 #:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:77
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:81
 msgid "Delete a virt-who configuration"
 msgstr ""
 
@@ -207,7 +235,11 @@ msgid ""
 "hich contains connection details and authentication token."
 msgstr ""
 
-#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:14
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:9
+msgid "Nutanix AHV’s IP address."
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:15
 msgid ""
 "Account name by which virt-who is to connect to the hypervisor, in the format "
 "<code>domain_name\\account_name</code>. Note that only a single backslash separ"
@@ -218,7 +250,7 @@ msgid ""
 "se a windows domain account with virt-who</a> for more information."
 msgstr ""
 
-#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:15
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:16
 msgid ""
 "Account name by which virt-who is to connect to the hypervisor. By default thi"
 "s is <code>Administrator</code>. To use an alternate account, create a user ac"
@@ -226,7 +258,7 @@ msgid ""
 "yper-V Administrators and Remote Management Users."
 msgstr ""
 
-#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:16
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:17
 msgid ""
 "Account name by which virt-who is to connect to the hypervisor. Virt-who does "
 "not support password based authentication, you must manually setup SSH key, se"
@@ -234,104 +266,116 @@ msgid ""
 "solution How to configure virt-who for a KVM host</a> for more information."
 msgstr ""
 
-#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:24
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:19
+msgid "Account name by which virt-who is to connect to Nutanix AHV."
+msgstr ""
+
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:26
 msgid "No Report Yet"
 msgstr ""
 
-#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:28
+#: ../app/helpers/foreman_virt_who_configure/configs_helper.rb:30
 msgid "Unknown configuration status"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:19
+#: ../app/models/foreman_virt_who_configure/config.rb:20
 msgid "Unlimited"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:20
+#: ../app/models/foreman_virt_who_configure/config.rb:21
 msgid "Whitelist"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:21
+#: ../app/models/foreman_virt_who_configure/config.rb:22
 msgid "Blacklist"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:25
+#: ../app/models/foreman_virt_who_configure/config.rb:26
 msgid "General information"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:26
+#: ../app/models/foreman_virt_who_configure/config.rb:27
 msgid "Schedule"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:27
+#: ../app/models/foreman_virt_who_configure/config.rb:28
 msgid "Connection"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:42
+#: ../app/models/foreman_virt_who_configure/config.rb:44
 msgid "Every hour"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:43
+#: ../app/models/foreman_virt_who_configure/config.rb:45
 msgid "Every 2 hours"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:44
+#: ../app/models/foreman_virt_who_configure/config.rb:46
 msgid "Every 4 hours"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:45
+#: ../app/models/foreman_virt_who_configure/config.rb:47
 msgid "Every 8 hours"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:46
+#: ../app/models/foreman_virt_who_configure/config.rb:48
 msgid "Every 12 hours"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:47
+#: ../app/models/foreman_virt_who_configure/config.rb:49
 msgid "Every 24 hours"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:48
+#: ../app/models/foreman_virt_who_configure/config.rb:50
 msgid "Every 2 days"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:49
+#: ../app/models/foreman_virt_who_configure/config.rb:51
 msgid "Every 3 days"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:55
+#: ../app/models/foreman_virt_who_configure/config.rb:57
 #: ../app/views/dashboard/_foreman_virt_who_configs_status_widget.html.erb:23
 msgid "OK"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:56
+#: ../app/models/foreman_virt_who_configure/config.rb:58
 msgid "No change"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:57
+#: ../app/models/foreman_virt_who_configure/config.rb:59
 msgid "Unknown"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:60
+#: ../app/models/foreman_virt_who_configure/config.rb:62
 msgid "Unknown configuration status, caused by unexpected conditions"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:62
+#: ../app/models/foreman_virt_who_configure/config.rb:64
 msgid ""
 "The configuration was not deployed yet or the virt-who was unable to report th"
 "e status"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:63
+#: ../app/models/foreman_virt_who_configure/config.rb:65
 msgid "The virt-who report arrived within the interval"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:64
+#: ../app/models/foreman_virt_who_configure/config.rb:66
 msgid ""
 "The virt-who report has not arrived within the interval, which indicates there"
 " was no change on hypervisor"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:192
+#: ../app/models/foreman_virt_who_configure/config.rb:71
+msgid "Prism Central"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:72
+msgid "Prism Element"
+msgstr ""
+
+#: ../app/models/foreman_virt_who_configure/config.rb:218
 msgid "every %s hours"
 msgstr ""
 
@@ -501,7 +545,7 @@ msgstr ""
 msgid "Ignore Proxy"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:65
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:68
 msgid ""
 "Use either hammer command or the script below to deploy this configuration. Bo"
 "th require root privileges. Run one of them on the target host which has acces"
@@ -509,36 +553,36 @@ msgid ""
 " Foreman host:"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:71
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:74
 msgid "Hammer command: "
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:80
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:104
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:83
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:107
 msgid "Copy to clipboard"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:87
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:90
 msgid "Configuration script: "
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:91
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:94
 msgid "On the target virt-who host:"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:92
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:95
 msgid "1. Copy this configuration script to a safe directory."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:93
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:96
 msgid "2. Make the script executable and run it."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:94
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:97
 msgid "3. Delete the script."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:105
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:108
 msgid "Download the script"
 msgstr ""
 
@@ -607,12 +651,13 @@ msgstr ""
 #:
 #: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:16
 msgid ""
-"Only hosts which parent (usually ComputeResource) name is specified in comma-s"
-"eparated list in this option will be reported. Wildcards and regular expressio"
-"ns are supported, multiple records must be separated by comma. Put the value i"
-"nto the double-quotes if it contains special characters like comma. All new li"
-"ne characters will be removed in resulting configuration file, white spaces ar"
-"e removed from beginning and end."
+"Only hosts which cluster ID is specified in comma-separated list in this optio"
+"n will be reported. PowerCLI command to find the domain names in VMware <code>"
+"Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expression"
+"s are supported, multiple records must be separated by comma. Put the value in"
+"to the double-quotes if it contains special characters like comma. All new lin"
+"e characters will be removed in resulting configuration file, white spaces are"
+" removed from beginning and end."
 msgstr ""
 
 #:
@@ -623,12 +668,13 @@ msgstr ""
 #:
 #: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:18
 msgid ""
-"Hosts which parent (usually ComputeResource) name is specified in comma-separa"
-"ted list in this option will <b>NOT</b> be reported. Wildcards and regular exp"
-"ressions are supported, multiple records must be separated by comma. Put the v"
-"alue into the double-quotes if it contains special characters like comma. All "
-"new line characters will be removed in resulting configuration file, white spa"
-"ces are removed from beginning and end."
+"Exclude hosts which cluster ID is specified in comma-separated list in this op"
+"tion will <b>NOT</b> be reported. PowerCLI command to find the domain names in"
+" VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regu"
+"lar expressions are supported, multiple records must be separated by comma. Pu"
+"t the value into the double-quotes if it contains special characters like comm"
+"a. All new line characters will be removed in resulting configuration file, wh"
+"ite spaces are removed from beginning and end."
 msgstr ""
 
 #:
@@ -675,6 +721,28 @@ msgstr ""
 #:
 #: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:24
 msgid "Path to kubeconfig file"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:27
+msgid "Prism Flavor"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:29
+msgid "AHV update interval"
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:30
+msgid ""
+"Option Enable debugging output is required to enable AHV internal debug. It pr"
+"ovides extra AHV debug information when both options are enabled "
+msgstr ""
+
+#:
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:30
+msgid "Enable AHV debug"
 msgstr ""
 
 #:
@@ -732,23 +800,23 @@ msgid "Virt-who Configs Status"
 msgstr ""
 
 #: action_names.rb:2
-msgid "Abstract async task"
+msgid "Action with sub plans"
 msgstr ""
 
 #: action_names.rb:3
-msgid "Create"
+msgid "Import facts"
 msgstr ""
 
 #: action_names.rb:4
-msgid "Generate host applicability"
+msgid "Import Puppet classes"
 msgstr ""
 
 #: action_names.rb:5
-msgid "Delete Activation Key"
+msgid "Promote"
 msgstr ""
 
 #: action_names.rb:6
-msgid "Update"
+msgid "Abstract async task"
 msgstr ""
 
 #: action_names.rb:7
@@ -760,271 +828,307 @@ msgid "Generate repository applicability"
 msgstr ""
 
 #: action_names.rb:9
-msgid "Agent action"
-msgstr ""
-
-#: action_names.rb:10
 msgid "Synchronize smart proxy"
 msgstr ""
 
-#: action_names.rb:11
+#: action_names.rb:10
 msgid "Sync capsule"
 msgstr ""
 
+#: action_names.rb:11
+msgid "Update CDN Configuration"
+msgstr ""
+
 #: action_names.rb:12
-msgid "Delete"
+msgid "Update"
 msgstr ""
 
 #: action_names.rb:13
-msgid "Errata mail"
+msgid "Delete"
 msgstr ""
 
 #: action_names.rb:14
-msgid "Incremental Update of  Content View Version(s) "
+msgid "Errata mail"
 msgstr ""
 
 #: action_names.rb:15
-msgid "Promote"
+msgid "Incremental Update of  Content View Version(s) "
 msgstr ""
 
 #: action_names.rb:16
-msgid "Promotion to Environment"
+msgid "Create"
 msgstr ""
 
 #: action_names.rb:17
-msgid "Publish"
+msgid "Delete Activation Key"
 msgstr ""
 
 #: action_names.rb:18
-msgid "Remove Versions and Associations"
+msgid "Agent action"
 msgstr ""
 
 #: action_names.rb:19
-msgid "Remove from Environment"
+msgid "Create Alternate Content Source"
 msgstr ""
 
 #: action_names.rb:20
-msgid "Remove Version"
+msgid "Destroy Alternate Content Source"
 msgstr ""
 
 #: action_names.rb:21
-msgid "Export"
+msgid "Refresh Alternate Content Source"
 msgstr ""
 
 #: action_names.rb:22
-msgid "Import Content View Version"
+msgid "Update Alternate Content Source"
 msgstr ""
 
 #: action_names.rb:23
-msgid "Import Default Content View"
+msgid "Generate host applicability"
 msgstr ""
 
 #: action_names.rb:24
-msgid "Incremental Update"
+msgid "Promotion to Environment"
 msgstr ""
 
 #: action_names.rb:25
-msgid "Republish Version Repositories"
+msgid "Publish"
 msgstr ""
 
 #: action_names.rb:26
-msgid "Delete Lifecycle Environment"
+msgid "Remove Versions and Associations"
 msgstr ""
 
 #: action_names.rb:27
-msgid "Publish Lifecycle Environment Repositories"
+msgid "Remove from Environment"
 msgstr ""
 
 #: action_names.rb:28
-msgid "Attach subscriptions"
+msgid "Remove Version"
 msgstr ""
 
 #: action_names.rb:29
-msgid "Auto attach subscriptions"
+msgid "Export"
 msgstr ""
 
 #: action_names.rb:30
-msgid "Destroy Content Host"
+msgid "Import Content View Version"
 msgstr ""
 
 #: action_names.rb:31
-msgid "Install Applicable Errata"
+msgid "Import Default Content View"
 msgstr ""
 
 #: action_names.rb:32
-msgid "Hypervisors"
+msgid "Import Repository"
 msgstr ""
 
 #: action_names.rb:33
-msgid "Hypervisors update"
+msgid "Incremental Update"
 msgstr ""
 
 #: action_names.rb:34
-msgid "Remove subscriptions"
+msgid "Republish Version Repositories"
 msgstr ""
 
 #: action_names.rb:35
-msgid "Update Content Overrides"
+msgid "Delete Lifecycle Environment"
 msgstr ""
 
 #: action_names.rb:36
-msgid "Update for host"
+msgid "Publish Lifecycle Environment Repositories"
 msgstr ""
 
 #: action_names.rb:37
-msgid "Updating System Purpose for host"
+msgid "Attach subscriptions"
 msgstr ""
 
 #: action_names.rb:38
-msgid "Update release version for host"
+msgid "Auto attach subscriptions"
 msgstr ""
 
 #: action_names.rb:39
-msgid "Package Profile Update"
+msgid "Destroy Content Host"
 msgstr ""
 
 #: action_names.rb:40
-msgid "Combined Profile Update"
+msgid "Install Applicable Errata"
 msgstr ""
 
 #: action_names.rb:41
-msgid "Destroy"
+msgid "Hypervisors"
 msgstr ""
 
 #: action_names.rb:42
-msgid "Product Create"
+msgid "Hypervisors update"
 msgstr ""
 
 #: action_names.rb:43
-msgid "Delete Product"
+msgid "Remove subscriptions"
 msgstr ""
 
 #: action_names.rb:44
-msgid "Reindex subscriptions"
+msgid "Update Content Overrides"
 msgstr ""
 
 #: action_names.rb:45
-msgid "Update http proxy"
+msgid "Update for host"
 msgstr ""
 
 #: action_names.rb:46
-msgid "Delete Package Group"
+msgid "Update release version for host"
 msgstr ""
 
 #: action_names.rb:47
-msgid "Discover"
+msgid "Updating System Purpose for host"
 msgstr ""
 
 #: action_names.rb:48
-msgid "Fetch pxe files"
+msgid "Package Profile Update"
 msgstr ""
 
 #: action_names.rb:49
-msgid "Filtered index content"
+msgid "Combined Profile Update"
 msgstr ""
 
 #: action_names.rb:50
-msgid "Upload into"
+msgid "Destroy"
 msgstr ""
 
 #: action_names.rb:51
-msgid "Index content"
+msgid "Product Create"
 msgstr ""
 
 #: action_names.rb:52
-msgid "Index errata"
+msgid "Delete Product"
 msgstr ""
 
 #: action_names.rb:53
-msgid "Index module streams"
+msgid "Reindex subscriptions"
 msgstr ""
 
 #: action_names.rb:54
-msgid "Index package groups"
+msgid "Update http proxy"
 msgstr ""
 
 #: action_names.rb:55
-msgid "Instance update"
+msgid "Delete Package Group"
 msgstr ""
 
 #: action_names.rb:56
-msgid "Remove Content"
+msgid "Discover"
 msgstr ""
 
 #: action_names.rb:57
-msgid "Synchronize"
+msgid "Fetch pxe files"
 msgstr ""
 
 #: action_names.rb:58
-msgid "Update content urls"
+msgid "Filtered index content"
 msgstr ""
 
 #: action_names.rb:59
-msgid "Update http proxy details"
+msgid "Upload into"
 msgstr ""
 
 #: action_names.rb:60
-msgid "Update redhat repository"
+msgid "Index content"
 msgstr ""
 
 #: action_names.rb:61
-msgid "Create Package Group"
+msgid "Index errata"
 msgstr ""
 
 #: action_names.rb:62
-msgid "Verify checksum"
+msgid "Index module streams"
 msgstr ""
 
 #: action_names.rb:63
-msgid "Disable"
+msgid "Index package groups"
 msgstr ""
 
 #: action_names.rb:64
-msgid "Enable"
+msgid "Instance update"
 msgstr ""
 
 #: action_names.rb:65
-msgid "Run Sync Plan:"
+msgid "Remove Content"
 msgstr ""
 
 #: action_names.rb:66
-msgid "Create Export History"
+msgid "Synchronize"
 msgstr ""
 
 #: action_names.rb:67
-msgid "Create Import History"
+msgid "Update content urls"
 msgstr ""
 
 #: action_names.rb:68
-msgid "Copy version units to library"
+msgid "Update http proxy details"
 msgstr ""
 
 #: action_names.rb:69
-msgid "Export Library"
+msgid "Update redhat repository"
 msgstr ""
 
 #: action_names.rb:70
-msgid "Import"
+msgid "Create Package Group"
 msgstr ""
 
 #: action_names.rb:71
-msgid "Report"
+msgid "Verify checksum"
 msgstr ""
 
 #: action_names.rb:72
-msgid "Remote action:"
+msgid "Disable"
 msgstr ""
 
 #: action_names.rb:73
-msgid "Import facts"
+msgid "Enable"
 msgstr ""
 
 #: action_names.rb:74
-msgid "Action with sub plans"
+msgid "Run Sync Plan:"
 msgstr ""
 
 #: action_names.rb:75
-msgid "Import Puppet classes"
+msgid "Abstract"
+msgstr ""
+
+#: action_names.rb:76
+msgid "Create Export History"
+msgstr ""
+
+#: action_names.rb:77
+msgid "Create Import History"
+msgstr ""
+
+#: action_names.rb:78
+msgid "Create Syncable Export History"
+msgstr ""
+
+#: action_names.rb:79
+msgid "Copy version units to library"
+msgstr ""
+
+#: action_names.rb:80
+msgid "Export Library"
+msgstr ""
+
+#: action_names.rb:81
+msgid "Export Repository"
+msgstr ""
+
+#: action_names.rb:82
+msgid "Import"
+msgstr ""
+
+#: action_names.rb:83
+msgid "Syncable export"
+msgstr ""
+
+#: action_names.rb:84
+msgid "Report"
 msgstr ""
 
 #: gemspec.rb:2

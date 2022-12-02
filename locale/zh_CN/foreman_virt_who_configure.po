@@ -37,8 +37,17 @@ msgstr "忽略代理服务器设置的主机名、域或 ip 地址逗号分隔�
 msgid "A plugin to make virt-who configuration easy"
 msgstr "简化 virt-who 配置的插件"
 
+msgid "AHV update interval"
+msgstr ""
+
+msgid "Abstract"
+msgstr ""
+
 msgid "Abstract async task"
 msgstr "提取 async 任务"
+
+msgid "Account name by which virt-who is to connect to Nutanix AHV."
+msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr ""
@@ -94,6 +103,9 @@ msgstr "配置状态"
 msgid "Configuration file containing details about how to connect to the cluster and authentication details"
 msgstr ""
 
+msgid "Configuration file containing details about how to connect to the cluster and authentication details."
+msgstr ""
+
 msgid "Configuration interval in minutes"
 msgstr "以分钟为单位的配置间隔"
 
@@ -133,6 +145,9 @@ msgstr "计数"
 msgid "Create"
 msgstr "创建"
 
+msgid "Create Alternate Content Source"
+msgstr ""
+
 msgid "Create Config"
 msgstr "创建配置"
 
@@ -144,6 +159,9 @@ msgstr ""
 
 msgid "Create Package Group"
 msgstr "创建软件包组"
+
+msgid "Create Syncable Export History"
+msgstr ""
 
 msgid "Create a virt-who configuration"
 msgstr "创建 virt-who 配置"
@@ -175,6 +193,9 @@ msgstr ""
 msgid "Destroy"
 msgstr "消除"
 
+msgid "Destroy Alternate Content Source"
+msgstr ""
+
 msgid "Destroy Content Host"
 msgstr "消除内容主机"
 
@@ -201,6 +222,9 @@ msgstr "编辑 Virt-who 配置"
 
 msgid "Enable"
 msgstr "启用"
+
+msgid "Enable AHV debug"
+msgstr ""
 
 msgid "Enable debugging output"
 msgstr "启用调试输出"
@@ -244,10 +268,16 @@ msgstr ""
 msgid "Exclude hosts"
 msgstr "排除主机"
 
+msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
 msgid "Export"
 msgstr "导出"
 
 msgid "Export Library"
+msgstr ""
+
+msgid "Export Repository"
 msgstr ""
 
 msgid "Fetch pxe files"
@@ -301,9 +331,6 @@ msgstr ""
 msgid "Help"
 msgstr "帮助"
 
-msgid "Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
-
 msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
@@ -319,8 +346,8 @@ msgstr "Hypervisor 黑名单，仅在过滤模式设置为 2 时适用。支持�
 msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
 msgstr "Hypervisor 过滤模式，%{unlimited} 表示无过滤，%{whitelist} 表示白名单，%{blacklist} 表示黑名单"
 
-msgid "Hypervisor password, required for all hypervisor types except for libvirt"
-msgstr "Hypervisor 密码，除 libvirt 以外的所有 hypervisor 类型都需要"
+msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
+msgstr ""
 
 msgid "Hypervisor type"
 msgstr "Hypervisor 类型"
@@ -357,6 +384,9 @@ msgstr ""
 
 msgid "Import Puppet classes"
 msgstr "导入 Puppet 分类"
+
+msgid "Import Repository"
+msgstr ""
 
 msgid "Import facts"
 msgstr "导入详情"
@@ -430,6 +460,9 @@ msgstr "不更改"
 msgid "No configuration found"
 msgstr "未找到配置"
 
+msgid "Nutanix AHV’s IP address."
+msgstr ""
+
 msgid "OK"
 msgstr "确定"
 
@@ -444,10 +477,16 @@ msgstr ""
 "一个 virt-who 配置代表 /etc/virt-who.d 目录中的一个配置文件，映射至单个\n"
 " hypervisor、机构和生命周期环境。"
 
-msgid "Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgid "Only hosts which cluster ID is specified in comma-separated list in this option will be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
 msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
+msgstr ""
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled "
 msgstr ""
 
 msgid "Organization of the virt-who configuration"
@@ -468,6 +507,15 @@ msgstr "软件包配置文件更新"
 msgid "Path to kubeconfig file"
 msgstr ""
 
+msgid "Prism Central"
+msgstr ""
+
+msgid "Prism Element"
+msgstr ""
+
+msgid "Prism Flavor"
+msgstr ""
+
 msgid "Product Create"
 msgstr "产品创建"
 
@@ -483,11 +531,11 @@ msgstr "发布"
 msgid "Publish Lifecycle Environment Repositories"
 msgstr "发布生命周期环境仓库"
 
+msgid "Refresh Alternate Content Source"
+msgstr ""
+
 msgid "Reindex subscriptions"
 msgstr "重新索引订阅"
-
-msgid "Remote action:"
-msgstr ""
 
 msgid "Remove Content"
 msgstr "删除内容"
@@ -519,6 +567,9 @@ msgstr ""
 msgid "Schedule"
 msgstr "时间表"
 
+msgid "Select the Prism flavor you are connecting to"
+msgstr ""
+
 msgid "Show a virt-who configuration"
 msgstr "显示 virt-who 配置"
 
@@ -542,6 +593,9 @@ msgstr "成功"
 msgid "Sync capsule"
 msgstr ""
 
+msgid "Syncable export"
+msgstr ""
+
 msgid "Synchronize"
 msgstr "同步"
 
@@ -550,6 +604,9 @@ msgstr "同步智能代理"
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr "尚未部署配置，或者 virt-who 无法报告状态"
+
+msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
+msgstr ""
 
 msgid "The virt-who report arrived within the interval"
 msgstr "在间隔期间收到 virt-who 报告"
@@ -592,6 +649,12 @@ msgstr "无限"
 
 msgid "Update"
 msgstr "更新"
+
+msgid "Update Alternate Content Source"
+msgstr ""
+
+msgid "Update CDN Configuration"
+msgstr ""
 
 msgid "Update Content Overrides"
 msgstr "更新内容覆盖"
