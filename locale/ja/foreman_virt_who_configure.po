@@ -4,16 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Tomoyuki KATO <inactive+katomo@transifex.com>, 2017
+# e93ed3aa97dec2eb31063731872555fc_1460a05 <71305a0095156d8e18373a5b7cfeb79e_8587>, 2017
 # 0868a4d1af5275b3f70b0a6dac4c99a4, 2019
-# Bryan Kearney <bryan.kearney@gmail.com>, 2019
+# Bryan Kearney <bryan.kearney@gmail.com>, 2021
+# Amit Upadhye <aupadhye@redhat.com>, 2022
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2019\n"
+"Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/foreman/teams/114/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,34 +32,34 @@ msgid "3. Delete the script."
 msgstr "3. スクリプトを削除します。"
 
 msgid "A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses."
-msgstr "プロキシー設定を無視するホスト名、ドメインまたは IP アドレスのコンマ区切りの一覧です。オプションとして、これは <code>*</code> に設定でき、すべてのホスト名ドメインまたは IP アドレスのプロキシー設定をバイパスします。"
+msgstr "プロキシー設定を無視するホスト名、ドメインまたは IP アドレスのコンマ区切りの一覧。オプションとして、これを <code>*</code> に設定し、すべてのホスト名ドメインまたは IP アドレスのプロキシー設定をバイパスすることができます。"
 
 msgid "A plugin to make virt-who configuration easy"
 msgstr "virt-who 設定を容易にするプラグイン"
 
 msgid "AHV update interval"
-msgstr ""
+msgstr "AHV 更新間隔"
 
 msgid "Abstract"
-msgstr ""
+msgstr "概要"
 
 msgid "Abstract async task"
-msgstr "非同期タスクの概要"
+msgstr "非同期タスクの抽象化"
 
 msgid "Account name by which virt-who is to connect to Nutanix AHV."
-msgstr ""
+msgstr "virt-who を Nutanix AHV に接続する際に使用されるアカウント名。"
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
-msgstr ""
+msgstr "virt-who を <code>domain_name\\account_name</code> 形式でハイパーバイザーに接続する際に使用するアカウント名。単一のバックスラッシュのみが domain_name および account_name の値を区別することに注意してください。ドメインアカウントおよびグローバル設定ファイル <code>/etc/virt-who.conf</code> を使用している場合、<b>2 つ</b> のバックスラッシュが必要になります。詳細は、Red Hat ナレッジベースのソリューション記事「<a href=\"https://access.redhat.com/solutions/1270223\">How to use a windows domain account with virt-who</a>」を参照してください。"
 
 msgid "Account name by which virt-who is to connect to the hypervisor."
 msgstr "virt-who をハイパーバイザーに接続する際に使用されるアカウント名。"
 
 msgid "Account name by which virt-who is to connect to the hypervisor. By default this is <code>Administrator</code>. To use an alternate account, create a user account and assign that account to the following groups (Windows 2012 Server): Hyper-V Administrators and Remote Management Users."
-msgstr "virt-who をハイパーバイザーに接続する際に使用されるアカウント名。デフォルトで、これは <code>Administrator</code> になります。代替アカウントを使用するには、ユーザーアカウントを作成し、そのアカウントを以下のグループに割り当てます (Windows 2012 Server): Hyper-V 管理者およびリモート管理ユーザー。"
+msgstr "virt-who をハイパーバイザーに接続する際に使用されるアカウント名。デフォルトで、これは <code>Administrator</code> になります。代替アカウントを使用するには、ユーザーアカウントを作成し、そのアカウントを次のグループに割り当てます (Windows 2012 Server): Hyper-V 管理者およびリモート管理ユーザー。"
 
 msgid "Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information."
-msgstr "virt-who をハイパーバイザーに接続する際に使用されるアカウント名。Virt-who はパスワードベースの認証をサポートしないため、SSH 鍵を手動で設定する必要があります。詳細は、<a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> を参照してください。"
+msgstr "virt-who をハイパーバイザーに接続する際に使用されるアカウント名。Virt-who はパスワードベースの認証をサポートしないため、SSH 鍵を手動で設定する必要があります。詳細は、「<a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a>」を参照してください。"
 
 msgid "Account password by which virt-who is to connect to the hypervisor instance."
 msgstr "virt-who をハイパーバイザーインスタンスに接続する際に使用されるアカウントパスワード。"
@@ -70,13 +71,13 @@ msgid "Actions"
 msgstr "アクション"
 
 msgid "Agent action"
-msgstr ""
+msgstr "エージェントのアクション"
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "esx プロバイダータイプにのみ適用できます。親 (通常は ComputeResource) の名前がこのオプションのコンマ区切りの一覧に指定されているホストの場合は <b>レポートされません</b>。ワイルドカードおよび正規表現がサポートされ、複数のレコードはコンマで区切られる必要があります。コンマなどの特殊文字が含まれている場合は値を二重引用符で囲みます。すべての改行文字は生成される設定ファイルで削除され、空白は先頭および末尾から削除されます。"
 
 msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "esx プロバイダータイプにのみ適用できます。親 (通常は ComputeResource) の名前がこのオプションのコンマ区切りの一覧に指定されているホストの場合にのみレポートされます。ワイルドカードおよび正規表現がサポートされ、複数のレコードはコンマで区切られる必要があります。コンマなどの特殊文字が含まれている場合は値を二重引用符で囲みます。すべての改行文字は生成される設定ファイルで削除され、空白は先頭および末尾から削除されます。"
 
 msgid "Attach subscriptions"
 msgstr "サブスクリプションの割り当て"
@@ -88,7 +89,7 @@ msgid "Blacklist"
 msgstr "ブラックリスト"
 
 msgid "Bulk generate applicability for hosts"
-msgstr ""
+msgstr "ホストに適用可能なエラータを一括生成します"
 
 msgid "Combined Profile Update"
 msgstr "統合プロファイルの更新"
@@ -100,10 +101,10 @@ msgid "Configuration Status"
 msgstr "設定ステータス"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details"
-msgstr ""
+msgstr "クラスターへの接続方法と認証の詳細を含む設定ファイル"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details."
-msgstr ""
+msgstr "クラスターへの接続方法と認証の詳細を含む設定ファイル"
 
 msgid "Configuration interval in minutes"
 msgstr "設定の間隔 (分単位)"
@@ -130,37 +131,37 @@ msgid "Connection"
 msgstr "接続"
 
 msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
-msgstr ""
+msgstr "コンテナーネイティブの仮想化の完全修飾ホスト名または IP アドレス。クラスターに接続するには、接続の詳細と認証トークンを含む kubeconfig へのパスを指定する必要があります。"
 
 msgid "Copy to clipboard"
 msgstr "クリップボードへのコピー"
 
 msgid "Copy version units to library"
-msgstr ""
+msgstr "バージョンユニットのライブラリーへのコピー"
 
 msgid "Count"
-msgstr "数量"
+msgstr "カウント"
 
 msgid "Create"
 msgstr "作成"
 
 msgid "Create Alternate Content Source"
-msgstr ""
+msgstr "代替コンテンツソースの作成"
 
 msgid "Create Config"
 msgstr "設定の作成"
 
 msgid "Create Export History"
-msgstr ""
+msgstr "エクスポート履歴の作成"
 
 msgid "Create Import History"
-msgstr ""
+msgstr "インポート履歴の作成"
 
 msgid "Create Package Group"
 msgstr "パッケージグループの作成"
 
 msgid "Create Syncable Export History"
-msgstr ""
+msgstr "同期可能なエクスポート履歴の作成"
 
 msgid "Create a virt-who configuration"
 msgstr "virt-who 設定の作成"
@@ -181,19 +182,19 @@ msgid "Delete Product"
 msgstr "製品の削除"
 
 msgid "Delete a virt-who configuration"
-msgstr "virt-who 設定の削除"
+msgstr "virt-who 設定を削除します。"
 
 msgid "Delete virt-who configuration %s?"
 msgstr "virt-who 設定 %s を削除しますか?"
 
 msgid "Deploy"
-msgstr ""
+msgstr "デプロイ"
 
 msgid "Destroy"
 msgstr "破棄"
 
 msgid "Destroy Alternate Content Source"
-msgstr ""
+msgstr "大体コンテンツソースの破棄"
 
 msgid "Destroy Content Host"
 msgstr "コンテンツホストの破棄"
@@ -202,7 +203,7 @@ msgid "Details"
 msgstr "詳細"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
-msgstr ""
+msgstr "ハイパーバイザーごとに異なるデバッグ値を設定できません。そのため、この設定をデプロイするホストにデプロイ済みの他の全設定に影響します。"
 
 msgid "Disable"
 msgstr "無効化"
@@ -223,13 +224,13 @@ msgid "Enable"
 msgstr "有効化"
 
 msgid "Enable AHV debug"
-msgstr ""
+msgstr "AHV デバッグの有効化"
 
 msgid "Enable debugging output"
 msgstr "デバッグ出力の有効化"
 
 msgid "Enable debugging output?"
-msgstr ""
+msgstr "デバッグ出力を有効にしますか?"
 
 msgid "Errata mail"
 msgstr "エラータメール"
@@ -238,16 +239,16 @@ msgid "Every 12 hours"
 msgstr "12 時間ごと"
 
 msgid "Every 2 days"
-msgstr ""
+msgstr "2 日ごと"
 
 msgid "Every 2 hours"
 msgstr "2 時間ごと"
 
 msgid "Every 24 hours"
-msgstr ""
+msgstr "24 時間ごと"
 
 msgid "Every 3 days"
-msgstr ""
+msgstr "3 日ごと"
 
 msgid "Every 4 hours"
 msgstr "4 時間ごと"
@@ -259,49 +260,49 @@ msgid "Every hour"
 msgstr "毎時"
 
 msgid "Exclude Hosts"
-msgstr ""
+msgstr "ホストの除外"
 
 msgid "Exclude host parents"
-msgstr ""
+msgstr "ホストの親の除外"
 
 msgid "Exclude hosts"
 msgstr "ホストの除外"
 
 msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "クラスター ID がこのオプションのコンマ区切りの一覧に指定されているホストは、レポート<b>されません</b>。PowerCLI コマンドを使用して VMware でドメイン名を検索します (<code>Get-Cluster “ClusterName” | Select ID</code>)。ワイルドカードおよび正規表現がサポートされ、複数のレコードはコンマで区切られる必要があります。コンマなどの特殊文字が含まれている場合は値を二重引用符で囲みます。すべての改行文字は生成される設定ファイルで削除され、空白は先頭および末尾から削除されます。"
 
 msgid "Export"
 msgstr "エクスポート"
 
 msgid "Export Library"
-msgstr ""
+msgstr "ライブラリーのエクスポート"
 
 msgid "Export Repository"
-msgstr ""
+msgstr "リポジトリーのエクスポート"
 
 msgid "Fetch pxe files"
-msgstr "PXE ファイルを取得"
+msgstr "PXE ファイルの取得"
 
 msgid "Filter Hosts"
-msgstr ""
+msgstr "ホストのフィルタリング"
 
 msgid "Filter host parents"
-msgstr ""
+msgstr "ホストの親のフィルタリング"
 
 msgid "Filter hosts"
-msgstr "ホストのフィルター"
+msgstr "ホストのフィルタリング"
 
 msgid "Filtered index content"
-msgstr "フィルターされたインデックスコンテンツ"
+msgstr "フィルタリングしたインデックスコンテンツ"
 
 msgid "Filtering"
 msgstr "フィルタリング"
 
 msgid "Foreman server FQDN"
-msgstr ""
+msgstr "Foreman サーバーの FQDN"
 
 msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
-msgstr ""
+msgstr "Foreman サーバーの完全修飾ホスト名 (例: foreman.example.com)"
 
 msgid "Fully qualified host name or IP address of the hypervisor"
 msgstr "ハイパーバイザーの完全修飾ホスト名または IP アドレス"
@@ -310,10 +311,10 @@ msgid "General information"
 msgstr "一般情報"
 
 msgid "Generate host applicability"
-msgstr ""
+msgstr "ホストに適用可能なエラータを生成します"
 
 msgid "Generate repository applicability"
-msgstr ""
+msgstr "リポジトリーに適用可能なエラータを生成します"
 
 msgid "HTTP Proxy"
 msgstr "HTTP プロキシー"
@@ -325,16 +326,16 @@ msgid "HTTP proxy that should be used for communication between the server on wh
 msgstr "virt-who が実行されているサーバーとハイパーバイザーおよび仮想化マネージャー間の通信に使用する必要のある HTTP プロキシー。プロキシーが使用されていない場合はこれを空白にします。"
 
 msgid "Hammer command: "
-msgstr ""
+msgstr "Hammer コマンド: "
 
 msgid "Help"
 msgstr "ヘルプ"
 
 msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "uuid (または <code>hypervisor_id</code> に応じてホスト名または hwuuid) がこのオプションのコンマ区切りの一覧に指定されているホストは <b>レポートされません</b>。ワイルドカードおよび正規表現がサポートされ、複数のレコードはコンマで区切られる必要があります。コンマなどの特殊文字が含まれている場合は値を二重引用符で囲みます。すべての改行文字は生成される設定ファイルで削除され、空白は先頭および末尾から削除されます。"
 
 msgid "How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours. Different interval can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
-msgstr ""
+msgstr "接続済みのハイパーバイザーに変更がないか、どのような頻度で確認しますか?また、マッピングの報告頻度にも影響します。大半の環境での推奨値は、2時間ごとです。ハイパーバイザーごとに異なる間隔を設定できるので、この設定をデプロイするホストに設定済みの他の全設定に影響があります。"
 
 msgid "Hypervisor ID"
 msgstr "ハイパーバイザー ID"
@@ -343,10 +344,10 @@ msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wi
 msgstr "フィルタリングモードが 2 に設定されている場合にのみ適用できるハイパーバイザーのブラックリストです。ワイルドカードおよび正規表現がサポートされており、複数のレコードはコンマで区切られる必要があります。"
 
 msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
-msgstr "ハイパーバイザーのフィルタリングモード。%{unlimited} はフィルタリングがないことを意味し、%{whitelist} はホワイトリスト、%{blacklist} はブラックリストを意味します。"
+msgstr "ハイパーバイザーのフィルタリングモード。%%{unlimited} はフィルタリングがないことを意味し、%%{whitelist} はホワイトリスト、%%{blacklist} はブラックリストを意味します。"
 
 msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
-msgstr ""
+msgstr "libvirt/kubevirt を除くすべてのハイパーバイザーのタイプに必要なハイパーバイザーのパスワード"
 
 msgid "Hypervisor type"
 msgstr "ハイパーバイザーのタイプ"
@@ -361,10 +362,10 @@ msgid "Hypervisors update"
 msgstr "ハイパーバイザーの更新"
 
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
-msgstr "Red Hat Enterprise Linux およびその他のオペレーティングシステムを実行する仮想マシンでハイブリッド環境を実行する場合、virt-who のホストへのアクセスの範囲を制限する必要がある場合があります。たとえば、一部のハイパーバイザーが Microsoft Windows Server インスタンスのみをホストする場合、これらのハイパーバイザーについて virt-who エージェントが報告する利点はありません。"
+msgstr "Red Hat Enterprise Linux およびその他のオペレーティングシステムを実行する仮想マシンでハイブリッド環境を実行する場合は、virt-who のホストへのアクセスの範囲を制限することをお勧めします。たとえば、一部のハイパーバイザーが Microsoft Windows Server インスタンスのみをホストする場合、これらのハイパーバイザーを virt-who エージェントが報告する利点はありません。"
 
 msgid "Ignore Proxy"
-msgstr ""
+msgstr "プロキシーを無視する"
 
 msgid "Ignore proxy"
 msgstr "プロキシーを無視"
@@ -373,19 +374,19 @@ msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addres
 msgstr "プロキシーを無視します。プロキシー設定を無視するホスト名、ドメインまたは IP アドレスのコンマ区切りの一覧です。オプションとして、これは * に設定でき、すべてのホスト名ドメインまたは IP アドレスのプロキシー設定をバイパスします。"
 
 msgid "Import"
-msgstr ""
+msgstr "インポート"
 
 msgid "Import Content View Version"
-msgstr ""
+msgstr "コンテンツビューバージョンのインポート"
 
 msgid "Import Default Content View"
-msgstr ""
+msgstr "デフォルトのコンテンツビューのインポート"
 
 msgid "Import Puppet classes"
 msgstr "Puppet クラスのインポート"
 
 msgid "Import Repository"
-msgstr ""
+msgstr "リポジトリーのインポート"
 
 msgid "Import facts"
 msgstr "ファクトのインポート"
@@ -394,22 +395,22 @@ msgid "Incremental Update"
 msgstr "増分更新"
 
 msgid "Incremental Update of  Content View Version(s) "
-msgstr "コンテンツビューバージョンの増分アップデート"
+msgstr "コンテンツビューバージョンの増分更新 "
 
 msgid "Index content"
-msgstr "コンテンツのインデックス化"
+msgstr "コンテンツのインデックス作成"
 
 msgid "Index errata"
-msgstr "エラータのインデックス化"
+msgstr "エラータのインデックス作成"
 
 msgid "Index module streams"
-msgstr "モジュールストリームのインデックス化"
+msgstr "モジュールストリームのインデックス作成"
 
 msgid "Index package groups"
-msgstr "パッケージグループのインデックス化"
+msgstr "パッケージグループのインデックス作成"
 
 msgid "Install Applicable Errata"
-msgstr "適用できるエラータのインストール"
+msgstr "適用可能なエラータのインストール"
 
 msgid "Instance update"
 msgstr "インスタンスの更新"
@@ -418,13 +419,13 @@ msgid "Interval was not provided"
 msgstr "間隔は指定されていません"
 
 msgid "Latest Configurations Without Change"
-msgstr ""
+msgstr "変更のない最新の設定"
 
 msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
 msgstr "Libvirt サーバーの完全修飾ホスト名または IP アドレス。優先するスキーマを指定することもできます (例: <code>qemu+ssh://libvirt.example.com/system</code>)。SSH を使用する場合は、ターゲットホストでハイパーバイザーのユーザー名フィールドで指定されたユーザーの root の SSH 鍵を設定していることを確認します。"
 
 msgid "List of virt-who configurations"
-msgstr "virt-who 設定の一覧"
+msgstr "virt-who 設定一覧を表示します。"
 
 msgid "List of virt-who configurations per organization"
 msgstr "組織別の virt-who 設定の一覧"
@@ -445,10 +446,10 @@ msgid "Newer version of virt-who is required, minimum version is %s"
 msgstr "virt-who の新規バージョンが必要です。最小バージョンは %s です"
 
 msgid "No Change"
-msgstr ""
+msgstr "変更なし"
 
 msgid "No Report Yet"
-msgstr "レポートがありません"
+msgstr "レポートはまだありません"
 
 msgid "No Reports"
 msgstr "レポートがありません"
@@ -460,7 +461,7 @@ msgid "No configuration found"
 msgstr "設定が見つかりません"
 
 msgid "Nutanix AHV’s IP address."
-msgstr ""
+msgstr "Nutanix AHV の IP アドレス。"
 
 msgid "OK"
 msgstr "OK"
@@ -475,16 +476,16 @@ msgid "One virt-who configuration represents one config file in /etc/virt-who.d 
 msgstr "1 つの virt-who 設定は /etc/virt-who.d ディレクトリーの 1 つの設定ファイルを表し、単一のハイパーバイザー、組織およびライフサイクル環境にマップされます。"
 
 msgid "Only hosts which cluster ID is specified in comma-separated list in this option will be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "クラスター ID がこのオプションのコンマ区切りの一覧に指定されているホストだけがレポートされます。PowerCLI コマンドを使用して VMware でドメイン名を検索します (<code>Get-Cluster “ClusterName” | Select ID</code>)。ワイルドカードおよび正規表現がサポートされ、複数のレコードはコンマで区切られる必要があります。コンマなどの特殊文字が含まれている場合は値を二重引用符で囲みます。すべての改行文字は生成される設定ファイルで削除され、空白は先頭および末尾から削除されます。"
 
 msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "uuid (または <code>hypervisor_id</code> に応じてホスト名または hwuuid) がこのオプションのコンマ区切りの一覧に指定されているホストの場合にのみレポートされます。ワイルドカードおよび正規表現がサポートされ、複数のレコードはコンマで区切られる必要があります。コンマなどの特殊文字が含まれている場合は値を二重引用符で囲みます。すべての改行文字は生成される設定ファイルで削除され、空白は先頭および末尾から削除されます。"
 
 msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
-msgstr ""
+msgstr "AHV 内部デバッグを有効にするには、オプション Enable debugging output が必要です。両方のオプションが有効な場合に追加の AHV デバッグ情報を提供します。"
 
 msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled "
-msgstr ""
+msgstr "AHV 内部デバッグを有効にするには、Enable debugging output のオプションは必須です。両方のオプションが有効な場合に追加の AHV デバッグ情報を提供します。"
 
 msgid "Organization of the virt-who configuration"
 msgstr "virt-who 設定の組織"
@@ -499,19 +500,19 @@ msgid "Owner was not provided"
 msgstr "所有者は指定されていません"
 
 msgid "Package Profile Update"
-msgstr "パッケージプロファイル更新"
+msgstr "パッケージプロファイルの更新"
 
 msgid "Path to kubeconfig file"
-msgstr ""
+msgstr "kubeconfig ファイルへのパス"
 
 msgid "Prism Central"
-msgstr ""
+msgstr "Prism Central"
 
 msgid "Prism Element"
-msgstr ""
+msgstr "Prism Element"
 
 msgid "Prism Flavor"
-msgstr ""
+msgstr "Prism フレーバー"
 
 msgid "Product Create"
 msgstr "製品の作成"
@@ -520,19 +521,19 @@ msgid "Promote"
 msgstr "プロモート"
 
 msgid "Promotion to Environment"
-msgstr "環境へのプロモーション"
+msgstr "環境へのプロモート"
 
 msgid "Publish"
 msgstr "公開"
 
 msgid "Publish Lifecycle Environment Repositories"
-msgstr "ライフサイクル環境のリポジトリーの公開"
+msgstr "ライフサイクル環境リポジトリーの公開"
 
 msgid "Refresh Alternate Content Source"
-msgstr ""
+msgstr "代替コンテンツソースの更新"
 
 msgid "Reindex subscriptions"
-msgstr "サブスクリプションを再インデックス化"
+msgstr "サブスクリプションのインデックス再作成"
 
 msgid "Remove Content"
 msgstr "コンテンツの削除"
@@ -550,7 +551,7 @@ msgid "Remove subscriptions"
 msgstr "サブスクリプションの削除"
 
 msgid "Renders a deploy script for the specified virt-who configuration"
-msgstr "指定された virt-who 設定のデプロイスクリプトをレンダリング"
+msgstr "指定した virt-who 設定の deploy スクリプトのレンダリングを行います。"
 
 msgid "Report"
 msgstr "レポート"
@@ -559,16 +560,16 @@ msgid "Republish Version Repositories"
 msgstr "バージョンリポジトリーの再公開"
 
 msgid "Run Sync Plan:"
-msgstr ""
+msgstr "同期プランの実行:"
 
 msgid "Schedule"
 msgstr "スケジュール"
 
 msgid "Select the Prism flavor you are connecting to"
-msgstr ""
+msgstr "接続先の Prism フレーバー選択"
 
 msgid "Show a virt-who configuration"
-msgstr "virt-who 設定の表示"
+msgstr "virt-who 設定を表示します。"
 
 msgid "Specifies how the hypervisor will be identified."
 msgstr "ハイパーバイザーの特定方法を指定します。"
@@ -580,18 +581,23 @@ msgid ""
 "                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx only.\n"
 "                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
 msgstr ""
+"ハイパーバイザーが <b>hostname</b>、<b>uuid</b> または <b>hwuuid</b> で特定されるように指定します。\n"
+"                              一部の仮想化バックエンドではそれらのすべてが実装されていません。\n"
+"                              デフォルトは <b>hostname</b> であり、意味を付したハイパーバイザー名\n"
+"                                  を提供しますが、ホスト名が変更される場合は、ハイパーバーザー登録の重複が生じる可能性があります。これを避けるには、代わりに <b>uuid</b> を使用できます。<b>hwuuid</b> は esx のみに適用されます。\n"
+"                                  このプロパティーは、virt-who の初回の実行前に設定されることになっています。これを後で変更すると、サブスクリプションマネージャーでエントリーの重複が生じます。"
 
 msgid "Status"
-msgstr "ステータス"
+msgstr "状態"
 
 msgid "Success"
 msgstr "成功"
 
 msgid "Sync capsule"
-msgstr ""
+msgstr "Capsule の同期"
 
 msgid "Syncable export"
-msgstr ""
+msgstr "同期可能なエクスポート"
 
 msgid "Synchronize"
 msgstr "同期"
@@ -603,7 +609,7 @@ msgid "The configuration was not deployed yet or the virt-who was unable to repo
 msgstr "設定がデプロイされていないか、または virt-who がステータスを報告できませんでした"
 
 msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
-msgstr ""
+msgstr "AHV の仮想マシンとホスト間のマッピングを更新する頻度 (秒単位)"
 
 msgid "The virt-who report arrived within the interval"
 msgstr "期間内に着信した virt-who レポート"
@@ -624,10 +630,10 @@ msgid "Unable to create virt-who config file"
 msgstr "virt-who 設定ファイルを作成できません"
 
 msgid "Unable to enable virt-who service using systemctl"
-msgstr ""
+msgstr "systemctl を使用して virt-who サービスを有効にできません"
 
 msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
-msgstr ""
+msgstr "virt-who パッケージをインストールできません。ホストが適切にサブスクライブされており、katello-host-tools リポジトリーへのアクセスがあることを確認します。"
 
 msgid "Unable to start virt-who service, please see virt-who logs for more details"
 msgstr "virt-who サービスを起動できません。詳細は、virt-who ログを参照してください"
@@ -648,10 +654,10 @@ msgid "Update"
 msgstr "更新"
 
 msgid "Update Alternate Content Source"
-msgstr ""
+msgstr "代替コンテンツソースの更新"
 
 msgid "Update CDN Configuration"
-msgstr ""
+msgstr "CDN 設定の更新"
 
 msgid "Update Content Overrides"
 msgstr "コンテンツ上書きの更新"
@@ -660,43 +666,43 @@ msgid "Update a virt-who configuration"
 msgstr "virt-who 設定の更新"
 
 msgid "Update content urls"
-msgstr ""
+msgstr "コンテンツ url の更新"
 
 msgid "Update for host"
 msgstr "ホストの更新"
 
 msgid "Update http proxy"
-msgstr ""
+msgstr "http プロキシーの更新"
 
 msgid "Update http proxy details"
-msgstr ""
+msgstr "HTTP プロキシーの詳細更新"
 
 msgid "Update redhat repository"
-msgstr ""
+msgstr "redhat リポジトリーの更新"
 
 msgid "Update release version for host"
 msgstr "ホストのリリースバージョンの更新"
 
 msgid "Updating System Purpose for host"
-msgstr ""
+msgstr "ホストのシステム目的を更新中"
 
 msgid "Upload into"
-msgstr "情報のアップロード"
+msgstr "アップロード先"
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
-msgstr ""
+msgstr "以下の Hammer コマンドまたはスクリプトを使用してこの設定をデプロイします。いずれも、root 権限が必要です。katello-host-tools にアクセスできるターゲットホストで Hammer コマンドまたはスクリプトを実行し、可能な場合は Foreman ホストで virt-who レポートを実行します。"
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
-msgstr "VMware vCenter サーバーの完全修飾ホスト名または IP アドレス。"
+msgstr "VMware vCenter サーバーの完全修飾ホスト名または IP アドレス"
 
 msgid "Verify checksum"
-msgstr ""
+msgstr "チェックサムの確認"
 
 msgid "Virt-who Configs Status"
 msgstr "Virt-who 設定ステータス"
 
 msgid "Virt-who Configuration %s"
-msgstr ""
+msgstr "Virt-who 設定 %s"
 
 msgid "Virt-who Configurations"
 msgstr "Virt-who 設定"

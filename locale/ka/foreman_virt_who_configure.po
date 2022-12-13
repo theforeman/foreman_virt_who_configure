@@ -4,14 +4,14 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# NorwayFun <temuri.doghonadze@gmail.com>, 2022
+# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2022
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>, 2022\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2022\n"
 "Language-Team: Georgian (https://www.transifex.com/foreman/teams/114/ka/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,7 +38,7 @@ msgid "AHV update interval"
 msgstr ""
 
 msgid "Abstract"
-msgstr ""
+msgstr "ანოტაცია"
 
 msgid "Abstract async task"
 msgstr "ასინქრონული ამოცანის აბსტრაქცია"
@@ -143,7 +143,7 @@ msgid "Create"
 msgstr "შექმნა"
 
 msgid "Create Alternate Content Source"
-msgstr ""
+msgstr "შემცველობის ალტერნატიული წყაროს შექმნა"
 
 msgid "Create Config"
 msgstr "კონფიგურაციის შექმნა"
@@ -158,7 +158,7 @@ msgid "Create Package Group"
 msgstr "პაკეტების ჯგუფის შექმნა"
 
 msgid "Create Syncable Export History"
-msgstr ""
+msgstr "სინქრონიზებადი გატანის ისტორიის შექმნა"
 
 msgid "Create a virt-who configuration"
 msgstr "Virt-who-ის კონფიგურაცის შექმნა"
@@ -191,7 +191,7 @@ msgid "Destroy"
 msgstr "განადგურება"
 
 msgid "Destroy Alternate Content Source"
-msgstr ""
+msgstr "შემცველობის ალტერნატიული წყაროს  განადგურება"
 
 msgid "Destroy Content Host"
 msgstr "შემცველობის ჰოსტის განადგურება"
@@ -275,7 +275,7 @@ msgid "Export Library"
 msgstr "ბიბლიოთეკის გატანა"
 
 msgid "Export Repository"
-msgstr ""
+msgstr "რეპოზიტორიის გატანა"
 
 msgid "Fetch pxe files"
 msgstr "PXE ფაილების გამოთხოვა"
@@ -383,7 +383,7 @@ msgid "Import Puppet classes"
 msgstr "Puppet-ის კლასების შემოტანა"
 
 msgid "Import Repository"
-msgstr ""
+msgstr "რეპოზიტორიის შემოტანა"
 
 msgid "Import facts"
 msgstr "ფაქტების შემოტანა"
@@ -527,7 +527,7 @@ msgid "Publish Lifecycle Environment Repositories"
 msgstr "ცხოვრების ციკლის გარემოს რეპოზიტორიების გასაჯაროება"
 
 msgid "Refresh Alternate Content Source"
-msgstr ""
+msgstr "შემცველობის ალტერნატიული წყაროს განახლება"
 
 msgid "Reindex subscriptions"
 msgstr "გამოწერების თავიდან ინდექსირება"
@@ -593,7 +593,7 @@ msgid "Sync capsule"
 msgstr "სინქრონიზაციის კაპსულა"
 
 msgid "Syncable export"
-msgstr ""
+msgstr "სინქრონიზებადი გატანა"
 
 msgid "Synchronize"
 msgstr "სინქრონიზაცია"
@@ -650,10 +650,10 @@ msgid "Update"
 msgstr "განახლება"
 
 msgid "Update Alternate Content Source"
-msgstr ""
+msgstr "შემცველობის ალტერნატიული წყაროს განახლება"
 
 msgid "Update CDN Configuration"
-msgstr ""
+msgstr "CDN-ის კონფიგურაციის განახლება"
 
 msgid "Update Content Overrides"
 msgstr "შემცველობის გადაფარვს განახლება"

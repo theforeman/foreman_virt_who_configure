@@ -1,21 +1,23 @@
-# Catalan translations for foreman_virt_who_configure package.
-# Copyright (C) 2020 THE PACKAGE'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the foreman_virt_who_configure package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2022
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-05-22 18:58+0530\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Catalan\n"
-"Language: ca\n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2022\n"
+"Language-Team: Catalan (https://www.transifex.com/foreman/teams/114/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "1. Copy this configuration script to a safe directory."
 msgstr ""
@@ -63,7 +65,7 @@ msgid "Action with sub plans"
 msgstr ""
 
 msgid "Actions"
-msgstr ""
+msgstr "Accions"
 
 msgid "Agent action"
 msgstr ""
@@ -81,7 +83,7 @@ msgid "Auto attach subscriptions"
 msgstr ""
 
 msgid "Blacklist"
-msgstr ""
+msgstr "Llista negra"
 
 msgid "Bulk generate applicability for hosts"
 msgstr ""
@@ -138,7 +140,7 @@ msgid "Count"
 msgstr ""
 
 msgid "Create"
-msgstr ""
+msgstr "Crea"
 
 msgid "Create Alternate Content Source"
 msgstr ""
@@ -153,7 +155,7 @@ msgid "Create Import History"
 msgstr ""
 
 msgid "Create Package Group"
-msgstr ""
+msgstr "Crea un grup de paquets"
 
 msgid "Create Syncable Export History"
 msgstr ""
@@ -162,7 +164,7 @@ msgid "Create a virt-who configuration"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Suprimeix"
 
 msgid "Delete Activation Key"
 msgstr ""
@@ -186,7 +188,7 @@ msgid "Deploy"
 msgstr ""
 
 msgid "Destroy"
-msgstr ""
+msgstr "Destrueix"
 
 msgid "Destroy Alternate Content Source"
 msgstr ""
@@ -195,13 +197,13 @@ msgid "Destroy Content Host"
 msgstr ""
 
 msgid "Details"
-msgstr ""
+msgstr "Detalls"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr ""
 
 msgid "Disable"
-msgstr ""
+msgstr "Inhabilita"
 
 msgid "Discover"
 msgstr ""
@@ -210,13 +212,13 @@ msgid "Download the script"
 msgstr ""
 
 msgid "Edit"
-msgstr ""
+msgstr "Edita"
 
 msgid "Edit Virt-who Config"
 msgstr ""
 
 msgid "Enable"
-msgstr ""
+msgstr "Habilita"
 
 msgid "Enable AHV debug"
 msgstr ""
@@ -267,7 +269,7 @@ msgid "Exclude hosts which cluster ID is specified in comma-separated list in th
 msgstr ""
 
 msgid "Export"
-msgstr ""
+msgstr "Exporta"
 
 msgid "Export Library"
 msgstr ""
@@ -291,7 +293,7 @@ msgid "Filtered index content"
 msgstr ""
 
 msgid "Filtering"
-msgstr ""
+msgstr "Filtratge"
 
 msgid "Foreman server FQDN"
 msgstr ""
@@ -303,7 +305,7 @@ msgid "Fully qualified host name or IP address of the hypervisor"
 msgstr ""
 
 msgid "General information"
-msgstr ""
+msgstr "informació general"
 
 msgid "Generate host applicability"
 msgstr ""
@@ -312,7 +314,7 @@ msgid "Generate repository applicability"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr ""
+msgstr "Servidor intermediari HTTP"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
 msgstr ""
@@ -324,7 +326,7 @@ msgid "Hammer command: "
 msgstr ""
 
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -369,7 +371,7 @@ msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addres
 msgstr ""
 
 msgid "Import"
-msgstr ""
+msgstr "Importa"
 
 msgid "Import Content View Version"
 msgstr ""
@@ -432,7 +434,7 @@ msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr ""
 
 msgid "New Config"
-msgstr ""
+msgstr "Configuració nova"
 
 msgid "New Virt-who Config"
 msgstr ""
@@ -459,7 +461,7 @@ msgid "Nutanix AHV’s IP address."
 msgstr ""
 
 msgid "OK"
-msgstr ""
+msgstr "D'acord"
 
 msgid "On the target virt-who host:"
 msgstr ""
@@ -486,10 +488,10 @@ msgid "Organization of the virt-who configuration"
 msgstr ""
 
 msgid "Overview"
-msgstr ""
+msgstr "Apreciació global"
 
 msgid "Owner"
-msgstr ""
+msgstr "Propietari"
 
 msgid "Owner was not provided"
 msgstr ""
@@ -534,7 +536,7 @@ msgid "Remove Content"
 msgstr ""
 
 msgid "Remove Version"
-msgstr ""
+msgstr "Suprimeix la versió"
 
 msgid "Remove Versions and Associations"
 msgstr ""
@@ -549,7 +551,7 @@ msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr ""
 
 msgid "Report"
-msgstr ""
+msgstr "Informe"
 
 msgid "Republish Version Repositories"
 msgstr ""
@@ -578,10 +580,10 @@ msgid ""
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Estat"
 
 msgid "Success"
-msgstr ""
+msgstr "Correcte"
 
 msgid "Sync capsule"
 msgstr ""
@@ -590,7 +592,7 @@ msgid "Syncable export"
 msgstr ""
 
 msgid "Synchronize"
-msgstr ""
+msgstr "Sincronitza"
 
 msgid "Synchronize smart proxy"
 msgstr ""
@@ -629,7 +631,7 @@ msgid "Unable to start virt-who service, please see virt-who logs for more detai
 msgstr ""
 
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
 
 msgid "Unknown configuration status"
 msgstr ""
@@ -638,10 +640,10 @@ msgid "Unknown configuration status, caused by unexpected conditions"
 msgstr ""
 
 msgid "Unlimited"
-msgstr ""
+msgstr "Il·limitat"
 
 msgid "Update"
-msgstr ""
+msgstr "Actualitza"
 
 msgid "Update Alternate Content Source"
 msgstr ""
@@ -704,7 +706,7 @@ msgid "Virt-who configurations"
 msgstr ""
 
 msgid "Whitelist"
-msgstr ""
+msgstr "Llista blanca"
 
 msgid "every %s hours"
-msgstr ""
+msgstr "cada %s hores"
