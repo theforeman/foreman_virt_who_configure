@@ -5,21 +5,23 @@
 #
 # Translators:
 # 21966816214bc546c1fc8a185e75ca1c, 2017
-# Claer <transiblu@claer.hammock.fr>, 2019
+# Claer <transiblu@claer.hammock.fr>, 2017
 # Bryan Kearney <bryan.kearney@gmail.com>, 2019
+# Amit Upadhye <aupadhye@redhat.com>, 2022
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2019\n"
+"Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/foreman/teams/114/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 100000"
+"0 == 0 ? 1 : 2;\n"
 
 msgid "1. Copy this configuration script to a safe directory."
 msgstr "1. Copiez ce script de configuration dans un répertoire sûr."
@@ -31,7 +33,7 @@ msgid "3. Delete the script."
 msgstr "3. Supprimez le script."
 
 msgid "A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses."
-msgstr "Liste de noms d'hôte ou de domaines ou d'adresses IP séparés par une virgule pour ignorer les paramètres du proxy. Peut éventuellement être défini sur <code>*</code> pour contourner les paramètres du proxy pour tous les noms d'hôte, domaines ou adresses IP."
+msgstr "Ignorer le proxy. Une liste de noms d'hôte ou de domaines ou d'adresses IP séparés par une virgule pour ignorer les paramètres du proxy. Peut éventuellement être défini sur <code>*</code> pour contourner les paramètres du proxy pour tous les noms d'hôte, domaines ou adresses IP."
 
 msgid "A plugin to make virt-who configuration easy"
 msgstr "Plug-in pour faciliter la configuration de virt-who"
@@ -40,7 +42,7 @@ msgid "AHV update interval"
 msgstr ""
 
 msgid "Abstract"
-msgstr ""
+msgstr "Résumé"
 
 msgid "Abstract async task"
 msgstr "Tâche async abstraite"
@@ -49,7 +51,7 @@ msgid "Account name by which virt-who is to connect to Nutanix AHV."
 msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
-msgstr ""
+msgstr "Nom du compte avec lequel virt-who doit se connecter à l'hyperviseur, au format <code>domain_name\\account_name</code>. Notez qu'une seule barre oblique inverse sépare les valeurs de domain_name et account_name. Si vous utilisez un compte de domaine et le fichier de configuration global <code>/etc/virt-who.conf</code>, <b>two</b> barres obliques inverses sont alors requises. Pour en savoir plus, consultez <a href=\"https://access.redhat.com/solutions/1270223\"> Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a>."
 
 msgid "Account name by which virt-who is to connect to the hypervisor."
 msgstr "Nom du compte avec lequel virt-who doit se connecter à l'hyperviseur."
@@ -58,7 +60,7 @@ msgid "Account name by which virt-who is to connect to the hypervisor. By defaul
 msgstr "Nom du compte avec lequel virt-who doit se connecter à l'hyperviseur. Par défaut, il s'agit de l'<code>Administrateur</code>. Pour utiliser un autre compte, créez un compte d'utilisateur et attribuez-le aux groupes suivants (Windows 2012 Server) : administrateurs Hyper-V et utilisateurs de la gestion à distance."
 
 msgid "Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information."
-msgstr "Nom du compte avec lequel virt-who doit se connecter à l'hyperviseur. Virt-who ne prend pas en charge l'authentification par mot de passe, vous devez donc configurer manuellement une clé SSH, consultez <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a>  pour en savoir plus."
+msgstr "Nom du compte avec lequel virt-who doit se connecter à l'hyperviseur. Virt-who ne prend pas en charge l'authentification par mot de passe, vous devez donc configurer manuellement une clé SSH, consultez <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> pour en savoir plus."
 
 msgid "Account password by which virt-who is to connect to the hypervisor instance."
 msgstr "Mot de passe du compte avec lequel virt-who doit se connecter à l'instance de l'hyperviseur."
@@ -70,13 +72,13 @@ msgid "Actions"
 msgstr "Actions"
 
 msgid "Agent action"
-msgstr ""
+msgstr "Action de l'agent"
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "Applicable uniquement pour le type de prestataire esx. Les hôtes dont le nom du parent (généralement ComputeResource) est spécifié dans la liste séparée par des virgules dans cette option seront <b>PAS</b> signalés. Les caractères de remplacement et les expressions régulières sont pris en charge, les enregistrements multiples doivent être séparés par une virgule. Mettez la valeur entre guillemets si elle contient des caractères spéciaux comme la virgule. Tous les nouveaux caractères de ligne seront supprimés dans le fichier de configuration résultant, les espaces blancs sont supprimés au début et à la fin."
 
 msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "Applicable uniquement pour le type de prestataire esx. Seuls les hôtes dont le nom du parent (généralement ComputeResource) est spécifié dans la liste séparée par des virgules dans cette option seront signalés. Les caractères de remplacement et les expressions régulières sont pris en charge, les enregistrements multiples doivent être séparés par une virgule. Mettez la valeur entre guillemets si elle contient des caractères spéciaux comme la virgule. Tous les nouveaux caractères de ligne seront supprimés dans le fichier de configuration résultant, les espaces blancs sont supprimés au début et à la fin."
 
 msgid "Attach subscriptions"
 msgstr "Attacher abonnements"
@@ -88,7 +90,7 @@ msgid "Blacklist"
 msgstr "Liste noire"
 
 msgid "Bulk generate applicability for hosts"
-msgstr ""
+msgstr "La masse génère l'applicabilité pour les hôtes"
 
 msgid "Combined Profile Update"
 msgstr "Mise à jour de profil combiné"
@@ -100,7 +102,7 @@ msgid "Configuration Status"
 msgstr "État de la configuration"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details"
-msgstr ""
+msgstr "Fichier de configuration contenant des détails sur la façon de se connecter au cluster et des détails d'authentification"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details."
 msgstr ""
@@ -130,13 +132,13 @@ msgid "Connection"
 msgstr "Connexion"
 
 msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
-msgstr ""
+msgstr "Nom d'hôte ou adresse IP entièrement qualifié de la virtualisation native du conteneur. Afin de se connecter au cluster, il est nécessaire de fournir le chemin d'accès à kubeconfig qui contient les détails de la connexion et le jeton d'authentification."
 
 msgid "Copy to clipboard"
 msgstr "Copier dans le presse-papiers"
 
 msgid "Copy version units to library"
-msgstr ""
+msgstr "Copier les unités de version dans la bibliothèque"
 
 msgid "Count"
 msgstr "Nombre"
@@ -145,16 +147,16 @@ msgid "Create"
 msgstr "Créer"
 
 msgid "Create Alternate Content Source"
-msgstr ""
+msgstr "Créer une autre source de contenu"
 
 msgid "Create Config"
 msgstr "Créer une configuration"
 
 msgid "Create Export History"
-msgstr ""
+msgstr "Créer un historique des exportations"
 
 msgid "Create Import History"
-msgstr ""
+msgstr "Créer un historique des importations"
 
 msgid "Create Package Group"
 msgstr "Créer un groupe de packages"
@@ -184,16 +186,16 @@ msgid "Delete a virt-who configuration"
 msgstr "Supprimer une configuration virt-who"
 
 msgid "Delete virt-who configuration %s?"
-msgstr "Supprimer la configuration virt-who %s ?"
+msgstr "Supprimer la configuration virt-who %s?"
 
 msgid "Deploy"
-msgstr ""
+msgstr "Déploiement"
 
 msgid "Destroy"
 msgstr "Détruire"
 
 msgid "Destroy Alternate Content Source"
-msgstr ""
+msgstr "Détruire la source de contenu alternatif"
 
 msgid "Destroy Content Host"
 msgstr "Détruire l'hôte du contenu"
@@ -202,13 +204,13 @@ msgid "Details"
 msgstr "Détails"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
-msgstr ""
+msgstr "Une valeur de débogage différente ne peut pas être définie par hyperviseur, elle affectera donc toutes les autres configurations déployées sur l'hôte sur lequel cette configuration sera déployée."
 
 msgid "Disable"
 msgstr "Désactiver"
 
 msgid "Discover"
-msgstr "Découvrir"
+msgstr "Discover"
 
 msgid "Download the script"
 msgstr "Télécharger le script"
@@ -229,7 +231,7 @@ msgid "Enable debugging output"
 msgstr "Activer la sortie de débogage"
 
 msgid "Enable debugging output?"
-msgstr ""
+msgstr "Activer la sortie de débogage ?"
 
 msgid "Errata mail"
 msgstr "Courrier d'errata"
@@ -238,16 +240,16 @@ msgid "Every 12 hours"
 msgstr "Toutes les 12 heures"
 
 msgid "Every 2 days"
-msgstr ""
+msgstr "Tous les 2 jours"
 
 msgid "Every 2 hours"
 msgstr "Toutes les 2 heures"
 
 msgid "Every 24 hours"
-msgstr ""
+msgstr "Toutes les 24 heures"
 
 msgid "Every 3 days"
-msgstr ""
+msgstr "Tous les 3 jours"
 
 msgid "Every 4 hours"
 msgstr "Toutes les 4 heures"
@@ -259,10 +261,10 @@ msgid "Every hour"
 msgstr "Toutes les heures"
 
 msgid "Exclude Hosts"
-msgstr ""
+msgstr "Exclure des hôtes"
 
 msgid "Exclude host parents"
-msgstr ""
+msgstr "Exclure les parents hôtes"
 
 msgid "Exclude hosts"
 msgstr "Exclure des hôtes"
@@ -274,19 +276,19 @@ msgid "Export"
 msgstr "Exporter"
 
 msgid "Export Library"
-msgstr ""
+msgstr "Exporter Bibliothèque"
 
 msgid "Export Repository"
-msgstr ""
+msgstr "Référentiel d'exportation"
 
 msgid "Fetch pxe files"
 msgstr "Récupérer les fichiers pxe"
 
 msgid "Filter Hosts"
-msgstr ""
+msgstr "Filtrer les hôtes"
 
 msgid "Filter host parents"
-msgstr ""
+msgstr "Filtrer les parents hôtes"
 
 msgid "Filter hosts"
 msgstr "Filtrer les hôtes"
@@ -298,10 +300,10 @@ msgid "Filtering"
 msgstr "Filtrage"
 
 msgid "Foreman server FQDN"
-msgstr ""
+msgstr "FQDN du serveur de Foreman"
 
 msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
-msgstr ""
+msgstr "Nom d'hôte complet du serveur Foreman, par exemple : foreman.example.com"
 
 msgid "Fully qualified host name or IP address of the hypervisor"
 msgstr "Nom d'hôte complet ou adresse IP de l'hyperviseur"
@@ -310,31 +312,31 @@ msgid "General information"
 msgstr "Informations générales"
 
 msgid "Generate host applicability"
-msgstr ""
+msgstr "Générer l'applicabilité à l'hôte"
 
 msgid "Generate repository applicability"
-msgstr ""
+msgstr "Générer l'applicabilité du référentiel"
 
 msgid "HTTP Proxy"
-msgstr "Mandataire HTTP"
+msgstr "HTTP Proxy"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
 msgstr "Proxy HTTP à utiliser pour la communication entre le serveur sur lequel virt-who est exécuté et les hyperviseurs et gestionnaires de virtualisation."
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used."
-msgstr "Proxy HTTP devant être utilisé pour la communication entre le serveur sur lequel virt-who est exécuté et les hyperviseurs et gestionnaires de virtualisation.  Laissez vide si aucun proxy n'est utilisé."
+msgstr "Proxy HTTP devant être utilisé pour la communication entre le serveur sur lequel virt-who est exécuté et les hyperviseurs et gestionnaires de virtualisation. Laissez vide si aucun proxy n'est utilisé."
 
 msgid "Hammer command: "
-msgstr ""
+msgstr "Commande hammer :"
 
 msgid "Help"
-msgstr "Aide"
+msgstr "Assistance"
 
 msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "Les hôtes dont l'uuid (ou le nom d'hôte ou hwuuid, basé sur <code>hypervisor_id</code>) est spécifié dans la liste séparée par des virgules dans cette option ne seront <b>PAS</b> signalés. Les caractères de remplacement et les expressions régulières sont pris en charge, les enregistrements multiples doivent être séparés par une virgule. Mettez la valeur entre guillemets si elle contient des caractères spéciaux comme la virgule. Tous les nouveaux caractères de ligne seront supprimés dans le fichier de configuration résultant, les espaces blancs sont supprimés au début et à la fin."
 
 msgid "How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours. Different interval can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
-msgstr ""
+msgstr "À quelle fréquence faut-il vérifier les modifications apportées aux hyperviseurs connectés ? Cela affecte également la fréquence de signalement d'un mappage. La valeur recommandée pour la plupart des environnements est toutes les deux heures. Il n'est pas possible de définir un intervalle différent pour chaque hyperviseur, ce qui affectera toutes les autres configurations déployées sur l'hôte sur lequel cette configuration sera déployée."
 
 msgid "Hypervisor ID"
 msgstr "ID hyperviseur"
@@ -343,7 +345,7 @@ msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wi
 msgstr "Liste noire Hyperviseur, applicable uniquement lorsque le mode de filtrage est défini sur 2. Les caractères génériques et les expressions régulières sont pris en charge, plusieurs enregistrements doivent être séparés par une virgule."
 
 msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
-msgstr "Mode de filtrage Hyperviseur, %{unlimited} signifie aucun filtrage, %{whitelist} signifie liste blanche, %{blacklist} signifie liste noire"
+msgstr "Mode de filtrage Hyperviseur, %%{unlimited} indique aucun filtrage, %%{whitelist} means whitelist, %%{blacklist} signifie liste noire"
 
 msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
 msgstr ""
@@ -364,7 +366,7 @@ msgid "If you run a hybrid environment, with virtual machines running Red Hat En
 msgstr "Si vous exécutez un environnement hybride, avec des machines virtuelles exécutant Red Hat Enterprise Linux et d'autres systèmes d'exploitation, il se peut que vous souhaitiez limiter l'accès de virt-who aux hôtes. Par exemple, si certains hyperviseurs n'hébergent que des instances Microsoft Windows Server, il n'y a aucun avantage à ce que ces hyperviseurs soient signalés par l'agent virt-who."
 
 msgid "Ignore Proxy"
-msgstr ""
+msgstr "Ignorer le proxy"
 
 msgid "Ignore proxy"
 msgstr "Ignorer le proxy"
@@ -373,28 +375,28 @@ msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addres
 msgstr "Ignorer le proxy. Une liste de noms d'hôte ou de domaines ou d'adresses IP séparés par une virgule pour ignorer les paramètres du proxy. Peut éventuellement être défini sur * pour contourner les paramètres du proxy pour tous les noms d'hôte, domaines ou adresses IP."
 
 msgid "Import"
-msgstr ""
+msgstr "Importation"
 
 msgid "Import Content View Version"
-msgstr ""
+msgstr "Supprimer la version de l'affichage du contenu"
 
 msgid "Import Default Content View"
-msgstr ""
+msgstr "Importer la vue du contenu par défaut"
 
 msgid "Import Puppet classes"
-msgstr "Importer les classes Puppet"
+msgstr "Importer des classes Puppet"
 
 msgid "Import Repository"
-msgstr ""
+msgstr "Importation du référentiel"
 
 msgid "Import facts"
-msgstr "Importer des facts"
+msgstr "Importer des faits"
 
 msgid "Incremental Update"
 msgstr "Mise à jour croissante"
 
 msgid "Incremental Update of  Content View Version(s) "
-msgstr "Mise à jour incrémentielle de Version(s) d'affichage de contenu"
+msgstr "Mise à jour incrémentielle Version(s) d'affichage de contenu"
 
 msgid "Index content"
 msgstr "Contenu d'index"
@@ -418,10 +420,10 @@ msgid "Interval was not provided"
 msgstr "L'intervalle n'était pas fourni"
 
 msgid "Latest Configurations Without Change"
-msgstr ""
+msgstr "Dernières configurations sans modification"
 
 msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr "Nom d'hôte complet ou adresse IP du serveur Libvirt. Vous pouvez également spécifier un schéma préféré, par exemple : <code>qemu+ssh://libvirt.example.com/system</code>. Si vous utilisez SSH, veillez à configurer la clé SSH du root sur l'hôte cible pour un utilisateur spécifié dans le champ du nom d'utilisateur hyperviseur"
+msgstr "Nom d'hôte complet ou adresse IP du serveur Libvirt. Vous pouvez également spécifier un schéma préféré, par exemple: <code>qemu+ssh://libvirt.example.com/system</code>. Si vous utilisez SSH, veillez à configurer la clé SSH du root sur l'hôte cible pour un utilisateur spécifié dans le champ du nom d'utilisateur hyperviseur"
 
 msgid "List of virt-who configurations"
 msgstr "Liste des configurations virt-who"
@@ -445,7 +447,7 @@ msgid "Newer version of virt-who is required, minimum version is %s"
 msgstr "Version de virt-who plus récente requise. La version minimale est %s"
 
 msgid "No Change"
-msgstr ""
+msgstr "Aucun changement"
 
 msgid "No Report Yet"
 msgstr "Aucun rapport pour l'instant"
@@ -463,7 +465,7 @@ msgid "Nutanix AHV’s IP address."
 msgstr ""
 
 msgid "OK"
-msgstr "Validé"
+msgstr "OK"
 
 msgid "On the target virt-who host:"
 msgstr "Sur l'hôte virt-who cible :"
@@ -478,7 +480,7 @@ msgid "Only hosts which cluster ID is specified in comma-separated list in this 
 msgstr ""
 
 msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "Seuls les hôtes dont l'uuid (ou le nom d'hôte ou hwuuid, basé sur <code>hypervisor_id</code>) est spécifié dans la liste séparée par des virgules dans cette option seront signalés. Les caractères de remplacement et les expressions régulières sont pris en charge, les enregistrements multiples doivent être séparés par une virgule. Mettez la valeur entre guillemets si elle contient des caractères spéciaux comme la virgule. Tous les nouveaux caractères de ligne seront supprimés dans le fichier de configuration résultant, les espaces blancs sont supprimés au début et à la fin."
 
 msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
 msgstr ""
@@ -490,7 +492,7 @@ msgid "Organization of the virt-who configuration"
 msgstr "Organisation de la configuration virt-who"
 
 msgid "Overview"
-msgstr "Vue globale"
+msgstr "Vue d'ensemble"
 
 msgid "Owner"
 msgstr "Propriétaire"
@@ -502,7 +504,7 @@ msgid "Package Profile Update"
 msgstr "Mise à jour du profil du package"
 
 msgid "Path to kubeconfig file"
-msgstr ""
+msgstr "Chemin d'accès au fichier kubeconfig"
 
 msgid "Prism Central"
 msgstr ""
@@ -520,7 +522,7 @@ msgid "Promote"
 msgstr "Promouvoir"
 
 msgid "Promotion to Environment"
-msgstr "Promotion vers l'environnement"
+msgstr "Promotion à Environnement"
 
 msgid "Publish"
 msgstr "Publier"
@@ -532,7 +534,7 @@ msgid "Refresh Alternate Content Source"
 msgstr ""
 
 msgid "Reindex subscriptions"
-msgstr "Réindexer les abonnements"
+msgstr "Ré-indexer les abonnements"
 
 msgid "Remove Content"
 msgstr "Supprimer le contenu"
@@ -559,10 +561,10 @@ msgid "Republish Version Repositories"
 msgstr "Publier de nouveau les référentiels de version"
 
 msgid "Run Sync Plan:"
-msgstr ""
+msgstr "Exécuter Plan Sync :"
 
 msgid "Schedule"
-msgstr "Échéancier"
+msgstr "Programmer"
 
 msgid "Select the Prism flavor you are connecting to"
 msgstr ""
@@ -580,15 +582,20 @@ msgid ""
 "                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx only.\n"
 "                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
 msgstr ""
+"Spécifie que les hyperviseurs seront identifiés par leur <b>hostname</b>, <b>uuid</b> ou <b>hwuuid</b>.\n"
+"                              Notez que certains serveurs principaux de virtualisation n'ont pas implémenté tous leurs hyperviseurs.\n"
+"                              La valeur par défaut est <b>hostname</b> qui fournit d'autres noms d'hyperviseur significatifs,\n"
+"                                  mais qui entraîne la création de doublons d'enregistrements d'hyperviseur si l'hôte est renommé. Pour éviter cela, vous pouvez utiliser l’<b>uuid</b> à la place. <b>hwuuid</b> ne s'applique qu'à esx.\n"
+"                                  Cette propriété doit être configurée avant l'exécution initiale de virt-who. Si vous la modifiez ultérieurement, des entrées en double seront présentes dans le gestionnaire d'abonnements."
 
 msgid "Status"
 msgstr "Statut"
 
 msgid "Success"
-msgstr "Réussite"
+msgstr "Réussi"
 
 msgid "Sync capsule"
-msgstr ""
+msgstr "Sync capsule"
 
 msgid "Syncable export"
 msgstr ""
@@ -624,10 +631,10 @@ msgid "Unable to create virt-who config file"
 msgstr "Impossible de créer le fichier de configuration virt-who"
 
 msgid "Unable to enable virt-who service using systemctl"
-msgstr ""
+msgstr "Impossible d'activer le service virt-who à l'aide de systemctl"
 
 msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
-msgstr ""
+msgstr "Impossible d'installer le paquetage virt-who. Assurez-vous que l'hôte dispose d'un abonnement correct et qu'il a accès au référentiel katello-host-tools"
 
 msgid "Unable to start virt-who service, please see virt-who logs for more details"
 msgstr "Impossible de démarrer le service virt-who. Consultez les journaux virt-who pour en savoir plus"
@@ -648,10 +655,10 @@ msgid "Update"
 msgstr "Mise à jour"
 
 msgid "Update Alternate Content Source"
-msgstr ""
+msgstr "Mise à jour de la source de contenu alternatif"
 
 msgid "Update CDN Configuration"
-msgstr ""
+msgstr "Mise à jour de la configuration CDN"
 
 msgid "Update Content Overrides"
 msgstr "Mettre à jour les substitutions de contenu"
@@ -660,43 +667,43 @@ msgid "Update a virt-who configuration"
 msgstr "Mettre à jour une configuration virt-who"
 
 msgid "Update content urls"
-msgstr ""
+msgstr "Mettre à jour les urls de contenu"
 
 msgid "Update for host"
 msgstr "Mise à jour de l'hôte"
 
 msgid "Update http proxy"
-msgstr ""
+msgstr "Mettre à jour proxy http"
 
 msgid "Update http proxy details"
-msgstr ""
+msgstr "Mise à jour des détails du proxy http"
 
 msgid "Update redhat repository"
-msgstr ""
+msgstr "Mettre à jour le référentiel de données Red Hat"
 
 msgid "Update release version for host"
 msgstr "Mettre à jour la version de publication pour l'hôte"
 
 msgid "Updating System Purpose for host"
-msgstr ""
+msgstr "Mise à jour Objectif système pour l'hôte"
 
 msgid "Upload into"
 msgstr "Téléverser vers"
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
-msgstr ""
+msgstr "Utilisez soit la commande hammer, soit le script ci-dessous pour déployer cette configuration. Les deux requièrent les privilèges root. Exécutez l'un d'eux sur l'hôte cible qui a accès au dépôt katello-host-tools et qui exécutera le rapport de virt-who, de préférence l'hôte Foreman :"
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
 msgstr "Nom d'hôte complet ou adresse IP du serveur VMware vCenter."
 
 msgid "Verify checksum"
-msgstr ""
+msgstr "Vérifier la somme de contrôle"
 
 msgid "Virt-who Configs Status"
 msgstr "État des configurations virt-who"
 
 msgid "Virt-who Configuration %s"
-msgstr ""
+msgstr "Virt-who Configuration %s"
 
 msgid "Virt-who Configurations"
 msgstr "Configurations virt-who"

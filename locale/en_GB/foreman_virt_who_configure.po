@@ -4,14 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Andi Chandler <andi@gowling.com>, 2019
+# 0868a4d1af5275b3f70b0a6dac4c99a4, 2022
+# Andi Chandler <andi@gowling.com>, 2022
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.2\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>, 2019\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>, 2022\n"
 "Language-Team: English (United Kingdom) (https://www.transifex.com/foreman/tea"
 "ms/114/en_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -165,7 +166,7 @@ msgid "Create a virt-who configuration"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 msgid "Delete Activation Key"
 msgstr ""
@@ -204,7 +205,7 @@ msgid "Different debug value can't be set per hypervisor, therefore it will affe
 msgstr ""
 
 msgid "Disable"
-msgstr ""
+msgstr "Disable"
 
 msgid "Discover"
 msgstr ""
@@ -219,7 +220,7 @@ msgid "Edit Virt-who Config"
 msgstr ""
 
 msgid "Enable"
-msgstr ""
+msgstr "Enable"
 
 msgid "Enable AHV debug"
 msgstr ""
@@ -584,7 +585,7 @@ msgid "Status"
 msgstr ""
 
 msgid "Success"
-msgstr ""
+msgstr "Success"
 
 msgid "Sync capsule"
 msgstr ""
