@@ -162,7 +162,7 @@ msgid "Create Package Group"
 msgstr "Créer un groupe de packages"
 
 msgid "Create Syncable Export History"
-msgstr ""
+msgstr "Créer un historique d'exportation synchronisable"
 
 msgid "Create a virt-who configuration"
 msgstr "Créer une configuration virt-who"
@@ -531,7 +531,7 @@ msgid "Publish Lifecycle Environment Repositories"
 msgstr "Publier les référentiels d'environnements de cycles de vie"
 
 msgid "Refresh Alternate Content Source"
-msgstr ""
+msgstr "Réactualisation de la source de contenu alternatif"
 
 msgid "Reindex subscriptions"
 msgstr "Ré-indexer les abonnements"
@@ -598,7 +598,7 @@ msgid "Sync capsule"
 msgstr "Sync capsule"
 
 msgid "Syncable export"
-msgstr ""
+msgstr "Exportation synchronisable"
 
 msgid "Synchronize"
 msgstr "Synchroniser"
