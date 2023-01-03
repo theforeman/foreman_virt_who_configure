@@ -35,7 +35,7 @@ msgid "A plugin to make virt-who configuration easy"
 msgstr "დამატება virt-who-ის კონფიგურაციის გასაადვილებლად"
 
 msgid "AHV update interval"
-msgstr ""
+msgstr "AHV -ის განახლების ინტერვალი"
 
 msgid "Abstract"
 msgstr "ანოტაცია"
@@ -44,7 +44,7 @@ msgid "Abstract async task"
 msgstr "ასინქრონული ამოცანის აბსტრაქცია"
 
 msgid "Account name by which virt-who is to connect to Nutanix AHV."
-msgstr ""
+msgstr "ანგარიშის სახელი, რომლითაც virt-who Nutanix AHV-ს უკავშირდება."
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr "ანგარიშის სახელი, რომლითაც virt-who უნდა დაუკავშირდეს ჰიპერვიზორს, ფორმატში <code>domain_name\\account_name</code> . გაითვალისწინეთ, რომ მხოლოდ ერთი უკანა ხაზი გამოყოფს დომენის_სახელისა და ანგარიშის_სახელის მნიშვნელობებს. თუ იყენებთ დომენის ანგარიშს და გლობალური კონფიგურაციის ფაილს <code>/etc/virt-who.conf</code> , მაშინ საჭიროა <b>ორი</b> უკანა ხაზი. დამატებითი ინფორმაციისთვის იხილეთ <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase გადაწყვეტა როგორ გამოვიყენოთ windows დომენის ანგარიში virt-who-სთან</a> დამატებითი ინფორმაციისთვის."
@@ -101,7 +101,7 @@ msgid "Configuration file containing details about how to connect to the cluster
 msgstr "კონფიგურაციის ფაილი, რომელიც შეიცავს დეტალებს კლასტერთან დაკავშირების და ავთენტიფიკაციის დეტალების შესახებ"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details."
-msgstr ""
+msgstr "კონფიგურაციის ფაილი, რომელიც შეიცავს დეტალებს კლასტერთან დაკავშირების და ავთენტიფიკაციის დეტალების შესახებ."
 
 msgid "Configuration interval in minutes"
 msgstr "კონფიგურაციის ინტერვალი წუთებში"
@@ -221,7 +221,7 @@ msgid "Enable"
 msgstr "ჩართვა"
 
 msgid "Enable AHV debug"
-msgstr ""
+msgstr "AHV -ის გამართვის ჩართვა"
 
 msgid "Enable debugging output"
 msgstr "დამატებითი ინფორმაციის გამოტანა"
@@ -344,7 +344,7 @@ msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} 
 msgstr "ჰიპერვიზორის ფილტრაციის რეჟიმი, %{unlimited} ნიშნავს ფილტრაციის გარეშე, %{whitelist} ნიშნავს თეთრ სიას, %{blacklist} ნიშნავს შავ სიას"
 
 msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
-msgstr ""
+msgstr "ჰაიპერვაიზორის პაროლი, რომელიც libvirt/kubevirt-ის გარდა ყველას სჭირდება."
 
 msgid "Hypervisor type"
 msgstr "ჰაიპერვაიზორის ტიპი"
@@ -458,7 +458,7 @@ msgid "No configuration found"
 msgstr "კონფიგურაციები ნაპოვნი არაა"
 
 msgid "Nutanix AHV’s IP address."
-msgstr ""
+msgstr "Nutanix AHV -ის IP მისამართი."
 
 msgid "OK"
 msgstr "დიახ"
@@ -479,10 +479,10 @@ msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_i
 msgstr "მოხსენებული იქნება მხოლოდ ჰოსტები, რომლებიც uuid (ან ჰოსტის სახელი ან hwuuid, <code>hypervisor_id</code>-ზე დაფუძნებული) მითითებულია მძიმით გამოყოფილ სიაში ამ პარამეტრში. Wildcards და რეგულარული გამონათქვამები მხარდაჭერილია, ჩანაწერები მძიმით უნდა იყოს გამოყოფილი. ჩასვით მნიშვნელობა ორ ბრჭყალში, თუ ის შეიცავს ისეთ სიმბოლოებს, როგორიცაა მძიმე. ყველა ახალი ხაზის სიმბოლო წაიშლება შედეგად კონფიგურაციის ფაილში, თეთრი სივრცეები ამოღებულია დასაწყისიდან და ბოლოდან."
 
 msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
-msgstr ""
+msgstr "AHV-ს შიდა გამართვისთვის საჭიროა გამართვის ინფორმაციის გამოტანის პარამეტრის ჩართვა. როცა ორივე პარამეტრი ჩართულია, AHV-ის გასამართად დამატებითი ინფორმაცია იქნება ხელმისაწვდომი"
 
 msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled "
-msgstr ""
+msgstr "AHV-ს შიდა გამართვისთვის საჭიროა გამართვის ინფორმაციის გამოტანის პარამეტრის ჩართვა. როცა ორივე პარამეტრი ჩართულია, AHV-ის გასამართად დამატებითი ინფორმაცია იქნება ხელმისაწვდომი "
 
 msgid "Organization of the virt-who configuration"
 msgstr "Virt-who-ის კონფიგურაციის ორგნიზაცია"
@@ -503,13 +503,13 @@ msgid "Path to kubeconfig file"
 msgstr "ბილიკი kubeconfig ფაილამდე"
 
 msgid "Prism Central"
-msgstr ""
+msgstr "Prism ცენტრალი"
 
 msgid "Prism Element"
-msgstr ""
+msgstr "Prism ელემენტი"
 
 msgid "Prism Flavor"
-msgstr ""
+msgstr "Prism -ის ვარიანტი"
 
 msgid "Product Create"
 msgstr "პროდუქტის შექმნა"
@@ -563,7 +563,7 @@ msgid "Schedule"
 msgstr "განრიგი"
 
 msgid "Select the Prism flavor you are connecting to"
-msgstr ""
+msgstr "აირჩიეთ Prism-ის ტიპი, რომელსაც უკავშირდებით"
 
 msgid "Show a virt-who configuration"
 msgstr "Virt-who-ის კონფიგურაცის ჩვენება"
@@ -605,7 +605,7 @@ msgid "The configuration was not deployed yet or the virt-who was unable to repo
 msgstr "კონფიგურაცია ჯერ არ იყო განლაგებული ან Virt-მა ვერ შეძლო სტატუსის შესახებ შეტყობინება"
 
 msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
-msgstr ""
+msgstr "AHV-სთვის VM-დან-ჰოსტამდე განახლებების მიბმის სიხშირე(წამებში)"
 
 msgid "The virt-who report arrived within the interval"
 msgstr "Virt-who-ის ანგარიში ინტერვალში იქნა გამოთხოვილი"
