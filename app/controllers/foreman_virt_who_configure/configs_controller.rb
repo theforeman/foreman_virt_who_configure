@@ -49,7 +49,7 @@ module ForemanVirtWhoConfigure
     end
 
     def update
-      if @config.update_attributes(config_params)
+      if @config.update(config_params)
         process_success :object => @config
       else
         process_error :object => @config
