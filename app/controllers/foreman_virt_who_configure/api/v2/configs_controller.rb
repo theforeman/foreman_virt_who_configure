@@ -75,7 +75,7 @@ module ForemanVirtWhoConfigure
         param_group :config
 
         def update
-          process_response @config.update_attributes(config_params)
+          process_response @config.update(config_params)
         end
 
         api :DELETE, '/configs/:id', N_("Delete a virt-who configuration")
