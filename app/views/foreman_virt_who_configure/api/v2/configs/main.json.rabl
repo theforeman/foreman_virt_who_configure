@@ -10,7 +10,7 @@ attributes :name, :interval, :organization_id, :whitelist, :blacklist, :hypervis
            :hypervisor_type, :hypervisor_server, :hypervisor_username, :debug,
            :satellite_url, :proxy, :no_proxy, :status, :last_report_at, :out_of_date_at,
            :filter_host_parents, :exclude_host_parents, :kubeconfig_path,
-           :prism_flavor, :ahv_update_interval, :ahv_internal_debug
+           :prism_flavor, :ahv_internal_debug
 
 child :http_proxy do
   attributes :id, :name, :url

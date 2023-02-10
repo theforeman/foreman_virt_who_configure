@@ -133,12 +133,10 @@ module ForemanVirtWhoConfigure
       test 'options specific to ahv are all set' do
         config.hypervisor_type = 'ahv'
         config.prism_flavor = 'central'
-        config.ahv_update_interval = 100
         config.ahv_internal_debug = true
 
         assert_includes output, 'type=ahv'
         assert_includes output, 'prism_central=true'
-        assert_includes output, 'update_interval=100'
         assert_includes output, 'ahv_internal_debug=true'
       end
 
@@ -148,8 +146,6 @@ module ForemanVirtWhoConfigure
 
         assert_includes output, 'type=ahv'
         assert_includes output, 'prism_central=true'
-        assert_not_includes output, 'update_interval='
-        assert_not_includes output, 'update_interval='
       end
     end
   end

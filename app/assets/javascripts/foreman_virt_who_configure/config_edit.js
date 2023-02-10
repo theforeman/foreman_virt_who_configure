@@ -35,8 +35,6 @@ function virt_who_update_hypervisor_fields() {
   element.closest('.form-group').toggle(selected_type == 'kubevirt');
   var element = $('#foreman_virt_who_configure_config_hypervisor_server');
   element.closest('.form-group').toggle(selected_type != 'kubevirt');
-  var element = $('#foreman_virt_who_configure_config_ahv_update_interval');
-  element.closest('.form-group').toggle(selected_type == 'ahv');
   var element = $('#foreman_virt_who_configure_config_ahv_internal_debug');
   element.closest('.form-group').toggle(selected_type == 'ahv');
   virt_who_update_listing_mode();

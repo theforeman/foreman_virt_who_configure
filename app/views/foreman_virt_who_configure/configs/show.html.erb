@@ -53,7 +53,6 @@
           <%= config_attribute :no_proxy, @config.no_proxy, _('Ignore Proxy') if @config.no_proxy.present? %>
           <%= config_attribute :kubeconfig_path, @config.kubeconfig_path if @config.hypervisor_type == 'kubevirt' %>
           <%= config_attribute :prism_flavor, @config.prism_flavor if @config.hypervisor_type == 'ahv' %>
-          <%= config_attribute :ahv_update_interval, @config.ahv_update_interval if @config.hypervisor_type == 'ahv' %>
           <%= config_attribute :ahv_internal_debug, checked_icon(@config.ahv_internal_debug) if @config.hypervisor_type == 'ahv' %>
         </div>
       </div>

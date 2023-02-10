@@ -7,7 +7,7 @@ module ForemanVirtWhoConfigure
       # API parameter filtering_mode gets translated to listing_mode in the controller
       # We keep both params permitted for compatibility with 1.11
       :listing_mode, :filtering_mode, :filter_host_parents, :exclude_host_parents, :kubeconfig_path,
-      :prism_flavor, :ahv_update_interval, :ahv_internal_debug
+      :prism_flavor, :ahv_internal_debug
     ]
     audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at ], :associations => []
     include Authorizable
@@ -72,7 +72,7 @@ module ForemanVirtWhoConfigure
       'element' => N_('Prism Element')
     }       
 
-    AHV_VALID_OPTIONS = %w(prism_flavor ahv_update_interval ahv_internal_debug)
+    AHV_VALID_OPTIONS = %w(prism_flavor ahv_internal_debug)
     KUBEVIRT_VALID_OPTIONS = %w(kubeconfig_path)
     KUBEVIRT_INVALID_OPTIONS = %w(hypervisor_server hypervisor_username)
 
@@ -113,7 +113,6 @@ module ForemanVirtWhoConfigure
     validates :hypervisor_id, :inclusion => HYPERVISOR_IDS
     validates :interval, :inclusion => AVAILABLE_INTERVALS.keys.map(&:to_i)
     validates :listing_mode, :inclusion => FILTERING_MODES.keys.map(&:to_i)
-    validates :ahv_update_interval, numericality: { only_integer: true, allow_nil: true, greater_than: 0 }, :if => Proc.new { |c| c.hypervisor_type == 'ahv' }
     validates :prism_flavor, :inclusion => {:in => PRISM_FLAVORS.keys, :message => "should be either central or element"}, :if => Proc.new { |c| c.hypervisor_type == 'ahv' }
     validate :validates_whitelist_blacklist
     validate :validates_debug_settings, :if => Proc.new { |c| c.hypervisor_type == 'ahv' }
