@@ -171,7 +171,7 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     post :create, :params => { :foreman_virt_who_configure_config => { :name => 'my new config',
                                                             :interval => 240,
                                                             :filtering_mode => ForemanVirtWhoConfigure::Config::BLACKLIST,
-                                                            :blacklist => ' a,b ',
+                                                            :blacklist => 'a,b',
                                                             :hypervisor_id => 'uuid',
                                                             :hypervisor_type => 'esx',
                                                             :hypervisor_server => "vmware.example.com",
