@@ -6,13 +6,14 @@
 # Translators:
 # 0868a4d1af5275b3f70b0a6dac4c99a4, 2017
 # Bryan Kearney <bryan.kearney@gmail.com>, 2021
+# 진선재, 2022
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2021\n"
+"Last-Translator: 진선재, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/foreman/teams/114/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,9 +34,6 @@ msgid "A comma-separated list of hostnames or domains or ip addresses to ignore 
 msgstr ""
 
 msgid "A plugin to make virt-who configuration easy"
-msgstr ""
-
-msgid "AHV update interval"
 msgstr ""
 
 msgid "Abstract"
@@ -315,7 +313,7 @@ msgid "Generate repository applicability"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr ""
+msgstr "HTTP 프록시"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
 msgstr ""
@@ -599,9 +597,6 @@ msgid "Synchronize smart proxy"
 msgstr ""
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
-msgstr ""
-
-msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
 msgstr ""
 
 msgid "The virt-who report arrived within the interval"

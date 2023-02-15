@@ -11,7 +11,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
 "Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2022\n"
@@ -37,9 +37,6 @@ msgstr "忽略代理服务器。忽略代理服务器设置的主机名、域或
 
 msgid "A plugin to make virt-who configuration easy"
 msgstr "简化 virt-who 配置的插件"
-
-msgid "AHV update interval"
-msgstr "AHV 更新间隔"
 
 msgid "Abstract"
 msgstr "摘要"
@@ -608,9 +605,6 @@ msgstr "同步智能代理服务器"
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr "尚未部署配置，或者 virt-who 无法报告状态"
-
-msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
-msgstr "AHV 的虚拟机到主机映射更新的频率（以秒为单位）"
 
 msgid "The virt-who report arrived within the interval"
 msgstr "在间隔期间收到 virt-who 报告"
