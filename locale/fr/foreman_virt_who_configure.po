@@ -7,14 +7,14 @@
 # 21966816214bc546c1fc8a185e75ca1c, 2017
 # Claer <transiblu@claer.hammock.fr>, 2017
 # Bryan Kearney <bryan.kearney@gmail.com>, 2019
-# Amit Upadhye <aupadhye@redhat.com>, 2022
+# Amit Upadhye <aupadhye@redhat.com>, 2023
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2022\n"
+"Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2023\n"
 "Language-Team: French (https://www.transifex.com/foreman/teams/114/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,9 +38,6 @@ msgstr "Ignorer le proxy. Une liste de noms d'hôte ou de domaines ou d'adresses
 msgid "A plugin to make virt-who configuration easy"
 msgstr "Plug-in pour faciliter la configuration de virt-who"
 
-msgid "AHV update interval"
-msgstr ""
-
 msgid "Abstract"
 msgstr "Résumé"
 
@@ -48,7 +45,7 @@ msgid "Abstract async task"
 msgstr "Tâche async abstraite"
 
 msgid "Account name by which virt-who is to connect to Nutanix AHV."
-msgstr ""
+msgstr "Nom du compte avec lequel virt-who doit se connecter à AHV Nutanix."
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
 msgstr "Nom du compte avec lequel virt-who doit se connecter à l'hyperviseur, au format <code>domain_name\\account_name</code>. Notez qu'une seule barre oblique inverse sépare les valeurs de domain_name et account_name. Si vous utilisez un compte de domaine et le fichier de configuration global <code>/etc/virt-who.conf</code>, <b>two</b> barres obliques inverses sont alors requises. Pour en savoir plus, consultez <a href=\"https://access.redhat.com/solutions/1270223\"> Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a>."
@@ -105,7 +102,7 @@ msgid "Configuration file containing details about how to connect to the cluster
 msgstr "Fichier de configuration contenant des détails sur la façon de se connecter au cluster et des détails d'authentification"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details."
-msgstr ""
+msgstr "Fichier de configuration contenant des détails sur la façon de se connecter au cluster et des détails d'authentification."
 
 msgid "Configuration interval in minutes"
 msgstr "Intervalle de configuration en minutes"
@@ -225,7 +222,7 @@ msgid "Enable"
 msgstr "Activer"
 
 msgid "Enable AHV debug"
-msgstr ""
+msgstr "Activer le débogage de l'AVH"
 
 msgid "Enable debugging output"
 msgstr "Activer la sortie de débogage"
@@ -270,7 +267,7 @@ msgid "Exclude hosts"
 msgstr "Exclure des hôtes"
 
 msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "Exclure les hôtes dont l'ID de cluster est spécifié dans une liste séparée par des virgules dans cette option ne sera <b>PAS</b> rapporté. Utiliser la commande PowerCLI pour trouver les noms de domaine dans VMware <code>Get-Cluster \"ClusterName\" | Select ID</code>. Les caractères génériques et les expressions régulières sont pris en charge, les enregistrements multiples doivent être séparés par une virgule. Mettez la valeur entre guillemets si elle contient des caractères spéciaux comme la virgule. Tous les caractères de nouvelle ligne seront supprimés dans le fichier de configuration résultant, les espaces blancs sont supprimés au début et à la fin."
 
 msgid "Export"
 msgstr "Exporter"
@@ -345,10 +342,10 @@ msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wi
 msgstr "Liste noire Hyperviseur, applicable uniquement lorsque le mode de filtrage est défini sur 2. Les caractères génériques et les expressions régulières sont pris en charge, plusieurs enregistrements doivent être séparés par une virgule."
 
 msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
-msgstr "Mode de filtrage Hyperviseur, %%{unlimited} indique aucun filtrage, %%{whitelist} means whitelist, %%{blacklist} signifie liste noire"
+msgstr "Mode de filtrage Hyperviseur, %{unlimited} indique aucun filtrage, %{whitelist} means whitelist, %{blacklist} signifie liste noire"
 
 msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
-msgstr ""
+msgstr "Mot de passe de l'hyperviseur obligatoire pour tous les types d'hyperviseur sauf libvirt/kebevirt."
 
 msgid "Hypervisor type"
 msgstr "Type d'hyperviseur"
@@ -462,7 +459,7 @@ msgid "No configuration found"
 msgstr "Aucune configuration trouvée"
 
 msgid "Nutanix AHV’s IP address."
-msgstr ""
+msgstr "L'adresse IP de Nutanix AHV."
 
 msgid "OK"
 msgstr "OK"
@@ -477,16 +474,16 @@ msgid "One virt-who configuration represents one config file in /etc/virt-who.d 
 msgstr "Une configuration virt-who représente un fichier de configuration dans le répertoire /etc/virt-who.d et correspond à un hyperviseur, une organisation et un environnement de cycle de vie."
 
 msgid "Only hosts which cluster ID is specified in comma-separated list in this option will be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "Seuls les hôtes dont l'ID de cluster est spécifié dans une liste séparée par des virgules dans cette option seront signalés. Utiliser la commande PowerCLI pour trouver les noms de domaine dans VMware <code>Get-Cluster \"ClusterName\" | Select ID</code>. Les caractères génériques et les expressions régulières sont pris en charge, les enregistrements multiples doivent être séparés par une virgule. Mettez la valeur entre guillemets si elle contient des caractères spéciaux comme la virgule. Tous les caractères de nouvelle ligne seront supprimés dans le fichier de configuration résultant, les espaces blancs sont supprimés au début et à la fin."
 
 msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr "Seuls les hôtes dont l'uuid (ou le nom d'hôte ou hwuuid, basé sur <code>hypervisor_id</code>) est spécifié dans la liste séparée par des virgules dans cette option seront signalés. Les caractères de remplacement et les expressions régulières sont pris en charge, les enregistrements multiples doivent être séparés par une virgule. Mettez la valeur entre guillemets si elle contient des caractères spéciaux comme la virgule. Tous les nouveaux caractères de ligne seront supprimés dans le fichier de configuration résultant, les espaces blancs sont supprimés au début et à la fin."
 
 msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
-msgstr ""
+msgstr "L'option Activer la sortie de débogage est nécessaire pour activer le débogage interne de l'AHV. Elle fournit des informations supplémentaires sur le débogage de l'AHV lorsque les deux options sont activées"
 
 msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled "
-msgstr ""
+msgstr "L'option Activer la sortie de débogage est nécessaire pour activer le débogage interne de l'AHV. Elle fournit des informations supplémentaires sur le débogage de l'AHV lorsque les deux options sont activées "
 
 msgid "Organization of the virt-who configuration"
 msgstr "Organisation de la configuration virt-who"
@@ -507,13 +504,13 @@ msgid "Path to kubeconfig file"
 msgstr "Chemin d'accès au fichier kubeconfig"
 
 msgid "Prism Central"
-msgstr ""
+msgstr "Prism Central"
 
 msgid "Prism Element"
-msgstr ""
+msgstr "Élément Prism"
 
 msgid "Prism Flavor"
-msgstr ""
+msgstr "Gabarit Prism"
 
 msgid "Product Create"
 msgstr "Créer Produit"
@@ -567,7 +564,7 @@ msgid "Schedule"
 msgstr "Programmer"
 
 msgid "Select the Prism flavor you are connecting to"
-msgstr ""
+msgstr "Sélectionnez le gabarit Prism auquel vous êtes connecté"
 
 msgid "Show a virt-who configuration"
 msgstr "Afficher une configuration virt-who"
@@ -608,9 +605,6 @@ msgstr "Synchroniser le smart proxy"
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr "La configuration n'a pas encore été déployée ou virt-who n'a pas été en mesure de signaler l'état"
-
-msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
-msgstr ""
 
 msgid "The virt-who report arrived within the interval"
 msgstr "Le rapport virt-who est arrivé dans l'intervalle"

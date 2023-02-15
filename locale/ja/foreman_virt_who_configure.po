@@ -11,7 +11,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
 "Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2022\n"
@@ -36,9 +36,6 @@ msgstr "プロキシー設定を無視するホスト名、ドメインまたは
 
 msgid "A plugin to make virt-who configuration easy"
 msgstr "virt-who 設定を容易にするプラグイン"
-
-msgid "AHV update interval"
-msgstr "AHV 更新間隔"
 
 msgid "Abstract"
 msgstr "概要"
@@ -607,9 +604,6 @@ msgstr "Smart Proxy の同期"
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr "設定がデプロイされていないか、または virt-who がステータスを報告できませんでした"
-
-msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
-msgstr "AHV の仮想マシンとホスト間のマッピングを更新する頻度 (秒単位)"
 
 msgid "The virt-who report arrived within the interval"
 msgstr "期間内に着信した virt-who レポート"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-03 16:49+0100\n"
-"PO-Revision-Date: 2023-01-03 16:49+0100\n"
+"POT-Creation-Date: 2023-02-15 19:51+0100\n"
+"PO-Revision-Date: 2023-02-15 19:51+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -168,35 +168,29 @@ msgstr ""
 
 #:
 #: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:60
-#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:29
-msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
-msgstr ""
-
-#:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:61
 msgid ""
 "Option Enable debugging output is required to enable AHV internal debug. It pr"
 "ovides extra AHV debug information when both options are enabled"
 msgstr ""
 
 #:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:65
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:64
 msgid "Create a virt-who configuration"
 msgstr ""
 
 #:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:73
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:72
 msgid "Update a virt-who configuration"
 msgstr ""
 
 #:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:74
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:82
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:73
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:81
 msgid "Configuration numeric identifier"
 msgstr ""
 
 #:
-#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:81
+#: ../app/controllers/foreman_virt_who_configure/api/v2/configs_controller.rb:80
 msgid "Delete a virt-who configuration"
 msgstr ""
 
@@ -375,7 +369,7 @@ msgstr ""
 msgid "Prism Element"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:218
+#: ../app/models/foreman_virt_who_configure/config.rb:217
 msgid "every %s hours"
 msgstr ""
 
@@ -545,7 +539,7 @@ msgstr ""
 msgid "Ignore Proxy"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:68
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:67
 msgid ""
 "Use either hammer command or the script below to deploy this configuration. Bo"
 "th require root privileges. Run one of them on the target host which has acces"
@@ -553,36 +547,36 @@ msgid ""
 " Foreman host:"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:74
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:73
 msgid "Hammer command: "
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:83
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:107
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:82
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:106
 msgid "Copy to clipboard"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:90
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:89
 msgid "Configuration script: "
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:94
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:93
 msgid "On the target virt-who host:"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:95
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:94
 msgid "1. Copy this configuration script to a safe directory."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:96
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:95
 msgid "2. Make the script executable and run it."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:97
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:96
 msgid "3. Delete the script."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:108
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:107
 msgid "Download the script"
 msgstr ""
 
@@ -730,18 +724,13 @@ msgstr ""
 
 #:
 #: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:29
-msgid "AHV update interval"
-msgstr ""
-
-#:
-#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:30
 msgid ""
 "Option Enable debugging output is required to enable AHV internal debug. It pr"
 "ovides extra AHV debug information when both options are enabled "
 msgstr ""
 
 #:
-#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:30
+#: ../app/views/foreman_virt_who_configure/configs/steps/_connection_form.erb:29
 msgid "Enable AHV debug"
 msgstr ""
 

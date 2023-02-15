@@ -8,7 +8,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.11\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
 "Last-Translator: Carmela Rubiños <carmela.rubinos@gmail.com>, 2022\n"
@@ -32,9 +32,6 @@ msgid "A comma-separated list of hostnames or domains or ip addresses to ignore 
 msgstr ""
 
 msgid "A plugin to make virt-who configuration easy"
-msgstr ""
-
-msgid "AHV update interval"
 msgstr ""
 
 msgid "Abstract"
@@ -598,9 +595,6 @@ msgid "Synchronize smart proxy"
 msgstr ""
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
-msgstr ""
-
-msgid "The frequency of VM-to-host mapping updates for AHV(in seconds)"
 msgstr ""
 
 msgid "The virt-who report arrived within the interval"
