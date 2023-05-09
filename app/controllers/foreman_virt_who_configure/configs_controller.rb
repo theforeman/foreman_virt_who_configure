@@ -36,7 +36,7 @@ module ForemanVirtWhoConfigure
     def create
       @config = Config.new(config_params)
       if @config.save
-        process_success :success_redirect => foreman_virt_who_configure_config_path(@config), :object => @config
+        process_success :success_redirect => foreman_virt_who_configure_config_path(@config), :object => @config.name
       else
         render 'new'
       end
@@ -50,17 +50,17 @@ module ForemanVirtWhoConfigure
 
     def update
       if @config.update(config_params)
-        process_success :object => @config
+        process_success :object => @config.name
       else
-        process_error :object => @config
+        process_error :object => @config.name
       end
     end
 
     def destroy
       if @config.destroy
-        process_success :object => @config
+        process_success :object => @config.name
       else
-        process_error :object => @config
+        process_error :object => @config.name
       end
     end
 
