@@ -1,8 +1,11 @@
 [main]
-host = https://www.transifex.com
+host = https://app.transifex.com
 
-[foreman.foreman_virt_who_configure]
+[o:foreman:p:foreman:r:foreman_virt_who_configure]
 file_filter = locale/<lang>/foreman_virt_who_configure.edit.po
 source_file = locale/foreman_virt_who_configure.pot
 source_lang = en
-type = PO
+type        = PO
+
+minimum_perc  = 0
+resource_name = foreman_virt_who_configure

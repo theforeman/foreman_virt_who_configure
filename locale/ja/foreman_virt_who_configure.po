@@ -154,9 +154,6 @@ msgstr "エクスポート履歴の作成"
 msgid "Create Import History"
 msgstr "インポート履歴の作成"
 
-msgid "Create Package Group"
-msgstr "パッケージグループの作成"
-
 msgid "Create Syncable Export History"
 msgstr "同期可能なエクスポート履歴の作成"
 
@@ -171,9 +168,6 @@ msgstr "アクティベーションキーの削除"
 
 msgid "Delete Lifecycle Environment"
 msgstr "ライフサイクル環境の削除"
-
-msgid "Delete Package Group"
-msgstr "パッケージグループの削除"
 
 msgid "Delete Product"
 msgstr "製品の削除"
@@ -337,6 +331,18 @@ msgstr "接続済みのハイパーバイザーに変更がないか、どのよ
 msgid "Hypervisor ID"
 msgstr "ハイパーバイザー ID"
 
+msgid "Hypervisor Password"
+msgstr ""
+
+msgid "Hypervisor Server"
+msgstr ""
+
+msgid "Hypervisor Type"
+msgstr ""
+
+msgid "Hypervisor Username"
+msgstr ""
+
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr "フィルタリングモードが 2 に設定されている場合にのみ適用できるハイパーバイザーのブラックリストです。ワイルドカードおよび正規表現がサポートされており、複数のレコードはコンマで区切られる必要があります。"
 
@@ -412,6 +418,9 @@ msgstr "適用可能なエラータのインストール"
 msgid "Instance update"
 msgstr "インスタンスの更新"
 
+msgid "Interval"
+msgstr ""
+
 msgid "Interval was not provided"
 msgstr "間隔は指定されていません"
 
@@ -429,6 +438,9 @@ msgstr "組織別の virt-who 設定の一覧"
 
 msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr "Microsoft Hyper-V の完全修飾ホスト名または IP アドレス。"
+
+msgid "Name"
+msgstr ""
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr "この設定の名前。例: ハイパーバイザーの名前"
@@ -531,6 +543,9 @@ msgstr "代替コンテンツソースの更新"
 
 msgid "Reindex subscriptions"
 msgstr "サブスクリプションのインデックス再作成"
+
+msgid "Remote action:"
+msgstr ""
 
 msgid "Remove Content"
 msgstr "コンテンツの削除"

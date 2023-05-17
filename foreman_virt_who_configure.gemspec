@@ -1,6 +1,18 @@
 require File.expand_path('../lib/foreman_virt_who_configure/version', __FILE__)
 require 'date'
 
+begin
+  Dir["locale/**/*.po"].each do |po|
+    mo = po.sub(/foreman_virt_who_configure\.po$/, "LC_MESSAGES/foreman_virt_who_configure.mo")
+    STDERR.puts "WARNING: File #{mo} does not exist, generate with 'make all-mo'!" unless File.exist?(mo)
+    STDERR.puts "WARNING: File #{mo} outdated, regenerate with 'make all-mo'" if File.mtime(po) > File.mtime(mo)
+  # Adding this so you can actually build the gem and the warnings come out, without this
+  # we get an error when making the gem and it fails as well as a ruby error if the mo files don't exist
+  rescue => e
+    puts "#{e} not found"
+  end
+end
+
 Gem::Specification.new do |s|
   s.name        = 'foreman_virt_who_configure'
   s.version     = ForemanVirtWhoConfigure::VERSION

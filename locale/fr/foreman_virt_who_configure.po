@@ -155,9 +155,6 @@ msgstr "Créer un historique des exportations"
 msgid "Create Import History"
 msgstr "Créer un historique des importations"
 
-msgid "Create Package Group"
-msgstr "Créer un groupe de packages"
-
 msgid "Create Syncable Export History"
 msgstr "Créer un historique d'exportation synchronisable"
 
@@ -172,9 +169,6 @@ msgstr "Supprimer la clé d'activation"
 
 msgid "Delete Lifecycle Environment"
 msgstr "Supprimer l'environnement de cycle de vie"
-
-msgid "Delete Package Group"
-msgstr "Supprimer le groupe de packages"
 
 msgid "Delete Product"
 msgstr "Supprimer le produit"
@@ -338,6 +332,18 @@ msgstr "À quelle fréquence faut-il vérifier les modifications apportées aux 
 msgid "Hypervisor ID"
 msgstr "ID hyperviseur"
 
+msgid "Hypervisor Password"
+msgstr ""
+
+msgid "Hypervisor Server"
+msgstr ""
+
+msgid "Hypervisor Type"
+msgstr ""
+
+msgid "Hypervisor Username"
+msgstr ""
+
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr "Liste noire Hyperviseur, applicable uniquement lorsque le mode de filtrage est défini sur 2. Les caractères génériques et les expressions régulières sont pris en charge, plusieurs enregistrements doivent être séparés par une virgule."
 
@@ -413,6 +419,9 @@ msgstr "Installer des errata applicables"
 msgid "Instance update"
 msgstr "Mise à jour de l'instance"
 
+msgid "Interval"
+msgstr ""
+
 msgid "Interval was not provided"
 msgstr "L'intervalle n'était pas fourni"
 
@@ -430,6 +439,9 @@ msgstr "Liste des configurations virt-who par organisation"
 
 msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr "Nom d'hôte complet ou adresse IP Microsoft Hyper-V."
+
+msgid "Name"
+msgstr ""
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr "Nom de cette configuration, par exemple le nom de l'hyperviseur"
@@ -532,6 +544,9 @@ msgstr "Réactualisation de la source de contenu alternatif"
 
 msgid "Reindex subscriptions"
 msgstr "Ré-indexer les abonnements"
+
+msgid "Remote action:"
+msgstr ""
 
 msgid "Remove Content"
 msgstr "Supprimer le contenu"
