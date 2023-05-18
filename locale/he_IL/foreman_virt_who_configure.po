@@ -1,0 +1,723 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_virt_who_configure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# ohadlevy <ohadlevy@gmail.com>, 2019
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-05-03 11:59+0000\n"
+"Last-Translator: ohadlevy <ohadlevy@gmail.com>, 2019\n"
+"Language-Team: Hebrew (Israel) (https://app.transifex.com/foreman/teams/114/he"
+"_IL/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1"
+" == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+
+msgid "1. Copy this configuration script to a safe directory."
+msgstr ""
+
+msgid "2. Make the script executable and run it."
+msgstr ""
+
+msgid "3. Delete the script."
+msgstr ""
+
+msgid "A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses."
+msgstr ""
+
+msgid "A plugin to make virt-who configuration easy"
+msgstr ""
+
+msgid "Abstract"
+msgstr ""
+
+msgid "Abstract async task"
+msgstr ""
+
+msgid "Account name by which virt-who is to connect to Nutanix AHV."
+msgstr ""
+
+msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
+msgstr ""
+
+msgid "Account name by which virt-who is to connect to the hypervisor."
+msgstr ""
+
+msgid "Account name by which virt-who is to connect to the hypervisor. By default this is <code>Administrator</code>. To use an alternate account, create a user account and assign that account to the following groups (Windows 2012 Server): Hyper-V Administrators and Remote Management Users."
+msgstr ""
+
+msgid "Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information."
+msgstr ""
+
+msgid "Account password by which virt-who is to connect to the hypervisor instance."
+msgstr ""
+
+msgid "Action with sub plans"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Agent action"
+msgstr ""
+
+msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Attach subscriptions"
+msgstr ""
+
+msgid "Auto attach subscriptions"
+msgstr ""
+
+msgid "Blacklist"
+msgstr ""
+
+msgid "Bulk generate applicability for hosts"
+msgstr ""
+
+msgid "Combined Profile Update"
+msgstr ""
+
+msgid "Configs"
+msgstr ""
+
+msgid "Configuration Status"
+msgstr ""
+
+msgid "Configuration file containing details about how to connect to the cluster and authentication details"
+msgstr ""
+
+msgid "Configuration file containing details about how to connect to the cluster and authentication details."
+msgstr ""
+
+msgid "Configuration interval in minutes"
+msgstr ""
+
+msgid "Configuration name"
+msgstr ""
+
+msgid "Configuration numeric identifier"
+msgstr ""
+
+msgid "Configuration script: "
+msgstr ""
+
+msgid "Config|Interval"
+msgstr ""
+
+msgid "Config|Last Report"
+msgstr ""
+
+msgid "Config|Name"
+msgstr ""
+
+msgid "Connection"
+msgstr ""
+
+msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
+msgstr ""
+
+msgid "Copy to clipboard"
+msgstr ""
+
+msgid "Copy version units to library"
+msgstr ""
+
+msgid "Count"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Create Alternate Content Source"
+msgstr ""
+
+msgid "Create Config"
+msgstr ""
+
+msgid "Create Export History"
+msgstr ""
+
+msgid "Create Import History"
+msgstr ""
+
+msgid "Create Syncable Export History"
+msgstr ""
+
+msgid "Create a virt-who configuration"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Delete Activation Key"
+msgstr ""
+
+msgid "Delete Lifecycle Environment"
+msgstr ""
+
+msgid "Delete Product"
+msgstr ""
+
+msgid "Delete a virt-who configuration"
+msgstr ""
+
+msgid "Delete virt-who configuration %s?"
+msgstr ""
+
+msgid "Deploy"
+msgstr ""
+
+msgid "Destroy"
+msgstr ""
+
+msgid "Destroy Alternate Content Source"
+msgstr ""
+
+msgid "Destroy Content Host"
+msgstr ""
+
+msgid "Details"
+msgstr "פרטים נוספים"
+
+msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid "Discover"
+msgstr ""
+
+msgid "Download the script"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit Virt-who Config"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid "Enable AHV debug"
+msgstr ""
+
+msgid "Enable debugging output"
+msgstr ""
+
+msgid "Enable debugging output?"
+msgstr ""
+
+msgid "Errata mail"
+msgstr ""
+
+msgid "Every 12 hours"
+msgstr ""
+
+msgid "Every 2 days"
+msgstr ""
+
+msgid "Every 2 hours"
+msgstr ""
+
+msgid "Every 24 hours"
+msgstr ""
+
+msgid "Every 3 days"
+msgstr ""
+
+msgid "Every 4 hours"
+msgstr ""
+
+msgid "Every 8 hours"
+msgstr ""
+
+msgid "Every hour"
+msgstr ""
+
+msgid "Exclude Hosts"
+msgstr ""
+
+msgid "Exclude host parents"
+msgstr ""
+
+msgid "Exclude hosts"
+msgstr ""
+
+msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Export Library"
+msgstr ""
+
+msgid "Export Repository"
+msgstr ""
+
+msgid "Fetch pxe files"
+msgstr ""
+
+msgid "Filter Hosts"
+msgstr ""
+
+msgid "Filter host parents"
+msgstr ""
+
+msgid "Filter hosts"
+msgstr ""
+
+msgid "Filtered index content"
+msgstr ""
+
+msgid "Filtering"
+msgstr ""
+
+msgid "Foreman server FQDN"
+msgstr ""
+
+msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
+msgstr ""
+
+msgid "Fully qualified host name or IP address of the hypervisor"
+msgstr ""
+
+msgid "General information"
+msgstr ""
+
+msgid "Generate host applicability"
+msgstr ""
+
+msgid "Generate repository applicability"
+msgstr ""
+
+msgid "HTTP Proxy"
+msgstr ""
+
+msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
+msgstr ""
+
+msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used."
+msgstr ""
+
+msgid "Hammer command: "
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours. Different interval can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
+msgstr ""
+
+msgid "Hypervisor ID"
+msgstr ""
+
+msgid "Hypervisor Password"
+msgstr ""
+
+msgid "Hypervisor Server"
+msgstr ""
+
+msgid "Hypervisor Type"
+msgstr ""
+
+msgid "Hypervisor Username"
+msgstr ""
+
+msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
+msgstr ""
+
+msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
+msgstr ""
+
+msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
+msgstr ""
+
+msgid "Hypervisor type"
+msgstr ""
+
+msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
+msgstr ""
+
+msgid "Hypervisors"
+msgstr ""
+
+msgid "Hypervisors update"
+msgstr ""
+
+msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
+msgstr ""
+
+msgid "Ignore Proxy"
+msgstr ""
+
+msgid "Ignore proxy"
+msgstr ""
+
+msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Import Content View Version"
+msgstr ""
+
+msgid "Import Default Content View"
+msgstr ""
+
+msgid "Import Puppet classes"
+msgstr ""
+
+msgid "Import Repository"
+msgstr ""
+
+msgid "Import facts"
+msgstr ""
+
+msgid "Incremental Update"
+msgstr ""
+
+msgid "Incremental Update of  Content View Version(s) "
+msgstr ""
+
+msgid "Index content"
+msgstr ""
+
+msgid "Index errata"
+msgstr ""
+
+msgid "Index module streams"
+msgstr ""
+
+msgid "Index package groups"
+msgstr ""
+
+msgid "Install Applicable Errata"
+msgstr ""
+
+msgid "Instance update"
+msgstr ""
+
+msgid "Interval"
+msgstr ""
+
+msgid "Interval was not provided"
+msgstr ""
+
+msgid "Latest Configurations Without Change"
+msgstr ""
+
+msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
+msgstr ""
+
+msgid "List of virt-who configurations"
+msgstr ""
+
+msgid "List of virt-who configurations per organization"
+msgstr ""
+
+msgid "Microsoft Hyper-V fully qualified host name or IP address."
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Name of this configuration, e.g. the name of the hypervisor"
+msgstr ""
+
+msgid "New Config"
+msgstr ""
+
+msgid "New Virt-who Config"
+msgstr ""
+
+msgid "Newer version of virt-who is required, minimum version is %s"
+msgstr ""
+
+msgid "No Change"
+msgstr ""
+
+msgid "No Report Yet"
+msgstr ""
+
+msgid "No Reports"
+msgstr ""
+
+msgid "No change"
+msgstr ""
+
+msgid "No configuration found"
+msgstr ""
+
+msgid "Nutanix AHV’s IP address."
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "On the target virt-who host:"
+msgstr ""
+
+msgid "On this page you can define virt-who configurations for your hypervisors."
+msgstr ""
+
+msgid "One virt-who configuration represents one config file in /etc/virt-who.d directory and maps to single hypervisor, organization and lifecycle environment."
+msgstr ""
+
+msgid "Only hosts which cluster ID is specified in comma-separated list in this option will be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
+msgstr ""
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
+msgstr ""
+
+msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled "
+msgstr ""
+
+msgid "Organization of the virt-who configuration"
+msgstr ""
+
+msgid "Overview"
+msgstr ""
+
+msgid "Owner"
+msgstr ""
+
+msgid "Owner was not provided"
+msgstr ""
+
+msgid "Package Profile Update"
+msgstr ""
+
+msgid "Path to kubeconfig file"
+msgstr ""
+
+msgid "Prism Central"
+msgstr ""
+
+msgid "Prism Element"
+msgstr ""
+
+msgid "Prism Flavor"
+msgstr ""
+
+msgid "Product Create"
+msgstr ""
+
+msgid "Promote"
+msgstr ""
+
+msgid "Promotion to Environment"
+msgstr ""
+
+msgid "Publish"
+msgstr ""
+
+msgid "Publish Lifecycle Environment Repositories"
+msgstr ""
+
+msgid "Refresh Alternate Content Source"
+msgstr ""
+
+msgid "Reindex subscriptions"
+msgstr ""
+
+msgid "Remote action:"
+msgstr ""
+
+msgid "Remove Content"
+msgstr ""
+
+msgid "Remove Version"
+msgstr ""
+
+msgid "Remove Versions and Associations"
+msgstr ""
+
+msgid "Remove from Environment"
+msgstr ""
+
+msgid "Remove subscriptions"
+msgstr ""
+
+msgid "Renders a deploy script for the specified virt-who configuration"
+msgstr ""
+
+msgid "Report"
+msgstr ""
+
+msgid "Republish Version Repositories"
+msgstr ""
+
+msgid "Run Sync Plan:"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "Select the Prism flavor you are connecting to"
+msgstr ""
+
+msgid "Show a virt-who configuration"
+msgstr ""
+
+msgid "Specifies how the hypervisor will be identified."
+msgstr ""
+
+msgid ""
+"Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
+"                              Note that some virtualization backends don't have all of them implemented.\n"
+"                              Default is <b>hostname</b>, which provides more meaningful hypervisor\n"
+"                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx only.\n"
+"                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Success"
+msgstr "הצלחה"
+
+msgid "Sync capsule"
+msgstr ""
+
+msgid "Syncable export"
+msgstr ""
+
+msgid "Synchronize"
+msgstr ""
+
+msgid "Synchronize smart proxy"
+msgstr ""
+
+msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
+msgstr ""
+
+msgid "The virt-who report arrived within the interval"
+msgstr ""
+
+msgid "The virt-who report has not arrived within the interval, which indicates there was no change on hypervisor"
+msgstr ""
+
+msgid "To define a new configuration, click the New Config button and fill in the form. After you provide all required information a virt-who configuration script will be generated. You could either install it manually by copying the script or deploy it on a selected target host through Remote Execution."
+msgstr ""
+
+msgid "Total Configurations"
+msgstr ""
+
+msgid "Unable to create sysconfig file"
+msgstr ""
+
+msgid "Unable to create virt-who config file"
+msgstr ""
+
+msgid "Unable to enable virt-who service using systemctl"
+msgstr ""
+
+msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
+msgstr ""
+
+msgid "Unable to start virt-who service, please see virt-who logs for more details"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Unknown configuration status"
+msgstr ""
+
+msgid "Unknown configuration status, caused by unexpected conditions"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Update Alternate Content Source"
+msgstr ""
+
+msgid "Update CDN Configuration"
+msgstr ""
+
+msgid "Update Content Overrides"
+msgstr ""
+
+msgid "Update a virt-who configuration"
+msgstr ""
+
+msgid "Update content urls"
+msgstr ""
+
+msgid "Update for host"
+msgstr ""
+
+msgid "Update http proxy"
+msgstr ""
+
+msgid "Update http proxy details"
+msgstr ""
+
+msgid "Update redhat repository"
+msgstr ""
+
+msgid "Update release version for host"
+msgstr ""
+
+msgid "Updating System Purpose for host"
+msgstr ""
+
+msgid "Upload into"
+msgstr ""
+
+msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
+msgstr ""
+
+msgid "VMware vCenter server’s fully qualified host name or IP address."
+msgstr ""
+
+msgid "Verify checksum"
+msgstr ""
+
+msgid "Virt-who Configs Status"
+msgstr ""
+
+msgid "Virt-who Configuration %s"
+msgstr ""
+
+msgid "Virt-who Configurations"
+msgstr ""
+
+msgid "Virt-who Configurations Status"
+msgstr ""
+
+msgid "Virt-who configurations"
+msgstr ""
+
+msgid "Whitelist"
+msgstr ""
+
+msgid "every %s hours"
+msgstr ""

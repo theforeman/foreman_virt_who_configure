@@ -157,9 +157,6 @@ msgstr ""
 msgid "Create Import History"
 msgstr ""
 
-msgid "Create Package Group"
-msgstr ""
-
 msgid "Create Syncable Export History"
 msgstr ""
 
@@ -174,9 +171,6 @@ msgstr "Удалить ключ активации"
 
 msgid "Delete Lifecycle Environment"
 msgstr "Удалить окружение"
-
-msgid "Delete Package Group"
-msgstr ""
 
 msgid "Delete Product"
 msgstr "Удалить продукт"
@@ -340,6 +334,18 @@ msgstr ""
 msgid "Hypervisor ID"
 msgstr ""
 
+msgid "Hypervisor Password"
+msgstr ""
+
+msgid "Hypervisor Server"
+msgstr ""
+
+msgid "Hypervisor Type"
+msgstr ""
+
+msgid "Hypervisor Username"
+msgstr ""
+
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr ""
 
@@ -415,6 +421,9 @@ msgstr "Установить исправления"
 msgid "Instance update"
 msgstr ""
 
+msgid "Interval"
+msgstr ""
+
 msgid "Interval was not provided"
 msgstr ""
 
@@ -431,6 +440,9 @@ msgid "List of virt-who configurations per organization"
 msgstr ""
 
 msgid "Microsoft Hyper-V fully qualified host name or IP address."
+msgstr ""
+
+msgid "Name"
 msgstr ""
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
@@ -534,6 +546,9 @@ msgstr ""
 
 msgid "Reindex subscriptions"
 msgstr "Повторно индексировать подписки"
+
+msgid "Remote action:"
+msgstr ""
 
 msgid "Remove Content"
 msgstr "Удалить содержимое"

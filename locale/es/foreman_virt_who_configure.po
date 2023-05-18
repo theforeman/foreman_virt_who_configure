@@ -157,9 +157,6 @@ msgstr "Crear historial de exportación"
 msgid "Create Import History"
 msgstr "Crear historial de importaciones"
 
-msgid "Create Package Group"
-msgstr "Crear grupo de paquete"
-
 msgid "Create Syncable Export History"
 msgstr ""
 
@@ -174,9 +171,6 @@ msgstr "Borrar llave de activación"
 
 msgid "Delete Lifecycle Environment"
 msgstr "Borrar entorno del ciclo de vida"
-
-msgid "Delete Package Group"
-msgstr "Eliminar grupo de paquete"
 
 msgid "Delete Product"
 msgstr "Borrar producto"
@@ -340,6 +334,18 @@ msgstr "¿Con qué frecuencia hay que revisar los hipervisores conectados para v
 msgid "Hypervisor ID"
 msgstr "ID del hipervisor"
 
+msgid "Hypervisor Password"
+msgstr ""
+
+msgid "Hypervisor Server"
+msgstr ""
+
+msgid "Hypervisor Type"
+msgstr ""
+
+msgid "Hypervisor Username"
+msgstr ""
+
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr "Lista negra del hipervisor, aplicable únicamente cuando el modo de filtrado está configurado en 2. Se admiten comodines y expresiones regulares, los registros múltiples deben separarse con coma."
 
@@ -415,6 +421,9 @@ msgstr "Instalación de erratas aplicables"
 msgid "Instance update"
 msgstr "Actualización de instancia"
 
+msgid "Interval"
+msgstr ""
+
 msgid "Interval was not provided"
 msgstr "No se proporcionó el intervalo"
 
@@ -432,6 +441,9 @@ msgstr "Lista de configuraciones virt-who por organización"
 
 msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr "Nombre de host o dirección IP totalmente calificados de Microsoft Hyper-V."
+
+msgid "Name"
+msgstr ""
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr "Nombre de esta configuración, por ejemplo: nombre del hipervisor"
@@ -534,6 +546,9 @@ msgstr ""
 
 msgid "Reindex subscriptions"
 msgstr "Reindexar suscripciones"
+
+msgid "Remote action:"
+msgstr ""
 
 msgid "Remove Content"
 msgstr "Borrar contenido"
