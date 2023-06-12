@@ -159,6 +159,8 @@ EOS
     def connection_details
       if config.hypervisor_type == 'kubevirt'
         ""
+      elsif config.hypervisor_type == 'libvirt'
+        "\nserver=qemu:///system"
       else
         "\nserver=#{cr_server}
 username=#{cr_username}
