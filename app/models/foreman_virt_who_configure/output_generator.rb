@@ -160,7 +160,8 @@ EOS
       if config.hypervisor_type == 'kubevirt'
         ""
       elsif config.hypervisor_type == 'libvirt'
-        "\nserver=qemu:///system"
+        "\nserver=#{cr_server}
+username=#{cr_username}"
       else
         "\nserver=#{cr_server}
 username=#{cr_username}
