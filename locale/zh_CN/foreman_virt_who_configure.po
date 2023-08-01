@@ -89,6 +89,9 @@ msgstr "黑名单"
 msgid "Bulk generate applicability for hosts"
 msgstr "批量生成主机的适用性"
 
+msgid "Check for long running tasks"
+msgstr ""
+
 msgid "Combined Profile Update"
 msgstr "组合的配置集更新"
 
@@ -178,6 +181,9 @@ msgstr "删除 virt-who 配置"
 
 msgid "Delete virt-who configuration %s?"
 msgstr "删除 virt-who 配置 %s？"
+
+msgid "Deliver notifications about long running tasks"
+msgstr ""
 
 msgid "Deploy"
 msgstr "部署"

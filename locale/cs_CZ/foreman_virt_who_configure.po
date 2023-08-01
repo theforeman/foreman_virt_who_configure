@@ -89,6 +89,9 @@ msgstr "Seznam vyloučených"
 msgid "Bulk generate applicability for hosts"
 msgstr ""
 
+msgid "Check for long running tasks"
+msgstr ""
+
 msgid "Combined Profile Update"
 msgstr ""
 
@@ -178,6 +181,9 @@ msgstr "Smazat nastavení pro virt-who"
 
 msgid "Delete virt-who configuration %s?"
 msgstr "Smazat nastavení pro virt-who %s?"
+
+msgid "Deliver notifications about long running tasks"
+msgstr ""
 
 msgid "Deploy"
 msgstr "Nasadit"

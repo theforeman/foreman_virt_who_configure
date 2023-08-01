@@ -89,6 +89,9 @@ msgstr "Liste noire"
 msgid "Bulk generate applicability for hosts"
 msgstr "La masse génère l'applicabilité pour les hôtes"
 
+msgid "Check for long running tasks"
+msgstr ""
+
 msgid "Combined Profile Update"
 msgstr "Mise à jour de profil combiné"
 
@@ -178,6 +181,9 @@ msgstr "Supprimer une configuration virt-who"
 
 msgid "Delete virt-who configuration %s?"
 msgstr "Supprimer la configuration virt-who %s?"
+
+msgid "Deliver notifications about long running tasks"
+msgstr ""
 
 msgid "Deploy"
 msgstr "Déploiement"

@@ -88,6 +88,9 @@ msgstr "ブラックリスト"
 msgid "Bulk generate applicability for hosts"
 msgstr "ホストに適用可能なエラータを一括生成します"
 
+msgid "Check for long running tasks"
+msgstr ""
+
 msgid "Combined Profile Update"
 msgstr "統合プロファイルの更新"
 
@@ -177,6 +180,9 @@ msgstr "virt-who 設定を削除します。"
 
 msgid "Delete virt-who configuration %s?"
 msgstr "virt-who 設定 %s を削除しますか?"
+
+msgid "Deliver notifications about long running tasks"
+msgstr ""
 
 msgid "Deploy"
 msgstr "デプロイ"

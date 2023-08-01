@@ -92,6 +92,9 @@ msgstr "Lista de bloqueios"
 msgid "Bulk generate applicability for hosts"
 msgstr "Aplicabilidade de geração em massa para hosts"
 
+msgid "Check for long running tasks"
+msgstr ""
+
 msgid "Combined Profile Update"
 msgstr "Atualização de perfil combinado"
 
@@ -181,6 +184,9 @@ msgstr "Excluir uma configuração do virt-who"
 
 msgid "Delete virt-who configuration %s?"
 msgstr "Excluir a configuração virgem-quem %s?"
+
+msgid "Deliver notifications about long running tasks"
+msgstr ""
 
 msgid "Deploy"
 msgstr "Implantar"
