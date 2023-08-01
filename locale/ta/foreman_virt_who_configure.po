@@ -85,6 +85,9 @@ msgstr ""
 msgid "Bulk generate applicability for hosts"
 msgstr ""
 
+msgid "Check for long running tasks"
+msgstr ""
+
 msgid "Combined Profile Update"
 msgstr ""
 
@@ -173,6 +176,9 @@ msgid "Delete a virt-who configuration"
 msgstr ""
 
 msgid "Delete virt-who configuration %s?"
+msgstr ""
+
+msgid "Deliver notifications about long running tasks"
 msgstr ""
 
 msgid "Deploy"

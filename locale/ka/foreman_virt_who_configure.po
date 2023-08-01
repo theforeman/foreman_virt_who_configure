@@ -85,6 +85,9 @@ msgstr "შავი სია"
 msgid "Bulk generate applicability for hosts"
 msgstr "გამოყენებადობის ერთდროულად მრავალი ჰოსტისთვის შექმნა"
 
+msgid "Check for long running tasks"
+msgstr ""
+
 msgid "Combined Profile Update"
 msgstr "პროფილის კომბინირებული განახლება"
 
@@ -174,6 +177,9 @@ msgstr "Virt-who-ის კონფიგურაცის წაშლა"
 
 msgid "Delete virt-who configuration %s?"
 msgstr "წავშალო Virt-who-ის კონფიგურაცია %s?"
+
+msgid "Deliver notifications about long running tasks"
+msgstr ""
 
 msgid "Deploy"
 msgstr "განთავსება"

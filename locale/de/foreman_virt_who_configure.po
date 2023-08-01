@@ -94,6 +94,9 @@ msgstr "Blacklist"
 msgid "Bulk generate applicability for hosts"
 msgstr "Anwendbarkeit von Massengenerierung für Hosts"
 
+msgid "Check for long running tasks"
+msgstr ""
+
 msgid "Combined Profile Update"
 msgstr "Kombiniertes Profil-Update"
 
@@ -183,6 +186,9 @@ msgstr "Virt-Who-Konfiguration löschen"
 
 msgid "Delete virt-who configuration %s?"
 msgstr "Virt-who Konfiguration %s löschen?"
+
+msgid "Deliver notifications about long running tasks"
+msgstr ""
 
 msgid "Deploy"
 msgstr "Einsetzen"
