@@ -430,8 +430,8 @@ msgstr "ინტერვალი მითითებული არაა"
 msgid "Latest Configurations Without Change"
 msgstr "ბოლო კონფიგურაციები ცვლილებების გარეშე"
 
-msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr "Libvirt-ის სერვერის სრული დომენური სახელი ან IP მისამართი. ასევე შეგიძლიათ მიუთითოთ სქემის სახით. მაგ: <code>qemu+ssh://libvirt.example.com/system</code>. თუ იყენებთ SSH-ს, დარწმუნდით, რომ ჰაიპერვაიზორში მითითებულ მომხმარებელს სამიზნე ჰოსტზე SSH გასაღებები ადგილზე აქვს"
+msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. Make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
+msgstr ""
 
 msgid "List of virt-who configurations"
 msgstr "Virt-who-ის კონფიგურაციების სია"

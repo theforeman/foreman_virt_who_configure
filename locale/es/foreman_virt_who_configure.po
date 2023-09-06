@@ -436,8 +436,8 @@ msgstr "No se proporcionó el intervalo"
 msgid "Latest Configurations Without Change"
 msgstr "Configuraciones más recientes sin modificaciones"
 
-msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr "Nombre de host completo o dirección IP del servidor de Libvirt. También puede especificar el esquema preferido, por ejemplo: <code>qemu+ssh://libvirt.example.com/system</code>. Si utiliza SSH, asegúrese de configurar la clave SSH de root en el host de destino para un usuario especificado en el campo de nombre de usuario del hipervisor"
+msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. Make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
+msgstr ""
 
 msgid "List of virt-who configurations"
 msgstr "Lista de configuraciones virt-who"

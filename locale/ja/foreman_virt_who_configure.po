@@ -433,8 +433,8 @@ msgstr "間隔は指定されていません"
 msgid "Latest Configurations Without Change"
 msgstr "変更のない最新の設定"
 
-msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr "Libvirt サーバーの完全修飾ホスト名または IP アドレス。優先するスキーマを指定することもできます (例: <code>qemu+ssh://libvirt.example.com/system</code>)。SSH を使用する場合は、ターゲットホストでハイパーバイザーのユーザー名フィールドで指定されたユーザーの root の SSH 鍵を設定していることを確認します。"
+msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. Make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
+msgstr ""
 
 msgid "List of virt-who configurations"
 msgstr "virt-who 設定一覧を表示します。"
