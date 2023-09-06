@@ -434,8 +434,8 @@ msgstr "Interval nebyl zadán"
 msgid "Latest Configurations Without Change"
 msgstr "Nejnovější nastavení beze změny"
 
-msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr "Plně kvalifikované doménové jméno nebo IP adresa vašeho Libvirtu. Můžete také uvést preferovaný protokol, například <code>qemu+ssh://libvirt.example.com/system</code>. Pokud používáte k autentizaci SSH, ujistěte se, že jste nastavili SSH klíč uživatele root na cílovém serveru pro uživatele, kterého jste uvedli v políčku přihlašovací jméno."
+msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. Make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
+msgstr ""
 
 msgid "List of virt-who configurations"
 msgstr "Vypsat nastavení pro virt-who"

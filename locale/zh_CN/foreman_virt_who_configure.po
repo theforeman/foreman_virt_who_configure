@@ -434,8 +434,8 @@ msgstr "未提供间隔"
 msgid "Latest Configurations Without Change"
 msgstr "无更改的最新配置"
 
-msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. If you use SSH, make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr "Libvirt 服务器的完全限定主机名或 IP 地址。您也可以指定首选的方案，例如：<code>qemu+ssh://libvirt.example.com/system</code>。如果您使用 SSH，确保您在目标主机上为 hypervisor 用户名字段指定的用户设置根的 SSH 密钥"
+msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. Make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
+msgstr ""
 
 msgid "List of virt-who configurations"
 msgstr "virt-who 配置列表"
