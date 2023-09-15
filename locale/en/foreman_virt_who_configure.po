@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2014-08-20 08:54+0100\n"
 "Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
@@ -541,9 +541,6 @@ msgid "Refresh Alternate Content Source"
 msgstr ""
 
 msgid "Reindex subscriptions"
-msgstr ""
-
-msgid "Remote action:"
 msgstr ""
 
 msgid "Remove Content"

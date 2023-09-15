@@ -6,16 +6,17 @@
 # Translators:
 # 21966816214bc546c1fc8a185e75ca1c, 2017
 # Claer <transiblu@claer.hammock.fr>, 2017
-# Bryan Kearney <bryan.kearney@gmail.com>, 2019
 # Amit Upadhye <aupadhye@redhat.com>, 2023
+# Baptiste Agasse <baptiste.agasse@gmail.com>, 2023
+# Bryan Kearney <bryan.kearney@gmail.com>, 2023
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2023\n"
-"Language-Team: French (https://www.transifex.com/foreman/teams/114/fr/)\n"
+"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2023\n"
+"Language-Team: French (https://app.transifex.com/foreman/teams/114/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -426,7 +427,7 @@ msgid "Instance update"
 msgstr "Mise à jour de l'instance"
 
 msgid "Interval"
-msgstr ""
+msgstr "Intervalle"
 
 msgid "Interval was not provided"
 msgstr "L'intervalle n'était pas fourni"
@@ -447,7 +448,7 @@ msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr "Nom d'hôte complet ou adresse IP Microsoft Hyper-V."
 
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr "Nom de cette configuration, par exemple le nom de l'hyperviseur"
@@ -550,9 +551,6 @@ msgstr "Réactualisation de la source de contenu alternatif"
 
 msgid "Reindex subscriptions"
 msgstr "Ré-indexer les abonnements"
-
-msgid "Remote action:"
-msgstr ""
 
 msgid "Remove Content"
 msgstr "Supprimer le contenu"
