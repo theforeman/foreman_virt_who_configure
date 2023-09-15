@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Luiz Henrique Vasconcelos <luizvasconceloss@yahoo.com.br>, 2017
 # Flamarion Jorge <jorge.flamarion@gmail.com>, 2017
-# Bryan Kearney <bryan.kearney@gmail.com>, 2021
 # Amit Upadhye <aupadhye@redhat.com>, 2022
+# Luiz Henrique Vasconcelos <luizvasconceloss@yahoo.com.br>, 2023
+# Bryan Kearney <bryan.kearney@gmail.com>, 2023
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2022\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/foreman/teams/11"
+"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/foreman/teams/11"
 "4/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,9 +49,7 @@ msgid "Account name by which virt-who is to connect to Nutanix AHV."
 msgstr ""
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
-msgstr ""
-"Nome da conta pela qual o virt-whove deve se conectar ao hipervisor, no formato <code>nome_do_domínio\n"
-"ome_da_conta</code>. Note que somente uma única barra invertida separa os valores para domain_name e account_name. Se você estiver usando uma conta de domínio, e o arquivo de configuração global <code>/etc/virt-who.conf</code>, então <b>duas barras invertidas</b> são necessárias. Para maiores detalhes, veja <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solução Como usar uma conta de domínio windows com virt-who.conf</a> para maiores informações."
+msgstr "Nome da conta pela qual o virt-whove deve se conectar ao hipervisor, no formato <code>nome_do_domínio\\nome_da_conta</code>. Note que somente uma única barra invertida separa os valores para domain_name e account_name. Se você estiver usando uma conta de domínio, e o arquivo de configuração global <code>/etc/virt-who.conf</code>, então <b>duas barras invertidas</b> são necessárias. Para maiores detalhes, veja <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solução Como usar uma conta de domínio windows com virt-who.conf</a> para maiores informações."
 
 msgid "Account name by which virt-who is to connect to the hypervisor."
 msgstr "Nome da conta pela qual o virt-who está conectado ao hipervisor."
@@ -429,7 +427,7 @@ msgid "Instance update"
 msgstr "Atualização de instância"
 
 msgid "Interval"
-msgstr ""
+msgstr "Intervalo"
 
 msgid "Interval was not provided"
 msgstr "Intervalo não fornecido"
@@ -450,7 +448,7 @@ msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr "Nome de host ou endereço IP completamente qualificado do Microsoft Hyper-V."
 
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr "Nome dessa configuração. Por exemplo, o nome do hipervisor"
@@ -553,9 +551,6 @@ msgstr ""
 
 msgid "Reindex subscriptions"
 msgstr "Reindexar subscrições "
-
-msgid "Remote action:"
-msgstr ""
 
 msgid "Remove Content"
 msgstr "Remover Conteúdo"

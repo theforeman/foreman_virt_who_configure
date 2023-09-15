@@ -8,7 +8,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2022\n"
@@ -545,9 +545,6 @@ msgid "Refresh Alternate Content Source"
 msgstr ""
 
 msgid "Reindex subscriptions"
-msgstr ""
-
-msgid "Remote action:"
 msgstr ""
 
 msgid "Remove Content"

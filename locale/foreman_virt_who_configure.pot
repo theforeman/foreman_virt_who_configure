@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-06 16:34+0000\n"
-"PO-Revision-Date: 2023-09-06 16:34+0000\n"
+"POT-Creation-Date: 2023-09-15 14:09+0200\n"
+"PO-Revision-Date: 2023-09-15 14:09+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -1050,106 +1050,102 @@ msgid "Reindex subscriptions"
 msgstr ""
 
 #: action_names.rb:60
-msgid "Remote action:"
-msgstr ""
-
-#: action_names.rb:61
 msgid "Remove Content"
 msgstr ""
 
-#: action_names.rb:62
+#: action_names.rb:61
 msgid "Remove Version"
 msgstr ""
 
-#: action_names.rb:63
+#: action_names.rb:62
 msgid "Remove Versions and Associations"
 msgstr ""
 
-#: action_names.rb:64
+#: action_names.rb:63
 msgid "Remove from Environment"
 msgstr ""
 
-#: action_names.rb:65
+#: action_names.rb:64
 msgid "Remove subscriptions"
 msgstr ""
 
-#: action_names.rb:66
+#: action_names.rb:65
 msgid "Report"
 msgstr ""
 
-#: action_names.rb:67
+#: action_names.rb:66
 msgid "Republish Version Repositories"
 msgstr ""
 
-#: action_names.rb:68
+#: action_names.rb:67
 msgid "Run Sync Plan:"
 msgstr ""
 
-#: action_names.rb:69
+#: action_names.rb:68
 msgid "Sync capsule"
 msgstr ""
 
-#: action_names.rb:70
+#: action_names.rb:69
 msgid "Syncable export"
 msgstr ""
 
-#: action_names.rb:71
+#: action_names.rb:70
 msgid "Synchronize smart proxy"
 msgstr ""
 
-#: action_names.rb:72
+#: action_names.rb:71
 msgid "Synchronize"
 msgstr ""
 
-#: action_names.rb:73
+#: action_names.rb:72
 msgid "Update Alternate Content Source"
 msgstr ""
 
-#: action_names.rb:74
+#: action_names.rb:73
 msgid "Update CDN Configuration"
 msgstr ""
 
-#: action_names.rb:75
+#: action_names.rb:74
 msgid "Update Content Overrides"
 msgstr ""
 
-#: action_names.rb:76
+#: action_names.rb:75
 msgid "Update content urls"
 msgstr ""
 
-#: action_names.rb:77
+#: action_names.rb:76
 msgid "Update for host"
 msgstr ""
 
-#: action_names.rb:78
+#: action_names.rb:77
 msgid "Update http proxy details"
 msgstr ""
 
-#: action_names.rb:79
+#: action_names.rb:78
 msgid "Update http proxy"
 msgstr ""
 
-#: action_names.rb:80
+#: action_names.rb:79
 msgid "Update redhat repository"
 msgstr ""
 
-#: action_names.rb:81
+#: action_names.rb:80
 msgid "Update release version for host"
 msgstr ""
 
-#: action_names.rb:82
+#: action_names.rb:81
 msgid "Update"
 msgstr ""
 
-#: action_names.rb:83
+#: action_names.rb:82
 msgid "Updating System Purpose for host"
 msgstr ""
 
-#: action_names.rb:84
+#: action_names.rb:83
 msgid "Upload into"
 msgstr ""
 
-#: action_names.rb:85
+#: action_names.rb:84
 msgid "Verify checksum"
 msgstr ""
 

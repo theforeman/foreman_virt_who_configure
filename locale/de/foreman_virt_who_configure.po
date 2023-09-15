@@ -9,19 +9,19 @@
 # simon11 <transifex@stieger.co>, 2017
 # Wiederoder <stefanwiederoder@googlemail.com>, 2017
 # Michael Moll, 2017
-# Lukas K. <kallies@puzzle.ch>, 2017
-# Crited <Alexander.Stoll@netways.de>, 2019
 # Bryan Kearney <bryan.kearney@gmail.com>, 2019
-# Ettore Atalan <atalanttore@googlemail.com>, 2021
-# Patrick Dolinic, 2021
+# Ettore Atalan <atalanttore@googlemail.com>, 2023
+# Crited <Alexander.Stoll@netways.de>, 2023
+# pdolinic, 2023
+# Lukas K. <kallies@puzzle.ch>, 2023
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Patrick Dolinic, 2021\n"
-"Language-Team: German (https://www.transifex.com/foreman/teams/114/de/)\n"
+"Last-Translator: Lukas K. <kallies@puzzle.ch>, 2023\n"
+"Language-Team: German (https://app.transifex.com/foreman/teams/114/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,7 @@ msgid "Abstract"
 msgstr ""
 
 msgid "Abstract async task"
-msgstr "Übersicht asynchrone Task"
+msgstr "Übersicht asynchrone Aufgabe"
 
 msgid "Account name by which virt-who is to connect to Nutanix AHV."
 msgstr ""
@@ -431,7 +431,7 @@ msgid "Instance update"
 msgstr "Instanz-Update"
 
 msgid "Interval"
-msgstr ""
+msgstr "Intervall"
 
 msgid "Interval was not provided"
 msgstr "Intervall wurde nicht mitgeliefert"
@@ -452,7 +452,7 @@ msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr "Vollständig qualifizierter Microsoft Hyper-V-Hostname oder IP-Adresse."
 
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr "Name der Konfiguration, z.B. der Name des Hypervisors"
@@ -555,9 +555,6 @@ msgstr ""
 
 msgid "Reindex subscriptions"
 msgstr "Subskriptionen neu indizieren"
-
-msgid "Remote action:"
-msgstr ""
 
 msgid "Remove Content"
 msgstr "Inhalt entfernen"

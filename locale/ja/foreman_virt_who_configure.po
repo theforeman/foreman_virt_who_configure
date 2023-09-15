@@ -6,16 +6,16 @@
 # Translators:
 # e93ed3aa97dec2eb31063731872555fc_1460a05 <71305a0095156d8e18373a5b7cfeb79e_8587>, 2017
 # 0868a4d1af5275b3f70b0a6dac4c99a4, 2019
-# Bryan Kearney <bryan.kearney@gmail.com>, 2021
 # Amit Upadhye <aupadhye@redhat.com>, 2022
+# Bryan Kearney <bryan.kearney@gmail.com>, 2023
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.12\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/foreman/teams/114/ja/)\n"
+"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/foreman/teams/114/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -425,7 +425,7 @@ msgid "Instance update"
 msgstr "インスタンスの更新"
 
 msgid "Interval"
-msgstr ""
+msgstr "間隔"
 
 msgid "Interval was not provided"
 msgstr "間隔は指定されていません"
@@ -446,7 +446,7 @@ msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr "Microsoft Hyper-V の完全修飾ホスト名または IP アドレス。"
 
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr "この設定の名前。例: ハイパーバイザーの名前"
@@ -549,9 +549,6 @@ msgstr "代替コンテンツソースの更新"
 
 msgid "Reindex subscriptions"
 msgstr "サブスクリプションのインデックス再作成"
-
-msgid "Remote action:"
-msgstr ""
 
 msgid "Remove Content"
 msgstr "コンテンツの削除"
