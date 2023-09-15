@@ -7,5 +7,5 @@ source_file = locale/foreman_virt_who_configure.pot
 source_lang = en
 type        = PO
 
-minimum_perc  = 0
+minimum_perc  = 50
 resource_name = foreman_virt_who_configure

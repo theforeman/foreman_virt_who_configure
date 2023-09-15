@@ -111,12 +111,6 @@ module ForemanVirtWhoConfigure
         ForemanVirtWhoConfigure::Engine.load_seed
       end
     end
-
-    initializer 'foreman_virt_who_configure.register_gettext', after: :load_config_initializers do |_app|
-      locale_dir = File.join(File.expand_path('../../..', __FILE__), 'locale')
-      locale_domain = 'foreman_virt_who_configure'
-      Foreman::Gettext::Support.add_text_domain locale_domain, locale_dir
-    end
   end
 
   def self.with_katello?
