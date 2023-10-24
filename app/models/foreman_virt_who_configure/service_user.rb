@@ -6,7 +6,7 @@ module ForemanVirtWhoConfigure
     encrypts :encrypted_password
 
     belongs_to :user
-    has_one :config
+    has_many :configs, :inverse_of => :service_user
 
     # Foreman 1.11 specifics, can be removed later, otherwise when string does not start with "encrypts" prefix
     # we get 500 when we try to create log message that relies on name method
