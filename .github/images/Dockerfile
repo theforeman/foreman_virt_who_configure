@@ -23,21 +23,15 @@ RUN \
 RUN \
   cd /projects/foreman; \
   echo "gemspec :path => '../foreman_virt_who_configure', :development_group => :dev" > bundler.d/foreman_virt_who_configure.local.rb; \
-  cp ../foreman_virt_who_configure/config/database.yml.example config/database.yml; \
-  cp ../foreman_virt_who_configure/config/Gemfile.lock.gh_test Gemfile.lock;
+  cp ../foreman_virt_who_configure/config/database.yml.example config/database.yml
 
 WORKDIR /projects/foreman
-RUN \
-  bundle config path vendor/bundle; \
-
 RUN \
   cd /projects/foreman; \
   rm -rf Gemfile.lock; \
   bundle install --jobs=3 --retry=3 --without journald development console
 
 COPY ./entrypoint.sh /usr/bin/
-
-RUN sed -i s/SCLS=/SCLS=\""$SCLS"\"/g /usr/bin/entrypoint.sh
 
 RUN chmod +x /usr/bin/entrypoint.sh
 
