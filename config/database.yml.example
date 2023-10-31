@@ -1,0 +1,17 @@
+# For testing and CI
+
+default: &default
+  adapter: postgresql
+  username: <%= ENV['PGUSER'] || 'foreman' %>
+  password: foreman
+  host: <%= ENV['PGHOST'] || 'localhost' %>
+
+test:
+  <<: *default
+  database: foreman-test
+development:
+  <<: *default
+  database: foreman-dev
+production:
+  <<: *default
+  database: foreman-prod
