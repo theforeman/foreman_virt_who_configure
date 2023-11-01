@@ -30,6 +30,8 @@ jobs:
       GIT_COMMITTER_EMAIL: "gh_actions@virt_who_configure.foreman"
 
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/theforeman/tfm_plugin_test:foreman_3_7
 
     services:
       postgres:
