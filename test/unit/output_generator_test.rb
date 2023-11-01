@@ -10,8 +10,7 @@ module ForemanVirtWhoConfigure
       test 'empty password is replaced by fake value so that virt-who runs in an non-interactive mode' do
         config.hypervisor_password = nil
         config.hypervisor_type = 'libvirt'
-        # (echo bGlidmlydF9mYWtlX3Bhc3N3b3Jk|base64 -d) = OutputGenerator::LIBVIRT_FAKE_PASSWORD
-	assert_includes output, 'virt-who-password --password $(echo bGlidmlydF9mYWtlX3Bhc3N3b3Jk|base64 -d)'
+        assert_includes output, 'virt-who-password --password $(echo bGlidmlydF9mYWtlX3Bhc3N3b3Jk|base64 -d)'
       end
     end
 

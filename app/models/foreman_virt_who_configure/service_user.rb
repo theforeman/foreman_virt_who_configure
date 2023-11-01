@@ -1,6 +1,6 @@
 module ForemanVirtWhoConfigure
   # holds the encrypted password for internal user that can be deployed to virt who reporter
-  class ServiceUser < ActiveRecord::Base
+  class ServiceUser < ApplicationRecord
     include Authorizable
     include Encryptable
     encrypts :encrypted_password
@@ -11,12 +11,12 @@ module ForemanVirtWhoConfigure
     # Foreman 1.11 specifics, can be removed later, otherwise when string does not start with "encrypts" prefix
     # we get 500 when we try to create log message that relies on name method
     def name
-      self.username || self.to_s
+      username || to_s
     end
 
     def username
       User.as_anonymous_admin do
-        self.user.login if self.user
+        user&.login
       end
     end
   end

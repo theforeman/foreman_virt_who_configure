@@ -11,7 +11,10 @@ module ForemanVirtWhoConfigure
     end
 
     describe 'config is created' do
-      let(:existing_config) { config.save; config }
+      let(:existing_config) do
+        config.save
+        config
+      end
 
       test 'config creates service user upon creation' do
         assert existing_config.service_user
@@ -67,11 +70,6 @@ module ForemanVirtWhoConfigure
       let(:config_1) { FactoryBot.create(:virt_who_config) }
       let(:config_2) { FactoryBot.create(:virt_who_config, :organization => another_org) }
 
-      before do
-        # let is lazy
-        preload = config_1, config_2
-      end
-
       test '.for_organization does not scope on any organization for nil' do
         # useful for just passing Organization.current which can be nil
         assert_includes ForemanVirtWhoConfigure::Config.for_organization(nil), config_1
@@ -82,17 +80,12 @@ module ForemanVirtWhoConfigure
         assert_includes ForemanVirtWhoConfigure::Config.for_organization(another_org), config_2
         refute_includes ForemanVirtWhoConfigure::Config.for_organization(another_org), config_1
       end
-
     end
 
     describe 'statuses and expiration' do
       let(:out_of_date_config) { FactoryBot.create(:virt_who_config, :out_of_date) }
       let(:ok_config) { FactoryBot.create(:virt_who_config, :ok) }
       let(:unknown_config) { FactoryBot.create(:virt_who_config) }
-      before do
-        # let is lazy
-        preload = out_of_date_config, ok_config, unknown_config
-      end
 
       test 'scoped search definitions work correctly' do
         assert_equal [ok_config], ForemanVirtWhoConfigure::Config.search_for('status = ok')

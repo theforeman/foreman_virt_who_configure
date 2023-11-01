@@ -45,7 +45,7 @@ module ForemanVirtWhoConfigure
                                                  :'foreman_virt_who_configure/api/v2/configs' => [:destroy] }, permission_options
         end
 
-        reporter_permissions = [ :create_hosts, :edit_hosts, :view_lifecycle_environments, :my_organizations ]
+        reporter_permissions = [:create_hosts, :edit_hosts, :view_lifecycle_environments, :my_organizations]
         begin
           if Permission.where(:name => ['create_content_hosts', 'edit_content_hosts']).count > 0
             # old Katello permissions detected (6.2 era)
@@ -61,19 +61,19 @@ module ForemanVirtWhoConfigure
           # could not configure role, some permissions are missing
         end
 
-        role 'Virt-who Manager',  [ :view_virt_who_config, :create_virt_who_config, :edit_virt_who_config, :destroy_virt_who_config ], 'Role granting all permissions to manage virt-who configurations, user needs this role to create, delete or update configurations.'
+        role 'Virt-who Manager', [:view_virt_who_config, :create_virt_who_config, :edit_virt_who_config, :destroy_virt_who_config], 'Role granting all permissions to manage virt-who configurations, user needs this role to create, delete or update configurations.'
 
-        role 'Virt-who Viewer',  [ :view_virt_who_config ], 'Role granting permissions to see all configurations including their configuration scripts, which means viewers could still deploy the virt-who instances for existing virt-who configurations.'
+        role 'Virt-who Viewer', [:view_virt_who_config], 'Role granting permissions to see all configurations including their configuration scripts, which means viewers could still deploy the virt-who instances for existing virt-who configurations.'
 
         # Available since Foreman 1.15
         add_all_permissions_to_default_roles if respond_to?(:add_all_permissions_to_default_roles)
 
         # add menu entry
         menu :top_menu, :virt_who_configs,
-             url_hash: { controller: 'foreman_virt_who_configure/configs', action: :index },
-             caption: N_('Virt-who configurations'),
-             parent: :infrastructure_menu,
-             after: :compute_resources
+          url_hash: { controller: 'foreman_virt_who_configure/configs', action: :index },
+          caption: N_('Virt-who configurations'),
+          parent: :infrastructure_menu,
+          after: :compute_resources
 
         # add dashboard widget
         widget 'foreman_virt_who_configs_status_widget', :name => N_('Virt-who Configs Status'), sizex: 6, sizey: 1
@@ -103,7 +103,7 @@ module ForemanVirtWhoConfigure
     # Include concerns in this config.to_prepare block
     config.to_prepare do
       SSO::METHODS.unshift SSO::BasicWithHidden
-      ::Organization.send :include, VirtWhoTaxonomyExtensions
+      ::Organization.include VirtWhoTaxonomyExtensions
     end
 
     rake_tasks do
