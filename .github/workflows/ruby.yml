@@ -1,10 +1,7 @@
-name: Build container for PR
-on:
-  pull_request:
-    paths:
-      - '**/.github/**/*'
+name: Ruby
+on: [pull_request]
 jobs:
-  build_test_container:
+  unit_tests_with_rubocop:
     runs-on: ubuntu-latest
 
     services:
@@ -22,5 +19,5 @@ jobs:
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
-      - name: Build local dockerfile
+      - name: Build from dockerfile
         uses: ./.github/actions/
