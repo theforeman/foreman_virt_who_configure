@@ -1,6 +1,6 @@
 # TODO: remove this file by either moving cops here or fixing code
 inherit_from:
-  - .rubocop_todo.yml
+  - https://raw.githubusercontent.com/theforeman/foreman/3.8-stable/.rubocop.yml
 
 AllCops:
   Include:
@@ -28,13 +28,16 @@ Style/Documentation:
 Style/HashSyntax:
   Enabled: false
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
   Enabled: false
 
 Style/IfUnlessModifier:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 # Both double and single quotes are OK
