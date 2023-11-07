@@ -1,0 +1,53 @@
+---
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+defaults:
+  run:
+    working-directory: ./foreman
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version:
+        - '2.7'
+    services:
+      postgres:
+        image: quay.io/jomitsch/postgres-with-evr
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: foreman
+          POSTGRES_PASSWORD: foreman
+    steps:
+    - name: Checkout foreman
+      uses: actions/checkout@v2
+      with:
+        repository: theforeman/foreman
+        path: foreman
+    - name: Checkout foreman_virt_who_configure
+      uses: actions/checkout@v2
+      with:
+        path: foreman_virt_who_configure
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: "${{ matrix.ruby-version }}"
+        bundler-cache: true
+      timeout-minutes: 30
+    - name: Set up system
+      run: ../foreman_virt_who_configure/.github/bin/setup.sh
+      env:
+        RAILS_ENV: test
+    - name: Run rubocop
+      run: bundle exec rake foreman_virt_who_configure:rubocop
+    - name: Run tests
+      run: bundle exec rake test:foreman_virt_who_configure
