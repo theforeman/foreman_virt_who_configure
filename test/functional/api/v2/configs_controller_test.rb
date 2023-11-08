@@ -3,19 +3,20 @@ require 'test_plugin_helper'
 class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController::TestCase
   setup do
     @http_proxy = FactoryBot.create(:http_proxy, name: "test", url: "http://test.com")
-    @new_config = FactoryBot.create(:virt_who_config,
-                                 :name => 'my vmware',
-                                 :interval => 120,
-                                 :listing_mode => ForemanVirtWhoConfigure::Config::WHITELIST,
-                                 :whitelist => 'a,b',
-                                 :hypervisor_id => 'hostname',
-                                 :hypervisor_type => 'esx',
-                                 :hypervisor_server => "vmware.example.com",
-                                 :hypervisor_username => "root",
-                                 :debug => false,
-                                 :satellite_url => "foreman.example.com",
-                                 :http_proxy_id => @http_proxy.id,
-                                 :no_proxy => nil
+    @new_config = FactoryBot.create(
+      :virt_who_config,
+      :name => 'my vmware',
+      :interval => 120,
+      :listing_mode => ForemanVirtWhoConfigure::Config::WHITELIST,
+      :whitelist => 'a,b',
+      :hypervisor_id => 'hostname',
+      :hypervisor_type => 'esx',
+      :hypervisor_server => "vmware.example.com",
+      :hypervisor_username => "root",
+      :debug => false,
+      :satellite_url => "foreman.example.com",
+      :http_proxy_id => @http_proxy.id,
+      :no_proxy => nil
     )
     @out_of_date_config = FactoryBot.create(:virt_who_config, :out_of_date)
     @ok_config = FactoryBot.create(:virt_who_config, :ok)

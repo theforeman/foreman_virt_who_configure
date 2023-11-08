@@ -6,7 +6,7 @@ module SSO
     end
 
     def current_user
-      User.unscoped.where(:auth_source_id => ForemanVirtWhoConfigure::AuthSourceHiddenWithAuthentication.default.id).find_by_login(self.user)
+      User.unscoped.where(:auth_source_id => ForemanVirtWhoConfigure::AuthSourceHiddenWithAuthentication.default.id).find_by_login(user)
     end
   end
 end

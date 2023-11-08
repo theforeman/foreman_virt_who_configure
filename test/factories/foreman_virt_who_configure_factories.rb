@@ -14,11 +14,11 @@ FactoryBot.define do
 
   trait :out_of_date do
     last_report_at { (1.minute.ago - 120.minutes).utc }
-    out_of_date_at { (1.minute.ago).utc }
+    out_of_date_at { 1.minute.ago.utc }
   end
 
   trait :ok do
-    last_report_at { (1.minute.ago).utc }
+    last_report_at { 1.minute.ago.utc }
     out_of_date_at { (1.minute.ago + 120.minutes).utc }
   end
 end

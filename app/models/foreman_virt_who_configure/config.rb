@@ -1,5 +1,5 @@
 module ForemanVirtWhoConfigure
-  class Config < ActiveRecord::Base
+  class Config < ApplicationRecord
     PERMITTED_PARAMS = [
       :interval, :organization_id, :compute_resource_id, :whitelist, :blacklist, :hypervisor_id,
       :hypervisor_type, :hypervisor_server, :hypervisor_username, :hypervisor_password, :debug,
@@ -9,7 +9,7 @@ module ForemanVirtWhoConfigure
       :listing_mode, :filtering_mode, :filter_host_parents, :exclude_host_parents, :kubeconfig_path,
       :prism_flavor, :ahv_internal_debug
     ]
-    audited :except => [ :hypervisor_password, :last_report_at, :out_of_date_at ], :associations => []
+    audited :except => [:hypervisor_password, :last_report_at, :out_of_date_at], :associations => []
     include Authorizable
     validates_lengths_from_database
 
@@ -28,7 +28,7 @@ module ForemanVirtWhoConfigure
       'connection' => N_('Connection')
     }
 
-    HYPERVISOR_IDS = [ 'hostname', 'uuid', 'hwuuid' ]
+    HYPERVISOR_IDS = ['hostname', 'uuid', 'hwuuid']
 
     HYPERVISOR_TYPES = {
       'esx' => 'VMware vSphere / vCenter (esx)',
@@ -70,7 +70,7 @@ module ForemanVirtWhoConfigure
     PRISM_FLAVORS = {
       'central' => N_('Prism Central'),
       'element' => N_('Prism Element')
-    }       
+    }
 
     AHV_VALID_OPTIONS = %w(prism_flavor ahv_internal_debug)
     KUBEVIRT_VALID_OPTIONS = %w(kubeconfig_path)
@@ -91,10 +91,10 @@ module ForemanVirtWhoConfigure
     scoped_search :on => :status, :complete_value => true, :only_explicit => true, :operators => ['= '], :ext_method => :search_by_status
     scoped_search :on => :out_of_date_at, :complete_value => true, :only_explicit => true
     scoped_search :on => :last_report_at, :complete_value => true, :only_explicit => true
-    # TODO add more related objects and attributes
+    # TODO: add more related objects and attributes
 
     # compatibility layer for 1.11 - pre strong params patch
-    if self.respond_to?(:attr_accessible)
+    if respond_to?(:attr_accessible)
       attr_accessible(*PERMITTED_PARAMS)
     end
 
@@ -102,43 +102,43 @@ module ForemanVirtWhoConfigure
     after_destroy :destroy_service_user
 
     validates :interval, :hypervisor_type,
-              :satellite_url, :hypervisor_id, :organization_id, :name,
-              :presence => true
+      :satellite_url, :hypervisor_id, :organization_id, :name,
+      :presence => true
     validates :name, :uniqueness => { :scope => :organization_id }
-    validates :hypervisor_password, :presence => true, :if => Proc.new { |c| c.hypervisor_type != 'libvirt' && c.hypervisor_type != 'kubevirt' }
-    validates :hypervisor_username, :presence => true, :if => Proc.new { |c| c.hypervisor_type != 'kubevirt' }
-    validates :hypervisor_server, :presence => true, :if => Proc.new { |c| c.hypervisor_type != 'kubevirt' }
-    validates :kubeconfig_path, :presence => true, :if => Proc.new { |c| c.hypervisor_type == 'kubevirt' }
+    validates :hypervisor_password, :presence => true, :if => proc { |c| c.hypervisor_type != 'libvirt' && c.hypervisor_type != 'kubevirt' }
+    validates :hypervisor_username, :presence => true, :if => proc { |c| c.hypervisor_type != 'kubevirt' }
+    validates :hypervisor_server, :presence => true, :if => proc { |c| c.hypervisor_type != 'kubevirt' }
+    validates :kubeconfig_path, :presence => true, :if => proc { |c| c.hypervisor_type == 'kubevirt' }
     validates :hypervisor_type, :inclusion => HYPERVISOR_TYPES.keys
     validates :hypervisor_id, :inclusion => HYPERVISOR_IDS
     validates :interval, :inclusion => AVAILABLE_INTERVALS.keys.map(&:to_i)
     validates :listing_mode, :inclusion => FILTERING_MODES.keys.map(&:to_i)
-    validates :prism_flavor, :inclusion => {:in => PRISM_FLAVORS.keys, :message => "should be either central or element"}, :if => Proc.new { |c| c.hypervisor_type == 'ahv' }
+    validates :prism_flavor, :inclusion => {:in => PRISM_FLAVORS.keys, :message => "should be either central or element"}, :if => proc { |c| c.hypervisor_type == 'ahv' }
     validate :validates_whitelist_blacklist
-    validate :validates_debug_settings, :if => Proc.new { |c| c.hypervisor_type == 'ahv' }
+    validate :validates_debug_settings, :if => proc { |c| c.hypervisor_type == 'ahv' }
     validate :validates_hypervisor_options
 
     def validates_whitelist_blacklist
       case listing_mode.to_i
         when WHITELIST
           unless whitelist.present? || filter_host_parents.present?
-            [:whitelist, :filter_host_parents].each {|f| errors.add(f, "Filter hosts or Filter host parents is required")}
+            [:whitelist, :filter_host_parents].each { |f| errors.add(f, "Filter hosts or Filter host parents is required") }
           end
         when BLACKLIST
           unless blacklist.present? || exclude_host_parents.present?
-            [:blacklist, :exclude_host_parents].each {|f| errors.add(f, "Exclude hosts or Exclude host parents is required")}
+            [:blacklist, :exclude_host_parents].each { |f| errors.add(f, "Exclude hosts or Exclude host parents is required") }
           end
       end
     end
 
     def validates_debug_settings
       if ahv_internal_debug && !debug
-        errors.add(:ahv_internal_debug, "Enable debugging output is required for Enable AHV debug") 
+        errors.add(:ahv_internal_debug, "Enable debugging output is required for Enable AHV debug")
       end
-    end    
+    end
 
     def validates_hypervisor_options
-      invalid_fields.each { |f| errors.add(f, "Invalid option for hypervisor [#{hypervisor_type}]") if eval(f).present? }
+      invalid_fields.each { |f| errors.add(f, "Invalid option for hypervisor [#{hypervisor_type}]") if send(f).present? }
     end
 
     validates_lengths_from_database
@@ -174,20 +174,20 @@ module ForemanVirtWhoConfigure
     def create_service_user
       User.skip_permission_check do
         password = User.random_password
-        service_user = self.build_service_user
+        service_user = build_service_user
         user = service_user.build_user
         user.auth_source = AuthSourceHiddenWithAuthentication.default
         user.password = password
-        user.login = "virt_who_reporter_#{self.id}"
-        user.organizations = [self.organization]
-        user.roles = [Role.where(:name => 'Virt-who Reporter').first]
+        user.login = "virt_who_reporter_#{id}"
+        user.organizations = [organization]
+        user.roles = [Role.find_by(:name => 'Virt-who Reporter')]
         user.valid? # to trigger password hashing
         user.save!(:validate => false)
 
         service_user.encrypted_password = password
         service_user.save!
 
-        self.update_attribute :service_user_id, service_user.id
+        update_attribute :service_user_id, service_user.id
       end
     end
 
@@ -214,11 +214,11 @@ module ForemanVirtWhoConfigure
     # end
 
     def humanized_interval
-      _("every %s hours") % (self.interval / 60)
+      _("every %s hours") % (interval / 60)
     end
 
     def out_of_date?(deadline = DateTime.now.utc)
-      self.out_of_date_at.present? && self.out_of_date_at < deadline
+      out_of_date_at.present? && out_of_date_at < deadline
     end
 
     def step_name(step_key)
@@ -243,24 +243,23 @@ module ForemanVirtWhoConfigure
     end
 
     def virt_who_config_command
-      "hammer virt-who-config deploy --id #{self.id} --organization-id #{self.organization_id}"
+      "hammer virt-who-config deploy --id #{id} --organization-id #{organization_id}"
     end
 
     def virt_who_touch!
       self.last_report_at = DateTime.now.utc
-      self.out_of_date_at = self.last_report_at + self.interval.minutes
-      self.class.skip_permission_check { self.save! }
+      self.out_of_date_at = last_report_at + interval.minutes
+      self.class.skip_permission_check { save! }
     end
 
     def status
-      case
-        when self.last_report_at.nil?
-          :unknown
-        when !self.out_of_date?
-          :ok
-        else
-          # out of date is currently considered ok too, virt-who does not send any report if there's no change on hypervisor
-          :out_of_date
+      if last_report_at.nil?
+        :unknown
+      elsif !out_of_date?
+        :ok
+      else
+        # out of date is currently considered ok too, virt-who does not send any report if there's no change on hypervisor
+        :out_of_date
       end
     end
 

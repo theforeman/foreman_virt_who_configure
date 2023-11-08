@@ -31,7 +31,7 @@ module ForemanVirtWhoConfigure
     end
 
     def error_code(error_name)
-      result = CONFIGURATION_RESULTS.find { |result| result.identifier == error_name.to_s }
+      result = CONFIGURATION_RESULTS.find { |r| r.identifier == error_name.to_s }
       result.try(:code)
     end
 
@@ -51,107 +51,107 @@ module ForemanVirtWhoConfigure
     def virt_who_output(format = nil)
       kubeconfig = config.hypervisor_type == 'kubevirt' ? "\nkubeconfig=#{config.kubeconfig_path}" : ''
       result = ''
-      cr_password_base64 = Base64.strict_encode64("#{cr_password}")
+      cr_password_base64 = Base64.strict_encode64(cr_password.to_s)
       result += "#!/bin/bash\n" if format == :bash_script
-      result += <<EOS
-heading() {
-  echo -e "\\n== $1 =="
-}
+      result += <<~SCRIPT
+        heading() {
+          echo -e "\\n== $1 =="
+        }
 
-step() {
-  step_count=5
-  heading "[$1/$step_count] $2"
-}
+        step() {
+          step_count=5
+          heading "[$1/$step_count] $2"
+        }
 
-version_lte() {
-  [ "$1" = "`echo -e "$1\\n$2" | sort -V | head -n1`" ]
-}
+        version_lte() {
+          [ "$1" = "`echo -e "$1\\n$2" | sort -V | head -n1`" ]
+        }
 
-version_lt() {
-  [ "$1" = "$2" ] && return 1 || version_lte $1 $2
-}
+        version_lt() {
+          [ "$1" = "$2" ] && return 1 || version_lte $1 $2
+        }
 
-verify_minimal_version() {
-  minimal_version=#{MINIMUM_VIRT_WHO_VERSION}
-  installed_version=`rpm -q --queryformat '%{VERSION}' virt-who`
+        verify_minimal_version() {
+          minimal_version=#{MINIMUM_VIRT_WHO_VERSION}
+          installed_version=`rpm -q --queryformat '%{VERSION}' virt-who`
 
-  if version_lt $installed_version $minimal_version; then
-    echo "virt-who $installed_version does not meet minimum requirements, please make sure this host is properly subscribed and has access to katello-host-tools repository, minimal virt-who version is $minimal_version"
-    return 1
-  else
-    return 0
-  fi
-}
+          if version_lt $installed_version $minimal_version; then
+            echo "virt-who $installed_version does not meet minimum requirements, please make sure this host is properly subscribed and has access to katello-host-tools repository, minimal virt-who version is $minimal_version"
+            return 1
+          else
+            return 0
+          fi
+        }
 
-result_code=#{error_code(:success)}
+        result_code=#{error_code(:success)}
 
-compose_install_command() {
-  $1 packages unlock
-  $1 advanced procedure run packages-install --packages virt-who --assumeyes || result_code=$(($result_code|#{error_code(:virt_who_installation)}))
-  $1 packages lock
-}
+        compose_install_command() {
+          $1 packages unlock
+          $1 advanced procedure run packages-install --packages virt-who --assumeyes || result_code=$(($result_code|#{error_code(:virt_who_installation)}))
+          $1 packages lock
+        }
 
-install_virt_who() {
-  if `rpm -q satellite-maintain > /dev/null`; then
-    compose_install_command satellite-maintain
-  elif `rpm -q rubygem-foreman_maintain > /dev/null`; then
-    compose_install_command foreman-maintain
-  else
-    yum install -y virt-who || result_code=$(($result_code|#{error_code(:virt_who_installation)}))
-  fi
-}
+        install_virt_who() {
+          if `rpm -q satellite-maintain > /dev/null`; then
+            compose_install_command satellite-maintain
+          elif `rpm -q rubygem-foreman_maintain > /dev/null`; then
+            compose_install_command foreman-maintain
+          else
+            yum install -y virt-who || result_code=$(($result_code|#{error_code(:virt_who_installation)}))
+          fi
+        }
 
-step 1 "Installing virt-who"
-install_virt_who
+        step 1 "Installing virt-who"
+        install_virt_who
 
-if verify_minimal_version; then
-  step 2 "Encrypting password"
-  cr_password=$(virt-who-password --password $(echo #{cr_password_base64}|base64 -d) 2> /dev/null)
-  user_password=$(virt-who-password --password '#{service_user_password}' 2> /dev/null)
+        if verify_minimal_version; then
+          step 2 "Encrypting password"
+          cr_password=$(virt-who-password --password $(echo #{cr_password_base64}|base64 -d) 2> /dev/null)
+          user_password=$(virt-who-password --password '#{service_user_password}' 2> /dev/null)
 
-  step 3 "Creating virt-who configuration"
-  cat > #{config_file_path} << EOF
-### This configuration file is managed via the virt-who configure plugin
-### manual edits will be deleted.
-[#{identifier}]
-type=#{type}
-hypervisor_id=#{hypervisor_id}
-owner=#{owner}
-#{connection_details}#{filtering}
-rhsm_hostname=#{satellite_url}
-rhsm_username=#{service_user_username}
-rhsm_encrypted_password=$user_password
-rhsm_prefix=/rhsm#{kubeconfig}#{ahv_config_options}
-EOF
-  if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_config_file_issue)})); fi
+          step 3 "Creating virt-who configuration"
+          cat > #{config_file_path} << EOF
+        ### This configuration file is managed via the virt-who configure plugin
+        ### manual edits will be deleted.
+        [#{identifier}]
+        type=#{type}
+        hypervisor_id=#{hypervisor_id}
+        owner=#{owner}
+        #{connection_details}#{filtering}
+        rhsm_hostname=#{satellite_url}
+        rhsm_username=#{service_user_username}
+        rhsm_encrypted_password=$user_password
+        rhsm_prefix=/rhsm#{kubeconfig}#{ahv_config_options}
+        EOF
+          if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_config_file_issue)})); fi
 
-  step 4 "Creating sysconfig virt-who configuration"
-  cat > #{default_config_path} << EOF
-### This configuration file is managed via the virt-who configure plugin
-### manual edits will be deleted.
-[global]
-debug=#{config.debug? ? 1 : 0}
-interval=#{config.interval * 60}#{proxy_strings}
-oneshot=False
-EOF
-  if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_sysconfig_file_issue)})); fi
+          step 4 "Creating sysconfig virt-who configuration"
+          cat > #{default_config_path} << EOF
+        ### This configuration file is managed via the virt-who configure plugin
+        ### manual edits will be deleted.
+        [global]
+        debug=#{config.debug? ? 1 : 0}
+        interval=#{config.interval * 60}#{proxy_strings}
+        oneshot=False
+        EOF
+          if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_sysconfig_file_issue)})); fi
 
-  step 5 "Enabling and restarting the virt-who service"
-  systemctl enable virt-who || result_code=$(($result_code|#{error_code(:virt_who_systemctl_issue)}))
-  systemctl restart virt-who || result_code=$(($result_code|#{error_code(:virt_who_service_issue)}))
-else
-  result_code=$(($result_code|#{error_code(:virt_who_too_old)}))
-fi
+          step 5 "Enabling and restarting the virt-who service"
+          systemctl enable virt-who || result_code=$(($result_code|#{error_code(:virt_who_systemctl_issue)}))
+          systemctl restart virt-who || result_code=$(($result_code|#{error_code(:virt_who_service_issue)}))
+        else
+          result_code=$(($result_code|#{error_code(:virt_who_too_old)}))
+        fi
 
-heading "Finished"
-if [ $result_code -ne 0 ]; then
-  echo "There were some errors during configuration:"
-  #{error_handling}
-else
-  echo "Finished successfully"
-fi
+        heading "Finished"
+        if [ $result_code -ne 0 ]; then
+          echo "There were some errors during configuration:"
+          #{error_handling}
+        else
+          echo "Finished successfully"
+        fi
 
-EOS
+      SCRIPT
       result += "exit $result_code\n" if format == :bash_script
       result
     end
@@ -198,7 +198,7 @@ encrypted_password=$cr_password"
     end
 
     def enabled_filters(filter)
-      filter.reject { |_, list| list.blank? }.map { |filter,list| filtering_line_sanitized(filter, list) }.join
+      filter.reject { |_, list| list.blank? }.map { |f, list| filtering_line_sanitized(f, list) }.join
     end
 
     def filtering_line_sanitized(filter, list)
@@ -245,9 +245,9 @@ encrypted_password=$cr_password"
     def cr_password
       case config.hypervisor_type
       when 'libvirt'
-        config.hypervisor_password.blank? ? LIBVIRT_FAKE_PASSWORD : config.hypervisor_password
+        config.hypervisor_password.presence || LIBVIRT_FAKE_PASSWORD
       when 'kubevirt'
-        config.hypervisor_password.blank? ? KUBEVIRT_FAKE_PASSWORD : config.hypervisor_password
+        config.hypervisor_password.presence || KUBEVIRT_FAKE_PASSWORD
       else
         config.hypervisor_password
       end
@@ -289,7 +289,7 @@ encrypted_password=$cr_password"
       output = ''
       output << "\n#{proxy_type}=#{sanitize_proxy(proxy.full_url)}" if proxy.present?
       output << "\nno_proxy=#{sanitize_proxy(no_proxy)}" if no_proxy.present?
-      output << "\nno_proxy=*" if !proxy.present? && !no_proxy.present?
+      output << "\nno_proxy=*" if proxy.blank? && no_proxy.blank?
       output
     end
 
