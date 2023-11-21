@@ -84,7 +84,7 @@ module ForemanVirtWhoConfigure
     belongs_to :http_proxy
 
     # service user used by virt-who to report back
-    belongs_to :service_user
+    belongs_to :service_user, :inverse_of => :configs
 
     scoped_search :on => :interval, :complete_value => true
     scoped_search :on => :name
@@ -98,7 +98,7 @@ module ForemanVirtWhoConfigure
       attr_accessible(*PERMITTED_PARAMS)
     end
 
-    after_create :create_service_user
+    after_create :create_or_find_service_user
     after_destroy :destroy_service_user
 
     validates :interval, :hypervisor_type,
@@ -171,10 +171,16 @@ module ForemanVirtWhoConfigure
       end
     end
 
-    def create_service_user
+    def create_or_find_service_user
+      service_user = ServiceUser.find_by(organization_id: organization_id)
+      if service_user.present?
+        update(service_user_id: service_user.id)
+        return service_user
+      end
+
       User.skip_permission_check do
         password = User.random_password
-        service_user = build_service_user
+        service_user = build_service_user(organization_id: organization_id)
         user = service_user.build_user
         user.auth_source = AuthSourceHiddenWithAuthentication.default
         user.password = password
@@ -192,6 +198,8 @@ module ForemanVirtWhoConfigure
     end
 
     def destroy_service_user
+      return unless service_user.configs.count == 0
+
       User.skip_permission_check do
         # skip validation that prevents hidden user deletion
         user = User.unscoped.find_by_id(service_user.user_id)

@@ -21,13 +21,23 @@ module ForemanVirtWhoConfigure
         assert_equal "virt_who_reporter_#{config.id}", existing_config.service_user.username
       end
 
+      test 'multiple configs for same organization shares one service user' do
+        new_config = FactoryBot.create(:virt_who_config, organization: existing_config.organization, hypervisor_type: 'libvirt', hypervisor_server: 'libvirt.example.com')
+        assert_equal new_config.service_user.username, existing_config.service_user.username
+      end
+
+      test "multiple organizations don't share service user" do
+        new_config = FactoryBot.create(:virt_who_config)
+        refute_equal new_config.service_user.username, existing_config.service_user.username
+      end
+
       test 'config creates hidden user' do
         assert existing_config.service_user.user
         assert_equal existing_config.service_user.username, existing_config.service_user.user.login
         assert_kind_of ForemanVirtWhoConfigure::AuthSourceHiddenWithAuthentication, existing_config.service_user.user.auth_source
       end
 
-      test 'config deletes service user and user upon removal' do
+      test 'last config deletes service user and user upon removal' do
         service_user = existing_config.service_user
         user = service_user.user
         assert existing_config.destroy
@@ -37,6 +47,15 @@ module ForemanVirtWhoConfigure
         assert_raises ActiveRecord::RecordNotFound do
           user.reload
         end
+      end
+
+      test 'config removal does not delete service user and user when other reference exists' do
+        FactoryBot.create(:virt_who_config, organization: existing_config.organization)
+        service_user = existing_config.service_user
+        user = service_user.user
+        assert existing_config.destroy
+        assert service_user.reload
+        assert user.reload
       end
     end
 
