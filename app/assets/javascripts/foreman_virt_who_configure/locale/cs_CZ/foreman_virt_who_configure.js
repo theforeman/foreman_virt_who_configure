@@ -5,7 +5,6 @@
       "": {
         "Project-Id-Version": "foreman_virt_who_configure 0.5.17",
         "Report-Msgid-Bugs-To": "",
-        "POT-Creation-Date": "2023-09-15 14:09+0200",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
         "Last-Translator": "Pavel Borecki <pavel.borecki@gmail.com>, 2023",
         "Language-Team": "Czech (Czech Republic) (https://app.transifex.com/foreman/teams/114/cs_CZ/)",
@@ -465,17 +464,11 @@
       "Virt-who Configs Status": [
         "Stav nastavení virt-who"
       ],
-      "Abstract async task": [
-        ""
-      ],
-      "Abstract": [
-        ""
+      "A plugin to make virt-who configuration easy": [
+        "Zásuvný modul pro usnadnění nastavování virt-who"
       ],
       "Action with sub plans": [
         "Akce s dílčími plány"
-      ],
-      "Agent action": [
-        ""
       ],
       "Attach subscriptions": [
         "Připojit předplatné"
@@ -483,32 +476,11 @@
       "Auto attach subscriptions": [
         "Automaticky připojovat předplatné"
       ],
-      "Bulk generate applicability for hosts": [
-        ""
-      ],
-      "Check for long running tasks": [
-        ""
-      ],
-      "Combined Profile Update": [
-        ""
-      ],
-      "Copy version units to library": [
-        ""
-      ],
-      "Create Alternate Content Source": [
-        ""
-      ],
-      "Create Export History": [
-        ""
-      ],
-      "Create Import History": [
-        ""
-      ],
-      "Create Syncable Export History": [
-        ""
-      ],
       "Create": [
         "Vytvořit"
+      ],
+      "Delete": [
+        "Smazat"
       ],
       "Delete Activation Key": [
         "Smazat aktivační klíč"
@@ -518,18 +490,6 @@
       ],
       "Delete Product": [
         "Smazat produkt"
-      ],
-      "Delete": [
-        "Smazat"
-      ],
-      "Deliver notifications about long running tasks": [
-        ""
-      ],
-      "Destroy Alternate Content Source": [
-        ""
-      ],
-      "Destroy Content Host": [
-        ""
       ],
       "Destroy": [
         "Zničit"
@@ -543,74 +503,32 @@
       "Enable": [
         "Zapnout"
       ],
-      "Errata mail": [
-        ""
-      ],
-      "Export Library": [
-        ""
-      ],
-      "Export Repository": [
-        ""
-      ],
       "Export": [
         "Export"
       ],
       "Fetch pxe files": [
         "Stáhnout pxe soubory"
       ],
-      "Filtered index content": [
-        ""
-      ],
-      "Generate host applicability": [
-        ""
-      ],
-      "Generate repository applicability": [
-        ""
+      "Hypervisors": [
+        "Hypervizory"
       ],
       "Hypervisors update": [
         "Aktualizace hypervizoru"
       ],
-      "Hypervisors": [
-        "Hypervizory"
-      ],
-      "Import Content View Version": [
-        ""
-      ],
-      "Import Default Content View": [
-        ""
+      "Import": [
+        "Import"
       ],
       "Import Puppet classes": [
         "Importovat Puppet třídy"
       ],
-      "Import Repository": [
-        ""
-      ],
       "Import facts": [
         "Importovat fakta"
-      ],
-      "Import": [
-        "Import"
-      ],
-      "Incremental Update of  Content View Version(s) ": [
-        ""
       ],
       "Incremental Update": [
         "Postupná aktualizace"
       ],
       "Index content": [
         "Obsah rejstříku"
-      ],
-      "Index errata": [
-        ""
-      ],
-      "Index module streams": [
-        ""
-      ],
-      "Index package groups": [
-        ""
-      ],
-      "Install Applicable Errata": [
-        ""
       ],
       "Instance update": [
         "Aktualizace instance"
@@ -627,26 +545,14 @@
       "Promotion to Environment": [
         "Povýšení do prostředí"
       ],
-      "Publish Lifecycle Environment Repositories": [
-        ""
-      ],
       "Publish": [
         "Zveřejnit"
-      ],
-      "Refresh Alternate Content Source": [
-        ""
-      ],
-      "Reindex subscriptions": [
-        ""
       ],
       "Remove Content": [
         "Odebrat obsah"
       ],
       "Remove Version": [
         "Verze na protějšku"
-      ],
-      "Remove Versions and Associations": [
-        ""
       ],
       "Remove from Environment": [
         "Odebrat z prostředí"
@@ -663,23 +569,11 @@
       "Run Sync Plan:": [
         "Spustit synchronizační plán:"
       ],
-      "Sync capsule": [
-        ""
-      ],
-      "Syncable export": [
-        ""
-      ],
-      "Synchronize smart proxy": [
-        ""
-      ],
       "Synchronize": [
         "Synchronizovat"
       ],
-      "Update Alternate Content Source": [
-        ""
-      ],
-      "Update CDN Configuration": [
-        ""
+      "Update": [
+        "Aktualizovat"
       ],
       "Update Content Overrides": [
         "Aktualizovat přepsání obsahu"
@@ -690,35 +584,14 @@
       "Update for host": [
         "Aktualizace pro stroj"
       ],
-      "Update http proxy details": [
-        ""
-      ],
-      "Update http proxy": [
-        ""
-      ],
       "Update redhat repository": [
         "Aktualizovat redhat repozitář"
       ],
       "Update release version for host": [
         "Aktualizovat verzi vydání pro stroj"
       ],
-      "Update": [
-        "Aktualizovat"
-      ],
-      "Updating System Purpose for host": [
-        ""
-      ],
       "Upload into": [
         "Nahrát do"
-      ],
-      "Verify checksum": [
-        ""
-      ],
-      "A plugin to make virt-who configuration easy": [
-        "Zásuvný modul pro usnadnění nastavování virt-who"
-      ],
-      "Remote action:": [
-        "Akce na protějšku:"
       ]
     }
   }

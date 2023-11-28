@@ -38,12 +38,6 @@ msgstr "忽略代理服务器。忽略代理服务器设置的主机名、域或
 msgid "A plugin to make virt-who configuration easy"
 msgstr "简化 virt-who 配置的插件"
 
-msgid "Abstract"
-msgstr "摘要"
-
-msgid "Abstract async task"
-msgstr "抽象 async 任务"
-
 msgid "Account name by which virt-who is to connect to Nutanix AHV."
 msgstr "virt-who 连接到 Nutanix AHV 的帐户名称。"
 
@@ -62,14 +56,8 @@ msgstr "virt-who 连接 hypervisor 所用的帐户名。Virt-who 不支持基于
 msgid "Account password by which virt-who is to connect to the hypervisor instance."
 msgstr "virt-who 用于连接 hypervisor 实例的帐户密码。"
 
-msgid "Action with sub plans"
-msgstr "有子计划的操作"
-
 msgid "Actions"
 msgstr "操作"
-
-msgid "Agent action"
-msgstr "代理操作"
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr "仅适用于 esx 提供程序类型。在此选项中以逗号分隔的列表指定了父资源（通常是 ComputeResource）名称的主机<b>不会被</b>报告。支持通配符和正则表达式，多个记录必须用逗号分隔。如果该值包含逗号等特殊字符，则将其放在双引号中。所有新行字符将在生成的配置文件中删除，空格从开头和结尾删除。"
@@ -77,23 +65,8 @@ msgstr "仅适用于 esx 提供程序类型。在此选项中以逗号分隔的�
 msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr "仅适用于 esx 提供程序类型。仅报告在此选项中以逗号分隔的列表指定了父资源（通常是 ComputeResource）名称的主机。支持通配符和正则表达式，多个记录必须用逗号分隔。如果该值包含逗号等特殊字符，则将其放在双引号中。所有新行字符将在生成的配置文件中删除，空格从开头和结尾删除。"
 
-msgid "Attach subscriptions"
-msgstr "附加订阅"
-
-msgid "Auto attach subscriptions"
-msgstr "自动附加订阅"
-
 msgid "Blacklist"
 msgstr "黑名单"
-
-msgid "Bulk generate applicability for hosts"
-msgstr "批量生成主机的适用性"
-
-msgid "Check for long running tasks"
-msgstr ""
-
-msgid "Combined Profile Update"
-msgstr "组合的配置集更新"
 
 msgid "Configs"
 msgstr "配置"
@@ -137,44 +110,14 @@ msgstr "容器原生虚拟化的标准主机名或 IP 地址。为了连接到�
 msgid "Copy to clipboard"
 msgstr "复制到剪贴板"
 
-msgid "Copy version units to library"
-msgstr "将版本单位复制到库"
-
 msgid "Count"
 msgstr "计数"
-
-msgid "Create"
-msgstr "创建"
-
-msgid "Create Alternate Content Source"
-msgstr "创建备用内容源"
 
 msgid "Create Config"
 msgstr "创建配置"
 
-msgid "Create Export History"
-msgstr "创建导出历史记录"
-
-msgid "Create Import History"
-msgstr "创建导入历史记录"
-
-msgid "Create Syncable Export History"
-msgstr "创建可同步的导出历史记录"
-
 msgid "Create a virt-who configuration"
 msgstr "创建 virt-who 配置"
-
-msgid "Delete"
-msgstr "刪除"
-
-msgid "Delete Activation Key"
-msgstr "删除激活码"
-
-msgid "Delete Lifecycle Environment"
-msgstr "删除生命周期环境"
-
-msgid "Delete Product"
-msgstr "删除产品"
 
 msgid "Delete a virt-who configuration"
 msgstr "删除 virt-who 配置"
@@ -182,32 +125,14 @@ msgstr "删除 virt-who 配置"
 msgid "Delete virt-who configuration %s?"
 msgstr "删除 virt-who 配置 %s？"
 
-msgid "Deliver notifications about long running tasks"
-msgstr ""
-
 msgid "Deploy"
 msgstr "部署"
-
-msgid "Destroy"
-msgstr "销毁"
-
-msgid "Destroy Alternate Content Source"
-msgstr "销毁备用内容源"
-
-msgid "Destroy Content Host"
-msgstr "销毁内容主机"
 
 msgid "Details"
 msgstr "详情"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr "不能为每个管理程序设置不同的调试值，因此它将影响将在其上部署此配置的主机上的所有其他已部署的配置。"
-
-msgid "Disable"
-msgstr "禁用"
-
-msgid "Discover"
-msgstr "发现"
 
 msgid "Download the script"
 msgstr "下载脚本"
@@ -218,9 +143,6 @@ msgstr "编辑"
 msgid "Edit Virt-who Config"
 msgstr "编辑 Virt-who 配置"
 
-msgid "Enable"
-msgstr "启用"
-
 msgid "Enable AHV debug"
 msgstr "启用 AHV 故障排除"
 
@@ -229,9 +151,6 @@ msgstr "启用调试输出"
 
 msgid "Enable debugging output?"
 msgstr "启用调试输出？"
-
-msgid "Errata mail"
-msgstr "勘误邮件"
 
 msgid "Every 12 hours"
 msgstr "每 12 小时"
@@ -269,18 +188,6 @@ msgstr "排除主机"
 msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr "排除集群 ID 在这个选项中列出（以逗号分隔的列表）的主机，<b>不会</b>报告这些主机。PowerCLI 命令在 VMware <code>Get-Cluster \"ClusterName\" | Select ID</code> 中找到域名。支持通配符和正则表达式，以逗号分开多个记录。如果包含特殊字符（如逗号），则需要将值包括在括号中。在结果配置文件中，所有新行都将被删除，开头和结尾的空字符也会被删除。"
 
-msgid "Export"
-msgstr "导出"
-
-msgid "Export Library"
-msgstr "导出库"
-
-msgid "Export Repository"
-msgstr "导出仓库"
-
-msgid "Fetch pxe files"
-msgstr "获取 pxe 文件"
-
 msgid "Filter Hosts"
 msgstr "过滤主机"
 
@@ -289,9 +196,6 @@ msgstr "过滤主机父系统"
 
 msgid "Filter hosts"
 msgstr "过滤主机"
-
-msgid "Filtered index content"
-msgstr "已过滤的索引内容"
 
 msgid "Filtering"
 msgstr "过滤"
@@ -307,12 +211,6 @@ msgstr "Hypervisor 的完全限定主机名或 IP 地址"
 
 msgid "General information"
 msgstr "通用信息"
-
-msgid "Generate host applicability"
-msgstr "产生主机适用性"
-
-msgid "Generate repository applicability"
-msgstr "生成仓库适用性"
 
 msgid "HTTP Proxy"
 msgstr "HTTP 代理"
@@ -365,12 +263,6 @@ msgstr "Hypervisor 类型"
 msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr "Hypervisor 白名单，仅在过滤模式设置为 1 时适用。支持通配符和正则表达式，必须用逗号分隔多项记录。"
 
-msgid "Hypervisors"
-msgstr "Hypervisor"
-
-msgid "Hypervisors update"
-msgstr "Hypervisor 更新"
-
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
 msgstr "如果您运行混合环境，且虚拟机运行 Red Hat Enterprise Linux 和其他操作系统，您可能想要限制 virt-who 对主机的访问权限范围。例如，如果某些 hypervisor 只托管 Microsoft Windows Server 实例，那么让 virt-who agent 报告这些 hypervisor 没有任何意义。"
 
@@ -382,48 +274,6 @@ msgstr "忽略代理服务器"
 
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr "忽略代理服务器。忽略代理服务器设置的主机名、域或 ip 地址逗号分隔列表。可选择性地设置为 *，以便为所有主机名、域或 ip 地址跳过代理服务器设置。"
-
-msgid "Import"
-msgstr "导入"
-
-msgid "Import Content View Version"
-msgstr "导入内容视图版本"
-
-msgid "Import Default Content View"
-msgstr "导入默认内容视图"
-
-msgid "Import Puppet classes"
-msgstr "导入 Puppet 类"
-
-msgid "Import Repository"
-msgstr "导入仓库"
-
-msgid "Import facts"
-msgstr "导入事实"
-
-msgid "Incremental Update"
-msgstr "增量更新"
-
-msgid "Incremental Update of  Content View Version(s) "
-msgstr "内容视图版本的增量更新"
-
-msgid "Index content"
-msgstr "索引內容"
-
-msgid "Index errata"
-msgstr "索引勘误"
-
-msgid "Index module streams"
-msgstr "索引模块流"
-
-msgid "Index package groups"
-msgstr "索引软件包组"
-
-msgid "Install Applicable Errata"
-msgstr "安装适用的勘误"
-
-msgid "Instance update"
-msgstr "实例更新"
 
 msgid "Interval"
 msgstr ""
@@ -515,9 +365,6 @@ msgstr "所有者"
 msgid "Owner was not provided"
 msgstr "未提供所有者"
 
-msgid "Package Profile Update"
-msgstr "软件包配置集更新"
-
 msgid "Path to kubeconfig file"
 msgstr "到 kubeconfig 文件的路径"
 
@@ -530,53 +377,8 @@ msgstr "Prism Element"
 msgid "Prism Flavor"
 msgstr "Prism Flavor"
 
-msgid "Product Create"
-msgstr "产品创建"
-
-msgid "Promote"
-msgstr "升级"
-
-msgid "Promotion to Environment"
-msgstr "升级到环境"
-
-msgid "Publish"
-msgstr "发布"
-
-msgid "Publish Lifecycle Environment Repositories"
-msgstr "发布生命周期环境仓库"
-
-msgid "Refresh Alternate Content Source"
-msgstr "刷新备用内容源"
-
-msgid "Reindex subscriptions"
-msgstr "重新索引订阅"
-
-msgid "Remove Content"
-msgstr "删除内容"
-
-msgid "Remove Version"
-msgstr "移除版本"
-
-msgid "Remove Versions and Associations"
-msgstr "删除版本和关联"
-
-msgid "Remove from Environment"
-msgstr "从环境中移除"
-
-msgid "Remove subscriptions"
-msgstr "删除订阅"
-
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr "为指定的 virt-who 配置提供部署脚本"
-
-msgid "Report"
-msgstr "报告"
-
-msgid "Republish Version Repositories"
-msgstr "发布版本库"
-
-msgid "Run Sync Plan:"
-msgstr "运行同步计划："
 
 msgid "Schedule"
 msgstr "调度"
@@ -608,18 +410,6 @@ msgstr "状态"
 
 msgid "Success"
 msgstr "成功"
-
-msgid "Sync capsule"
-msgstr "同步 capsule"
-
-msgid "Syncable export"
-msgstr "可同步导出"
-
-msgid "Synchronize"
-msgstr "同步"
-
-msgid "Synchronize smart proxy"
-msgstr "同步智能代理服务器"
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr "尚未部署配置，或者 virt-who 无法报告状态"
@@ -663,53 +453,14 @@ msgstr "未知配置状态，由意外情况造成"
 msgid "Unlimited"
 msgstr "无限制"
 
-msgid "Update"
-msgstr "更新"
-
-msgid "Update Alternate Content Source"
-msgstr "更新备用内容源"
-
-msgid "Update CDN Configuration"
-msgstr "更新 CDN 配置"
-
-msgid "Update Content Overrides"
-msgstr "更新内容覆盖"
-
 msgid "Update a virt-who configuration"
 msgstr "更新 virt-who 配置"
-
-msgid "Update content urls"
-msgstr "更新内容 url"
-
-msgid "Update for host"
-msgstr "对主机的更新"
-
-msgid "Update http proxy"
-msgstr "更新 HTTP 代理"
-
-msgid "Update http proxy details"
-msgstr "更新 http 代理详情"
-
-msgid "Update redhat repository"
-msgstr "更新 redhat 仓库"
-
-msgid "Update release version for host"
-msgstr "为主机更新发行版本"
-
-msgid "Updating System Purpose for host"
-msgstr "主机更新系统目的"
-
-msgid "Upload into"
-msgstr "上传到"
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr "使用 hammer 命令或下面的脚本来部署此配置。两者都需要 root 特权。在有权访问 Red Hat Satellite Tools 仓库的一个目标主机上运行其中一个，并运行 virt-who 报告，最好在 Foreman 主机上运行："
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
 msgstr "VMware vCenter 服务器的完全限定主机名或 IP 地址。"
-
-msgid "Verify checksum"
-msgstr "验证校验和"
 
 msgid "Virt-who Configs Status"
 msgstr "Virt-who 配置状态"

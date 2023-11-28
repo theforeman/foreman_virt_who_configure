@@ -37,12 +37,6 @@ msgstr "プロキシー設定を無視するホスト名、ドメインまたは
 msgid "A plugin to make virt-who configuration easy"
 msgstr "virt-who 設定を容易にするプラグイン"
 
-msgid "Abstract"
-msgstr "概要"
-
-msgid "Abstract async task"
-msgstr "非同期タスクの抽象化"
-
 msgid "Account name by which virt-who is to connect to Nutanix AHV."
 msgstr "virt-who を Nutanix AHV に接続する際に使用されるアカウント名。"
 
@@ -61,14 +55,8 @@ msgstr "virt-who をハイパーバイザーに接続する際に使用される
 msgid "Account password by which virt-who is to connect to the hypervisor instance."
 msgstr "virt-who をハイパーバイザーインスタンスに接続する際に使用されるアカウントパスワード。"
 
-msgid "Action with sub plans"
-msgstr "サブプランによるアクション"
-
 msgid "Actions"
 msgstr "アクション"
-
-msgid "Agent action"
-msgstr "エージェントのアクション"
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr "esx プロバイダータイプにのみ適用できます。親 (通常は ComputeResource) の名前がこのオプションのコンマ区切りの一覧に指定されているホストの場合は <b>レポートされません</b>。ワイルドカードおよび正規表現がサポートされ、複数のレコードはコンマで区切られる必要があります。コンマなどの特殊文字が含まれている場合は値を二重引用符で囲みます。すべての改行文字は生成される設定ファイルで削除され、空白は先頭および末尾から削除されます。"
@@ -76,23 +64,8 @@ msgstr "esx プロバイダータイプにのみ適用できます。親 (通常
 msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr "esx プロバイダータイプにのみ適用できます。親 (通常は ComputeResource) の名前がこのオプションのコンマ区切りの一覧に指定されているホストの場合にのみレポートされます。ワイルドカードおよび正規表現がサポートされ、複数のレコードはコンマで区切られる必要があります。コンマなどの特殊文字が含まれている場合は値を二重引用符で囲みます。すべての改行文字は生成される設定ファイルで削除され、空白は先頭および末尾から削除されます。"
 
-msgid "Attach subscriptions"
-msgstr "サブスクリプションの割り当て"
-
-msgid "Auto attach subscriptions"
-msgstr "サブスクリプションの自動割り当て"
-
 msgid "Blacklist"
 msgstr "ブラックリスト"
-
-msgid "Bulk generate applicability for hosts"
-msgstr "ホストに適用可能なエラータを一括生成します"
-
-msgid "Check for long running tasks"
-msgstr ""
-
-msgid "Combined Profile Update"
-msgstr "統合プロファイルの更新"
 
 msgid "Configs"
 msgstr "設定"
@@ -136,44 +109,14 @@ msgstr "コンテナーネイティブの仮想化の完全修飾ホスト名ま
 msgid "Copy to clipboard"
 msgstr "クリップボードへのコピー"
 
-msgid "Copy version units to library"
-msgstr "バージョンユニットのライブラリーへのコピー"
-
 msgid "Count"
 msgstr "カウント"
-
-msgid "Create"
-msgstr "作成"
-
-msgid "Create Alternate Content Source"
-msgstr "代替コンテンツソースの作成"
 
 msgid "Create Config"
 msgstr "設定の作成"
 
-msgid "Create Export History"
-msgstr "エクスポート履歴の作成"
-
-msgid "Create Import History"
-msgstr "インポート履歴の作成"
-
-msgid "Create Syncable Export History"
-msgstr "同期可能なエクスポート履歴の作成"
-
 msgid "Create a virt-who configuration"
 msgstr "virt-who 設定の作成"
-
-msgid "Delete"
-msgstr "削除"
-
-msgid "Delete Activation Key"
-msgstr "アクティベーションキーの削除"
-
-msgid "Delete Lifecycle Environment"
-msgstr "ライフサイクル環境の削除"
-
-msgid "Delete Product"
-msgstr "製品の削除"
 
 msgid "Delete a virt-who configuration"
 msgstr "virt-who 設定を削除します。"
@@ -181,32 +124,14 @@ msgstr "virt-who 設定を削除します。"
 msgid "Delete virt-who configuration %s?"
 msgstr "virt-who 設定 %s を削除しますか?"
 
-msgid "Deliver notifications about long running tasks"
-msgstr ""
-
 msgid "Deploy"
 msgstr "デプロイ"
-
-msgid "Destroy"
-msgstr "破棄"
-
-msgid "Destroy Alternate Content Source"
-msgstr "大体コンテンツソースの破棄"
-
-msgid "Destroy Content Host"
-msgstr "コンテンツホストの破棄"
 
 msgid "Details"
 msgstr "詳細"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr "ハイパーバイザーごとに異なるデバッグ値を設定できません。そのため、この設定をデプロイするホストにデプロイ済みの他の全設定に影響します。"
-
-msgid "Disable"
-msgstr "無効化"
-
-msgid "Discover"
-msgstr "検出"
 
 msgid "Download the script"
 msgstr "スクリプトのダウンロード"
@@ -217,9 +142,6 @@ msgstr "編集"
 msgid "Edit Virt-who Config"
 msgstr "Virt-who 設定の編集"
 
-msgid "Enable"
-msgstr "有効化"
-
 msgid "Enable AHV debug"
 msgstr "AHV デバッグの有効化"
 
@@ -228,9 +150,6 @@ msgstr "デバッグ出力の有効化"
 
 msgid "Enable debugging output?"
 msgstr "デバッグ出力を有効にしますか?"
-
-msgid "Errata mail"
-msgstr "エラータメール"
 
 msgid "Every 12 hours"
 msgstr "12 時間ごと"
@@ -268,18 +187,6 @@ msgstr "ホストの除外"
 msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr "クラスター ID がこのオプションのコンマ区切りの一覧に指定されているホストは、レポート<b>されません</b>。PowerCLI コマンドを使用して VMware でドメイン名を検索します (<code>Get-Cluster “ClusterName” | Select ID</code>)。ワイルドカードおよび正規表現がサポートされ、複数のレコードはコンマで区切られる必要があります。コンマなどの特殊文字が含まれている場合は値を二重引用符で囲みます。すべての改行文字は生成される設定ファイルで削除され、空白は先頭および末尾から削除されます。"
 
-msgid "Export"
-msgstr "エクスポート"
-
-msgid "Export Library"
-msgstr "ライブラリーのエクスポート"
-
-msgid "Export Repository"
-msgstr "リポジトリーのエクスポート"
-
-msgid "Fetch pxe files"
-msgstr "PXE ファイルの取得"
-
 msgid "Filter Hosts"
 msgstr "ホストのフィルタリング"
 
@@ -288,9 +195,6 @@ msgstr "ホストの親のフィルタリング"
 
 msgid "Filter hosts"
 msgstr "ホストのフィルタリング"
-
-msgid "Filtered index content"
-msgstr "フィルタリングしたインデックスコンテンツ"
 
 msgid "Filtering"
 msgstr "フィルタリング"
@@ -306,12 +210,6 @@ msgstr "ハイパーバイザーの完全修飾ホスト名または IP アド�
 
 msgid "General information"
 msgstr "一般情報"
-
-msgid "Generate host applicability"
-msgstr "ホストに適用可能なエラータを生成します"
-
-msgid "Generate repository applicability"
-msgstr "リポジトリーに適用可能なエラータを生成します"
 
 msgid "HTTP Proxy"
 msgstr "HTTP プロキシー"
@@ -364,12 +262,6 @@ msgstr "ハイパーバイザーのタイプ"
 msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr "フィルタリングモードが 1 に設定されている場合にのみ適用できるハイパーバイザーのホワイトリストです。ワイルドカードおよび正規表現がサポートされており、複数のレコードはコンマで区切られる必要があります。"
 
-msgid "Hypervisors"
-msgstr "ハイパーバイザー"
-
-msgid "Hypervisors update"
-msgstr "ハイパーバイザーの更新"
-
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
 msgstr "Red Hat Enterprise Linux およびその他のオペレーティングシステムを実行する仮想マシンでハイブリッド環境を実行する場合は、virt-who のホストへのアクセスの範囲を制限することをお勧めします。たとえば、一部のハイパーバイザーが Microsoft Windows Server インスタンスのみをホストする場合、これらのハイパーバイザーを virt-who エージェントが報告する利点はありません。"
 
@@ -381,48 +273,6 @@ msgstr "プロキシーを無視"
 
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr "プロキシーを無視します。プロキシー設定を無視するホスト名、ドメインまたは IP アドレスのコンマ区切りの一覧です。オプションとして、これは * に設定でき、すべてのホスト名ドメインまたは IP アドレスのプロキシー設定をバイパスします。"
-
-msgid "Import"
-msgstr "インポート"
-
-msgid "Import Content View Version"
-msgstr "コンテンツビューバージョンのインポート"
-
-msgid "Import Default Content View"
-msgstr "デフォルトのコンテンツビューのインポート"
-
-msgid "Import Puppet classes"
-msgstr "Puppet クラスのインポート"
-
-msgid "Import Repository"
-msgstr "リポジトリーのインポート"
-
-msgid "Import facts"
-msgstr "ファクトのインポート"
-
-msgid "Incremental Update"
-msgstr "増分更新"
-
-msgid "Incremental Update of  Content View Version(s) "
-msgstr "コンテンツビューバージョンの増分更新 "
-
-msgid "Index content"
-msgstr "コンテンツのインデックス作成"
-
-msgid "Index errata"
-msgstr "エラータのインデックス作成"
-
-msgid "Index module streams"
-msgstr "モジュールストリームのインデックス作成"
-
-msgid "Index package groups"
-msgstr "パッケージグループのインデックス作成"
-
-msgid "Install Applicable Errata"
-msgstr "適用可能なエラータのインストール"
-
-msgid "Instance update"
-msgstr "インスタンスの更新"
 
 msgid "Interval"
 msgstr "間隔"
@@ -514,9 +364,6 @@ msgstr "所有者"
 msgid "Owner was not provided"
 msgstr "所有者は指定されていません"
 
-msgid "Package Profile Update"
-msgstr "パッケージプロファイルの更新"
-
 msgid "Path to kubeconfig file"
 msgstr "kubeconfig ファイルへのパス"
 
@@ -529,53 +376,8 @@ msgstr "Prism Element"
 msgid "Prism Flavor"
 msgstr "Prism フレーバー"
 
-msgid "Product Create"
-msgstr "製品の作成"
-
-msgid "Promote"
-msgstr "プロモート"
-
-msgid "Promotion to Environment"
-msgstr "環境へのプロモート"
-
-msgid "Publish"
-msgstr "公開"
-
-msgid "Publish Lifecycle Environment Repositories"
-msgstr "ライフサイクル環境リポジトリーの公開"
-
-msgid "Refresh Alternate Content Source"
-msgstr "代替コンテンツソースの更新"
-
-msgid "Reindex subscriptions"
-msgstr "サブスクリプションのインデックス再作成"
-
-msgid "Remove Content"
-msgstr "コンテンツの削除"
-
-msgid "Remove Version"
-msgstr "バージョンの削除"
-
-msgid "Remove Versions and Associations"
-msgstr "バージョンおよび関連付けの削除"
-
-msgid "Remove from Environment"
-msgstr "環境からの削除"
-
-msgid "Remove subscriptions"
-msgstr "サブスクリプションの削除"
-
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr "指定した virt-who 設定の deploy スクリプトのレンダリングを行います。"
-
-msgid "Report"
-msgstr "レポート"
-
-msgid "Republish Version Repositories"
-msgstr "バージョンリポジトリーの再公開"
-
-msgid "Run Sync Plan:"
-msgstr "同期プランの実行:"
 
 msgid "Schedule"
 msgstr "スケジュール"
@@ -607,18 +409,6 @@ msgstr "状態"
 
 msgid "Success"
 msgstr "成功"
-
-msgid "Sync capsule"
-msgstr "Capsule の同期"
-
-msgid "Syncable export"
-msgstr "同期可能なエクスポート"
-
-msgid "Synchronize"
-msgstr "同期"
-
-msgid "Synchronize smart proxy"
-msgstr "Smart Proxy の同期"
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr "設定がデプロイされていないか、または virt-who がステータスを報告できませんでした"
@@ -662,53 +452,14 @@ msgstr "予期しない状況によって生じる不明な設定ステータス
 msgid "Unlimited"
 msgstr "無制限"
 
-msgid "Update"
-msgstr "更新"
-
-msgid "Update Alternate Content Source"
-msgstr "代替コンテンツソースの更新"
-
-msgid "Update CDN Configuration"
-msgstr "CDN 設定の更新"
-
-msgid "Update Content Overrides"
-msgstr "コンテンツ上書きの更新"
-
 msgid "Update a virt-who configuration"
 msgstr "virt-who 設定の更新"
-
-msgid "Update content urls"
-msgstr "コンテンツ url の更新"
-
-msgid "Update for host"
-msgstr "ホストの更新"
-
-msgid "Update http proxy"
-msgstr "http プロキシーの更新"
-
-msgid "Update http proxy details"
-msgstr "HTTP プロキシーの詳細更新"
-
-msgid "Update redhat repository"
-msgstr "redhat リポジトリーの更新"
-
-msgid "Update release version for host"
-msgstr "ホストのリリースバージョンの更新"
-
-msgid "Updating System Purpose for host"
-msgstr "ホストのシステム目的を更新中"
-
-msgid "Upload into"
-msgstr "アップロード先"
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr "以下の Hammer コマンドまたはスクリプトを使用してこの設定をデプロイします。いずれも、root 権限が必要です。katello-host-tools にアクセスできるターゲットホストで Hammer コマンドまたはスクリプトを実行し、可能な場合は Foreman ホストで virt-who レポートを実行します。"
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
 msgstr "VMware vCenter サーバーの完全修飾ホスト名または IP アドレス"
-
-msgid "Verify checksum"
-msgstr "チェックサムの確認"
 
 msgid "Virt-who Configs Status"
 msgstr "Virt-who 設定ステータス"

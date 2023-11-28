@@ -5,7 +5,6 @@
       "": {
         "Project-Id-Version": "foreman_virt_who_configure 0.5.17",
         "Report-Msgid-Bugs-To": "",
-        "POT-Creation-Date": "2023-09-15 14:09+0200",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
         "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2023",
         "Language-Team": "Portuguese (Brazil) (https://app.transifex.com/foreman/teams/114/pt_BR/)",
@@ -465,11 +464,11 @@
       "Virt-who Configs Status": [
         "Status das configurações do virt-who"
       ],
+      "A plugin to make virt-who configuration easy": [
+        "Um plug-in para facilitar a configuração do virt-who"
+      ],
       "Abstract async task": [
         "Tarefa assíncrona abstrata"
-      ],
-      "Abstract": [
-        ""
       ],
       "Action with sub plans": [
         "Ação com subplanos "
@@ -486,17 +485,14 @@
       "Bulk generate applicability for hosts": [
         "Aplicabilidade de geração em massa para hosts"
       ],
-      "Check for long running tasks": [
-        ""
-      ],
       "Combined Profile Update": [
         "Atualização de perfil combinado"
       ],
       "Copy version units to library": [
         "Copiar unidades da versão para a biblioteca"
       ],
-      "Create Alternate Content Source": [
-        ""
+      "Create": [
+        "Criar"
       ],
       "Create Export History": [
         "Criar histórico de exportação"
@@ -504,11 +500,8 @@
       "Create Import History": [
         "Criar histórico de importação"
       ],
-      "Create Syncable Export History": [
-        ""
-      ],
-      "Create": [
-        "Criar"
+      "Delete": [
+        "Excluir"
       ],
       "Delete Activation Key": [
         "Remover chave de ativação"
@@ -519,20 +512,11 @@
       "Delete Product": [
         "Remover Produto"
       ],
-      "Delete": [
-        "Excluir"
-      ],
-      "Deliver notifications about long running tasks": [
-        ""
-      ],
-      "Destroy Alternate Content Source": [
-        ""
+      "Destroy": [
+        "Destruir"
       ],
       "Destroy Content Host": [
         "Destruir Host de Conteúdo"
-      ],
-      "Destroy": [
-        "Destruir"
       ],
       "Disable": [
         "Desabilitar"
@@ -546,14 +530,11 @@
       "Errata mail": [
         "E-mail da Errata"
       ],
-      "Export Library": [
-        "Biblioteca de exportação"
-      ],
-      "Export Repository": [
-        ""
-      ],
       "Export": [
         "Exportar"
+      ],
+      "Export Library": [
+        "Biblioteca de exportação"
       ],
       "Fetch pxe files": [
         "Buscar arquivos de PXE"
@@ -567,11 +548,14 @@
       "Generate repository applicability": [
         "Gerar aplicabilidade de repositório"
       ],
+      "Hypervisors": [
+        "Hipervisores"
+      ],
       "Hypervisors update": [
         "Atualização de hipervisores"
       ],
-      "Hypervisors": [
-        "Hipervisores"
+      "Import": [
+        "Importar"
       ],
       "Import Content View Version": [
         "Versão Importar Conteúdo Ver"
@@ -582,20 +566,14 @@
       "Import Puppet classes": [
         "Importar classes de Puppet"
       ],
-      "Import Repository": [
-        ""
-      ],
       "Import facts": [
         "Importar fatos"
       ],
-      "Import": [
-        "Importar"
+      "Incremental Update": [
+        "Atualização Adicional"
       ],
       "Incremental Update of  Content View Version(s) ": [
         "Atualização incremental de versão(ões) da Exibição de Conteúdo."
-      ],
-      "Incremental Update": [
-        "Atualização Adicional"
       ],
       "Index content": [
         "Indexar conteúdo "
@@ -627,14 +605,11 @@
       "Promotion to Environment": [
         "Promoção a ambiente"
       ],
-      "Publish Lifecycle Environment Repositories": [
-        "Publicar repositórios do ambiente de ciclo de vida"
-      ],
       "Publish": [
         "Publicar"
       ],
-      "Refresh Alternate Content Source": [
-        ""
+      "Publish Lifecycle Environment Repositories": [
+        "Publicar repositórios do ambiente de ciclo de vida"
       ],
       "Reindex subscriptions": [
         "Reindexar subscrições "
@@ -666,20 +641,14 @@
       "Sync capsule": [
         "Sincronizar cápsula"
       ],
-      "Syncable export": [
-        ""
+      "Synchronize": [
+        "Sincronizar"
       ],
       "Synchronize smart proxy": [
         "Sincronizar proxy inteligente"
       ],
-      "Synchronize": [
-        "Sincronizar"
-      ],
-      "Update Alternate Content Source": [
-        ""
-      ],
-      "Update CDN Configuration": [
-        ""
+      "Update": [
+        "Atualizar"
       ],
       "Update Content Overrides": [
         "Atualizar substituições do conteúdo"
@@ -690,20 +659,17 @@
       "Update for host": [
         "Atualização para host"
       ],
-      "Update http proxy details": [
-        "Atualizar detalhes do proxy http"
-      ],
       "Update http proxy": [
         "Atualizar proxy http"
+      ],
+      "Update http proxy details": [
+        "Atualizar detalhes do proxy http"
       ],
       "Update redhat repository": [
         "Atualizar repositório redhat"
       ],
       "Update release version for host": [
         "Atualizar versão do host"
-      ],
-      "Update": [
-        "Atualizar"
       ],
       "Updating System Purpose for host": [
         "Atualização do sistema Objetivo do sistema de hospedagem"
@@ -713,12 +679,6 @@
       ],
       "Verify checksum": [
         "Verificação do checksum"
-      ],
-      "A plugin to make virt-who configuration easy": [
-        "Um plug-in para facilitar a configuração do virt-who"
-      ],
-      "Remote action:": [
-        "Ação remota:"
       ]
     }
   }

@@ -464,17 +464,14 @@
       "Virt-who Configs Status": [
         ""
       ],
+      "A plugin to make virt-who configuration easy": [
+        ""
+      ],
       "Abstract async task": [
         "Абстрактная асинхронная задача"
       ],
-      "Abstract": [
-        ""
-      ],
       "Action with sub plans": [
         "Действия с подпланами"
-      ],
-      "Agent action": [
-        ""
       ],
       "Attach subscriptions": [
         "Выделить подписки"
@@ -482,32 +479,11 @@
       "Auto attach subscriptions": [
         "Выбрать подписки автоматически"
       ],
-      "Bulk generate applicability for hosts": [
-        ""
-      ],
-      "Check for long running tasks": [
-        ""
-      ],
-      "Combined Profile Update": [
-        ""
-      ],
-      "Copy version units to library": [
-        ""
-      ],
-      "Create Alternate Content Source": [
-        ""
-      ],
-      "Create Export History": [
-        ""
-      ],
-      "Create Import History": [
-        ""
-      ],
-      "Create Syncable Export History": [
-        ""
-      ],
       "Create": [
         "Создать"
+      ],
+      "Delete": [
+        "Удалить"
       ],
       "Delete Activation Key": [
         "Удалить ключ активации"
@@ -518,20 +494,11 @@
       "Delete Product": [
         "Удалить продукт"
       ],
-      "Delete": [
+      "Destroy": [
         "Удалить"
-      ],
-      "Deliver notifications about long running tasks": [
-        ""
-      ],
-      "Destroy Alternate Content Source": [
-        ""
       ],
       "Destroy Content Host": [
         "Удалить узел"
-      ],
-      "Destroy": [
-        "Удалить"
       ],
       "Disable": [
         "Отключить"
@@ -545,53 +512,26 @@
       "Errata mail": [
         "Почта"
       ],
-      "Export Library": [
-        ""
-      ],
-      "Export Repository": [
-        ""
-      ],
       "Export": [
         "Экспорт"
-      ],
-      "Fetch pxe files": [
-        ""
       ],
       "Filtered index content": [
         "Содержимое фильтруемого индекса"
       ],
-      "Generate host applicability": [
-        ""
-      ],
-      "Generate repository applicability": [
-        ""
+      "Hypervisors": [
+        "Гипервизоры"
       ],
       "Hypervisors update": [
         "Обновление гипервизоров"
       ],
-      "Hypervisors": [
-        "Гипервизоры"
-      ],
-      "Import Content View Version": [
-        ""
-      ],
-      "Import Default Content View": [
-        ""
+      "Import": [
+        "Импорт"
       ],
       "Import Puppet classes": [
         "Импорт классов Puppet"
       ],
-      "Import Repository": [
-        ""
-      ],
       "Import facts": [
         "Импорт фактов"
-      ],
-      "Import": [
-        "Импорт"
-      ],
-      "Incremental Update of  Content View Version(s) ": [
-        ""
       ],
       "Incremental Update": [
         "Инкрементное обновление"
@@ -602,17 +542,11 @@
       "Index errata": [
         "Индексировать исправления"
       ],
-      "Index module streams": [
-        ""
-      ],
       "Index package groups": [
         "Индексировать группы пакетов"
       ],
       "Install Applicable Errata": [
         "Установить исправления"
-      ],
-      "Instance update": [
-        ""
       ],
       "Package Profile Update": [
         "Обновление профиля пакетов"
@@ -623,17 +557,8 @@
       "Promote": [
         "Продвижение"
       ],
-      "Promotion to Environment": [
-        ""
-      ],
-      "Publish Lifecycle Environment Repositories": [
-        ""
-      ],
       "Publish": [
         "Опубликовать"
-      ],
-      "Refresh Alternate Content Source": [
-        ""
       ],
       "Reindex subscriptions": [
         "Повторно индексировать подписки"
@@ -656,65 +581,17 @@
       "Report": [
         "Сообщить"
       ],
-      "Republish Version Repositories": [
-        ""
-      ],
-      "Run Sync Plan:": [
-        ""
-      ],
-      "Sync capsule": [
-        ""
-      ],
-      "Syncable export": [
-        ""
-      ],
-      "Synchronize smart proxy": [
-        ""
-      ],
       "Synchronize": [
         "Синхронизировать"
-      ],
-      "Update Alternate Content Source": [
-        ""
-      ],
-      "Update CDN Configuration": [
-        ""
-      ],
-      "Update Content Overrides": [
-        ""
-      ],
-      "Update content urls": [
-        ""
-      ],
-      "Update for host": [
-        "Обновление узла"
-      ],
-      "Update http proxy details": [
-        ""
-      ],
-      "Update http proxy": [
-        ""
-      ],
-      "Update redhat repository": [
-        ""
-      ],
-      "Update release version for host": [
-        ""
       ],
       "Update": [
         "Обновить"
       ],
-      "Updating System Purpose for host": [
-        ""
+      "Update for host": [
+        "Обновление узла"
       ],
       "Upload into": [
         "Добавить в"
-      ],
-      "Verify checksum": [
-        ""
-      ],
-      "A plugin to make virt-who configuration easy": [
-        ""
       ]
     }
   }

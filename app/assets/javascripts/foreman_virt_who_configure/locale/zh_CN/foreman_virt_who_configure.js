@@ -5,7 +5,6 @@
       "": {
         "Project-Id-Version": "foreman_virt_who_configure 0.5.17",
         "Report-Msgid-Bugs-To": "",
-        "POT-Creation-Date": "2023-09-15 14:09+0200",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
         "Last-Translator": "Amit Upadhye <aupadhye@redhat.com>, 2023",
         "Language-Team": "Chinese (China) (https://app.transifex.com/foreman/teams/114/zh_CN/)",
@@ -465,11 +464,14 @@
       "Virt-who Configs Status": [
         "Virt-who 配置状态"
       ],
-      "Abstract async task": [
-        "抽象 async 任务"
+      "A plugin to make virt-who configuration easy": [
+        "简化 virt-who 配置的插件"
       ],
       "Abstract": [
         "摘要"
+      ],
+      "Abstract async task": [
+        "抽象 async 任务"
       ],
       "Action with sub plans": [
         "有子计划的操作"
@@ -486,14 +488,14 @@
       "Bulk generate applicability for hosts": [
         "批量生成主机的适用性"
       ],
-      "Check for long running tasks": [
-        ""
-      ],
       "Combined Profile Update": [
         "组合的配置集更新"
       ],
       "Copy version units to library": [
         "将版本单位复制到库"
+      ],
+      "Create": [
+        "创建"
       ],
       "Create Alternate Content Source": [
         "创建备用内容源"
@@ -507,8 +509,8 @@
       "Create Syncable Export History": [
         "创建可同步的导出历史记录"
       ],
-      "Create": [
-        "创建"
+      "Delete": [
+        "刪除"
       ],
       "Delete Activation Key": [
         "删除激活码"
@@ -519,20 +521,14 @@
       "Delete Product": [
         "删除产品"
       ],
-      "Delete": [
-        "刪除"
-      ],
-      "Deliver notifications about long running tasks": [
-        ""
+      "Destroy": [
+        "销毁"
       ],
       "Destroy Alternate Content Source": [
         "销毁备用内容源"
       ],
       "Destroy Content Host": [
         "销毁内容主机"
-      ],
-      "Destroy": [
-        "销毁"
       ],
       "Disable": [
         "禁用"
@@ -546,14 +542,14 @@
       "Errata mail": [
         "勘误邮件"
       ],
+      "Export": [
+        "导出"
+      ],
       "Export Library": [
         "导出库"
       ],
       "Export Repository": [
         "导出仓库"
-      ],
-      "Export": [
-        "导出"
       ],
       "Fetch pxe files": [
         "获取 pxe 文件"
@@ -567,11 +563,14 @@
       "Generate repository applicability": [
         "生成仓库适用性"
       ],
+      "Hypervisors": [
+        "Hypervisor"
+      ],
       "Hypervisors update": [
         "Hypervisor 更新"
       ],
-      "Hypervisors": [
-        "Hypervisor"
+      "Import": [
+        "导入"
       ],
       "Import Content View Version": [
         "导入内容视图版本"
@@ -588,14 +587,11 @@
       "Import facts": [
         "导入事实"
       ],
-      "Import": [
-        "导入"
+      "Incremental Update": [
+        "增量更新"
       ],
       "Incremental Update of  Content View Version(s) ": [
         "内容视图版本的增量更新"
-      ],
-      "Incremental Update": [
-        "增量更新"
       ],
       "Index content": [
         "索引內容"
@@ -627,11 +623,11 @@
       "Promotion to Environment": [
         "升级到环境"
       ],
-      "Publish Lifecycle Environment Repositories": [
-        "发布生命周期环境仓库"
-      ],
       "Publish": [
         "发布"
+      ],
+      "Publish Lifecycle Environment Repositories": [
+        "发布生命周期环境仓库"
       ],
       "Refresh Alternate Content Source": [
         "刷新备用内容源"
@@ -669,11 +665,14 @@
       "Syncable export": [
         "可同步导出"
       ],
+      "Synchronize": [
+        "同步"
+      ],
       "Synchronize smart proxy": [
         "同步智能代理服务器"
       ],
-      "Synchronize": [
-        "同步"
+      "Update": [
+        "更新"
       ],
       "Update Alternate Content Source": [
         "更新备用内容源"
@@ -690,20 +689,17 @@
       "Update for host": [
         "对主机的更新"
       ],
-      "Update http proxy details": [
-        "更新 http 代理详情"
-      ],
       "Update http proxy": [
         "更新 HTTP 代理"
+      ],
+      "Update http proxy details": [
+        "更新 http 代理详情"
       ],
       "Update redhat repository": [
         "更新 redhat 仓库"
       ],
       "Update release version for host": [
         "为主机更新发行版本"
-      ],
-      "Update": [
-        "更新"
       ],
       "Updating System Purpose for host": [
         "主机更新系统目的"
@@ -713,12 +709,6 @@
       ],
       "Verify checksum": [
         "验证校验和"
-      ],
-      "A plugin to make virt-who configuration easy": [
-        "简化 virt-who 配置的插件"
-      ],
-      "Remote action:": [
-        "远程操作："
       ]
     }
   }

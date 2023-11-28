@@ -5,7 +5,6 @@
       "": {
         "Project-Id-Version": "foreman_virt_who_configure 0.5.17",
         "Report-Msgid-Bugs-To": "",
-        "POT-Creation-Date": "2023-09-15 14:09+0200",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
         "Last-Translator": "Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2023",
         "Language-Team": "Georgian (https://app.transifex.com/foreman/teams/114/ka/)",
@@ -465,11 +464,14 @@
       "Virt-who Configs Status": [
         "Virt-who-ის კონფიგურაციების სტატუსი"
       ],
-      "Abstract async task": [
-        "ასინქრონული ამოცანის აბსტრაქცია"
+      "A plugin to make virt-who configuration easy": [
+        "დამატება virt-who-ის კონფიგურაციის გასაადვილებლად"
       ],
       "Abstract": [
         "ანოტაცია"
+      ],
+      "Abstract async task": [
+        "ასინქრონული ამოცანის აბსტრაქცია"
       ],
       "Action with sub plans": [
         "ქმედება ქვე-გეგმებით"
@@ -495,6 +497,9 @@
       "Copy version units to library": [
         "ვერსიის ერთეულების ბიბლიოთეკაში კოპირება"
       ],
+      "Create": [
+        "შექმნა"
+      ],
       "Create Alternate Content Source": [
         "შემცველობის ალტერნატიული წყაროს შექმნა"
       ],
@@ -507,8 +512,8 @@
       "Create Syncable Export History": [
         "სინქრონიზებადი გატანის ისტორიის შექმნა"
       ],
-      "Create": [
-        "შექმნა"
+      "Delete": [
+        "წაშლა"
       ],
       "Delete Activation Key": [
         "აქტივაციის გასაღების წაშლა"
@@ -519,20 +524,17 @@
       "Delete Product": [
         "პროდუქტის წაშლა"
       ],
-      "Delete": [
-        "წაშლა"
-      ],
       "Deliver notifications about long running tasks": [
         "შეტყობინება დიდხანს გაშვებული ამოცანების შესახებ"
+      ],
+      "Destroy": [
+        "განადგურება"
       ],
       "Destroy Alternate Content Source": [
         "შემცველობის ალტერნატიული წყაროს  განადგურება"
       ],
       "Destroy Content Host": [
         "შემცველობის ჰოსტის განადგურება"
-      ],
-      "Destroy": [
-        "განადგურება"
       ],
       "Disable": [
         "გამორთვა"
@@ -546,14 +548,14 @@
       "Errata mail": [
         "მორჩენილი ელფოსტა"
       ],
+      "Export": [
+        "გატანა"
+      ],
       "Export Library": [
         "ბიბლიოთეკის გატანა"
       ],
       "Export Repository": [
         "რეპოზიტორიის გატანა"
-      ],
-      "Export": [
-        "გატანა"
       ],
       "Fetch pxe files": [
         "PXE ფაილების გამოთხოვა"
@@ -567,11 +569,14 @@
       "Generate repository applicability": [
         "ჰოსტის გამოყენებადობის გენერაცია"
       ],
+      "Hypervisors": [
+        "ჰაიპერვაიზორები"
+      ],
       "Hypervisors update": [
         "ჰაიპერვაიზორის განახლება"
       ],
-      "Hypervisors": [
-        "ჰაიპერვაიზორები"
+      "Import": [
+        "იმპორტი"
       ],
       "Import Content View Version": [
         "შემცველობის ხედის ვერსიის შემოტანა"
@@ -588,14 +593,11 @@
       "Import facts": [
         "ფაქტების შემოტანა"
       ],
-      "Import": [
-        "იმპორტი"
+      "Incremental Update": [
+        "ინკრემენტული განახლება"
       ],
       "Incremental Update of  Content View Version(s) ": [
         "შემცველობის ხედის ვერსიების ინკრემენტული განახლება "
-      ],
-      "Incremental Update": [
-        "ინკრემენტული განახლება"
       ],
       "Index content": [
         "შემცველობის ინდექსი"
@@ -627,11 +629,11 @@
       "Promotion to Environment": [
         "გარემოს წინ წაწევა"
       ],
-      "Publish Lifecycle Environment Repositories": [
-        "ცხოვრების ციკლის გარემოს რეპოზიტორიების გასაჯაროება"
-      ],
       "Publish": [
         "გამოქვეყნება"
+      ],
+      "Publish Lifecycle Environment Repositories": [
+        "ცხოვრების ციკლის გარემოს რეპოზიტორიების გასაჯაროება"
       ],
       "Refresh Alternate Content Source": [
         "შემცველობის ალტერნატიული წყაროს განახლება"
@@ -669,11 +671,14 @@
       "Syncable export": [
         "სინქრონიზებადი გატანა"
       ],
+      "Synchronize": [
+        "სინქრონიზაცია"
+      ],
       "Synchronize smart proxy": [
         "ჭკვიან პროქსისთან სინქრონიზაცია"
       ],
-      "Synchronize": [
-        "სინქრონიზაცია"
+      "Update": [
+        "განახლება"
       ],
       "Update Alternate Content Source": [
         "შემცველობის ალტერნატიული წყაროს განახლება"
@@ -690,20 +695,17 @@
       "Update for host": [
         "განახლება ჰოსტისთვის"
       ],
-      "Update http proxy details": [
-        "HTTP პროქსის დეტალების განახლება"
-      ],
       "Update http proxy": [
         "HTTP პროქსის განახლება"
+      ],
+      "Update http proxy details": [
+        "HTTP პროქსის დეტალების განახლება"
       ],
       "Update redhat repository": [
         "RH-ის რეპოზიტორიის განახლება"
       ],
       "Update release version for host": [
         "ჰოსტის რელიზის ვერსიის განახლება"
-      ],
-      "Update": [
-        "განახლება"
       ],
       "Updating System Purpose for host": [
         "ჰოსტის სისტემური დანიშნულების განახლება"
@@ -713,12 +715,6 @@
       ],
       "Verify checksum": [
         "საკონტროლო ჯამის შემოწმება"
-      ],
-      "A plugin to make virt-who configuration easy": [
-        "დამატება virt-who-ის კონფიგურაციის გასაადვილებლად"
-      ],
-      "Remote action:": [
-        "დაშორებული ქმედება:"
       ]
     }
   }

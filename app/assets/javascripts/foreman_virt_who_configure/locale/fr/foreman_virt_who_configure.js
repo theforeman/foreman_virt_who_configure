@@ -5,7 +5,6 @@
       "": {
         "Project-Id-Version": "foreman_virt_who_configure 0.5.17",
         "Report-Msgid-Bugs-To": "",
-        "POT-Creation-Date": "2023-09-15 14:09+0200",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
         "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2023",
         "Language-Team": "French (https://app.transifex.com/foreman/teams/114/fr/)",
@@ -465,11 +464,14 @@
       "Virt-who Configs Status": [
         "État des configurations virt-who"
       ],
-      "Abstract async task": [
-        "Tâche async abstraite"
+      "A plugin to make virt-who configuration easy": [
+        "Plug-in pour faciliter la configuration de virt-who"
       ],
       "Abstract": [
         "Résumé"
+      ],
+      "Abstract async task": [
+        "Tâche async abstraite"
       ],
       "Action with sub plans": [
         "Action avec sous-plans"
@@ -486,14 +488,14 @@
       "Bulk generate applicability for hosts": [
         "La masse génère l'applicabilité pour les hôtes"
       ],
-      "Check for long running tasks": [
-        ""
-      ],
       "Combined Profile Update": [
         "Mise à jour de profil combiné"
       ],
       "Copy version units to library": [
         "Copier les unités de version dans la bibliothèque"
+      ],
+      "Create": [
+        "Créer"
       ],
       "Create Alternate Content Source": [
         "Créer une autre source de contenu"
@@ -507,8 +509,8 @@
       "Create Syncable Export History": [
         "Créer un historique d'exportation synchronisable"
       ],
-      "Create": [
-        "Créer"
+      "Delete": [
+        "Supprimer"
       ],
       "Delete Activation Key": [
         "Supprimer la clé d'activation"
@@ -519,20 +521,14 @@
       "Delete Product": [
         "Supprimer le produit"
       ],
-      "Delete": [
-        "Supprimer"
-      ],
-      "Deliver notifications about long running tasks": [
-        ""
+      "Destroy": [
+        "Détruire"
       ],
       "Destroy Alternate Content Source": [
         "Détruire la source de contenu alternatif"
       ],
       "Destroy Content Host": [
         "Détruire l'hôte du contenu"
-      ],
-      "Destroy": [
-        "Détruire"
       ],
       "Disable": [
         "Désactiver"
@@ -546,14 +542,14 @@
       "Errata mail": [
         "Courrier d'errata"
       ],
+      "Export": [
+        "Exporter"
+      ],
       "Export Library": [
         "Exporter Bibliothèque"
       ],
       "Export Repository": [
         "Référentiel d'exportation"
-      ],
-      "Export": [
-        "Exporter"
       ],
       "Fetch pxe files": [
         "Récupérer les fichiers pxe"
@@ -567,11 +563,14 @@
       "Generate repository applicability": [
         "Générer l'applicabilité du référentiel"
       ],
+      "Hypervisors": [
+        "Hyperviseurs"
+      ],
       "Hypervisors update": [
         "Mise à jour des hyperviseurs"
       ],
-      "Hypervisors": [
-        "Hyperviseurs"
+      "Import": [
+        "Importation"
       ],
       "Import Content View Version": [
         "Supprimer la version de l'affichage du contenu"
@@ -588,14 +587,11 @@
       "Import facts": [
         "Importer des faits"
       ],
-      "Import": [
-        "Importation"
+      "Incremental Update": [
+        "Mise à jour croissante"
       ],
       "Incremental Update of  Content View Version(s) ": [
         "Mise à jour incrémentielle Version(s) d'affichage de contenu"
-      ],
-      "Incremental Update": [
-        "Mise à jour croissante"
       ],
       "Index content": [
         "Contenu d'index"
@@ -627,11 +623,11 @@
       "Promotion to Environment": [
         "Promotion à Environnement"
       ],
-      "Publish Lifecycle Environment Repositories": [
-        "Publier les référentiels d'environnements de cycles de vie"
-      ],
       "Publish": [
         "Publier"
+      ],
+      "Publish Lifecycle Environment Repositories": [
+        "Publier les référentiels d'environnements de cycles de vie"
       ],
       "Refresh Alternate Content Source": [
         "Réactualisation de la source de contenu alternatif"
@@ -669,11 +665,14 @@
       "Syncable export": [
         "Exportation synchronisable"
       ],
+      "Synchronize": [
+        "Synchroniser"
+      ],
       "Synchronize smart proxy": [
         "Synchroniser le smart proxy"
       ],
-      "Synchronize": [
-        "Synchroniser"
+      "Update": [
+        "Mise à jour"
       ],
       "Update Alternate Content Source": [
         "Mise à jour de la source de contenu alternatif"
@@ -690,20 +689,17 @@
       "Update for host": [
         "Mise à jour de l'hôte"
       ],
-      "Update http proxy details": [
-        "Mise à jour des détails du proxy http"
-      ],
       "Update http proxy": [
         "Mettre à jour proxy http"
+      ],
+      "Update http proxy details": [
+        "Mise à jour des détails du proxy http"
       ],
       "Update redhat repository": [
         "Mettre à jour le référentiel de données Red Hat"
       ],
       "Update release version for host": [
         "Mettre à jour la version de publication pour l'hôte"
-      ],
-      "Update": [
-        "Mise à jour"
       ],
       "Updating System Purpose for host": [
         "Mise à jour Objectif système pour l'hôte"
@@ -713,12 +709,6 @@
       ],
       "Verify checksum": [
         "Vérifier la somme de contrôle"
-      ],
-      "A plugin to make virt-who configuration easy": [
-        "Plug-in pour faciliter la configuration de virt-who"
-      ],
-      "Remote action:": [
-        "Action distante :"
       ]
     }
   }
