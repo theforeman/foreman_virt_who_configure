@@ -464,17 +464,14 @@
       "Virt-who Configs Status": [
         ""
       ],
+      "A plugin to make virt-who configuration easy": [
+        ""
+      ],
       "Abstract async task": [
         "비동기 작업 개요"
       ],
-      "Abstract": [
-        ""
-      ],
       "Action with sub plans": [
         "하위 계획이 있는 작업"
-      ],
-      "Agent action": [
-        ""
       ],
       "Attach subscriptions": [
         "서브스크립션 연결"
@@ -482,32 +479,11 @@
       "Auto attach subscriptions": [
         "서브스크립션 자동 첨부"
       ],
-      "Bulk generate applicability for hosts": [
-        ""
-      ],
-      "Check for long running tasks": [
-        ""
-      ],
-      "Combined Profile Update": [
-        ""
-      ],
-      "Copy version units to library": [
-        ""
-      ],
-      "Create Alternate Content Source": [
-        ""
-      ],
-      "Create Export History": [
-        ""
-      ],
-      "Create Import History": [
-        ""
-      ],
-      "Create Syncable Export History": [
-        ""
-      ],
       "Create": [
         "생성"
+      ],
+      "Delete": [
+        "삭제 "
       ],
       "Delete Activation Key": [
         "활성키 삭제 "
@@ -518,20 +494,11 @@
       "Delete Product": [
         "제품 삭제 "
       ],
-      "Delete": [
+      "Destroy": [
         "삭제 "
-      ],
-      "Deliver notifications about long running tasks": [
-        ""
-      ],
-      "Destroy Alternate Content Source": [
-        ""
       ],
       "Destroy Content Host": [
         "컨텐츠 호스트 삭제 "
-      ],
-      "Destroy": [
-        "삭제 "
       ],
       "Disable": [
         "비활성화 "
@@ -545,53 +512,26 @@
       "Errata mail": [
         "에라타 메일"
       ],
-      "Export Library": [
-        ""
-      ],
-      "Export Repository": [
-        ""
-      ],
       "Export": [
         "내보내기"
-      ],
-      "Fetch pxe files": [
-        ""
       ],
       "Filtered index content": [
         "필터링된 인덱스 컨텐츠"
       ],
-      "Generate host applicability": [
-        ""
-      ],
-      "Generate repository applicability": [
-        ""
+      "Hypervisors": [
+        "하이퍼바이저 "
       ],
       "Hypervisors update": [
         "하이퍼바이저 업데이트"
       ],
-      "Hypervisors": [
-        "하이퍼바이저 "
-      ],
-      "Import Content View Version": [
-        ""
-      ],
-      "Import Default Content View": [
-        ""
+      "Import": [
+        "불러오기"
       ],
       "Import Puppet classes": [
         "Puppet 클래스 가져오기"
       ],
-      "Import Repository": [
-        ""
-      ],
       "Import facts": [
         "팩트 불러오기"
-      ],
-      "Import": [
-        "불러오기"
-      ],
-      "Incremental Update of  Content View Version(s) ": [
-        ""
       ],
       "Incremental Update": [
         "증분 업데이트 "
@@ -602,17 +542,11 @@
       "Index errata": [
         "에라타 인덱스"
       ],
-      "Index module streams": [
-        ""
-      ],
       "Index package groups": [
         "패키지 그룹 인덱싱"
       ],
       "Install Applicable Errata": [
         "적용 가능한 에라타 설치 "
-      ],
-      "Instance update": [
-        ""
       ],
       "Package Profile Update": [
         "패키지 프로파일 업데이트"
@@ -623,17 +557,8 @@
       "Promote": [
         "승격 "
       ],
-      "Promotion to Environment": [
-        ""
-      ],
-      "Publish Lifecycle Environment Repositories": [
-        ""
-      ],
       "Publish": [
         "공개 "
-      ],
-      "Refresh Alternate Content Source": [
-        ""
       ],
       "Reindex subscriptions": [
         "서브스크립션 다시 인덱싱"
@@ -656,65 +581,17 @@
       "Report": [
         "보고  "
       ],
-      "Republish Version Repositories": [
-        ""
-      ],
-      "Run Sync Plan:": [
-        ""
-      ],
-      "Sync capsule": [
-        ""
-      ],
-      "Syncable export": [
-        ""
-      ],
-      "Synchronize smart proxy": [
-        ""
-      ],
       "Synchronize": [
         "동기화 "
-      ],
-      "Update Alternate Content Source": [
-        ""
-      ],
-      "Update CDN Configuration": [
-        ""
-      ],
-      "Update Content Overrides": [
-        ""
-      ],
-      "Update content urls": [
-        ""
-      ],
-      "Update for host": [
-        "호스트에 대한 업데이트"
-      ],
-      "Update http proxy details": [
-        ""
-      ],
-      "Update http proxy": [
-        ""
-      ],
-      "Update redhat repository": [
-        ""
-      ],
-      "Update release version for host": [
-        ""
       ],
       "Update": [
         "업데이트"
       ],
-      "Updating System Purpose for host": [
-        ""
+      "Update for host": [
+        "호스트에 대한 업데이트"
       ],
       "Upload into": [
         "업로드 "
-      ],
-      "Verify checksum": [
-        ""
-      ],
-      "A plugin to make virt-who configuration easy": [
-        ""
       ]
     }
   }

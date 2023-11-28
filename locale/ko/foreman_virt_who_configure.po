@@ -36,12 +36,6 @@ msgstr ""
 msgid "A plugin to make virt-who configuration easy"
 msgstr ""
 
-msgid "Abstract"
-msgstr ""
-
-msgid "Abstract async task"
-msgstr "비동기 작업 개요"
-
 msgid "Account name by which virt-who is to connect to Nutanix AHV."
 msgstr ""
 
@@ -60,14 +54,8 @@ msgstr ""
 msgid "Account password by which virt-who is to connect to the hypervisor instance."
 msgstr ""
 
-msgid "Action with sub plans"
-msgstr "하위 계획이 있는 작업"
-
 msgid "Actions"
 msgstr "작업"
-
-msgid "Agent action"
-msgstr ""
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -75,22 +63,7 @@ msgstr ""
 msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
-msgid "Attach subscriptions"
-msgstr "서브스크립션 연결"
-
-msgid "Auto attach subscriptions"
-msgstr "서브스크립션 자동 첨부"
-
 msgid "Blacklist"
-msgstr ""
-
-msgid "Bulk generate applicability for hosts"
-msgstr ""
-
-msgid "Check for long running tasks"
-msgstr ""
-
-msgid "Combined Profile Update"
 msgstr ""
 
 msgid "Configs"
@@ -135,44 +108,14 @@ msgstr ""
 msgid "Copy to clipboard"
 msgstr ""
 
-msgid "Copy version units to library"
-msgstr ""
-
 msgid "Count"
 msgstr "개수"
-
-msgid "Create"
-msgstr "생성"
-
-msgid "Create Alternate Content Source"
-msgstr ""
 
 msgid "Create Config"
 msgstr ""
 
-msgid "Create Export History"
-msgstr ""
-
-msgid "Create Import History"
-msgstr ""
-
-msgid "Create Syncable Export History"
-msgstr ""
-
 msgid "Create a virt-who configuration"
 msgstr ""
-
-msgid "Delete"
-msgstr "삭제 "
-
-msgid "Delete Activation Key"
-msgstr "활성키 삭제 "
-
-msgid "Delete Lifecycle Environment"
-msgstr "라이프사이클 환경 삭제 "
-
-msgid "Delete Product"
-msgstr "제품 삭제 "
 
 msgid "Delete a virt-who configuration"
 msgstr ""
@@ -180,32 +123,14 @@ msgstr ""
 msgid "Delete virt-who configuration %s?"
 msgstr ""
 
-msgid "Deliver notifications about long running tasks"
-msgstr ""
-
 msgid "Deploy"
 msgstr ""
-
-msgid "Destroy"
-msgstr "삭제 "
-
-msgid "Destroy Alternate Content Source"
-msgstr ""
-
-msgid "Destroy Content Host"
-msgstr "컨텐츠 호스트 삭제 "
 
 msgid "Details"
 msgstr "상세 정보 "
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr ""
-
-msgid "Disable"
-msgstr "비활성화 "
-
-msgid "Discover"
-msgstr "검색"
 
 msgid "Download the script"
 msgstr ""
@@ -216,9 +141,6 @@ msgstr "편집"
 msgid "Edit Virt-who Config"
 msgstr ""
 
-msgid "Enable"
-msgstr "활성화"
-
 msgid "Enable AHV debug"
 msgstr ""
 
@@ -227,9 +149,6 @@ msgstr ""
 
 msgid "Enable debugging output?"
 msgstr ""
-
-msgid "Errata mail"
-msgstr "에라타 메일"
 
 msgid "Every 12 hours"
 msgstr ""
@@ -267,18 +186,6 @@ msgstr ""
 msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
-msgid "Export"
-msgstr "내보내기"
-
-msgid "Export Library"
-msgstr ""
-
-msgid "Export Repository"
-msgstr ""
-
-msgid "Fetch pxe files"
-msgstr ""
-
 msgid "Filter Hosts"
 msgstr ""
 
@@ -287,9 +194,6 @@ msgstr ""
 
 msgid "Filter hosts"
 msgstr ""
-
-msgid "Filtered index content"
-msgstr "필터링된 인덱스 컨텐츠"
 
 msgid "Filtering"
 msgstr ""
@@ -304,12 +208,6 @@ msgid "Fully qualified host name or IP address of the hypervisor"
 msgstr ""
 
 msgid "General information"
-msgstr ""
-
-msgid "Generate host applicability"
-msgstr ""
-
-msgid "Generate repository applicability"
 msgstr ""
 
 msgid "HTTP Proxy"
@@ -363,12 +261,6 @@ msgstr ""
 msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr ""
 
-msgid "Hypervisors"
-msgstr "하이퍼바이저 "
-
-msgid "Hypervisors update"
-msgstr "하이퍼바이저 업데이트"
-
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
 msgstr ""
 
@@ -379,48 +271,6 @@ msgid "Ignore proxy"
 msgstr ""
 
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
-msgstr ""
-
-msgid "Import"
-msgstr "불러오기"
-
-msgid "Import Content View Version"
-msgstr ""
-
-msgid "Import Default Content View"
-msgstr ""
-
-msgid "Import Puppet classes"
-msgstr "Puppet 클래스 가져오기"
-
-msgid "Import Repository"
-msgstr ""
-
-msgid "Import facts"
-msgstr "팩트 불러오기"
-
-msgid "Incremental Update"
-msgstr "증분 업데이트 "
-
-msgid "Incremental Update of  Content View Version(s) "
-msgstr ""
-
-msgid "Index content"
-msgstr "컨텐츠 인덱싱"
-
-msgid "Index errata"
-msgstr "에라타 인덱스"
-
-msgid "Index module streams"
-msgstr ""
-
-msgid "Index package groups"
-msgstr "패키지 그룹 인덱싱"
-
-msgid "Install Applicable Errata"
-msgstr "적용 가능한 에라타 설치 "
-
-msgid "Instance update"
 msgstr ""
 
 msgid "Interval"
@@ -513,9 +363,6 @@ msgstr "소유자"
 msgid "Owner was not provided"
 msgstr ""
 
-msgid "Package Profile Update"
-msgstr "패키지 프로파일 업데이트"
-
 msgid "Path to kubeconfig file"
 msgstr ""
 
@@ -528,52 +375,7 @@ msgstr ""
 msgid "Prism Flavor"
 msgstr ""
 
-msgid "Product Create"
-msgstr "제품 생성"
-
-msgid "Promote"
-msgstr "승격 "
-
-msgid "Promotion to Environment"
-msgstr ""
-
-msgid "Publish"
-msgstr "공개 "
-
-msgid "Publish Lifecycle Environment Repositories"
-msgstr ""
-
-msgid "Refresh Alternate Content Source"
-msgstr ""
-
-msgid "Reindex subscriptions"
-msgstr "서브스크립션 다시 인덱싱"
-
-msgid "Remove Content"
-msgstr "컨텐츠 삭제 "
-
-msgid "Remove Version"
-msgstr "버전 삭제 "
-
-msgid "Remove Versions and Associations"
-msgstr "버전 및 연결 삭제 "
-
-msgid "Remove from Environment"
-msgstr "환경에서 삭제 "
-
-msgid "Remove subscriptions"
-msgstr "서브스크립션 삭제"
-
 msgid "Renders a deploy script for the specified virt-who configuration"
-msgstr ""
-
-msgid "Report"
-msgstr "보고  "
-
-msgid "Republish Version Repositories"
-msgstr ""
-
-msgid "Run Sync Plan:"
 msgstr ""
 
 msgid "Schedule"
@@ -601,18 +403,6 @@ msgstr "상태 "
 
 msgid "Success"
 msgstr "성공"
-
-msgid "Sync capsule"
-msgstr ""
-
-msgid "Syncable export"
-msgstr ""
-
-msgid "Synchronize"
-msgstr "동기화 "
-
-msgid "Synchronize smart proxy"
-msgstr ""
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr ""
@@ -656,52 +446,13 @@ msgstr ""
 msgid "Unlimited"
 msgstr "제한 없음 "
 
-msgid "Update"
-msgstr "업데이트"
-
-msgid "Update Alternate Content Source"
-msgstr ""
-
-msgid "Update CDN Configuration"
-msgstr ""
-
-msgid "Update Content Overrides"
-msgstr ""
-
 msgid "Update a virt-who configuration"
 msgstr ""
-
-msgid "Update content urls"
-msgstr ""
-
-msgid "Update for host"
-msgstr "호스트에 대한 업데이트"
-
-msgid "Update http proxy"
-msgstr ""
-
-msgid "Update http proxy details"
-msgstr ""
-
-msgid "Update redhat repository"
-msgstr ""
-
-msgid "Update release version for host"
-msgstr ""
-
-msgid "Updating System Purpose for host"
-msgstr ""
-
-msgid "Upload into"
-msgstr "업로드 "
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
-msgstr ""
-
-msgid "Verify checksum"
 msgstr ""
 
 msgid "Virt-who Configs Status"

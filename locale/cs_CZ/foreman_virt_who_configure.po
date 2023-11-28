@@ -38,12 +38,6 @@ msgstr ""
 msgid "A plugin to make virt-who configuration easy"
 msgstr "Zásuvný modul pro usnadnění nastavování virt-who"
 
-msgid "Abstract"
-msgstr ""
-
-msgid "Abstract async task"
-msgstr ""
-
 msgid "Account name by which virt-who is to connect to Nutanix AHV."
 msgstr ""
 
@@ -62,14 +56,8 @@ msgstr ""
 msgid "Account password by which virt-who is to connect to the hypervisor instance."
 msgstr ""
 
-msgid "Action with sub plans"
-msgstr "Akce s dílčími plány"
-
 msgid "Actions"
 msgstr "Akce"
-
-msgid "Agent action"
-msgstr ""
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
@@ -77,23 +65,8 @@ msgstr ""
 msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
-msgid "Attach subscriptions"
-msgstr "Připojit předplatné"
-
-msgid "Auto attach subscriptions"
-msgstr "Automaticky připojovat předplatné"
-
 msgid "Blacklist"
 msgstr "Seznam vyloučených"
-
-msgid "Bulk generate applicability for hosts"
-msgstr ""
-
-msgid "Check for long running tasks"
-msgstr ""
-
-msgid "Combined Profile Update"
-msgstr ""
 
 msgid "Configs"
 msgstr "Nastavení"
@@ -137,44 +110,14 @@ msgstr ""
 msgid "Copy to clipboard"
 msgstr "Zkopírovat do schránky"
 
-msgid "Copy version units to library"
-msgstr ""
-
 msgid "Count"
 msgstr "Počet"
-
-msgid "Create"
-msgstr "Vytvořit"
-
-msgid "Create Alternate Content Source"
-msgstr ""
 
 msgid "Create Config"
 msgstr "Vytvořit nastavení"
 
-msgid "Create Export History"
-msgstr ""
-
-msgid "Create Import History"
-msgstr ""
-
-msgid "Create Syncable Export History"
-msgstr ""
-
 msgid "Create a virt-who configuration"
 msgstr "Vytvořit nastavení pro virt-who"
-
-msgid "Delete"
-msgstr "Smazat"
-
-msgid "Delete Activation Key"
-msgstr "Smazat aktivační klíč"
-
-msgid "Delete Lifecycle Environment"
-msgstr "Smazat prostředí životního cyklu"
-
-msgid "Delete Product"
-msgstr "Smazat produkt"
 
 msgid "Delete a virt-who configuration"
 msgstr "Smazat nastavení pro virt-who"
@@ -182,32 +125,14 @@ msgstr "Smazat nastavení pro virt-who"
 msgid "Delete virt-who configuration %s?"
 msgstr "Smazat nastavení pro virt-who %s?"
 
-msgid "Deliver notifications about long running tasks"
-msgstr ""
-
 msgid "Deploy"
 msgstr "Nasadit"
-
-msgid "Destroy"
-msgstr "Zničit"
-
-msgid "Destroy Alternate Content Source"
-msgstr ""
-
-msgid "Destroy Content Host"
-msgstr ""
 
 msgid "Details"
 msgstr "Podrobnosti"
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
 msgstr ""
-
-msgid "Disable"
-msgstr "Vypnout"
-
-msgid "Discover"
-msgstr "Objevit"
 
 msgid "Download the script"
 msgstr "Stáhnout skript"
@@ -218,9 +143,6 @@ msgstr "Upravit"
 msgid "Edit Virt-who Config"
 msgstr "Upravit nastavení pro Virt-who"
 
-msgid "Enable"
-msgstr "Zapnout"
-
 msgid "Enable AHV debug"
 msgstr ""
 
@@ -229,9 +151,6 @@ msgstr "Zapnout ladící výstup"
 
 msgid "Enable debugging output?"
 msgstr "Zapnout ladící výstup?"
-
-msgid "Errata mail"
-msgstr ""
 
 msgid "Every 12 hours"
 msgstr "Každých 12 hodin"
@@ -269,18 +188,6 @@ msgstr "Vynechat stroje"
 msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
 msgstr ""
 
-msgid "Export"
-msgstr "Export"
-
-msgid "Export Library"
-msgstr ""
-
-msgid "Export Repository"
-msgstr ""
-
-msgid "Fetch pxe files"
-msgstr "Stáhnout pxe soubory"
-
 msgid "Filter Hosts"
 msgstr "Filtrovat stroje"
 
@@ -289,9 +196,6 @@ msgstr ""
 
 msgid "Filter hosts"
 msgstr "Filtrovat stroje"
-
-msgid "Filtered index content"
-msgstr ""
 
 msgid "Filtering"
 msgstr "Filtrování"
@@ -307,12 +211,6 @@ msgstr ""
 
 msgid "General information"
 msgstr "Obecné informace"
-
-msgid "Generate host applicability"
-msgstr ""
-
-msgid "Generate repository applicability"
-msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP proxy"
@@ -365,12 +263,6 @@ msgstr "Typ hypervizoru"
 msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr ""
 
-msgid "Hypervisors"
-msgstr "Hypervizory"
-
-msgid "Hypervisors update"
-msgstr "Aktualizace hypervizoru"
-
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
 msgstr ""
 
@@ -382,48 +274,6 @@ msgstr "Ignorovat proxy"
 
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
 msgstr ""
-
-msgid "Import"
-msgstr "Import"
-
-msgid "Import Content View Version"
-msgstr ""
-
-msgid "Import Default Content View"
-msgstr ""
-
-msgid "Import Puppet classes"
-msgstr "Importovat Puppet třídy"
-
-msgid "Import Repository"
-msgstr ""
-
-msgid "Import facts"
-msgstr "Importovat fakta"
-
-msgid "Incremental Update"
-msgstr "Postupná aktualizace"
-
-msgid "Incremental Update of  Content View Version(s) "
-msgstr ""
-
-msgid "Index content"
-msgstr "Obsah rejstříku"
-
-msgid "Index errata"
-msgstr ""
-
-msgid "Index module streams"
-msgstr ""
-
-msgid "Index package groups"
-msgstr ""
-
-msgid "Install Applicable Errata"
-msgstr ""
-
-msgid "Instance update"
-msgstr "Aktualizace instance"
 
 msgid "Interval"
 msgstr "Interval"
@@ -515,9 +365,6 @@ msgstr "Vlastník"
 msgid "Owner was not provided"
 msgstr "Vlastník nebyl poskytnut"
 
-msgid "Package Profile Update"
-msgstr "Aktualizace profilu balíčku"
-
 msgid "Path to kubeconfig file"
 msgstr "Popis umístění souboru s nastaveními kubeconfig"
 
@@ -530,53 +377,8 @@ msgstr ""
 msgid "Prism Flavor"
 msgstr ""
 
-msgid "Product Create"
-msgstr "Vytvořit produkt"
-
-msgid "Promote"
-msgstr "Povýšit"
-
-msgid "Promotion to Environment"
-msgstr "Povýšení do prostředí"
-
-msgid "Publish"
-msgstr "Zveřejnit"
-
-msgid "Publish Lifecycle Environment Repositories"
-msgstr ""
-
-msgid "Refresh Alternate Content Source"
-msgstr ""
-
-msgid "Reindex subscriptions"
-msgstr ""
-
-msgid "Remove Content"
-msgstr "Odebrat obsah"
-
-msgid "Remove Version"
-msgstr "Verze na protějšku"
-
-msgid "Remove Versions and Associations"
-msgstr ""
-
-msgid "Remove from Environment"
-msgstr "Odebrat z prostředí"
-
-msgid "Remove subscriptions"
-msgstr "Odebrat předplatné"
-
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr ""
-
-msgid "Report"
-msgstr "Výkaz"
-
-msgid "Republish Version Repositories"
-msgstr "Znovu zveřejnit repozitáře verze"
-
-msgid "Run Sync Plan:"
-msgstr "Spustit synchronizační plán:"
 
 msgid "Schedule"
 msgstr "Plán"
@@ -603,18 +405,6 @@ msgstr "Stav"
 
 msgid "Success"
 msgstr "Úspěch"
-
-msgid "Sync capsule"
-msgstr ""
-
-msgid "Syncable export"
-msgstr ""
-
-msgid "Synchronize"
-msgstr "Synchronizovat"
-
-msgid "Synchronize smart proxy"
-msgstr ""
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
 msgstr ""
@@ -658,53 +448,14 @@ msgstr "Neznámý stav nastavení, způsobený neočekávanými podmínkami"
 msgid "Unlimited"
 msgstr "Neomezený"
 
-msgid "Update"
-msgstr "Aktualizovat"
-
-msgid "Update Alternate Content Source"
-msgstr ""
-
-msgid "Update CDN Configuration"
-msgstr ""
-
-msgid "Update Content Overrides"
-msgstr "Aktualizovat přepsání obsahu"
-
 msgid "Update a virt-who configuration"
 msgstr "Aktualizovat nastavení pro virt-who"
-
-msgid "Update content urls"
-msgstr "Aktualizovat url adresy obsahu"
-
-msgid "Update for host"
-msgstr "Aktualizace pro stroj"
-
-msgid "Update http proxy"
-msgstr ""
-
-msgid "Update http proxy details"
-msgstr ""
-
-msgid "Update redhat repository"
-msgstr "Aktualizovat redhat repozitář"
-
-msgid "Update release version for host"
-msgstr "Aktualizovat verzi vydání pro stroj"
-
-msgid "Updating System Purpose for host"
-msgstr ""
-
-msgid "Upload into"
-msgstr "Nahrát do"
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
 msgstr ""
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
 msgstr "Plně kvalifikované doménové jméno nebo IP adresa vašeho VMware vCenter"
-
-msgid "Verify checksum"
-msgstr ""
 
 msgid "Virt-who Configs Status"
 msgstr "Stav nastavení virt-who"

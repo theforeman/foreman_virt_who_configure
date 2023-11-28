@@ -464,50 +464,20 @@
       "Virt-who Configs Status": [
         ""
       ],
+      "A plugin to make virt-who configuration easy": [
+        ""
+      ],
       "Abstract async task": [
         "Evento asinc astratto"
-      ],
-      "Abstract": [
-        ""
-      ],
-      "Action with sub plans": [
-        ""
-      ],
-      "Agent action": [
-        ""
-      ],
-      "Attach subscriptions": [
-        ""
       ],
       "Auto attach subscriptions": [
         "esegui l'auto attach delle sottoscrizioni"
       ],
-      "Bulk generate applicability for hosts": [
-        ""
-      ],
-      "Check for long running tasks": [
-        ""
-      ],
-      "Combined Profile Update": [
-        ""
-      ],
-      "Copy version units to library": [
-        ""
-      ],
-      "Create Alternate Content Source": [
-        ""
-      ],
-      "Create Export History": [
-        ""
-      ],
-      "Create Import History": [
-        ""
-      ],
-      "Create Syncable Export History": [
-        ""
-      ],
       "Create": [
         "Crea"
+      ],
+      "Delete": [
+        "Cancella"
       ],
       "Delete Activation Key": [
         "Cancella chiave di attivazione"
@@ -518,20 +488,11 @@
       "Delete Product": [
         "Cancella prodotto"
       ],
-      "Delete": [
-        "Cancella"
-      ],
-      "Deliver notifications about long running tasks": [
-        ""
-      ],
-      "Destroy Alternate Content Source": [
-        ""
+      "Destroy": [
+        "Elimina"
       ],
       "Destroy Content Host": [
         "Elimina host di contenuto"
-      ],
-      "Destroy": [
-        "Elimina"
       ],
       "Disable": [
         "Disabilita"
@@ -545,98 +506,32 @@
       "Errata mail": [
         "Posta per l'Errata"
       ],
-      "Export Library": [
-        ""
-      ],
-      "Export Repository": [
-        ""
-      ],
       "Export": [
         "Esporta"
-      ],
-      "Fetch pxe files": [
-        ""
-      ],
-      "Filtered index content": [
-        ""
-      ],
-      "Generate host applicability": [
-        ""
-      ],
-      "Generate repository applicability": [
-        ""
-      ],
-      "Hypervisors update": [
-        ""
-      ],
-      "Hypervisors": [
-        ""
-      ],
-      "Import Content View Version": [
-        ""
-      ],
-      "Import Default Content View": [
-        ""
-      ],
-      "Import Puppet classes": [
-        "Importa classi Puppet"
-      ],
-      "Import Repository": [
-        ""
-      ],
-      "Import facts": [
-        "Importa gli eventi"
       ],
       "Import": [
         "Importa"
       ],
-      "Incremental Update of  Content View Version(s) ": [
-        ""
+      "Import Puppet classes": [
+        "Importa classi Puppet"
+      ],
+      "Import facts": [
+        "Importa gli eventi"
       ],
       "Incremental Update": [
         "Aggiornamento incrementale"
       ],
-      "Index content": [
-        ""
-      ],
       "Index errata": [
         "Indice errata"
-      ],
-      "Index module streams": [
-        ""
-      ],
-      "Index package groups": [
-        ""
       ],
       "Install Applicable Errata": [
         "Installa errata applicabile"
       ],
-      "Instance update": [
-        ""
-      ],
-      "Package Profile Update": [
-        ""
-      ],
-      "Product Create": [
-        ""
-      ],
       "Promote": [
         "Avanzamento"
       ],
-      "Promotion to Environment": [
-        ""
-      ],
-      "Publish Lifecycle Environment Repositories": [
-        ""
-      ],
       "Publish": [
         "Pubblica"
-      ],
-      "Refresh Alternate Content Source": [
-        ""
-      ],
-      "Reindex subscriptions": [
-        ""
       ],
       "Remove Content": [
         "Rimuovi contenuto"
@@ -650,71 +545,17 @@
       "Remove from Environment": [
         "Rimuovi dall'ambiente"
       ],
-      "Remove subscriptions": [
-        ""
-      ],
       "Report": [
         "Notifica"
-      ],
-      "Republish Version Repositories": [
-        ""
-      ],
-      "Run Sync Plan:": [
-        ""
-      ],
-      "Sync capsule": [
-        ""
-      ],
-      "Syncable export": [
-        ""
-      ],
-      "Synchronize smart proxy": [
-        ""
       ],
       "Synchronize": [
         "Sincronizza"
       ],
-      "Update Alternate Content Source": [
-        ""
-      ],
-      "Update CDN Configuration": [
-        ""
-      ],
-      "Update Content Overrides": [
-        ""
-      ],
-      "Update content urls": [
-        ""
-      ],
-      "Update for host": [
-        ""
-      ],
-      "Update http proxy details": [
-        ""
-      ],
-      "Update http proxy": [
-        ""
-      ],
-      "Update redhat repository": [
-        ""
-      ],
-      "Update release version for host": [
-        ""
-      ],
       "Update": [
         "Aggiorna"
       ],
-      "Updating System Purpose for host": [
-        ""
-      ],
       "Upload into": [
         "Carica in"
-      ],
-      "Verify checksum": [
-        ""
-      ],
-      "A plugin to make virt-who configuration easy": [
-        ""
       ]
     }
   }

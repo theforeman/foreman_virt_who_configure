@@ -464,71 +464,20 @@
       "Virt-who Configs Status": [
         ""
       ],
-      "Abstract async task": [
-        ""
-      ],
-      "Abstract": [
-        ""
-      ],
-      "Action with sub plans": [
-        ""
-      ],
-      "Agent action": [
-        ""
-      ],
-      "Attach subscriptions": [
-        ""
-      ],
-      "Auto attach subscriptions": [
-        ""
-      ],
-      "Bulk generate applicability for hosts": [
-        ""
-      ],
-      "Check for long running tasks": [
-        ""
-      ],
-      "Combined Profile Update": [
-        ""
-      ],
-      "Copy version units to library": [
-        ""
-      ],
-      "Create Alternate Content Source": [
-        ""
-      ],
-      "Create Export History": [
-        ""
-      ],
-      "Create Import History": [
-        ""
-      ],
-      "Create Syncable Export History": [
+      "A plugin to make virt-who configuration easy": [
         ""
       ],
       "Create": [
         "Δημιουργία"
       ],
-      "Delete Activation Key": [
-        "Διαγραφή κλειδιού ενεργοποίησης"
-      ],
-      "Delete Lifecycle Environment": [
-        ""
-      ],
-      "Delete Product": [
-        "Διαγραφή προϊόντος"
-      ],
       "Delete": [
         "Διαγραφή"
       ],
-      "Deliver notifications about long running tasks": [
-        ""
+      "Delete Activation Key": [
+        "Διαγραφή κλειδιού ενεργοποίησης"
       ],
-      "Destroy Alternate Content Source": [
-        ""
-      ],
-      "Destroy Content Host": [
-        ""
+      "Delete Product": [
+        "Διαγραφή προϊόντος"
       ],
       "Destroy": [
         "Καταστροφή"
@@ -536,107 +485,23 @@
       "Disable": [
         "Απενεργοποίηση"
       ],
-      "Discover": [
-        ""
-      ],
       "Enable": [
         "Ενεργοποίηση"
-      ],
-      "Errata mail": [
-        ""
-      ],
-      "Export Library": [
-        ""
-      ],
-      "Export Repository": [
-        ""
       ],
       "Export": [
         "Εξαγωγή"
       ],
-      "Fetch pxe files": [
-        ""
-      ],
-      "Filtered index content": [
-        ""
-      ],
-      "Generate host applicability": [
-        ""
-      ],
-      "Generate repository applicability": [
-        ""
-      ],
-      "Hypervisors update": [
-        ""
-      ],
-      "Hypervisors": [
-        ""
-      ],
-      "Import Content View Version": [
-        ""
-      ],
-      "Import Default Content View": [
-        ""
+      "Import": [
+        "Εισαγωγή"
       ],
       "Import Puppet classes": [
         "Εισαγωγή κλάσεων Puppet"
       ],
-      "Import Repository": [
-        ""
-      ],
-      "Import facts": [
-        ""
-      ],
-      "Import": [
-        "Εισαγωγή"
-      ],
-      "Incremental Update of  Content View Version(s) ": [
-        ""
-      ],
-      "Incremental Update": [
-        ""
-      ],
       "Index content": [
         "Περιεχόμενο ευρετηρίου"
       ],
-      "Index errata": [
-        ""
-      ],
-      "Index module streams": [
-        ""
-      ],
-      "Index package groups": [
-        ""
-      ],
-      "Install Applicable Errata": [
-        ""
-      ],
-      "Instance update": [
-        ""
-      ],
-      "Package Profile Update": [
-        ""
-      ],
-      "Product Create": [
-        ""
-      ],
-      "Promote": [
-        ""
-      ],
-      "Promotion to Environment": [
-        ""
-      ],
-      "Publish Lifecycle Environment Repositories": [
-        ""
-      ],
       "Publish": [
         "Δημοσίευση"
-      ],
-      "Refresh Alternate Content Source": [
-        ""
-      ],
-      "Reindex subscriptions": [
-        ""
       ],
       "Remove Content": [
         "Αφαίρεση περιεχομένου"
@@ -644,77 +509,20 @@
       "Remove Version": [
         "Αφαίρεση έκδοσης"
       ],
-      "Remove Versions and Associations": [
-        ""
-      ],
-      "Remove from Environment": [
-        ""
-      ],
-      "Remove subscriptions": [
-        ""
-      ],
       "Report": [
         "Αναφορά"
-      ],
-      "Republish Version Repositories": [
-        ""
       ],
       "Run Sync Plan:": [
         "Εκκίνηση πλάνου συγχρονισμού:"
       ],
-      "Sync capsule": [
-        ""
-      ],
-      "Syncable export": [
-        ""
-      ],
-      "Synchronize smart proxy": [
-        ""
-      ],
       "Synchronize": [
         "Συγχρονισμός"
-      ],
-      "Update Alternate Content Source": [
-        ""
-      ],
-      "Update CDN Configuration": [
-        ""
-      ],
-      "Update Content Overrides": [
-        ""
-      ],
-      "Update content urls": [
-        ""
-      ],
-      "Update for host": [
-        ""
-      ],
-      "Update http proxy details": [
-        ""
-      ],
-      "Update http proxy": [
-        ""
-      ],
-      "Update redhat repository": [
-        ""
-      ],
-      "Update release version for host": [
-        ""
       ],
       "Update": [
         "Ενημέρωση"
       ],
-      "Updating System Purpose for host": [
-        ""
-      ],
       "Upload into": [
         "Μεταφόρτωση σε"
-      ],
-      "Verify checksum": [
-        ""
-      ],
-      "A plugin to make virt-who configuration easy": [
-        ""
       ]
     }
   }

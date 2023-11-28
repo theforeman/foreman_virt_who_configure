@@ -464,17 +464,14 @@
       "Virt-who Configs Status": [
         ""
       ],
+      "A plugin to make virt-who configuration easy": [
+        ""
+      ],
       "Abstract async task": [
         "抽象 async task"
       ],
-      "Abstract": [
-        ""
-      ],
       "Action with sub plans": [
         "有子計畫的動作"
-      ],
-      "Agent action": [
-        ""
       ],
       "Attach subscriptions": [
         "連接訂閱服務"
@@ -482,32 +479,11 @@
       "Auto attach subscriptions": [
         "自動連接訂閱"
       ],
-      "Bulk generate applicability for hosts": [
-        ""
-      ],
-      "Check for long running tasks": [
-        ""
-      ],
-      "Combined Profile Update": [
-        ""
-      ],
-      "Copy version units to library": [
-        ""
-      ],
-      "Create Alternate Content Source": [
-        ""
-      ],
-      "Create Export History": [
-        ""
-      ],
-      "Create Import History": [
-        ""
-      ],
-      "Create Syncable Export History": [
-        ""
-      ],
       "Create": [
         "建立"
+      ],
+      "Delete": [
+        "刪除"
       ],
       "Delete Activation Key": [
         "刪除啟動金鑰"
@@ -518,20 +494,11 @@
       "Delete Product": [
         "刪除產品"
       ],
-      "Delete": [
-        "刪除"
-      ],
-      "Deliver notifications about long running tasks": [
-        ""
-      ],
-      "Destroy Alternate Content Source": [
-        ""
+      "Destroy": [
+        "銷毀"
       ],
       "Destroy Content Host": [
         "銷毀內容主機"
-      ],
-      "Destroy": [
-        "銷毀"
       ],
       "Disable": [
         "停用"
@@ -545,53 +512,26 @@
       "Errata mail": [
         "勘誤郵件"
       ],
-      "Export Library": [
-        ""
-      ],
-      "Export Repository": [
-        ""
-      ],
       "Export": [
         "匯出"
-      ],
-      "Fetch pxe files": [
-        ""
       ],
       "Filtered index content": [
         "已篩選的索引內容"
       ],
-      "Generate host applicability": [
-        ""
-      ],
-      "Generate repository applicability": [
-        ""
+      "Hypervisors": [
+        "Hypervisor"
       ],
       "Hypervisors update": [
         "Hypervisor 更新"
       ],
-      "Hypervisors": [
-        "Hypervisor"
-      ],
-      "Import Content View Version": [
-        ""
-      ],
-      "Import Default Content View": [
-        ""
+      "Import": [
+        "匯入"
       ],
       "Import Puppet classes": [
         "匯入 Puppet 類別"
       ],
-      "Import Repository": [
-        ""
-      ],
       "Import facts": [
         "匯入詳情"
-      ],
-      "Import": [
-        "匯入"
-      ],
-      "Incremental Update of  Content View Version(s) ": [
-        ""
       ],
       "Incremental Update": [
         "遞增更新"
@@ -602,17 +542,11 @@
       "Index errata": [
         "索引勘誤"
       ],
-      "Index module streams": [
-        ""
-      ],
       "Index package groups": [
         "為套件群組製作索引"
       ],
       "Install Applicable Errata": [
         "安裝可套用的勘誤"
-      ],
-      "Instance update": [
-        ""
       ],
       "Package Profile Update": [
         "套件設定檔更新"
@@ -623,17 +557,8 @@
       "Promote": [
         "Promote"
       ],
-      "Promotion to Environment": [
-        ""
-      ],
-      "Publish Lifecycle Environment Repositories": [
-        ""
-      ],
       "Publish": [
         "發行"
-      ],
-      "Refresh Alternate Content Source": [
-        ""
       ],
       "Reindex subscriptions": [
         "重新索引訂閱服務"
@@ -656,65 +581,17 @@
       "Report": [
         "回報"
       ],
-      "Republish Version Repositories": [
-        ""
-      ],
-      "Run Sync Plan:": [
-        ""
-      ],
-      "Sync capsule": [
-        ""
-      ],
-      "Syncable export": [
-        ""
-      ],
-      "Synchronize smart proxy": [
-        ""
-      ],
       "Synchronize": [
         "同步"
-      ],
-      "Update Alternate Content Source": [
-        ""
-      ],
-      "Update CDN Configuration": [
-        ""
-      ],
-      "Update Content Overrides": [
-        ""
-      ],
-      "Update content urls": [
-        ""
-      ],
-      "Update for host": [
-        "給主機的更新"
-      ],
-      "Update http proxy details": [
-        ""
-      ],
-      "Update http proxy": [
-        ""
-      ],
-      "Update redhat repository": [
-        ""
-      ],
-      "Update release version for host": [
-        ""
       ],
       "Update": [
         "更新"
       ],
-      "Updating System Purpose for host": [
-        ""
+      "Update for host": [
+        "給主機的更新"
       ],
       "Upload into": [
         "上傳入"
-      ],
-      "Verify checksum": [
-        ""
-      ],
-      "A plugin to make virt-who configuration easy": [
-        ""
       ]
     }
   }

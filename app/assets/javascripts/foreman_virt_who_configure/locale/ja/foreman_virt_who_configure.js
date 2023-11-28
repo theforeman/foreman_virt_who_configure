@@ -5,7 +5,6 @@
       "": {
         "Project-Id-Version": "foreman_virt_who_configure 0.5.17",
         "Report-Msgid-Bugs-To": "",
-        "POT-Creation-Date": "2023-09-15 14:09+0200",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
         "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2023",
         "Language-Team": "Japanese (https://app.transifex.com/foreman/teams/114/ja/)",
@@ -465,11 +464,14 @@
       "Virt-who Configs Status": [
         "Virt-who 設定ステータス"
       ],
-      "Abstract async task": [
-        "非同期タスクの抽象化"
+      "A plugin to make virt-who configuration easy": [
+        "virt-who 設定を容易にするプラグイン"
       ],
       "Abstract": [
         "概要"
+      ],
+      "Abstract async task": [
+        "非同期タスクの抽象化"
       ],
       "Action with sub plans": [
         "サブプランによるアクション"
@@ -486,14 +488,14 @@
       "Bulk generate applicability for hosts": [
         "ホストに適用可能なエラータを一括生成します"
       ],
-      "Check for long running tasks": [
-        ""
-      ],
       "Combined Profile Update": [
         "統合プロファイルの更新"
       ],
       "Copy version units to library": [
         "バージョンユニットのライブラリーへのコピー"
+      ],
+      "Create": [
+        "作成"
       ],
       "Create Alternate Content Source": [
         "代替コンテンツソースの作成"
@@ -507,8 +509,8 @@
       "Create Syncable Export History": [
         "同期可能なエクスポート履歴の作成"
       ],
-      "Create": [
-        "作成"
+      "Delete": [
+        "削除"
       ],
       "Delete Activation Key": [
         "アクティベーションキーの削除"
@@ -519,20 +521,14 @@
       "Delete Product": [
         "製品の削除"
       ],
-      "Delete": [
-        "削除"
-      ],
-      "Deliver notifications about long running tasks": [
-        ""
+      "Destroy": [
+        "破棄"
       ],
       "Destroy Alternate Content Source": [
         "大体コンテンツソースの破棄"
       ],
       "Destroy Content Host": [
         "コンテンツホストの破棄"
-      ],
-      "Destroy": [
-        "破棄"
       ],
       "Disable": [
         "無効化"
@@ -546,14 +542,14 @@
       "Errata mail": [
         "エラータメール"
       ],
+      "Export": [
+        "エクスポート"
+      ],
       "Export Library": [
         "ライブラリーのエクスポート"
       ],
       "Export Repository": [
         "リポジトリーのエクスポート"
-      ],
-      "Export": [
-        "エクスポート"
       ],
       "Fetch pxe files": [
         "PXE ファイルの取得"
@@ -567,11 +563,14 @@
       "Generate repository applicability": [
         "リポジトリーに適用可能なエラータを生成します"
       ],
+      "Hypervisors": [
+        "ハイパーバイザー"
+      ],
       "Hypervisors update": [
         "ハイパーバイザーの更新"
       ],
-      "Hypervisors": [
-        "ハイパーバイザー"
+      "Import": [
+        "インポート"
       ],
       "Import Content View Version": [
         "コンテンツビューバージョンのインポート"
@@ -588,14 +587,11 @@
       "Import facts": [
         "ファクトのインポート"
       ],
-      "Import": [
-        "インポート"
+      "Incremental Update": [
+        "増分更新"
       ],
       "Incremental Update of  Content View Version(s) ": [
         "コンテンツビューバージョンの増分更新 "
-      ],
-      "Incremental Update": [
-        "増分更新"
       ],
       "Index content": [
         "コンテンツのインデックス作成"
@@ -627,11 +623,11 @@
       "Promotion to Environment": [
         "環境へのプロモート"
       ],
-      "Publish Lifecycle Environment Repositories": [
-        "ライフサイクル環境リポジトリーの公開"
-      ],
       "Publish": [
         "公開"
+      ],
+      "Publish Lifecycle Environment Repositories": [
+        "ライフサイクル環境リポジトリーの公開"
       ],
       "Refresh Alternate Content Source": [
         "代替コンテンツソースの更新"
@@ -669,11 +665,14 @@
       "Syncable export": [
         "同期可能なエクスポート"
       ],
+      "Synchronize": [
+        "同期"
+      ],
       "Synchronize smart proxy": [
         "Smart Proxy の同期"
       ],
-      "Synchronize": [
-        "同期"
+      "Update": [
+        "更新"
       ],
       "Update Alternate Content Source": [
         "代替コンテンツソースの更新"
@@ -690,20 +689,17 @@
       "Update for host": [
         "ホストの更新"
       ],
-      "Update http proxy details": [
-        "HTTP プロキシーの詳細更新"
-      ],
       "Update http proxy": [
         "http プロキシーの更新"
+      ],
+      "Update http proxy details": [
+        "HTTP プロキシーの詳細更新"
       ],
       "Update redhat repository": [
         "redhat リポジトリーの更新"
       ],
       "Update release version for host": [
         "ホストのリリースバージョンの更新"
-      ],
-      "Update": [
-        "更新"
       ],
       "Updating System Purpose for host": [
         "ホストのシステム目的を更新中"
@@ -713,12 +709,6 @@
       ],
       "Verify checksum": [
         "チェックサムの確認"
-      ],
-      "A plugin to make virt-who configuration easy": [
-        "virt-who 設定を容易にするプラグイン"
-      ],
-      "Remote action:": [
-        "リモートアクション:"
       ]
     }
   }
