@@ -43,7 +43,7 @@ uniq-po:
 	done
 
 tx-pull: $(EDITFILES)
-	cd .. && tx pull -f
+	cd .. && tx pull -f --all
 	for f in $(EDITFILES) ; do \
 		sed -i 's/^\("Project-Id-Version: \).*$$/\1$(DOMAIN) $(VERSION)\\n"/' $$f; \
 	done
@@ -55,9 +55,7 @@ tx-update: tx-pull
 	@echo then run make -C locale mo-files to finish
 	@echo
 
-build-mo-files: $(MOFILES)
-
-mo-files: build-mo-files
+mo-files: $(MOFILES)
 	git add $(POFILES) $(POTFILE) $(JSFILES) ../locale/*/LC_MESSAGES
 	git commit -m "i18n - pulling from tx"
 	@echo
