@@ -19,9 +19,8 @@ module Actions
           #   # but we should be careful anyway
           #   hypervisor = ::Host.joins(:subscription_facet).where(:'katello_subscription_facets.uuid' => hv_attrs['uuid']).first
           # end
-
-          config = ::ForemanVirtWhoConfigure::ServiceUser.find_by_user_id(User.current.id).try(:config)
-          if config.present?
+          configs = ::ForemanVirtWhoConfigure::ServiceUser.find_by_user_id(User.current.id).try(:configs)
+          configs&.each do |config|
             config.virt_who_touch!
           end
 
