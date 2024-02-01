@@ -27,7 +27,6 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib,locale}/**/*'] + ['LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'katello'
   s.add_development_dependency('theforeman-rubocop', '~> 0.0.6')
   s.add_development_dependency 'rdoc'
 end
