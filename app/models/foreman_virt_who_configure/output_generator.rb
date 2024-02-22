@@ -131,8 +131,10 @@ module ForemanVirtWhoConfigure
         ### manual edits will be deleted.
         [global]
         debug=#{config.debug? ? 1 : 0}
-        interval=#{config.interval * 60}#{proxy_strings}
+        interval=#{config.interval * 60}
         oneshot=False
+
+        [system_environment]#{proxy_strings}
         EOF
           if [ $? -ne 0 ]; then result_code=$(($result_code|#{error_code(:virt_who_sysconfig_file_issue)})); fi
 
@@ -289,7 +291,6 @@ encrypted_password=$cr_password"
       output = ''
       output << "\n#{proxy_type}=#{sanitize_proxy(proxy.full_url)}" if proxy.present?
       output << "\nno_proxy=#{sanitize_proxy(no_proxy)}" if no_proxy.present?
-      output << "\nno_proxy=*" if proxy.blank? && no_proxy.blank?
       output
     end
 
