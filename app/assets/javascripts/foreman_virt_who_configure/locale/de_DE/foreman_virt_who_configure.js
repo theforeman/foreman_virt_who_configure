@@ -466,9 +466,6 @@
       ],
       "A plugin to make virt-who configuration easy": [
         ""
-      ],
-      "Report": [
-        "Bericht"
       ]
     }
   }

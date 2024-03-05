@@ -466,12 +466,6 @@
       ],
       "A plugin to make virt-who configuration easy": [
         ""
-      ],
-      "Disable": [
-        "Onemogoči"
-      ],
-      "Enable": [
-        "Omogoči"
       ]
     }
   }

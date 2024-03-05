@@ -466,63 +466,6 @@
       ],
       "A plugin to make virt-who configuration easy": [
         ""
-      ],
-      "Create": [
-        "Δημιουργία"
-      ],
-      "Delete": [
-        "Διαγραφή"
-      ],
-      "Delete Activation Key": [
-        "Διαγραφή κλειδιού ενεργοποίησης"
-      ],
-      "Delete Product": [
-        "Διαγραφή προϊόντος"
-      ],
-      "Destroy": [
-        "Καταστροφή"
-      ],
-      "Disable": [
-        "Απενεργοποίηση"
-      ],
-      "Enable": [
-        "Ενεργοποίηση"
-      ],
-      "Export": [
-        "Εξαγωγή"
-      ],
-      "Import": [
-        "Εισαγωγή"
-      ],
-      "Import Puppet classes": [
-        "Εισαγωγή κλάσεων Puppet"
-      ],
-      "Index content": [
-        "Περιεχόμενο ευρετηρίου"
-      ],
-      "Publish": [
-        "Δημοσίευση"
-      ],
-      "Remove Content": [
-        "Αφαίρεση περιεχομένου"
-      ],
-      "Remove Version": [
-        "Αφαίρεση έκδοσης"
-      ],
-      "Report": [
-        "Αναφορά"
-      ],
-      "Run Sync Plan:": [
-        "Εκκίνηση πλάνου συγχρονισμού:"
-      ],
-      "Synchronize": [
-        "Συγχρονισμός"
-      ],
-      "Update": [
-        "Ενημέρωση"
-      ],
-      "Upload into": [
-        "Μεταφόρτωση σε"
       ]
     }
   }

@@ -466,24 +466,6 @@
       ],
       "A plugin to make virt-who configuration easy": [
         ""
-      ],
-      "Action with sub plans": [
-        "Action with sub plans"
-      ],
-      "Delete": [
-        "Delete"
-      ],
-      "Disable": [
-        "Disable"
-      ],
-      "Enable": [
-        "Enable"
-      ],
-      "Import Puppet classes": [
-        "Import Puppet classes"
-      ],
-      "Import facts": [
-        "Import facts"
       ]
     }
   }

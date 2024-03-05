@@ -466,24 +466,6 @@
       ],
       "A plugin to make virt-who configuration easy": [
         ""
-      ],
-      "Create": [
-        "Utwórz"
-      ],
-      "Delete": [
-        "Usuń"
-      ],
-      "Destroy": [
-        "Usuń"
-      ],
-      "Import": [
-        "Import"
-      ],
-      "Report": [
-        "Raport"
-      ],
-      "Update": [
-        "Aktualizacja:"
       ]
     }
   }

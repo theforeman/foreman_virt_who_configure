@@ -466,21 +466,6 @@
       ],
       "A plugin to make virt-who configuration easy": [
         ""
-      ],
-      "Delete": [
-        "Radera"
-      ],
-      "Destroy": [
-        "Förstör"
-      ],
-      "Import": [
-        "Importera"
-      ],
-      "Report": [
-        "Rapport"
-      ],
-      "Update": [
-        "Uppdatera"
       ]
     }
   }

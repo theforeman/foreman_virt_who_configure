@@ -466,18 +466,6 @@
       ],
       "A plugin to make virt-who configuration easy": [
         ""
-      ],
-      "Delete": [
-        "Verwijderen"
-      ],
-      "Export": [
-        "Exporteren"
-      ],
-      "Import": [
-        "Geimporteerd"
-      ],
-      "Report": [
-        "Rapport"
       ]
     }
   }
