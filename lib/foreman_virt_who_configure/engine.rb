@@ -71,7 +71,7 @@ module ForemanVirtWhoConfigure
         # add menu entry
         menu :top_menu, :virt_who_configs,
           url_hash: { controller: 'foreman_virt_who_configure/configs', action: :index },
-          caption: N_('Virt-who configurations'),
+          caption: N_('Virt-who Configurations'),
           parent: :infrastructure_menu,
           after: :compute_resources
 

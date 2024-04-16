@@ -4,21 +4,33 @@ A Foreman plugin to make virt-who configuration easier. This provides a simple U
 
 ## Installation
 
-This plugins requires Katello to be installed in your Foreman instance. If it's there, simply install a package with the plugin (rpm only), run migrations and seed by running,
+### Development setup:
 
+* This plugin requires Katello to be installed in your Foreman instance. If it's there, simply install a package with the plugin (rpm only), run migrations and seed by running:
+
+```
 dnf install rubygem-foreman_virt_who_configure
 foreman-rake db:migrate
 foreman-rake db:seed
+```
+
+### Production setup:
+
+* Run the following command to install the plugin with the Foreman Installer.
+```
+foreman-installer --enable-foreman-plugin-virt-who-configure
+foreman-installer --enable-foreman-cli-virt-who-configure
+```
 
 ## Usage
 
-After installation there is new "Virt-who configurations" menu added in "Infrastructure" tab. The "Virt-who configurations" -> "Create Config" provides options to add details about configuration, most of the fields are having inline help.
+* After installation there is new "Virt-who Configurations" menu added in "Infrastructure" tab. The "Virt-who Configurations" -> "Create Config" provides options to add details about configuration, most of the fields have inline help.
 
-The virt-who configuration should be in an organization. If an organization has not selected then Owner field would be displayed where it is required to select organization. If organization is already selected then Owner field is not displayed and virt-configuration will be automatically created in selected organization scope.
+* The virt-who configuration should be in an organization. If an organization has not selected then Owner field would be displayed where it is required to select organization. If an organization is already selected then Owner field is not displayed and virt-configuration will be automatically created in the selected organization scope.
 
-To deploy the configuration click on configuration name on "Virt-who configurations" list page, "Overview" page shows details about configuration and "Deploy page" has all details on deploying configuration.
+* To deploy the configuration click on configuration name on "Virt-who Configurations" list page, "Overview" page shows details about configuration and "Deploy page" has all details on deploying configuration.
 
-More details are available at - https://theforeman.org/plugins/foreman_virt_who_configure
+* More details are available at - https://theforeman.org/plugins/foreman_virt_who_configure
 
 ## Contributing
 
@@ -26,7 +38,7 @@ Fork and send a Pull Request. Thanks!
 
 ## Copyright
 
-Copyright (c) 2023 - Foreman team
+Copyright (c) 2024 - Foreman team
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
