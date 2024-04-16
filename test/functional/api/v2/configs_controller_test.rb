@@ -167,6 +167,27 @@ class ForemanVirtWhoConfigure::Api::V2::ConfigsControllerTest < ActionController
     assert_equal "Kubeconfig path Invalid option for hypervisor [esx]", response['error']['full_messages'].join('')
   end
 
+  test "should error when hypervisor type is hwuuid and type is not vmware" do
+    org = FactoryBot.create(:organization)
+    post :create, :params => { :foreman_virt_who_configure_config => { :name => 'my new config',
+                                                            :interval => 240,
+                                                            :filtering_mode => ForemanVirtWhoConfigure::Config::BLACKLIST,
+                                                            :blacklist => ' a,b ',
+                                                            :hypervisor_id => 'hwuuid',
+                                                            :hypervisor_type => 'libvirt',
+                                                            :hypervisor_server => "libvirt.example.com",
+                                                            :hypervisor_username => "root",
+                                                            :debug => true,
+                                                            :satellite_url => "foreman.example.com",
+                                                            :organization_id => org.id }
+    }, :session => set_session_user
+
+    assert_response :unprocessable_entity
+
+    response = ActiveSupport::JSON.decode(@response.body)
+    assert_equal "Hypervisor hwuuid is only supported for ESX hypervisor type", response['error']['full_messages'].join('')
+  end
+
   test "should create the config" do
     org = FactoryBot.create(:organization)
     post :create, :params => { :foreman_virt_who_configure_config => { :name => 'my new config',

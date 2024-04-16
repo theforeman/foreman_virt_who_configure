@@ -116,6 +116,7 @@ module ForemanVirtWhoConfigure
     validates :prism_flavor, :inclusion => {:in => PRISM_FLAVORS.keys, :message => "should be either central or element"}, :if => proc { |c| c.hypervisor_type == 'ahv' }
     validate :validates_whitelist_blacklist
     validate :validates_debug_settings, :if => proc { |c| c.hypervisor_type == 'ahv' }
+    validate :validates_hypervisor_id_non_vmware, :if => proc { |c| c.hypervisor_type != 'esx' }
     validate :validates_hypervisor_options
 
     def validates_whitelist_blacklist
@@ -128,6 +129,13 @@ module ForemanVirtWhoConfigure
           unless blacklist.present? || exclude_host_parents.present?
             [:blacklist, :exclude_host_parents].each { |f| errors.add(f, "Exclude hosts or Exclude host parents is required") }
           end
+      end
+    end
+
+    def validates_hypervisor_id_non_vmware
+      return unless hypervisor_id.present?
+      if hypervisor_id == 'hwuuid'
+        errors.add(:hypervisor_id, "hwuuid is only supported for ESX hypervisor type")
       end
     end
 

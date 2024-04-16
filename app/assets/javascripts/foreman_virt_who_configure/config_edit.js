@@ -5,6 +5,14 @@ function virt_who_update_listing_mode() {
   var blacklist = $('#foreman_virt_who_configure_config_blacklist').parents('div.form-group');
   var whitelist_parent = $('#foreman_virt_who_configure_config_filter_host_parents').parents('div.form-group');
   var blacklist_parent = $('#foreman_virt_who_configure_config_exclude_host_parents').parents('div.form-group');
+  var hypervisor_ids = foreman_virt_who_configure_config_hypervisor_id;
+
+  // https://projects.theforeman.org/issues/26321
+    if (hypervisor_type != 'esx') {
+      $(hypervisor_ids).find('option[value=hwuuid]').remove();
+    } else if (hypervisor_type == 'esx' && $(hypervisor_ids).find('option[value=hwuuid]').length == 0) {
+      $(hypervisor_ids).append('<option value='+'hwuuid>'+'hwuuid'+'</option>');
+    }
 
   // UNLIMITED = 0, WHITELIST = 1, BLACKLIST = 2, see config.rb model for the definition
   if (filtering_mode == '0') {
