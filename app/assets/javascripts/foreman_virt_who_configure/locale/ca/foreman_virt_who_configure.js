@@ -466,39 +466,6 @@
       ],
       "A plugin to make virt-who configuration easy": [
         ""
-      ],
-      "Create": [
-        "Crea"
-      ],
-      "Delete": [
-        "Suprimeix"
-      ],
-      "Destroy": [
-        "Destrueix"
-      ],
-      "Disable": [
-        "Inhabilita"
-      ],
-      "Enable": [
-        "Habilita"
-      ],
-      "Export": [
-        "Exporta"
-      ],
-      "Import": [
-        "Importa"
-      ],
-      "Remove Version": [
-        "Suprimeix la versió"
-      ],
-      "Report": [
-        "Informe"
-      ],
-      "Synchronize": [
-        "Sincronitza"
-      ],
-      "Update": [
-        "Actualitza"
       ]
     }
   }

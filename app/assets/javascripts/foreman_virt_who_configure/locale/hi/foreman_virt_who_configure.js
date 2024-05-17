@@ -466,18 +466,6 @@
       ],
       "A plugin to make virt-who configuration easy": [
         ""
-      ],
-      "Delete": [
-        "मिटाएँ"
-      ],
-      "Destroy": [
-        "नष्ट करें"
-      ],
-      "Import": [
-        "आयात करें"
-      ],
-      "Update": [
-        "अद्यतन"
       ]
     }
   }
