@@ -469,9 +469,6 @@ msgstr "Virt-who-ის კონფიგურაციები"
 msgid "Virt-who Configurations Status"
 msgstr "Virt-who-ის კონფიგურაციის სტატუსი"
 
-msgid "Virt-who configurations"
-msgstr "Virt-who-ის კონფიგურაციები"
-
 msgid "Whitelist"
 msgstr "თეთრი სია"
 

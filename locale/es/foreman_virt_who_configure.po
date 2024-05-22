@@ -476,9 +476,6 @@ msgstr "Configuraciones de virt-who"
 msgid "Virt-who Configurations Status"
 msgstr "Estado de configuración de virt-who"
 
-msgid "Virt-who configurations"
-msgstr "Configuraciones virt-who"
-
 msgid "Whitelist"
 msgstr "Lista blanca"
 
