@@ -474,9 +474,6 @@ msgstr "Virt-who 配置"
 msgid "Virt-who Configurations Status"
 msgstr "Virt-who 配置状态"
 
-msgid "Virt-who configurations"
-msgstr "Virt-who 配置"
-
 msgid "Whitelist"
 msgstr "白名单"
 

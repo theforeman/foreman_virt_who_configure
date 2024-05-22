@@ -468,9 +468,6 @@ msgstr ""
 msgid "Virt-who Configurations Status"
 msgstr ""
 
-msgid "Virt-who configurations"
-msgstr ""
-
 msgid "Whitelist"
 msgstr ""
 

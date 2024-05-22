@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-28 18:45+0100\n"
-"PO-Revision-Date: 2023-11-28 18:45+0100\n"
+"POT-Creation-Date: 2024-05-22 09:39-0400\n"
+"PO-Revision-Date: 2024-05-22 09:39-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -369,7 +369,7 @@ msgstr ""
 msgid "Prism Element"
 msgstr ""
 
-#: ../app/models/foreman_virt_who_configure/config.rb:225
+#: ../app/models/foreman_virt_who_configure/config.rb:233
 msgid "every %s hours"
 msgstr ""
 
@@ -465,6 +465,7 @@ msgstr ""
 #: ../app/views/foreman_virt_who_configure/configs/index.html.erb:1
 #: ../app/views/foreman_virt_who_configure/configs/show.html.erb:12
 #: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:3
+#: ../lib/foreman_virt_who_configure/engine.rb:74
 msgid "Virt-who Configurations"
 msgstr ""
 
@@ -807,10 +808,6 @@ msgid ""
 "m. After you provide all required information a virt-who configuration script "
 "will be generated. You could either install it manually by copying the script "
 "or deploy it on a selected target host through Remote Execution."
-msgstr ""
-
-#: ../lib/foreman_virt_who_configure/engine.rb:74
-msgid "Virt-who configurations"
 msgstr ""
 
 #: ../lib/foreman_virt_who_configure/engine.rb:79
