@@ -2,7 +2,7 @@
 
 A Foreman plugin to make virt-who configuration easier. This provides a simple UI for obtaining required information about the desired virt-who configuration, such as hypervisor credentials, check interval and other similar config options. After the information is gathered, it provides a configuration script that can be used to install and configure the virt-who instance. All incoming reports from such virt-who instance are tracked and monitored by the plugin.
 
-## Installation
+## Installation1
 
 ### Development setup:
 
