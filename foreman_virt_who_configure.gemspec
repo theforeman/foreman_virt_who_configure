@@ -1,4 +1,4 @@
-require File.expand_path('../lib/foreman_virt_who_configure/version', __FILE__)
+require_relative 'lib/foreman_virt_who_configure/version'
 require 'date'
 
 begin

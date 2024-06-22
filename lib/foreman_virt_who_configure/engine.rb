@@ -7,8 +7,6 @@ module ForemanVirtWhoConfigure
     config.autoload_paths += Dir["#{config.root}/app/controllers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/helpers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/models/concerns"]
-    config.autoload_paths += Dir["#{config.root}/app/lib"]
-    config.autoload_paths += Dir["#{config.root}/test/"]
 
     # Add any db migrations
     initializer 'foreman_virt_who_configure.load_app_instance_data' do |app|
@@ -27,7 +25,7 @@ module ForemanVirtWhoConfigure
 
     initializer 'foreman_virt_who_configure.register_plugin', :before => :finisher_hook do |_app|
       Foreman::Plugin.register :foreman_virt_who_configure do
-        requires_foreman '>= 3.7'
+        requires_foreman '>= 3.12'
         register_gettext
 
         apipie_documented_controllers ["#{ForemanVirtWhoConfigure::Engine.root}/app/controllers/foreman_virt_who_configure/api/v2/*.rb"]
