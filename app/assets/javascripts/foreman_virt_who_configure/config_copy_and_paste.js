@@ -1,8 +1,10 @@
 function virt_who_copy_configuration_to_clipboard(text) {
-  var aux = document.createElement("textarea");
-  $(aux).html(text);
-  document.body.appendChild(aux);
-  aux.select();
-  document.execCommand("copy");
-  document.body.removeChild(aux);
+  try {
+    navigator.clipboard.writeText(text);
+  } catch (error) {
+    console.error(
+      "Copying to clipboard is not supported in this browser, or with an insecure connection."
+    );
+    console.error(error);
+  }
 }

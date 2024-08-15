@@ -82,7 +82,13 @@ $(document).ready(function () {
   virt_who_update_hypervisor_fields();
   virt_who_update_ahv_debug();
 
-  $('#foreman_virt_who_configure_config_listing_mode').change(virt_who_update_listing_mode);
-  $('#foreman_virt_who_configure_config_hypervisor_type').change(virt_who_update_credentials_help);
-  $('#foreman_virt_who_configure_config_hypervisor_type').change(virt_who_update_hypervisor_fields);
+  $("#foreman_virt_who_configure_config_listing_mode").on("change", virt_who_update_listing_mode);
+  $("#foreman_virt_who_configure_config_hypervisor_type").on(
+    "change",
+    virt_who_update_credentials_help
+  );
+  $("#foreman_virt_who_configure_config_hypervisor_type").on(
+    "change",
+    virt_who_update_hypervisor_fields
+  );
 });
