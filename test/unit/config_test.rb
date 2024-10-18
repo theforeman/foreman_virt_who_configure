@@ -63,7 +63,7 @@ module ForemanVirtWhoConfigure
       test 'whitelisting mode requires blacklist to be set' do
         config.listing_mode = ForemanVirtWhoConfigure::Config::WHITELIST
         refute config.valid?
-        assert_includes config.errors.keys, :whitelist
+        assert_includes config.errors.attribute_names, :whitelist
 
         config.whitelist = 'a.host'
         assert config.valid?
@@ -72,7 +72,7 @@ module ForemanVirtWhoConfigure
       test 'blacklisting mode requires blacklist to be set' do
         config.listing_mode = ForemanVirtWhoConfigure::Config::BLACKLIST
         refute config.valid?
-        assert_includes config.errors.keys, :blacklist
+        assert_includes config.errors.attribute_names, :blacklist
 
         config.blacklist = 'a.host'
         assert config.valid?
