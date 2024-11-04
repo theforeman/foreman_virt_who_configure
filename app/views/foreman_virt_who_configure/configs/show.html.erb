@@ -79,7 +79,7 @@
           </div>
           <div class="col-md-8">
             <div class="terminal-buttons">
-              <%= link_to _('Copy to clipboard'), '#', :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_command").html()); return false' %>
+              <%= link_to _('Copy to clipboard'), '#', :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_command").text()); return false' %>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
           </div>
           <div class="col-md-8">
             <div class="terminal-buttons">
-              <%= link_to _('Copy to clipboard'), '#', :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_script").html()); return false' %>
+              <%= link_to _('Copy to clipboard'), '#', :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_script").text()); return false' %>
               <%= link_to _('Download the script'), deploy_script_foreman_virt_who_configure_config_path(@config), :class => 'btn btn-default' %>
             </div>
           </div>
