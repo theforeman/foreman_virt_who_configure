@@ -8,13 +8,16 @@
 # 0868a4d1af5275b3f70b0a6dac4c99a4, 2019
 # Amit Upadhye <aupadhye@redhat.com>, 2022
 # Bryan Kearney <bryan.kearney@gmail.com>, 2023
+# Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2025
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.25\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2023\n"
+"Last-Translator: Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarde"
+"n.nl>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/foreman/teams/114/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -236,16 +239,16 @@ msgid "Hypervisor ID"
 msgstr "ハイパーバイザー ID"
 
 msgid "Hypervisor Password"
-msgstr ""
+msgstr "ハイパーバイザーのパスワード"
 
 msgid "Hypervisor Server"
-msgstr ""
+msgstr "ハイパーバイザーのサーバー"
 
 msgid "Hypervisor Type"
-msgstr ""
+msgstr "ハイパーバイザーのタイプ"
 
 msgid "Hypervisor Username"
-msgstr ""
+msgstr "ハイパーバイザーのユーザー名"
 
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr "フィルタリングモードが 2 に設定されている場合にのみ適用できるハイパーバイザーのブラックリストです。ワイルドカードおよび正規表現がサポートされており、複数のレコードはコンマで区切られる必要があります。"
@@ -284,7 +287,7 @@ msgid "Latest Configurations Without Change"
 msgstr "変更のない最新の設定"
 
 msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. Make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr ""
+msgstr "Libvirt サーバーの完全修飾ホスト名または IP アドレス。優先スキーマを指定することもできます。例:<code> qemu+ssh://libvirt.example.com/system</code>。ハイパーバイザーのユーザー名フィールドで指定されたユーザーのターゲットホストにルートの SSH 鍵を設定してください。"
 
 msgid "List of virt-who configurations"
 msgstr "virt-who 設定一覧を表示します。"

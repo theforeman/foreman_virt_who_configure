@@ -6,15 +6,18 @@
 # Translators:
 # 0868a4d1af5275b3f70b0a6dac4c99a4, 2017
 # tim123, 2017
-# Bryan Kearney <bryan.kearney@gmail.com>, 2021
-# Amit Upadhye <aupadhye@redhat.com>, 2023
+# Bryan Kearney <bryan.kearney@gmail.com>, 2019
+# Amit Upadhye <aupadhye@redhat.com>, 2022
+# Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2025
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.25\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Amit Upadhye <aupadhye@redhat.com>, 2023\n"
+"Last-Translator: Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarde"
+"n.nl>, 2025\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/foreman/teams/114/zh"
 "_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -237,16 +240,16 @@ msgid "Hypervisor ID"
 msgstr "Hypervisor ID"
 
 msgid "Hypervisor Password"
-msgstr ""
+msgstr "Hypervisor 密码"
 
 msgid "Hypervisor Server"
-msgstr ""
+msgstr "Hypervisor 服务器"
 
 msgid "Hypervisor Type"
-msgstr ""
+msgstr "Hypervisor 类型"
 
 msgid "Hypervisor Username"
-msgstr ""
+msgstr "Hypervisor 用户名"
 
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr "Hypervisor 黑名单，仅在过滤模式设置为 2 时适用。支持通配符和正则表达式，必须用逗号分隔多项记录。"
@@ -276,7 +279,7 @@ msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addres
 msgstr "忽略代理服务器。忽略代理服务器设置的主机名、域或 ip 地址逗号分隔列表。可选择性地设置为 *，以便为所有主机名、域或 ip 地址跳过代理服务器设置。"
 
 msgid "Interval"
-msgstr ""
+msgstr "间隔"
 
 msgid "Interval was not provided"
 msgstr "未提供间隔"
@@ -285,7 +288,7 @@ msgid "Latest Configurations Without Change"
 msgstr "无更改的最新配置"
 
 msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. Make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr ""
+msgstr "Libvirt 服务器的完全限定主机名或 IP 地址。您也可以指定首选的方案，例如：<code>qemu+ssh://libvirt.example.com/system</code>。确保您在目标主机上为 hypervisor 用户名字段指定的用户设置根的 SSH 密钥"
 
 msgid "List of virt-who configurations"
 msgstr "virt-who 配置列表"
@@ -297,7 +300,7 @@ msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr "Microsoft Hyper-V fully 的完全限定主机名或 IP 地址。"
 
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr "此配置的名称，例如 hypervisor 的名称"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-22 09:39-0400\n"
-"PO-Revision-Date: 2024-05-22 09:39-0400\n"
+"POT-Creation-Date: 2025-02-20 11:50+0100\n"
+"PO-Revision-Date: 2025-02-20 11:50+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -465,7 +465,7 @@ msgstr ""
 #: ../app/views/foreman_virt_who_configure/configs/index.html.erb:1
 #: ../app/views/foreman_virt_who_configure/configs/show.html.erb:12
 #: ../app/views/foreman_virt_who_configure/configs/welcome.html.erb:3
-#: ../lib/foreman_virt_who_configure/engine.rb:74
+#: ../lib/foreman_virt_who_configure/engine.rb:69
 msgid "Virt-who Configurations"
 msgstr ""
 
@@ -810,7 +810,7 @@ msgid ""
 "or deploy it on a selected target host through Remote Execution."
 msgstr ""
 
-#: ../lib/foreman_virt_who_configure/engine.rb:79
+#: ../lib/foreman_virt_who_configure/engine.rb:74
 msgid "Virt-who Configs Status"
 msgstr ""
 

@@ -5,16 +5,19 @@
 #
 # Translators:
 # 0868a4d1af5275b3f70b0a6dac4c99a4, 2017
-# Bryan Kearney <bryan.kearney@gmail.com>, 2021
 # 진선재, 2022
+# Bryan Kearney <bryan.kearney@gmail.com>, 2023
+# Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2025
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.25\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: 진선재, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/foreman/teams/114/ko/)\n"
+"Last-Translator: Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarde"
+"n.nl>, 2025\n"
+"Language-Team: Korean (https://app.transifex.com/foreman/teams/114/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,373 +25,373 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "1. Copy this configuration script to a safe directory."
-msgstr ""
+msgstr "1. 이 구성 스크립트를 안전한 디렉토리로 복사합니다."
 
 msgid "2. Make the script executable and run it."
-msgstr ""
+msgstr "2. 스크립트를 실행 가능하게 만들고 실행합니다."
 
 msgid "3. Delete the script."
-msgstr ""
+msgstr "3. 스크립트를 삭제합니다."
 
 msgid "A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to <code>*</code> to bypass proxy settings for all hostnames domains or ip addresses."
-msgstr ""
+msgstr "프록시 설정을 무시할 호스트 이름 또는 도메인 또는 IP 주소의 쉼표로 구분된 목록입니다. 선택적으로 모든 호스트 이름, 도메인 또는 IP 주소에 대해 프록시 설정을 우회하려면 <code>*</code>로 설정할 수 있습니다."
 
 msgid "A plugin to make virt-who configuration easy"
-msgstr ""
+msgstr "virt-who 구성을 쉽게 설정할 수 있도록 하는 플러그인"
 
 msgid "Account name by which virt-who is to connect to Nutanix AHV."
-msgstr ""
+msgstr "virt-who가 Nutanix AHV에 연결할 때 사용할 계정 이름입니다."
 
 msgid "Account name by which virt-who is to connect to the hypervisor, in the format <code>domain_name\\account_name</code>. Note that only a single backslash separates the values for domain_name and account_name. If you are using a domain account, and the global configuration file <code>/etc/virt-who.conf</code>, then <b>two</b> backslashes are required. For further details, see <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a> for more information."
-msgstr ""
+msgstr "virt-who가 하이퍼바이저에 연결할 계정 이름은 <code>domain_name\\account_name</code> 형식입니다. domain_name과 account_name의 값은 단일 백슬래시로 구분됩니다. 도메인 계정을 사용하고 글로벌 구성 파일 <code>/etc/virt-who.conf</code>을 사용하는 경우 <b>두 개</b>의 백슬래시를 사용해야 합니다. 자세한 내용은 <a href=\"https://access.redhat.com/solutions/1270223\">Red Hat Knowledgebase solution How to use a windows domain account with virt-who</a>을 참조하세요."
 
 msgid "Account name by which virt-who is to connect to the hypervisor."
-msgstr ""
+msgstr "virt-who가 하이퍼바이저에 연결할 때 사용할 계정 이름입니다."
 
 msgid "Account name by which virt-who is to connect to the hypervisor. By default this is <code>Administrator</code>. To use an alternate account, create a user account and assign that account to the following groups (Windows 2012 Server): Hyper-V Administrators and Remote Management Users."
-msgstr ""
+msgstr "virt-who가 하이퍼바이저에 연결할 때 사용할 계정 이름입니다. 기본값은 <code> 관리자</code>입니다. 다른 계정을 사용하려면 사용자 계정을 생성하고 해당 계정을 다음 그룹에 추가하십시오 (Windows 2012 Server): Hyper-V Administrators 및 Remote Management Users"
 
 msgid "Account name by which virt-who is to connect to the hypervisor. Virt-who does not support password based authentication, you must manually setup SSH key, see <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a> for more information."
-msgstr ""
+msgstr "virt-who가 하이퍼바이저에 연결할 때 사용할 계정 이름입니다. Virt-who는 암호 기반 인증을 지원하지 않으므로 SSH 키를 수동으로 설정해야 합니다. 자세한 내용은 <a href=\"https://access.redhat.com/solutions/1515983\">Red Hat Knowledgebase solution How to configure virt-who for a KVM host</a>를 참조하세요."
 
 msgid "Account password by which virt-who is to connect to the hypervisor instance."
-msgstr ""
+msgstr "virt-who가 하이퍼바이저 인스턴스에 연결할 계정 비밀번호입니다."
 
 msgid "Actions"
-msgstr "작업"
+msgstr "동작 "
 
 msgid "Applicable only for esx provider type. Hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "esx 공급자 유형에만 적용 가능합니다. 이 옵션에서 부모(일반적으로 ComputeResource) 이름이 쉼표로 구분된 목록에 지정된 호스트는<b> 보고되지 않습니다</b>. 와일드카드와 정규 표현식이 지원되며, 여러 항목은 쉼표로 구분해야 합니다. 쉼표와 같은 특수 문자가 포함된 경우 값을 큰따옴표로 묶습니다. 결과 구성 파일에서 모든 줄 바꿈 문자가 제거되고, 시작과 끝에서 공백이 제거됩니다."
 
 msgid "Applicable only for esx provider type. Only hosts which parent (usually ComputeResource) name is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "esx 공급자 유형에만 적용 가능합니다. 이 옵션에서 부모(일반적으로 ComputeResource) 이름이 쉼표로 구분된 목록에 지정된 호스트만 보고됩니다. 와일드카드와 정규 표현식이 지원되며, 여러 항목은 쉼표로 구분해야 합니다. 쉼표와 같은 특수 문자가 포함된 경우 값을 큰따옴표로 묶습니다. 결과 구성 파일에서 모든 줄 바꿈 문자가 제거되고 시작과 끝에서 공백이 제거됩니다."
 
 msgid "Blacklist"
-msgstr ""
+msgstr "블랙리스트"
 
 msgid "Configs"
-msgstr "설정 "
+msgstr "구성"
 
 msgid "Configuration Status"
-msgstr ""
+msgstr "구성 상태"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details"
-msgstr ""
+msgstr "클러스터에 연결하는 방법 및 인증 세부 정보에 대한 세부 정보가 포함된 구성 파일"
 
 msgid "Configuration file containing details about how to connect to the cluster and authentication details."
-msgstr ""
+msgstr "클러스터에 연결하는 방법 및 인증 세부 정보가 포함된 구성 파일입니다."
 
 msgid "Configuration interval in minutes"
-msgstr ""
+msgstr "구성 간격 (분 단위)"
 
 msgid "Configuration name"
-msgstr ""
+msgstr "구성 이름"
 
 msgid "Configuration numeric identifier"
-msgstr ""
+msgstr "구성 숫자 식별자"
 
 msgid "Configuration script: "
-msgstr ""
+msgstr "구성 스크립트: "
 
 msgid "Config|Interval"
-msgstr ""
+msgstr "간격"
 
 msgid "Config|Last Report"
-msgstr ""
+msgstr "마지막 보고서"
 
 msgid "Config|Name"
-msgstr ""
+msgstr "이름"
 
 msgid "Connection"
 msgstr "연결"
 
 msgid "Container-native virtualization’s fully qualified host name or IP address. In order to connect to the cluster it is required to provide path to kubeconfig which contains connection details and authentication token."
-msgstr ""
+msgstr "컨테이너 네이티브 가상화의 정규화된 호스트 이름 또는 IP 주소입니다. 클러스터에 연결하려면 연결 세부 정보와 인증 토큰이 포함된 kubeconfig에 대한 경로를 제공해야 합니다."
 
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "클립보드에 복사"
 
 msgid "Count"
 msgstr "개수"
 
 msgid "Create Config"
-msgstr ""
+msgstr "구성 생성"
 
 msgid "Create a virt-who configuration"
-msgstr ""
+msgstr "virt-who 구성 생성"
 
 msgid "Delete a virt-who configuration"
-msgstr ""
+msgstr "virt-who 구성 삭제"
 
 msgid "Delete virt-who configuration %s?"
-msgstr ""
+msgstr "virt-who 구성 %s을/를 삭제하시겠습니까?"
 
 msgid "Deploy"
-msgstr ""
+msgstr "배포"
 
 msgid "Details"
 msgstr "상세 정보 "
 
 msgid "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
-msgstr ""
+msgstr "하이퍼바이저마다 다른 디버그 값을 설정할 수 없으므로 이 구성이 배포될 호스트에 배포된 다른 모든 구성에 영향을 미칩니다."
 
 msgid "Download the script"
-msgstr ""
+msgstr "스크립트 다운로드"
 
 msgid "Edit"
-msgstr "편집"
+msgstr "편집 "
 
 msgid "Edit Virt-who Config"
-msgstr ""
+msgstr "Virt-who 구성 편집"
 
 msgid "Enable AHV debug"
-msgstr ""
+msgstr "AHV 디버그 활성화"
 
 msgid "Enable debugging output"
-msgstr ""
+msgstr "디버깅 출력 활성화"
 
 msgid "Enable debugging output?"
-msgstr ""
+msgstr "디버깅 출력을 활성화하시겠습니까?"
 
 msgid "Every 12 hours"
-msgstr ""
+msgstr "12시간마다"
 
 msgid "Every 2 days"
-msgstr ""
+msgstr "2일마다"
 
 msgid "Every 2 hours"
-msgstr ""
+msgstr "2시간마다"
 
 msgid "Every 24 hours"
-msgstr ""
+msgstr "24시간마다"
 
 msgid "Every 3 days"
-msgstr ""
+msgstr "3일마다"
 
 msgid "Every 4 hours"
-msgstr ""
+msgstr "4시간마다"
 
 msgid "Every 8 hours"
-msgstr ""
+msgstr "8시간마다"
 
 msgid "Every hour"
-msgstr ""
+msgstr "매 시간마다"
 
 msgid "Exclude Hosts"
-msgstr ""
+msgstr "제외할 호스트"
 
 msgid "Exclude host parents"
-msgstr ""
+msgstr "상위 호스트 제외"
 
 msgid "Exclude hosts"
-msgstr ""
+msgstr "호스트 제외"
 
 msgid "Exclude hosts which cluster ID is specified in comma-separated list in this option will <b>NOT</b> be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "이 옵션에서 클러스터 ID가 쉼표로 구분된 목록에 지정된 호스트 제외는 <b>보고되지 않습니다</b>. VMware에서 도메인 이름을 찾으려면 PowerCLI 명령 <code>Get-Cluster “ClusterName” | Select ID</code>를 사용하십시오. 와일드카드 및 정규 표현식을 사용할 수 있으며, 여러 개의 항목은 쉼표로 구분해야 합니다. 쉼표와 같은 특수 문자가 포함된 값은 큰따옴표로 묶습니다. 최종 구성 파일에서는 모든 줄 바꿈 문자가 제거되며, 시작과 끝의 공백도 자동으로 삭제됩니다."
 
 msgid "Filter Hosts"
-msgstr ""
+msgstr "호스트 필터링"
 
 msgid "Filter host parents"
-msgstr ""
+msgstr "상위 호스트 필터링"
 
 msgid "Filter hosts"
-msgstr ""
+msgstr "호스트 필터링"
 
 msgid "Filtering"
-msgstr ""
+msgstr "필터링"
 
 msgid "Foreman server FQDN"
-msgstr ""
+msgstr "Foreman 서버의 FQDN"
 
 msgid "Foreman server’s fully-qualified host name, for example: foreman.example.com"
-msgstr ""
+msgstr "Foreman 서버의 정규화된 호스트 이름(예: foreman.example.com)"
 
 msgid "Fully qualified host name or IP address of the hypervisor"
-msgstr ""
+msgstr "하이퍼바이저의 정규화된 호스트 이름 또는 IP 주소"
 
 msgid "General information"
-msgstr ""
+msgstr "일반 정보"
 
 msgid "HTTP Proxy"
 msgstr "HTTP 프록시"
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers."
-msgstr ""
+msgstr "virt-who가 실행되는 서버와 하이퍼바이저 및 가상화 관리자 간 통신에 사용해야 하는 HTTP 프록시입니다."
 
 msgid "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used."
-msgstr ""
+msgstr "virt-who가 실행되는 서버와 하이퍼바이저 및 가상화 관리자 간의 통신에 사용해야 하는 HTTP 프록시를 지정합니다. 프록시를 사용하지 않는 경우 이 값을 비워 둡니다."
 
 msgid "Hammer command: "
-msgstr ""
+msgstr "Hammer 명령: "
 
 msgid "Help"
 msgstr "도움말"
 
 msgid "Hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will <b>NOT</b> be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "이 옵션에서 쉼표로 구분된 목록에 지정된 UUID(또는 호스트 이름, hwuuid, <code>hypervisor_id</code>에 따라 선택됨)를 가진 호스트만 <b>보고되지 않습니다</b>. 와일드카드 및 정규 표현식을 사용할 수 있으며, 여러 개의 항목은 쉼표로 구분해야 합니다. 쉼표와 같은 특수 문자가 포함된 값은 큰따옴표로 묶습니다. 최종 구성 파일에서는 모든 줄 바꿈 문자가 제거되며, 시작과 끝의 공백도 자동으로 삭제됩니다."
 
 msgid "How often to check connected hypervisors for changes? Also affects how often a mapping is reported. The recommended value for most environments is every two hours. Different interval can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed."
-msgstr ""
+msgstr "연결된 하이퍼바이저의 변경 사항을 얼마나 자주 확인하시겠습니까? 이는 매핑이 보고되는 빈도에도 영향을 미칩니다. 대부분 환경에서 권장되는 값은 2시간입니다. 하이퍼바이저마다 다른 간격을 설정할 수 없으므로 이 구성이 배포될 호스트의 다른 모든 배포된 구성에 영향을 미칩니다."
 
 msgid "Hypervisor ID"
-msgstr ""
+msgstr "하이퍼바이저 ID"
 
 msgid "Hypervisor Password"
-msgstr ""
+msgstr "하이퍼바이저 비밀번호"
 
 msgid "Hypervisor Server"
-msgstr ""
+msgstr "하이퍼바이저 서버"
 
 msgid "Hypervisor Type"
-msgstr ""
+msgstr "하이퍼바이저 유형"
 
 msgid "Hypervisor Username"
-msgstr ""
+msgstr "하이퍼바이저 사용자 이름"
 
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
-msgstr ""
+msgstr "하이퍼바이저 블랙리스트, 필터링 모드가 2로 설정된 경우에만 적용됩니다. 와일드카드와 정규 표현식이 지원되며, 여러 항목은 쉼표로 구분해야 합니다."
 
 msgid "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist"
-msgstr ""
+msgstr "하이퍼바이저 필터링 모드, %{unlimited}는 필터링 없음, %{whitelist}는 화이트리스트, %{blacklist}는 블랙리스트를 의미"
 
 msgid "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt."
-msgstr ""
+msgstr "하이퍼바이저 비밀번호는 libvirt/kubevirt를 제외한 모든 하이퍼바이저 유형에 필요합니다."
 
 msgid "Hypervisor type"
-msgstr ""
+msgstr "하이퍼바이저 유형"
 
 msgid "Hypervisor whitelist, applicable only when filtering mode is set to 1. Wildcards and regular expressions are supported, multiple records must be separated by comma."
-msgstr ""
+msgstr "하이퍼바이저 화이트리스트, 필터링 모드가 1로 설정된 경우에만 적용됩니다. 와일드카드와 정규 표현식이 지원되며 여러 항목은 쉼표로 구분해야 합니다."
 
 msgid "If you run a hybrid environment, with virtual machines running Red Hat Enterprise Linux and other operating systems, you may want to limit the scope of virt-who’s access to hosts. For example, if some hypervisors host only Microsoft Windows Server instances, there is no benefit in having those hypervisors reported by the virt-who agent."
-msgstr ""
+msgstr "Red Hat Enterprise Linux과 기타 운영 체제가 혼합된 환경에서 virt-who를 실행하는 경우, virt-who가 액세스할 수 있는 호스트 범위를 제한하는 것이 좋습니다. 예를 들어, 특정 하이퍼바이저가 Microsoft Windows Server 인스턴스만 호스팅하는 경우, 해당 하이퍼바이저를 virt-who 에이전트가 보고하도록 설정하는 것은 불필요할 수 있습니다."
 
 msgid "Ignore Proxy"
-msgstr ""
+msgstr "프록시 무시"
 
 msgid "Ignore proxy"
-msgstr ""
+msgstr "프록시 무시"
 
 msgid "Ignore proxy. A comma-separated list of hostnames or domains or ip addresses to ignore proxy settings for. Optionally this may be set to * to bypass proxy settings for all hostnames domains or ip addresses."
-msgstr ""
+msgstr "프록시 무시. 프록시 설정을 무시할 호스트 이름이나 도메인 또는 IP 주소의 쉼표로 구분된 목록입니다. 선택적으로 모든 호스트 이름 도메인 또는 IP 주소에 대한 프록시 설정을 우회하려면 *로 설정할 수 있습니다."
 
 msgid "Interval"
-msgstr ""
+msgstr "간격 "
 
 msgid "Interval was not provided"
-msgstr ""
+msgstr "간격이 지정되지 않았습니다"
 
 msgid "Latest Configurations Without Change"
-msgstr ""
+msgstr "변경되지 않은 최신 구성"
 
 msgid "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. Make sure you setup root's SSH key on target host for a user specified at hypervisor username field"
-msgstr ""
+msgstr "Libvirt 서버의 정규화된 호스트 이름 또는 IP 주소입니다. 선호하는 스키마를 지정할 수도 있습니다(예:<code> qemu+ssh://libvirt.example.com/system</code> . 하이퍼바이저 사용자 이름 필드에 지정된 사용자에 대해 대상 호스트에서 root의 SSH 키를 설정했는지 확인하세요."
 
 msgid "List of virt-who configurations"
-msgstr ""
+msgstr "virt-who 구성 목록"
 
 msgid "List of virt-who configurations per organization"
-msgstr ""
+msgstr "조직별 virt-who 구성 목록"
 
 msgid "Microsoft Hyper-V fully qualified host name or IP address."
-msgstr ""
+msgstr "Microsoft Hyper-V의 정규화된 호스트 이름 또는 IP 주소입니다."
 
 msgid "Name"
-msgstr ""
+msgstr "이름 "
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
-msgstr ""
+msgstr "이 구성의 이름, 예: 하이퍼바이저의 이름"
 
 msgid "New Config"
-msgstr ""
+msgstr "새 구성"
 
 msgid "New Virt-who Config"
-msgstr ""
+msgstr "새 Virt-who 구성"
 
 msgid "Newer version of virt-who is required, minimum version is %s"
-msgstr ""
+msgstr "최신 버전의 virt-who가 필요합니다. 최소 버전: %s"
 
 msgid "No Change"
-msgstr ""
+msgstr "변경 사항 없음"
 
 msgid "No Report Yet"
-msgstr ""
+msgstr "아직 보고서 없음"
 
 msgid "No Reports"
-msgstr ""
+msgstr "보고서 없음"
 
 msgid "No change"
-msgstr ""
+msgstr "변경 사항 없음"
 
 msgid "No configuration found"
-msgstr ""
+msgstr "구성을 찾을 수 없음"
 
 msgid "Nutanix AHV’s IP address."
-msgstr ""
+msgstr "Nutanix AHV의 IP 주소입니다."
 
 msgid "OK"
 msgstr "OK"
 
 msgid "On the target virt-who host:"
-msgstr ""
+msgstr "대상 virt-who 호스트에서:"
 
 msgid "On this page you can define virt-who configurations for your hypervisors."
-msgstr ""
+msgstr "이 페이지에서 하이퍼바이저에 대한 virt-who 구성을 정의할 수 있습니다."
 
 msgid "One virt-who configuration represents one config file in /etc/virt-who.d directory and maps to single hypervisor, organization and lifecycle environment."
-msgstr ""
+msgstr "하나의 virt-who 구성은 /etc/virt-who.d 디렉토리에 있는 하나의 구성 파일을 나타내며 단일 하이퍼바이저, 조직 및 라이프사이클 환경과 매핑됩니다."
 
 msgid "Only hosts which cluster ID is specified in comma-separated list in this option will be reported. PowerCLI command to find the domain names in VMware <code>Get-Cluster “ClusterName” | Select ID</code>. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "이 옵션에서 쉼표로 구분된 목록에 지정된 클러스터 ID를 가진 호스트만 보고됩니다. VMware에서 도메인 이름을 찾으려면 PowerCLI 명령 <code>Get-Cluster “ClusterName” | Select ID</code>를 사용하십시오. 와일드카드 및 정규 표현식을 사용할 수 있으며, 여러 개의 항목은 쉼표로 구분해야 합니다. 쉼표와 같은 특수 문자가 포함된 값은 큰따옴표로 묶습니다. 최종 구성 파일에서는 모든 줄 바꿈 문자가 제거되며, 시작과 끝의 공백도 자동으로 삭제됩니다."
 
 msgid "Only hosts which uuid (or hostname or hwuuid, based on <code>hypervisor_id</code>) is specified in comma-separated list in this option will be reported. Wildcards and regular expressions are supported, multiple records must be separated by comma. Put the value into the double-quotes if it contains special characters like comma. All new line characters will be removed in resulting configuration file, white spaces are removed from beginning and end."
-msgstr ""
+msgstr "이 옵션에서 쉼표로 구분된 목록에 지정된 UUID(또는 호스트 이름, hwuuid, <code>hypervisor_id</code>에 따라 선택됨)를 가진 호스트만 보고됩니다. 와일드카드 및 정규 표현식을 사용할 수 있으며, 여러 개의 항목은 쉼표로 구분해야 합니다. 쉼표와 같은 특수 문자가 포함된 값은 큰따옴표로 묶습니다. 최종 구성 파일에서는 모든 줄 바꿈 문자가 제거되며, 시작과 끝의 공백도 자동으로 삭제됩니다."
 
 msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled"
-msgstr ""
+msgstr "AHV 내부 디버그를 활성화하려면 디버깅 출력 활성화 옵션이 필요합니다. 두 옵션이 모두 활성화되면 추가 AHV 디버그 정보를 제공합니다."
 
 msgid "Option Enable debugging output is required to enable AHV internal debug. It provides extra AHV debug information when both options are enabled "
-msgstr ""
+msgstr "AHV 내부 디버그를 활성화하려면 디버깅 출력 활성화 옵션이 필요합니다. 두 옵션이 모두 활성화되면 추가 AHV 디버그 정보를 제공합니다."
 
 msgid "Organization of the virt-who configuration"
-msgstr ""
+msgstr "virt-who 구성의 조직"
 
 msgid "Overview"
 msgstr "개요"
 
 msgid "Owner"
-msgstr "소유자"
+msgstr "소유자 "
 
 msgid "Owner was not provided"
-msgstr ""
+msgstr "소유자가 제공되지 않았습니다"
 
 msgid "Path to kubeconfig file"
-msgstr ""
+msgstr "kubeconfig 파일 경로"
 
 msgid "Prism Central"
-msgstr ""
+msgstr "Prism Central"
 
 msgid "Prism Element"
-msgstr ""
+msgstr "Prism Element"
 
 msgid "Prism Flavor"
-msgstr ""
+msgstr "Prism Flavor"
 
 msgid "Renders a deploy script for the specified virt-who configuration"
-msgstr ""
+msgstr "지정된 virt-who 구성을 위한 배포 스크립트 렌더링"
 
 msgid "Schedule"
 msgstr "스케줄 "
 
 msgid "Select the Prism flavor you are connecting to"
-msgstr ""
+msgstr "연결할 Prism 플레이버를 선택하세요"
 
 msgid "Show a virt-who configuration"
-msgstr ""
+msgstr "virt-who 구성 표시"
 
 msgid "Specifies how the hypervisor will be identified."
-msgstr ""
+msgstr "하이퍼바이저가 식별되는 방법을 지정합니다."
 
 msgid ""
 "Specifies that hypervisors will be identified by their <b>hostname</b>, <b>uuid</b> or <b>hwuuid</b>.\n"
@@ -397,78 +400,83 @@ msgid ""
 "                                  names, but can cause duplicated hypervisor registrations if the host is renamed. To avoid that, you can use <b>uuid</b> instead. <b>hwuuid</b> is applicable to esx only.\n"
 "                                  This property is meant to be set up before the initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager."
 msgstr ""
+"하이퍼바이저를 <b>hostname</b>, <b>uuid</b>, <b>hwuuid</b>로 식별할 지를 지정합니다.\n"
+"                              일부 가상화 백엔드는 이 모든 항목을 지원하지 않을 수도 있습니다.\n"
+"                              기본값은 <b>hostname</b>이며 이는 보다 의미 있는 하이퍼바이저 이름을 제공하지만, \n"
+"                                  호스트 이름 변경 시 중복 등록이 발생할 수 있습니다.. 이를 방지하려면 <b>uuid</b>를 사용하는 것이 좋습니다. <b>hwuuid</b>는 esx에만 적용됩니다.\n"
+"                                  이 속성은 virt-who를 처음 실행하기 전에 설정해야 하며, 이후 변경하면 서브스크립션 관리자에 중복 항목이 생성될 수 있습니다."
 
 msgid "Status"
 msgstr "상태 "
 
 msgid "Success"
-msgstr "성공"
+msgstr "성공 "
 
 msgid "The configuration was not deployed yet or the virt-who was unable to report the status"
-msgstr ""
+msgstr "구성이 아직 배포되지 않았거나 virt-who가 상태를 보고할 수 없음"
 
 msgid "The virt-who report arrived within the interval"
-msgstr ""
+msgstr "virt-who 보고서가 설정된 간격 내에 도착함"
 
 msgid "The virt-who report has not arrived within the interval, which indicates there was no change on hypervisor"
-msgstr ""
+msgstr "virt-who 보고서가 설정된 간격 내에 도착하지 않았으며, 이는 하이퍼바이저에 변경 사항이 없음을 의미함"
 
 msgid "To define a new configuration, click the New Config button and fill in the form. After you provide all required information a virt-who configuration script will be generated. You could either install it manually by copying the script or deploy it on a selected target host through Remote Execution."
-msgstr ""
+msgstr "새 구성을 정의하려면 ‘새 설정' 버튼을 클릭하고 양식을 작성합니다. 필요한 모든 정보를 입력하면 virt-who 구성 스크립트가 생성됩니다. 스크립트를 복사하여 수동으로 설치하거나 원격 실행을 통해 선택한 대상 호스트에 배포할 수 있습니다."
 
 msgid "Total Configurations"
-msgstr ""
+msgstr "전체 구성"
 
 msgid "Unable to create sysconfig file"
-msgstr ""
+msgstr "sysconfig 파일을 생성할 수 없음"
 
 msgid "Unable to create virt-who config file"
-msgstr ""
+msgstr "virt-who 구성 파일을 생성할 수 없음"
 
 msgid "Unable to enable virt-who service using systemctl"
-msgstr ""
+msgstr "systemctl을 사용하여 virt-who 서비스를 활성화할 수 없음"
 
 msgid "Unable to install virt-who package, make sure the host is properly subscribed and has access to katello-host-tools repository"
-msgstr ""
+msgstr "virt-who 패키지를 설치할 수 없습니다. 호스트가 제대로 구독되었고 katello-host-tools 리포지토리에 액세스할 수 있는지 확인하십시오."
 
 msgid "Unable to start virt-who service, please see virt-who logs for more details"
-msgstr ""
+msgstr "virt-who 서비스를 시작할 수 없습니다. 자세한 내용은 virt-who 로그를 참조하세요."
 
 msgid "Unknown"
 msgstr "알 수 없음 "
 
 msgid "Unknown configuration status"
-msgstr ""
+msgstr "알 수 없는 구성 상태"
 
 msgid "Unknown configuration status, caused by unexpected conditions"
-msgstr ""
+msgstr "예기치 않은 상황으로 인해 알 수 없는 구성 상태"
 
 msgid "Unlimited"
 msgstr "제한 없음 "
 
 msgid "Update a virt-who configuration"
-msgstr ""
+msgstr "virt-who 구성 업데이트"
 
 msgid "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:"
-msgstr ""
+msgstr "hammer 명령이나 아래 스크립트를 사용하여 이 구성을 배포합니다. 둘 다 루트 권한이 필요합니다. katello-host-tools 저장소에 액세스할 수 있고 virt-who 보고를 실행할 대상 호스트(가능하면 Foreman 호스트)에서 실행하십시오."
 
 msgid "VMware vCenter server’s fully qualified host name or IP address."
-msgstr ""
+msgstr "VMware vCenter 서버의 정규화된 호스트 이름 또는 IP 주소입니다."
 
 msgid "Virt-who Configs Status"
-msgstr ""
+msgstr "Virt-who 구성 상태"
 
 msgid "Virt-who Configuration %s"
-msgstr ""
+msgstr "Virt-who 구성 %s"
 
 msgid "Virt-who Configurations"
-msgstr ""
+msgstr "Virt-who 구성"
 
 msgid "Virt-who Configurations Status"
-msgstr ""
+msgstr "Virt-who 구성 상태"
 
 msgid "Whitelist"
-msgstr ""
+msgstr "화이트리스트"
 
 msgid "every %s hours"
-msgstr ""
+msgstr "매 %s 시간마다"
