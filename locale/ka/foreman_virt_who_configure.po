@@ -6,9 +6,10 @@
 # Translators:
 # Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2023
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.25\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2023\n"
@@ -233,16 +234,16 @@ msgid "Hypervisor ID"
 msgstr "ჰაიპერვაიზორის ID"
 
 msgid "Hypervisor Password"
-msgstr ""
+msgstr "ჰაიპერვაიზორის პაროლი"
 
 msgid "Hypervisor Server"
-msgstr ""
+msgstr "ჰაიპერვაიზორის სერვერი"
 
 msgid "Hypervisor Type"
-msgstr ""
+msgstr "ჰაიპერვაიზორის ტიპი"
 
 msgid "Hypervisor Username"
-msgstr ""
+msgstr "ჰაიპერვაიზორის მომხმარებლის სახელი"
 
 msgid "Hypervisor blacklist, applicable only when filtering mode is set to 2. Wildcards and regular expressions are supported, multiple records must be separated by comma."
 msgstr "ჰიპერვიზორის შავი სია, გამოიყენება მხოლოდ მაშინ, როდესაც ფილტრაციის რეჟიმი დაყენებულია 2-ზე. Wildcards და რეგულარული გამონათქვამები მხარდაჭერილია. ჩანაწერები მძიმით უნდა იყოს გამოყოფილი."

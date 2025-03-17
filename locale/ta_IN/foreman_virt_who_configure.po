@@ -4,14 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# 0868a4d1af5275b3f70b0a6dac4c99a4, 2022
+# 0868a4d1af5275b3f70b0a6dac4c99a4, 2023
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.25\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: 0868a4d1af5275b3f70b0a6dac4c99a4, 2022\n"
+"Last-Translator: 0868a4d1af5275b3f70b0a6dac4c99a4, 2023\n"
 "Language-Team: Tamil (India) (https://app.transifex.com/foreman/teams/114/ta_I"
 "N/)\n"
 "MIME-Version: 1.0\n"
@@ -294,7 +295,7 @@ msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr ""
 
 msgid "Name"
-msgstr ""
+msgstr "பெயர்"
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr ""

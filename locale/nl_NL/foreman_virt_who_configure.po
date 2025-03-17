@@ -6,17 +6,18 @@
 # Translators:
 # Maxim Burgerhout <maxim@wzzrd.com>, 2017
 # dschutterop <daniel@schutterop.nl>, 2017
+# Mark Olie <mark.transifex@oliekoets.nl>, 2017
 # Engel Hendrik Fokkens, 2019
-# Mark Olie <mark.transifex@oliekoets.nl>, 2021
-# EmielK <emiel@kremers.us>, 2022
+# EmielK <emiel@kremers.us>, 2023
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.17\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.25\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: EmielK <emiel@kremers.us>, 2022\n"
-"Language-Team: Dutch (Netherlands) (https://www.transifex.com/foreman/teams/11"
+"Last-Translator: EmielK <emiel@kremers.us>, 2023\n"
+"Language-Team: Dutch (Netherlands) (https://app.transifex.com/foreman/teams/11"
 "4/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -298,7 +299,7 @@ msgid "Microsoft Hyper-V fully qualified host name or IP address."
 msgstr ""
 
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 msgid "Name of this configuration, e.g. the name of the hypervisor"
 msgstr ""
