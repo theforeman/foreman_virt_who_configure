@@ -3,7 +3,7 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.25",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.26",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
         "Last-Translator": "Lukas K. <kallies@puzzle.ch>, 2023",
@@ -373,6 +373,9 @@
       ],
       "Renders a deploy script for the specified virt-who configuration": [
         "Rendert ein Deploy-Skript für die angegebene virt-who-Konfiguration"
+      ],
+      "Report": [
+        ""
       ],
       "Schedule": [
         "Plan"
