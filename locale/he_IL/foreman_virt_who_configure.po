@@ -6,10 +6,9 @@
 # Translators:
 # ohadlevy <ohadlevy@gmail.com>, 2019
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_virt_who_configure 0.5.25\n"
+"Project-Id-Version: foreman_virt_who_configure 0.5.26\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
 "Last-Translator: ohadlevy <ohadlevy@gmail.com>, 2019\n"
@@ -377,6 +376,9 @@ msgid "Prism Flavor"
 msgstr ""
 
 msgid "Renders a deploy script for the specified virt-who configuration"
+msgstr ""
+
+msgid "Report"
 msgstr ""
 
 msgid "Schedule"
