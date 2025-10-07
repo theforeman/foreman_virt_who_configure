@@ -7,14 +7,14 @@
 # Luiz Henrique Vasconcelos <luizvasconceloss@yahoo.com.br>, 2017
 # Flamarion Jorge <jorge.flamarion@gmail.com>, 2017
 # Amit Upadhye <aupadhye@redhat.com>, 2022
-# Bryan Kearney <bryan.kearney@gmail.com>, 2023
+# Bryan Kearney <bryan.kearney@gmail.com>, 2025
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 0.5.26\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2023\n"
+"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>, 2025\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/foreman/teams/11"
 "4/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -380,9 +380,6 @@ msgstr ""
 
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr "Renderiza um script de implantação para a configuração especificada do virt-who"
-
-msgid "Report"
-msgstr ""
 
 msgid "Schedule"
 msgstr "Agendamento"

@@ -8,14 +8,14 @@
 # dschutterop <daniel@schutterop.nl>, 2017
 # Mark Olie <mark.transifex@oliekoets.nl>, 2017
 # Engel Hendrik Fokkens, 2019
-# EmielK <emiel@kremers.us>, 2023
+# EmielK <emiel@kremers.us>, 2025
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 0.5.26\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2017-05-03 11:59+0000\n"
-"Last-Translator: EmielK <emiel@kremers.us>, 2023\n"
+"Last-Translator: EmielK <emiel@kremers.us>, 2025\n"
 "Language-Team: Dutch (Netherlands) (https://app.transifex.com/foreman/teams/11"
 "4/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -379,9 +379,6 @@ msgid "Prism Flavor"
 msgstr ""
 
 msgid "Renders a deploy script for the specified virt-who configuration"
-msgstr ""
-
-msgid "Report"
 msgstr ""
 
 msgid "Schedule"

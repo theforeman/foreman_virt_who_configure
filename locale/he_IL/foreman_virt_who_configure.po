@@ -378,9 +378,6 @@ msgstr ""
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr ""
 
-msgid "Report"
-msgstr ""
-
 msgid "Schedule"
 msgstr ""
 
