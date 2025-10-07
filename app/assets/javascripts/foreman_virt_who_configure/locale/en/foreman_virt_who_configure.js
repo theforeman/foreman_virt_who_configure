@@ -5,7 +5,7 @@
       "": {
         "Project-Id-Version": "foreman_virt_who_configure 1.0.0",
         "Report-Msgid-Bugs-To": "",
-        "PO-Revision-Date": "2025-09-12 13:21+0200",
+        "PO-Revision-Date": "2025-10-07 14:52+0200",
         "Last-Translator": "FULL NAME <EMAIL@ADDRESS>",
         "Language-Team": "LANGUAGE <LL@li.org>",
         "Language": "",
@@ -372,9 +372,6 @@
         ""
       ],
       "Renders a deploy script for the specified virt-who configuration": [
-        ""
-      ],
-      "Report": [
         ""
       ],
       "Schedule": [

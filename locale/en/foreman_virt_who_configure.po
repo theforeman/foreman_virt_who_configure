@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the foreman_virt_who_configure package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-09-12 13:21+0200\n"
+"PO-Revision-Date: 2025-10-07 14:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -371,9 +372,6 @@ msgid "Prism Flavor"
 msgstr ""
 
 msgid "Renders a deploy script for the specified virt-who configuration"
-msgstr ""
-
-msgid "Report"
 msgstr ""
 
 msgid "Schedule"

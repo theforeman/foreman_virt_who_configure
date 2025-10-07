@@ -6,7 +6,7 @@
         "Project-Id-Version": "foreman_virt_who_configure 0.5.26",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2025",
+        "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2025",
         "Language-Team": "French (https://app.transifex.com/foreman/teams/114/fr/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -373,9 +373,6 @@
       ],
       "Renders a deploy script for the specified virt-who configuration": [
         "Produit un script de déploiement pour la configuration virt-who spécifiée"
-      ],
-      "Report": [
-        ""
       ],
       "Schedule": [
         "Programmer"
