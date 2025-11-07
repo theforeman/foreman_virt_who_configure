@@ -22,4 +22,3 @@ jobs:
     uses: theforeman/actions/.github/workflows/foreman_plugin.yml@v0
     with:
       plugin: foreman_virt_who_configure
-      test_existing_database: false
