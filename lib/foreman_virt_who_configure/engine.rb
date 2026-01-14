@@ -68,7 +68,7 @@ module ForemanVirtWhoConfigure
             url_hash: { controller: 'foreman_virt_who_configure/configs', action: :index },
             caption: N_('Virt-who Configurations'),
             parent: :infrastructure_menu,
-            after: :compute_resources
+            after: :realms
 
           # add dashboard widget
           widget 'foreman_virt_who_configs_status_widget', :name => N_('Virt-who Configs Status'), sizex: 6, sizey: 1
