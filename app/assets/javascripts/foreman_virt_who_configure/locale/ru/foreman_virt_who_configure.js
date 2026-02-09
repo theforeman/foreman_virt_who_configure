@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.26",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.28",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2025",
+        "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2023",
         "Language-Team": "Russian (https://app.transifex.com/foreman/teams/114/ru/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
