@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.26",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.29",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Amit Upadhye <aupadhye@redhat.com>, 2025",
+        "Last-Translator": "Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2025",
         "Language-Team": "Chinese (China) (https://app.transifex.com/foreman/teams/114/zh_CN/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -373,6 +373,9 @@
       ],
       "Renders a deploy script for the specified virt-who configuration": [
         "为指定的 virt-who 配置提供部署脚本"
+      ],
+      "Report": [
+        ""
       ],
       "Schedule": [
         "调度"

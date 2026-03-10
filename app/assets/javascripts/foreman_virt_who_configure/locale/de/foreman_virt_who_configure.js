@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.26",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.29",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2025",
+        "Last-Translator": "Lukas K. <kallies@puzzle.ch>, 2023",
         "Language-Team": "German (https://app.transifex.com/foreman/teams/114/de/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -373,6 +373,9 @@
       ],
       "Renders a deploy script for the specified virt-who configuration": [
         "Rendert ein Deploy-Skript für die angegebene virt-who-Konfiguration"
+      ],
+      "Report": [
+        ""
       ],
       "Schedule": [
         "Plan"

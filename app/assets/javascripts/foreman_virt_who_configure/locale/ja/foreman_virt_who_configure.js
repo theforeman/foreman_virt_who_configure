@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.26",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.29",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2025",
+        "Last-Translator": "Ondřej Gajdušek, 2026",
         "Language-Team": "Japanese (https://app.transifex.com/foreman/teams/114/ja/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -102,7 +102,7 @@
         "コンテナーネイティブの仮想化の完全修飾ホスト名または IP アドレス。クラスターに接続するには、接続の詳細と認証トークンを含む kubeconfig へのパスを指定する必要があります。"
       ],
       "Copy to clipboard": [
-        "クリップボードへのコピー"
+        "クリップボードにコピー"
       ],
       "Count": [
         "カウント"
@@ -246,7 +246,7 @@
         "フィルタリングモードが 2 に設定されている場合にのみ適用できるハイパーバイザーのブラックリストです。ワイルドカードおよび正規表現がサポートされており、複数のレコードはコンマで区切られる必要があります。"
       ],
       "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist": [
-        "ハイパーバイザーのフィルタリングモード。%%{unlimited} はフィルタリングがないことを意味し、%%{whitelist} はホワイトリスト、%%{blacklist} はブラックリストを意味します。"
+        "ハイパーバイザーのフィルタリングモード。%{unlimited} はフィルタリングがないことを意味し、%{whitelist} はホワイトリスト、%{blacklist} はブラックリストを意味します。"
       ],
       "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt.": [
         "libvirt/kubevirt を除くすべてのハイパーバイザーのタイプに必要なハイパーバイザーのパスワード"
@@ -374,6 +374,9 @@
       "Renders a deploy script for the specified virt-who configuration": [
         "指定した virt-who 設定の deploy スクリプトのレンダリングを行います。"
       ],
+      "Report": [
+        ""
+      ],
       "Schedule": [
         "スケジュール"
       ],
@@ -390,7 +393,7 @@
         "ハイパーバイザーが <b>hostname</b>、<b>uuid</b> または <b>hwuuid</b> で特定されるように指定します。\\n                              一部の仮想化バックエンドではそれらのすべてが実装されていません。\\n                              デフォルトは <b>hostname</b> であり、意味を付したハイパーバイザー名\\n                                  を提供しますが、ホスト名が変更される場合は、ハイパーバーザー登録の重複が生じる可能性があります。これを避けるには、代わりに <b>uuid</b> を使用できます。<b>hwuuid</b> は esx のみに適用されます。\\n                                  このプロパティーは、virt-who の初回の実行前に設定されることになっています。これを後で変更すると、サブスクリプションマネージャーでエントリーの重複が生じます。"
       ],
       "Status": [
-        "状態"
+        "ステータス"
       ],
       "Success": [
         "成功"
