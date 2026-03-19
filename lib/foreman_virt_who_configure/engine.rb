@@ -100,6 +100,7 @@ module ForemanVirtWhoConfigure
     config.to_prepare do
       SSO::METHODS.unshift SSO::BasicWithHidden
       ::Organization.include VirtWhoTaxonomyExtensions
+      ::Katello::Api::Rhsm::CandlepinProxiesController.include ForemanVirtWhoConfigure::CandlepinProxiesExtensions
     end
 
     rake_tasks do
