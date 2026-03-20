@@ -167,4 +167,23 @@ Registered as a Foreman plugin with:
 - Minimal API payload sizes
 - Cached configuration generation
 
+## Contributing & Pull Requests
+
+**IMPORTANT**: Follow the standard open source workflow. Create PRs from your fork to upstream.
+
+### GitHub Workflow:
+1. Fork `theforeman/foreman_virt_who_configure` to your account (e.g., `yourname/foreman_virt_who_configure`)
+2. Create feature branch in your fork
+3. Make changes and commit
+4. Push branch to your fork
+5. **Create PR from your fork branch to upstream** (e.g., `yourname/foreman_virt_who_configure:feature-branch` → `theforeman/foreman_virt_who_configure:develop`)
+6. Do NOT push branches directly to `theforeman/foreman_virt_who_configure` and create PRs between branches there
+
+### Before Submitting PR:
+```bash
+cd $GITDIR/foreman
+bundle exec rake test:foreman_virt_who_configure  # Run all tests
+bundle exec rubocop --parallel          # Check code style
+```
+
 This plugin is essential for organizations using Red Hat Satellite/Foreman with virtualized infrastructure, providing streamlined virt-who deployment and management capabilities across diverse hypervisor environments.
