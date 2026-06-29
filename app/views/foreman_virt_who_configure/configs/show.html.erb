@@ -64,29 +64,13 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-6">
-            <%= _("Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:") %>
+            <%= _("Use the script below to deploy this configuration. It requires root privileges. Run it on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably the smart proxy:") %>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-12">
-            <h3><%= 'a) ' + _('Hammer command: ') %></h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-8">
-            <pre class="terminal" id="config_command"><%= @config.virt_who_config_command %></pre>
-          </div>
-          <div class="col-md-8">
-            <div class="terminal-buttons">
-              <%= link_to _('Copy to clipboard'), '#', :class => 'btn btn-default', :onclick => 'virt_who_copy_configuration_to_clipboard($("#config_command").text()); return false' %>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <h3><%= 'b) ' + _('Configuration script: ') %></h3>
+            <h3><%= _('Configuration script: ') %></h3>
           </div>
           <div class="col-md-8">
             <p>

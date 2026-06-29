@@ -63,7 +63,7 @@ This plugin provides a user-friendly web interface and API for:
 #### Deployment
 - Generates shell scripts for automated virt-who installation and configuration
 - Supports both manual deployment and configuration management integration
-- Provides Hammer CLI command examples for automation
+- Provides deployment scripts for automation
 
 ### Database Schema
 
