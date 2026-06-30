@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.29",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.31",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Lukas K. <kallies@puzzle.ch>, 2023",
+        "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2026",
         "Language-Team": "German (https://app.transifex.com/foreman/teams/114/de/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -215,9 +215,6 @@
       "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used.": [
         "HTTP-Proxy, der für die Kommunikation zwischen dem Server, auf dem virt-who läuft, und den Hypervisoren und Virtualisierungsmanagern verwendet werden soll. Lassen Sie dieses Feld leer, wenn kein Proxy verwendet wird."
       ],
-      "Hammer command: ": [
-        "Hammer-Befehl:"
-      ],
       "Help": [
         "Hilfe"
       ],
@@ -375,7 +372,7 @@
         "Rendert ein Deploy-Skript für die angegebene virt-who-Konfiguration"
       ],
       "Report": [
-        ""
+        "Melden"
       ],
       "Schedule": [
         "Plan"
@@ -443,8 +440,8 @@
       "Update a virt-who configuration": [
         "Virt-Who-Konfiguration aktualisieren"
       ],
-      "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:": [
-        "Verwenden Sie entweder den Befehl hammer oder das folgende Skript, um diese Konfiguration bereitzustellen. Beide benötigen Root-Rechte. Führen Sie einen davon auf dem Zielhost aus, der Zugriff auf das katello-host-tools-Repository hat und das virt-who-Reporting ausführt, vorzugsweise Foreman-Host:"
+      "Use the script below to deploy this configuration. It requires root privileges. Run it on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably the smart proxy:": [
+        ""
       ],
       "VMware vCenter server’s fully qualified host name or IP address.": [
         "Vollständig qualifizierter Hostname oder IP-Adresse des VMware vCenter-Servers."

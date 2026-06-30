@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.29",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.31",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Ondřej Gajdušek, 2026",
+        "Last-Translator": "Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2026",
         "Language-Team": "Japanese (https://app.transifex.com/foreman/teams/114/ja/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -215,9 +215,6 @@
       "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used.": [
         "virt-who が実行されているサーバーとハイパーバイザーおよび仮想化マネージャー間の通信に使用する必要のある HTTP プロキシー。プロキシーが使用されていない場合はこれを空白にします。"
       ],
-      "Hammer command: ": [
-        "Hammer コマンド: "
-      ],
       "Help": [
         "ヘルプ"
       ],
@@ -375,7 +372,7 @@
         "指定した virt-who 設定の deploy スクリプトのレンダリングを行います。"
       ],
       "Report": [
-        ""
+        "レポート"
       ],
       "Schedule": [
         "スケジュール"
@@ -443,8 +440,8 @@
       "Update a virt-who configuration": [
         "virt-who 設定の更新"
       ],
-      "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:": [
-        "以下の Hammer コマンドまたはスクリプトを使用してこの設定をデプロイします。いずれも、root 権限が必要です。katello-host-tools にアクセスできるターゲットホストで Hammer コマンドまたはスクリプトを実行し、可能な場合は Foreman ホストで virt-who レポートを実行します。"
+      "Use the script below to deploy this configuration. It requires root privileges. Run it on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably the smart proxy:": [
+        ""
       ],
       "VMware vCenter server’s fully qualified host name or IP address.": [
         "VMware vCenter サーバーの完全修飾ホスト名または IP アドレス"

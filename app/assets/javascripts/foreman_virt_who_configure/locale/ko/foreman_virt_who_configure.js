@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.29",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.31",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2025",
+        "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2026",
         "Language-Team": "Korean (https://app.transifex.com/foreman/teams/114/ko/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -215,9 +215,6 @@
       "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used.": [
         "virt-who가 실행되는 서버와 하이퍼바이저 및 가상화 관리자 간의 통신에 사용해야 하는 HTTP 프록시를 지정합니다. 프록시를 사용하지 않는 경우 이 값을 비워 둡니다."
       ],
-      "Hammer command: ": [
-        "Hammer 명령: "
-      ],
       "Help": [
         "도움말"
       ],
@@ -375,7 +372,7 @@
         "지정된 virt-who 구성을 위한 배포 스크립트 렌더링"
       ],
       "Report": [
-        ""
+        "보고  "
       ],
       "Schedule": [
         "스케줄 "
@@ -443,8 +440,8 @@
       "Update a virt-who configuration": [
         "virt-who 구성 업데이트"
       ],
-      "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:": [
-        "hammer 명령이나 아래 스크립트를 사용하여 이 구성을 배포합니다. 둘 다 루트 권한이 필요합니다. katello-host-tools 저장소에 액세스할 수 있고 virt-who 보고를 실행할 대상 호스트(가능하면 Foreman 호스트)에서 실행하십시오."
+      "Use the script below to deploy this configuration. It requires root privileges. Run it on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably the smart proxy:": [
+        ""
       ],
       "VMware vCenter server’s fully qualified host name or IP address.": [
         "VMware vCenter 서버의 정규화된 호스트 이름 또는 IP 주소입니다."

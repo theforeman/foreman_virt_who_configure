@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.29",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.31",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2025",
+        "Last-Translator": "Amit Upadhye <aupadhye@redhat.com>, 2026",
         "Language-Team": "Chinese (China) (https://app.transifex.com/foreman/teams/114/zh_CN/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -215,9 +215,6 @@
       "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used.": [
         "应当用于 virt-who 运行所在服务器和 hypervisor 及虚拟管理器之间通信的 HTTP 代理服务器。如果未使用代理服务器，则留空。"
       ],
-      "Hammer command: ": [
-        "Hammer 命令："
-      ],
       "Help": [
         "帮助"
       ],
@@ -375,7 +372,7 @@
         "为指定的 virt-who 配置提供部署脚本"
       ],
       "Report": [
-        ""
+        "报告"
       ],
       "Schedule": [
         "调度"
@@ -443,8 +440,8 @@
       "Update a virt-who configuration": [
         "更新 virt-who 配置"
       ],
-      "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:": [
-        "使用 hammer 命令或下面的脚本来部署此配置。两者都需要 root 特权。在有权访问 Red Hat Satellite Tools 仓库的一个目标主机上运行其中一个，并运行 virt-who 报告，最好在 Foreman 主机上运行："
+      "Use the script below to deploy this configuration. It requires root privileges. Run it on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably the smart proxy:": [
+        ""
       ],
       "VMware vCenter server’s fully qualified host name or IP address.": [
         "VMware vCenter 服务器的完全限定主机名或 IP 地址。"

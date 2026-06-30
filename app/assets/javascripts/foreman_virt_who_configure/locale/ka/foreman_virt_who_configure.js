@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.29",
+        "Project-Id-Version": "foreman_virt_who_configure 0.5.31",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2023",
+        "Last-Translator": "Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2026",
         "Language-Team": "Georgian (https://app.transifex.com/foreman/teams/114/ka/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -215,9 +215,6 @@
       "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers. Leave this blank if no proxy is used.": [
         "HTTP პროქსი, რომელიც უნდა იყოს გამოყენებული სერვერს შორის კომუნიკაციისთვის, რომელზეც მუშაობს virt-who და ჰიპერვიზორებსა და ვირტუალიზაციის მენეჯერებს შორის. თუ პროქსი არ გამოიყენება, დატოვეთ ცარიელი."
       ],
-      "Hammer command: ": [
-        "Hammer-ის ბრძანება: "
-      ],
       "Help": [
         "დახმარება"
       ],
@@ -375,7 +372,7 @@
         "Virt-who-ს მითითებული კონფიგურაციის განშლის სკრიპტის რენდერი"
       ],
       "Report": [
-        ""
+        "ანგარიში"
       ],
       "Schedule": [
         "განრიგი"
@@ -443,8 +440,8 @@
       "Update a virt-who configuration": [
         "Virt-who-ის კონფიგურაცის განახლება"
       ],
-      "Use either hammer command or the script below to deploy this configuration. Both require root privileges. Run one of them on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably Foreman host:": [
-        "გამოიყენეთ ან hammer ბრძანება ან ქვემოთ მოცემული სკრიპტი ამ კონფიგურაციის განსათავსებლად. ორივეს სჭირდება root პრივილეგიები. გაუშვით ერთ-ერთი მათგანი სამიზნე ჰოსტზე, რომელსაც აქვს წვდომა katello-host-tools-ის საცავზე და გაუშვებს virt-who reporting, სასურველია Foreman-ის ჰოსტი:"
+      "Use the script below to deploy this configuration. It requires root privileges. Run it on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably the smart proxy:": [
+        ""
       ],
       "VMware vCenter server’s fully qualified host name or IP address.": [
         "VMware vCenter-ის სერვერის სრული დომენური სახელი ან IP მისამართი."
