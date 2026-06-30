@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-10 14:59+0100\n"
-"PO-Revision-Date: 2026-03-10 14:59+0100\n"
+"POT-Creation-Date: 2026-06-30 17:32-0400\n"
+"PO-Revision-Date: 2026-06-30 17:32-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -542,42 +542,36 @@ msgstr ""
 
 #: ../app/views/foreman_virt_who_configure/configs/show.html.erb:67
 msgid ""
-"Use either hammer command or the script below to deploy this configuration. Bo"
-"th require root privileges. Run one of them on the target host which has acces"
-"s to katello-host-tools repository and will run virt-who reporting, preferably"
-" Foreman host:"
+"Use the script below to deploy this configuration. It requires root privileges"
+". Run it on the target host which has access to katello-host-tools repository "
+"and will run virt-who reporting, preferably the smart proxy:"
 msgstr ""
 
 #: ../app/views/foreman_virt_who_configure/configs/show.html.erb:73
-msgid "Hammer command: "
-msgstr ""
-
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:82
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:106
-msgid "Copy to clipboard"
-msgstr ""
-
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:89
 msgid "Configuration script: "
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:93
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:77
 msgid "On the target virt-who host:"
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:94
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:78
 msgid "1. Copy this configuration script to a safe directory."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:95
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:79
 msgid "2. Make the script executable and run it."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:96
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:80
 msgid "3. Delete the script."
 msgstr ""
 
-#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:107
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:90
+msgid "Copy to clipboard"
+msgstr ""
+
+#: ../app/views/foreman_virt_who_configure/configs/show.html.erb:91
 msgid "Download the script"
 msgstr ""
 
