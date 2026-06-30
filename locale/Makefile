@@ -60,8 +60,8 @@ tx-pull: $(EDITFILES)
 
 tx-update: tx-pull
 	@echo
-	@echo Run rake plugin:gettext[$(DOMAIN)] from the Foreman installation
-	@echo then run rake plugin:po_to_json[$(DOMAIN)] from the Foreman installation
+	@echo Run bundle exec rake plugin:gettext[$(DOMAIN)] from the Foreman installation
+	@echo then run bundle exec rake plugin:po_to_json[$(DOMAIN)] from the Foreman installation
 	@echo then run make -C locale mo-files to finish
 	@echo
 
