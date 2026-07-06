@@ -1,3 +1,3 @@
 module ForemanVirtWhoConfigure
-  VERSION = '0.5.31'.freeze
+  VERSION = '5.0.0'.freeze
 end
