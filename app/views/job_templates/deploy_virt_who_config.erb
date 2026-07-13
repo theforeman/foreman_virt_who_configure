@@ -1,0 +1,91 @@
+<%#
+name: Deploy virt-who Config - Ansible Default
+snippet: false
+template_inputs:
+- name: virt_who_config_id
+  required: true
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  description: "ID of the virt-who configuration to deploy. Find it under Infrastructure > Virt-who Configurations (the numeric ID in the configuration's URL)."
+model: JobTemplate
+job_category: Virt-who
+description_format: "Deploy virt-who configuration %{virt_who_config_id}"
+provider_type: Ansible
+kind: job_template
+feature: deploy_virt_who_config
+%>
+<%- deploy = virt_who_deploy_config(input('virt_who_config_id')) -%>
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install virt-who
+      ansible.builtin.package:
+        name: virt-who
+        state: present
+<% if deploy['needs_hypervisor_password'] -%>
+
+    - name: Encrypt hypervisor password
+      ansible.builtin.command:
+        argv:
+          - virt-who-password
+          - --password
+          - '<%= deploy['hypervisor_password'].gsub("'", "''") %>'
+      register: __virt_who_cr_encrypted_password
+      changed_when: false
+      no_log: true
+<% end -%>
+
+    - name: Encrypt service user password
+      ansible.builtin.command:
+        argv:
+          - virt-who-password
+          - --password
+          - '<%= deploy['service_user_password'].gsub("'", "''") %>'
+      register: __virt_who_service_user_encrypted_password
+      changed_when: false
+      no_log: true
+
+    - name: Ensure virt-who config directory exists
+      ansible.builtin.file:
+        path: /etc/virt-who.d
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Deploy virt-who per-config configuration
+      ansible.builtin.copy:
+        content: |
+<%= indent(10) { deploy['config_content'] } -%>
+        dest: /etc/virt-who.d/<%= deploy['identifier'] %>.conf
+        owner: root
+        group: root
+        mode: '0640'
+      notify:
+        - Restart virt-who
+
+    - name: Deploy virt-who global configuration
+      ansible.builtin.copy:
+        content: |
+<%= indent(10) { deploy['sysconfig_content'] } -%>
+        dest: /etc/virt-who.conf
+        owner: root
+        group: root
+        mode: '0644'
+      notify:
+        - Restart virt-who
+
+    - name: Enable and start virt-who service
+      ansible.builtin.service:
+        name: virt-who
+        enabled: true
+        state: started
+
+  handlers:
+    - name: Restart virt-who
+      ansible.builtin.service:
+        name: virt-who
+        state: restarted
