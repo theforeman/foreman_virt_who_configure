@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.31",
+        "Project-Id-Version": "foreman_virt_who_configure 5.0.0",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Bryan Kearney <bryan.kearney@gmail.com>, 2026",
+        "Last-Translator": "Ondřej Gajdušek, 2026",
         "Language-Team": "French (https://app.transifex.com/foreman/teams/114/fr/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -441,7 +441,7 @@
         "Mettre à jour une configuration virt-who"
       ],
       "Use the script below to deploy this configuration. It requires root privileges. Run it on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably the smart proxy:": [
-        ""
+        "Utilisez soit la commande hammer, soit le script ci-dessous pour déployer cette configuration. Les deux requièrent les privilèges root. Exécutez l'un d'eux sur l'hôte cible qui a accès au référentiel katello-host-tools et qui exécutera le rapport de virt-who, de préférence l'hôte Foreman :"
       ],
       "VMware vCenter server’s fully qualified host name or IP address.": [
         "Nom d'hôte complet ou adresse IP du serveur VMware vCenter."
