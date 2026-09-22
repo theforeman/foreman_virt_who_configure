@@ -3,10 +3,10 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.31",
+        "Project-Id-Version": "foreman_virt_who_configure 5.0.0",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
-        "Last-Translator": "Ewoud Kohl van Wijngaarden <ewoud+transifex@kohlvanwijngaarden.nl>, 2026",
+        "Last-Translator": "Ondřej Gajdušek, 2026",
         "Language-Team": "Japanese (https://app.transifex.com/foreman/teams/114/ja/)",
         "MIME-Version": "1.0",
         "Content-Type": "text/plain; charset=UTF-8",
@@ -441,7 +441,7 @@
         "virt-who 設定の更新"
       ],
       "Use the script below to deploy this configuration. It requires root privileges. Run it on the target host which has access to katello-host-tools repository and will run virt-who reporting, preferably the smart proxy:": [
-        ""
+        "この設定をデプロイするには、以下のスクリプトを使用します。実行には root 権限が必要です。katello-host-tools リポジトリーにアクセス可能で、virt-who レポートを実行するターゲットホスト (スマートプロキシーを推奨) 上で実行してください。"
       ],
       "VMware vCenter server’s fully qualified host name or IP address.": [
         "VMware vCenter サーバーの完全修飾ホスト名または IP アドレス"

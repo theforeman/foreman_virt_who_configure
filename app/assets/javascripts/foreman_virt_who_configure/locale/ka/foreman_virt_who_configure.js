@@ -3,7 +3,7 @@
   "locale_data": {
     "foreman_virt_who_configure": {
       "": {
-        "Project-Id-Version": "foreman_virt_who_configure 0.5.31",
+        "Project-Id-Version": "foreman_virt_who_configure 5.0.0",
         "Report-Msgid-Bugs-To": "",
         "PO-Revision-Date": "2017-05-03 11:59+0000",
         "Last-Translator": "Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2026",
@@ -276,7 +276,7 @@
         "ბოლო კონფიგურაციები ცვლილებების გარეშე"
       ],
       "Libvirt server’s fully qualified host name or IP address. You can also specify preferred schema, for example: <code>qemu+ssh://libvirt.example.com/system</code>. Make sure you setup root's SSH key on target host for a user specified at hypervisor username field": [
-        ""
+        "Libvirt-ის სერვერის სრული დომენური სახელი ან IP მისამართი. ასევე შეგიძლიათ მიუთითოთ სქემის სახით. მაგ: <code>qemu+ssh://libvirt.example.com/system</code>. თუ იყენებთ SSH-ს, დარწმუნდით, რომ ჰაიპერვაიზორში მითითებულ მომხმარებელს სამიზნე ჰოსტზე SSH გასაღებები ადგილზე აქვს"
       ],
       "List of virt-who configurations": [
         "Virt-who-ის კონფიგურაციების სია"
