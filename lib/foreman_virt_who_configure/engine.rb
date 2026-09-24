@@ -101,6 +101,15 @@ module ForemanVirtWhoConfigure
       SSO::METHODS.unshift SSO::BasicWithHidden
       ::Organization.include VirtWhoTaxonomyExtensions
       ::Katello::Api::Rhsm::CandlepinProxiesController.include ForemanVirtWhoConfigure::CandlepinProxiesExtensions
+
+      if defined?(RemoteExecutionFeature)
+        RemoteExecutionFeature.register(
+          :deploy_virt_who_config,
+          N_('Deploy virt-who configuration'),
+          :description => N_('Deploy virt-who configuration to a host'),
+          :host_action_button => false
+        )
+      end
     end
 
     rake_tasks do

@@ -1,0 +1,372 @@
+<%#
+name: Deploy virt-who Config
+snippet: false
+template_inputs:
+- name: virt_who_hypervisor_type
+  required: true
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  description: "Hypervisor type: esx, hyperv, libvirt, kubevirt, or ahv"
+- name: virt_who_hypervisor_server
+  required: false
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  description: "Hypervisor server URL/hostname (required for all types except kubevirt)"
+- name: virt_who_hypervisor_username
+  required: false
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  description: "Hypervisor username (required for all types except kubevirt)"
+- name: virt_who_hypervisor_password
+  required: false
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: true
+  description: "Hypervisor password (required for esx, hyperv, ahv)"
+- name: virt_who_organization_label
+  required: true
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  description: "Organization label (Candlepin owner)"
+- name: virt_who_service_user
+  required: true
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  description: "RHSM service user username"
+- name: virt_who_service_user_password
+  required: true
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: true
+  description: "RHSM service user password"
+- name: virt_who_identifier
+  required: false
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  default: "virt-who-config"
+  description: "Config identifier"
+- name: virt_who_hypervisor_id
+  required: false
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  default: "hostname"
+  description: "Hypervisor ID method: hostname, uuid, or hwuuid"
+- name: virt_who_interval
+  required: false
+  input_type: user
+  advanced: true
+  value_type: plain
+  hidden_value: false
+  default: "7200"
+  description: "Reporting interval in seconds"
+- name: virt_who_debug
+  required: false
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  default: "false"
+  description: "Enable debug logging: true or false"
+- name: virt_who_filtering_mode
+  required: false
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  default: "none"
+  description: "Host filtering mode: none, whitelist, or blacklist"
+- name: virt_who_whitelist
+  required: false
+  input_type: user
+  advanced: true
+  value_type: plain
+  hidden_value: false
+  description: "Comma-separated list of hosts to include (whitelist mode)"
+- name: virt_who_blacklist
+  required: false
+  input_type: user
+  advanced: true
+  value_type: plain
+  hidden_value: false
+  description: "Comma-separated list of hosts to exclude (blacklist mode)"
+- name: virt_who_filter_host_parents
+  required: false
+  input_type: user
+  advanced: true
+  value_type: plain
+  hidden_value: false
+  description: "Comma-separated parent compute resources to include (ESX whitelist)"
+- name: virt_who_exclude_host_parents
+  required: false
+  input_type: user
+  advanced: true
+  value_type: plain
+  hidden_value: false
+  description: "Comma-separated parent compute resources to exclude (ESX blacklist)"
+- name: virt_who_http_proxy
+  required: false
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  description: "Full proxy URL (e.g., http://proxy.example.com:8080)"
+- name: virt_who_no_proxy
+  required: false
+  input_type: user
+  advanced: false
+  value_type: plain
+  hidden_value: false
+  description: "Comma-separated list of hosts/domains to bypass proxy"
+- name: virt_who_kubeconfig_path
+  required: false
+  input_type: user
+  advanced: true
+  value_type: plain
+  hidden_value: false
+  description: "Path to kubeconfig file (kubevirt only)"
+- name: virt_who_prism_flavor
+  required: false
+  input_type: user
+  advanced: true
+  value_type: plain
+  hidden_value: false
+  default: "central"
+  description: "AHV Prism type: central or element"
+- name: virt_who_ahv_internal_debug
+  required: false
+  input_type: user
+  advanced: true
+  value_type: plain
+  hidden_value: false
+  description: "AHV internal debug value"
+model: JobTemplate
+job_category: Virt-who
+description_format: "Deploy virt-who configuration %{virt_who_identifier}"
+provider_type: Ansible
+kind: job_template
+feature: deploy_virt_who_config
+%>
+<%
+  identifier = input('virt_who_identifier')
+  identifier = 'virt-who-config' if identifier.to_s.empty?
+  hypervisor_id = input('virt_who_hypervisor_id')
+  hypervisor_id = 'hostname' if hypervisor_id.to_s.empty?
+  interval = input('virt_who_interval')
+  interval = '7200' if interval.to_s.empty?
+  debug_val = input('virt_who_debug').to_s == 'true' ? '1' : '0'
+  hypervisor_type = input('virt_who_hypervisor_type')
+  filtering_mode = input('virt_who_filtering_mode')
+  filtering_mode = 'none' if filtering_mode.to_s.empty?
+  prism_flavor = input('virt_who_prism_flavor')
+  prism_flavor = 'central' if prism_flavor.to_s.empty?
+
+  # Build per-config file content
+  config_lines = []
+  config_lines << "### This configuration file is managed via the virt-who configure plugin"
+  config_lines << "### manual edits will be deleted."
+  config_lines << "[#{identifier}]"
+  config_lines << "type=#{hypervisor_type}"
+  config_lines << "hypervisor_id=#{hypervisor_id}"
+  config_lines << "owner=#{input('virt_who_organization_label')}"
+
+  if hypervisor_type != 'kubevirt'
+    config_lines << "server=#{input('virt_who_hypervisor_server')}"
+    config_lines << "username=#{input('virt_who_hypervisor_username')}"
+  end
+  if !['kubevirt', 'libvirt'].include?(hypervisor_type)
+    config_lines << "encrypted_password={{ __virt_who_cr_encrypted_password.stdout }}"
+  end
+
+  if filtering_mode == 'whitelist'
+    wl = input('virt_who_whitelist')
+    fhp = input('virt_who_filter_host_parents')
+    config_lines << "filter_hosts=#{wl}" unless wl.to_s.empty?
+    config_lines << "filter_host_parents=#{fhp}" unless fhp.to_s.empty?
+  elsif filtering_mode == 'blacklist'
+    bl = input('virt_who_blacklist')
+    ehp = input('virt_who_exclude_host_parents')
+    config_lines << "exclude_hosts=#{bl}" unless bl.to_s.empty?
+    config_lines << "exclude_host_parents=#{ehp}" unless ehp.to_s.empty?
+  end
+
+  config_lines << "rhsm_hostname=#{foreman_server_url.sub('https://', '').sub('http://', '')}"
+  config_lines << "rhsm_username=#{input('virt_who_service_user')}"
+  config_lines << "rhsm_encrypted_password={{ __virt_who_service_user_encrypted_password.stdout }}"
+  config_lines << "rhsm_prefix=/rhsm"
+
+  if hypervisor_type == 'kubevirt'
+    config_lines << "kubeconfig=#{input('virt_who_kubeconfig_path')}"
+  end
+
+  if hypervisor_type == 'ahv'
+    config_lines << "prism_central=#{prism_flavor == 'central'}"
+    ahv_debug = input('virt_who_ahv_internal_debug')
+    config_lines << "ahv_internal_debug=#{ahv_debug}" unless ahv_debug.to_s.empty?
+  end
+
+  config_content = config_lines.join("\n") + "\n"
+
+  # Build global sysconfig content
+  sysconfig_lines = []
+  sysconfig_lines << "### This configuration file is managed via the virt-who configure plugin"
+  sysconfig_lines << "### manual edits will be deleted."
+  sysconfig_lines << "[global]"
+  sysconfig_lines << "debug=#{debug_val}"
+  sysconfig_lines << "interval=#{interval}"
+  sysconfig_lines << "oneshot=False"
+  sysconfig_lines << ""
+  sysconfig_lines << "[system_environment]"
+
+  http_proxy = input('virt_who_http_proxy')
+  unless http_proxy.to_s.empty?
+    if http_proxy.start_with?('https')
+      sysconfig_lines << "https_proxy=#{http_proxy}"
+    else
+      sysconfig_lines << "http_proxy=#{http_proxy}"
+    end
+  end
+
+  no_proxy = input('virt_who_no_proxy')
+  sysconfig_lines << "no_proxy=#{no_proxy}" unless no_proxy.to_s.empty?
+
+  sysconfig_content = sysconfig_lines.join("\n") + "\n"
+-%>
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Check if virt-who is already installed
+      ansible.builtin.command: rpm -q virt-who
+      register: __virt_who_installed
+      changed_when: false
+      failed_when: false
+
+    - name: Install virt-who
+      when: __virt_who_installed.rc != 0
+      block:
+        - name: Check for satellite-maintain
+          ansible.builtin.command: rpm -q satellite-maintain
+          register: __virt_who_satellite_maintain
+          changed_when: false
+          failed_when: false
+
+        - name: Check for foreman-maintain
+          ansible.builtin.command: rpm -q rubygem-foreman_maintain
+          register: __virt_who_foreman_maintain
+          changed_when: false
+          failed_when: false
+          when: __virt_who_satellite_maintain.rc != 0
+
+        - name: Install virt-who using satellite-maintain
+          when: __virt_who_satellite_maintain.rc == 0
+          block:
+            - name: Unlock packages via satellite-maintain
+              ansible.builtin.command: satellite-maintain packages unlock
+            - name: Install virt-who via satellite-maintain
+              ansible.builtin.command: satellite-maintain advanced procedure run packages-install --packages virt-who --assumeyes
+            - name: Lock packages via satellite-maintain
+              ansible.builtin.command: satellite-maintain packages lock
+
+        - name: Install virt-who using foreman-maintain
+          when:
+            - __virt_who_satellite_maintain.rc != 0
+            - __virt_who_foreman_maintain.rc == 0
+          block:
+            - name: Unlock packages via foreman-maintain
+              ansible.builtin.command: foreman-maintain packages unlock
+            - name: Install virt-who via foreman-maintain
+              ansible.builtin.command: foreman-maintain advanced procedure run packages-install --packages virt-who --assumeyes
+            - name: Lock packages via foreman-maintain
+              ansible.builtin.command: foreman-maintain packages lock
+
+        - name: Install virt-who via package manager
+          ansible.builtin.package:
+            name: virt-who
+            state: present
+          when:
+            - __virt_who_satellite_maintain.rc != 0
+            - __virt_who_foreman_maintain.rc | default(1) != 0
+
+    - name: Get installed virt-who version
+      ansible.builtin.command: rpm -q --queryformat '%{VERSION}' virt-who
+      register: __virt_who_installed_version
+      changed_when: false
+
+    - name: Verify minimum virt-who version
+      ansible.builtin.assert:
+        that:
+          - __virt_who_installed_version.stdout is version('0.24.2', '>=')
+        fail_msg: >-
+          virt-who {{ __virt_who_installed_version.stdout }} does not meet minimum requirements,
+          minimum version is 0.24.2
+<% if !['kubevirt', 'libvirt'].include?(hypervisor_type) -%>
+
+    - name: Encrypt hypervisor password
+      ansible.builtin.command: virt-who-password --password '<%= input('virt_who_hypervisor_password') %>'
+      register: __virt_who_cr_encrypted_password
+      changed_when: false
+      no_log: true
+<% end -%>
+
+    - name: Encrypt service user password
+      ansible.builtin.command: virt-who-password --password '<%= input('virt_who_service_user_password') %>'
+      register: __virt_who_service_user_encrypted_password
+      changed_when: false
+      no_log: true
+
+    - name: Ensure virt-who config directory exists
+      ansible.builtin.file:
+        path: /etc/virt-who.d
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Deploy virt-who per-config configuration
+      ansible.builtin.copy:
+        content: |
+<%= config_content.split("\n").map { |l| "          #{l}\n" }.join -%>
+        dest: /etc/virt-who.d/<%= identifier %>.conf
+        owner: root
+        group: root
+        mode: '0640'
+      notify:
+        - Restart virt-who
+
+    - name: Deploy virt-who global configuration
+      ansible.builtin.copy:
+        content: |
+<%= sysconfig_content.split("\n").map { |l| "          #{l}\n" }.join -%>
+        dest: /etc/virt-who.conf
+        owner: root
+        group: root
+        mode: '0644'
+      notify:
+        - Restart virt-who
+
+    - name: Enable virt-who service
+      ansible.builtin.service:
+        name: virt-who
+        enabled: true
+
+  handlers:
+    - name: Restart virt-who
+      ansible.builtin.service:
+        name: virt-who
+        state: restarted
