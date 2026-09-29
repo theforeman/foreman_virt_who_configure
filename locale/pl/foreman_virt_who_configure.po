@@ -7,7 +7,6 @@
 # sziolkow <sziolkow@gmail.com>, 2019
 # Michał Foryt <michal.foryt@gmail.com>, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 5.0.0\n"
@@ -376,9 +375,6 @@ msgstr ""
 
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr ""
-
-msgid "Report"
-msgstr "Raport"
 
 msgid "Schedule"
 msgstr ""

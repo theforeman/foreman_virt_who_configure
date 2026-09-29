@@ -123,7 +123,7 @@
         "배포"
       ],
       "Details": [
-        "상세 정보 "
+        "상세 정보"
       ],
       "Different debug value can't be set per hypervisor, therefore it will affect all other deployed configurations on the host on which this configuration will be deployed.": [
         "하이퍼바이저마다 다른 디버그 값을 설정할 수 없으므로 이 구성이 배포될 호스트에 배포된 다른 모든 구성에 영향을 미칩니다."
@@ -132,7 +132,7 @@
         "스크립트 다운로드"
       ],
       "Edit": [
-        "편집 "
+        "편집"
       ],
       "Edit Virt-who Config": [
         "Virt-who 구성 편집"
@@ -371,9 +371,6 @@
       "Renders a deploy script for the specified virt-who configuration": [
         "지정된 virt-who 구성을 위한 배포 스크립트 렌더링"
       ],
-      "Report": [
-        "보고  "
-      ],
       "Schedule": [
         "스케줄 "
       ],
@@ -390,7 +387,7 @@
         "하이퍼바이저를 <b>hostname</b>, <b>uuid</b>, <b>hwuuid</b>로 식별할 지를 지정합니다.\\n                              일부 가상화 백엔드는 이 모든 항목을 지원하지 않을 수도 있습니다.\\n                              기본값은 <b>hostname</b>이며 이는 보다 의미 있는 하이퍼바이저 이름을 제공하지만, \\n                                  호스트 이름 변경 시 중복 등록이 발생할 수 있습니다.. 이를 방지하려면 <b>uuid</b>를 사용하는 것이 좋습니다. <b>hwuuid</b>는 esx에만 적용됩니다.\\n                                  이 속성은 virt-who를 처음 실행하기 전에 설정해야 하며, 이후 변경하면 서브스크립션 관리자에 중복 항목이 생성될 수 있습니다."
       ],
       "Status": [
-        "상태 "
+        "상태"
       ],
       "Success": [
         "성공 "
@@ -426,7 +423,7 @@
         "virt-who 서비스를 시작할 수 없습니다. 자세한 내용은 virt-who 로그를 참조하세요."
       ],
       "Unknown": [
-        "알 수 없음 "
+        "알 수 없음"
       ],
       "Unknown configuration status": [
         "알 수 없는 구성 상태"
