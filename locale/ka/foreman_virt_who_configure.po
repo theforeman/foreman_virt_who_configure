@@ -6,7 +6,6 @@
 # Translators:
 # Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 5.0.0\n"
@@ -373,9 +372,6 @@ msgstr "Prism -ის ვარიანტი"
 
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr "Virt-who-ს მითითებული კონფიგურაციის განშლის სკრიპტის რენდერი"
-
-msgid "Report"
-msgstr "ანგარიში"
 
 msgid "Schedule"
 msgstr "განრიგი"

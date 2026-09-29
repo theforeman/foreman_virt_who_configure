@@ -243,7 +243,7 @@
         "Hypervisor 黑名单，仅在过滤模式设置为 2 时适用。支持通配符和正则表达式，必须用逗号分隔多项记录。"
       ],
       "Hypervisor filtering mode, %{unlimited} means no filtering, %{whitelist} means whitelist, %{blacklist} means blacklist": [
-        "Hypervisor 过滤模式 %{unlimited} 表示没有过滤，%{whitelist} 表示白名单，%{blacklist} 代表黑名单"
+        "Hypervisor 过滤模式，%%{unlimited} 代表没有过滤，%%{whitelist} 代表白名单，%%{blacklist} 代表黑名单"
       ],
       "Hypervisor password, required for all hypervisor types except for libvirt/kubevirt.": [
         "Hypervisor 密码，除 libvirt/kubevirt 以外的所有 hypervisor 类型都需要"
@@ -370,9 +370,6 @@
       ],
       "Renders a deploy script for the specified virt-who configuration": [
         "为指定的 virt-who 配置提供部署脚本"
-      ],
-      "Report": [
-        "报告"
       ],
       "Schedule": [
         "调度"

@@ -207,7 +207,7 @@
         "Informations générales"
       ],
       "HTTP Proxy": [
-        "HTTP Proxy"
+        "Proxy HTTP"
       ],
       "HTTP proxy that should be used for communication between the server on which virt-who is running and the hypervisors and virtualization managers.": [
         "Proxy HTTP à utiliser pour la communication entre le serveur sur lequel virt-who est exécuté et les hyperviseurs et gestionnaires de virtualisation."
@@ -370,9 +370,6 @@
       ],
       "Renders a deploy script for the specified virt-who configuration": [
         "Produit un script de déploiement pour la configuration virt-who spécifiée"
-      ],
-      "Report": [
-        "Rapport"
       ],
       "Schedule": [
         "Programmer"
