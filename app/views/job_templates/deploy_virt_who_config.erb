@@ -258,14 +258,22 @@ feature: deploy_virt_who_config
 <% if !['kubevirt', 'libvirt'].include?(hypervisor_type) -%>
 
     - name: Encrypt hypervisor password
-      ansible.builtin.command: virt-who-password --password '<%= input('virt_who_hypervisor_password') %>'
+      ansible.builtin.command:
+        argv:
+          - virt-who-password
+          - --password
+          - '<%= input('virt_who_hypervisor_password').gsub("'", "''") %>'
       register: __virt_who_cr_encrypted_password
       changed_when: false
       no_log: true
 <% end -%>
 
     - name: Encrypt service user password
-      ansible.builtin.command: virt-who-password --password '<%= input('virt_who_service_user_password') %>'
+      ansible.builtin.command:
+        argv:
+          - virt-who-password
+          - --password
+          - '<%= input('virt_who_service_user_password').gsub("'", "''") %>'
       register: __virt_who_service_user_encrypted_password
       changed_when: false
       no_log: true
@@ -300,10 +308,11 @@ feature: deploy_virt_who_config
       notify:
         - Restart virt-who
 
-    - name: Enable virt-who service
+    - name: Enable and start virt-who service
       ansible.builtin.service:
         name: virt-who
         enabled: true
+        state: started
 
   handlers:
     - name: Restart virt-who
