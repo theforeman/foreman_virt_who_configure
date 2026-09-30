@@ -251,70 +251,10 @@ feature: deploy_virt_who_config
 - hosts: all
   become: true
   tasks:
-    - name: Check if virt-who is already installed
-      ansible.builtin.command: rpm -q virt-who
-      register: __virt_who_installed
-      changed_when: false
-      failed_when: false
-
     - name: Install virt-who
-      when: __virt_who_installed.rc != 0
-      block:
-        - name: Check for satellite-maintain
-          ansible.builtin.command: rpm -q satellite-maintain
-          register: __virt_who_satellite_maintain
-          changed_when: false
-          failed_when: false
-
-        - name: Check for foreman-maintain
-          ansible.builtin.command: rpm -q rubygem-foreman_maintain
-          register: __virt_who_foreman_maintain
-          changed_when: false
-          failed_when: false
-          when: __virt_who_satellite_maintain.rc != 0
-
-        - name: Install virt-who using satellite-maintain
-          when: __virt_who_satellite_maintain.rc == 0
-          block:
-            - name: Unlock packages via satellite-maintain
-              ansible.builtin.command: satellite-maintain packages unlock
-            - name: Install virt-who via satellite-maintain
-              ansible.builtin.command: satellite-maintain advanced procedure run packages-install --packages virt-who --assumeyes
-            - name: Lock packages via satellite-maintain
-              ansible.builtin.command: satellite-maintain packages lock
-
-        - name: Install virt-who using foreman-maintain
-          when:
-            - __virt_who_satellite_maintain.rc != 0
-            - __virt_who_foreman_maintain.rc == 0
-          block:
-            - name: Unlock packages via foreman-maintain
-              ansible.builtin.command: foreman-maintain packages unlock
-            - name: Install virt-who via foreman-maintain
-              ansible.builtin.command: foreman-maintain advanced procedure run packages-install --packages virt-who --assumeyes
-            - name: Lock packages via foreman-maintain
-              ansible.builtin.command: foreman-maintain packages lock
-
-        - name: Install virt-who via package manager
-          ansible.builtin.package:
-            name: virt-who
-            state: present
-          when:
-            - __virt_who_satellite_maintain.rc != 0
-            - __virt_who_foreman_maintain.rc | default(1) != 0
-
-    - name: Get installed virt-who version
-      ansible.builtin.command: rpm -q --queryformat '%{VERSION}' virt-who
-      register: __virt_who_installed_version
-      changed_when: false
-
-    - name: Verify minimum virt-who version
-      ansible.builtin.assert:
-        that:
-          - __virt_who_installed_version.stdout is version('0.24.2', '>=')
-        fail_msg: >-
-          virt-who {{ __virt_who_installed_version.stdout }} does not meet minimum requirements,
-          minimum version is 0.24.2
+      ansible.builtin.package:
+        name: virt-who
+        state: present
 <% if !['kubevirt', 'libvirt'].include?(hypervisor_type) -%>
 
     - name: Encrypt hypervisor password
@@ -341,7 +281,7 @@ feature: deploy_virt_who_config
     - name: Deploy virt-who per-config configuration
       ansible.builtin.copy:
         content: |
-<%= config_content.split("\n").map { |l| "          #{l}\n" }.join -%>
+<%= indent(10) { config_content } -%>
         dest: /etc/virt-who.d/<%= identifier %>.conf
         owner: root
         group: root
@@ -352,7 +292,7 @@ feature: deploy_virt_who_config
     - name: Deploy virt-who global configuration
       ansible.builtin.copy:
         content: |
-<%= sysconfig_content.split("\n").map { |l| "          #{l}\n" }.join -%>
+<%= indent(10) { sysconfig_content } -%>
         dest: /etc/virt-who.conf
         owner: root
         group: root
