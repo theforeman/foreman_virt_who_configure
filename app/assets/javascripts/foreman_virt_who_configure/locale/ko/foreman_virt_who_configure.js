@@ -371,6 +371,9 @@
       "Renders a deploy script for the specified virt-who configuration": [
         "지정된 virt-who 구성을 위한 배포 스크립트 렌더링"
       ],
+      "Report": [
+        "보고  "
+      ],
       "Schedule": [
         "스케줄 "
       ],

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_virt_who_configure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-29 11:03+0000\n"
-"PO-Revision-Date: 2026-09-29 11:03+0000\n"
+"POT-Creation-Date: 2026-10-01 10:03+0000\n"
+"PO-Revision-Date: 2026-10-01 10:03+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -806,6 +806,10 @@ msgstr ""
 
 #: ../lib/foreman_virt_who_configure/engine.rb:74
 msgid "Virt-who Configs Status"
+msgstr ""
+
+#: action_names.rb:2
+msgid "Report"
 msgstr ""
 
 #: gemspec.rb:2

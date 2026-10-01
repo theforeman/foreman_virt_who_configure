@@ -379,6 +379,9 @@ msgstr "Gabarit Prism"
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr "Produit un script de déploiement pour la configuration virt-who spécifiée"
 
+msgid "Report"
+msgstr "Rapport"
+
 msgid "Schedule"
 msgstr "Programmer"
 
