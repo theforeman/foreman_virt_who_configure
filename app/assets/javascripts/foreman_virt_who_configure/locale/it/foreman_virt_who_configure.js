@@ -371,6 +371,9 @@
       "Renders a deploy script for the specified virt-who configuration": [
         ""
       ],
+      "Report": [
+        "Notifica"
+      ],
       "Schedule": [
         "Programmazione"
       ],

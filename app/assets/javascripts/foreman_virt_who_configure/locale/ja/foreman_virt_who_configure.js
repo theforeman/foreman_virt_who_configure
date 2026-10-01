@@ -371,6 +371,9 @@
       "Renders a deploy script for the specified virt-who configuration": [
         "指定した virt-who 設定の deploy スクリプトのレンダリングを行います。"
       ],
+      "Report": [
+        "レポート"
+      ],
       "Schedule": [
         "スケジュール"
       ],

@@ -379,6 +379,9 @@ msgstr "Prism Flavor"
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr "为指定的 virt-who 配置提供部署脚本"
 
+msgid "Report"
+msgstr "报告"
+
 msgid "Schedule"
 msgstr "调度"
 

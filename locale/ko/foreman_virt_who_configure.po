@@ -377,6 +377,9 @@ msgstr "Prism Flavor"
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr "지정된 virt-who 구성을 위한 배포 스크립트 렌더링"
 
+msgid "Report"
+msgstr "보고  "
+
 msgid "Schedule"
 msgstr "스케줄 "
 

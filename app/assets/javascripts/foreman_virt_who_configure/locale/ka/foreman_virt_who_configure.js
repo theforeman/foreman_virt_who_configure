@@ -371,6 +371,9 @@
       "Renders a deploy script for the specified virt-who configuration": [
         "Virt-who-ს მითითებული კონფიგურაციის განშლის სკრიპტის რენდერი"
       ],
+      "Report": [
+        "ანგარიში"
+      ],
       "Schedule": [
         "განრიგი"
       ],

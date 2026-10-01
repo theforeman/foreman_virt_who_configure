@@ -378,6 +378,9 @@ msgstr "Prism フレーバー"
 msgid "Renders a deploy script for the specified virt-who configuration"
 msgstr "指定した virt-who 設定の deploy スクリプトのレンダリングを行います。"
 
+msgid "Report"
+msgstr "レポート"
+
 msgid "Schedule"
 msgstr "スケジュール"
 
