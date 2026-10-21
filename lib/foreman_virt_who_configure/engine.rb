@@ -27,6 +27,9 @@ module ForemanVirtWhoConfigure
 
           apipie_documented_controllers ["#{ForemanVirtWhoConfigure::Engine.root}/app/controllers/foreman_virt_who_configure/api/v2/*.rb"]
 
+          # expose the virt_who_deploy_config helper to the job template renderer
+          extend_template_helpers ForemanVirtWhoConfigure::TemplateRendererHelper
+
           # Add permissions
           security_block :foreman_virt_who_configure do
             permission_options = { :resource_type => 'ForemanVirtWhoConfigure::Config' }
@@ -101,6 +104,15 @@ module ForemanVirtWhoConfigure
       SSO::METHODS.unshift SSO::BasicWithHidden
       ::Organization.include VirtWhoTaxonomyExtensions
       ::Katello::Api::Rhsm::CandlepinProxiesController.include ForemanVirtWhoConfigure::CandlepinProxiesExtensions
+
+      if defined?(RemoteExecutionFeature)
+        RemoteExecutionFeature.register(
+          :deploy_virt_who_config,
+          N_('Deploy virt-who configuration'),
+          :description => N_('Deploy virt-who configuration to a host'),
+          :host_action_button => false
+        )
+      end
     end
 
     rake_tasks do
