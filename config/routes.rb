@@ -13,12 +13,15 @@ Rails.application.routes.draw do
 
     namespace :api, :defaults => {:format => 'json'} do
       scope "(:apiv)", :module => :v2, :defaults => {:apiv => 'v2'}, :apiv => /v1|v2/, :constraints => ApiConstraints.new(:version => 2, :default => true) do
-        resources :configs do
+        resources :configs, :except => [:new, :edit] do
           get :deploy_script, :on => :member
         end
 
         if SETTINGS[:organizations_enabled]
-          resources :organizations, :except => [:new, :edit] do
+          # Only the nested configs routes are provided here; the plugin has no
+          # organizations controller of its own, so the organization resource
+          # itself must not generate any routes.
+          resources :organizations, :only => [] do
             # scoped by organization
             resources :configs, :only => [:index, :show]
           end
