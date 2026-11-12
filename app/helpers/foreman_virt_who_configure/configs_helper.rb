@@ -82,5 +82,29 @@ module ForemanVirtWhoConfigure
         config_attribute_label(attribute, label) + config_attribute_value(attribute, value)
       end
     end
+
+    # True when the remote execution plugin is loaded and the current user may
+    # launch jobs. The "Deploy on host" button is only useful in that case.
+    def deploy_on_host_available?
+      defined?(ForemanRemoteExecution) && User.current.can?(:create_job_invocations)
+    end
+
+    # Links to Foreman's native "Run job" wizard, pre-selecting the virt-who
+    # deploy job template (via its registered remote execution feature) and
+    # filling in this configuration's id. The user picks the target host(s) in
+    # the wizard, so we deliberately do not pass host_ids here.
+    def deploy_on_host_button(config, options = {})
+      return unless deploy_on_host_available?
+
+      link_to(
+        _('Deploy config'),
+        new_job_invocation_path(
+          :feature => 'deploy_virt_who_config',
+          :inputs => { :virt_who_config_id => config.id }
+        ),
+        { :class => 'btn btn-default',
+          :title => _('Select a host and deploy this virt-who configuration using a remote execution job') }.merge(options)
+      )
+    end
   end
 end
